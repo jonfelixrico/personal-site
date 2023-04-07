@@ -1,3 +1,3 @@
 export function ContactsSection() {
-  return <div className="h-screen">contacts</div>
+  return <div className="min-h-screen">contacts</div>
 }

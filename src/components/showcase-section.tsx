@@ -1,3 +1,3 @@
 export function ShowcaseSection() {
-  return <div className="h-screen">showcase</div>
+  return <div className="min-h-screen">showcase</div>
 }
