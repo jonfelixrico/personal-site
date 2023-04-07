@@ -14,19 +14,20 @@ export function ShowcaseSection() {
         laborum et dolorum fuga.
       </div>
 
-      <div className="gap-5 grid grid-cols-auto">
-        <div className="h-80">
-          <div className="bg-gray-500 row-span-2 col-span-3 h-80 w-full mb-3">
-            test
-          </div>
+      <div className="grid grid-cols-1 gap-3">
+        <div className="grid grid-cols-3 gap-3">
+          <div>Test</div>
+          <div className="bg-gray-500 col-span-2 h-80 mb-3" />
+        </div>
 
-          <div className="grid grid-cols-3 gap-3">
-            <div className="bg-gray-500 h-52"></div>
+        <div className="grid grid-cols-3 gap-3">
+          <div className="bg-gray-500 col-span-2 h-80 mb-3" />
+          <div>Test</div>
+        </div>
 
-            <div className="bg-gray-500 h-40"></div>
-
-            <div className="bg-gray-500 h-40"></div>
-          </div>
+        <div className="grid grid-cols-3 gap-3">
+          <div>Test</div>
+          <div className="bg-gray-500 col-span-2 h-80 mb-3" />
         </div>
       </div>
     </div>
