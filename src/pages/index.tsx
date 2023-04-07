@@ -7,7 +7,7 @@ import { ShowcaseSection } from '@/components/showcase-section'
 export default function Home() {
   return (
     <main>
-      <div className="mx-auto max-w-screen-lg">
+      <div className="mx-auto max-w-screen-lg px-5">
         <div className="border-b">
           <HomeSection />
         </div>
