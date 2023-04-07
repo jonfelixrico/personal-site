@@ -1,3 +1,9 @@
+import { HomeSection } from '@/components/home-section'
+
 export default function Home() {
-  return <main>{/* TODO add content here */}</main>
+  return (
+    <main>
+      <HomeSection />
+    </main>
+  )
 }
