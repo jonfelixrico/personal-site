@@ -1,3 +1,4 @@
+import { AboutMeSection } from '@/components/about-me-section'
 import { ContactsSection } from '@/components/contacts-section'
 import { ExperienceSection } from '@/components/experience-section'
 import { HomeSection } from '@/components/home-section'
@@ -9,6 +10,10 @@ export default function Home() {
       <div className="mx-auto max-w-screen-lg">
         <div className="border-b">
           <HomeSection />
+        </div>
+
+        <div className="border-b">
+          <AboutMeSection />
         </div>
 
         <div className="border-b">
