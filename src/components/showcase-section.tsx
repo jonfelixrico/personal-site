@@ -15,10 +15,19 @@ export function ShowcaseSection() {
       </div>
 
       <div className="gap-5 grid grid-cols-auto">
-        <div className="bg-gray-500 h-80"></div>
-        <div className="bg-gray-500 h-80"></div>
-        <div className="bg-gray-500 h-80"></div>
-        <div className="bg-gray-500 h-80"></div>
+        <div className="h-80">
+          <div className="bg-gray-500 row-span-2 col-span-3 h-80 w-full mb-3">
+            test
+          </div>
+
+          <div className="grid grid-cols-3 gap-3">
+            <div className="bg-gray-500 h-52"></div>
+
+            <div className="bg-gray-500 h-40"></div>
+
+            <div className="bg-gray-500 h-40"></div>
+          </div>
+        </div>
       </div>
     </div>
   )
