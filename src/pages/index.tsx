@@ -1,5 +1,5 @@
 import { Inter } from 'next/font/google'
 
 export default function Home() {
-  return <main>test</main>
+  return <main>{/* TODO add content here */}</main>
 }
