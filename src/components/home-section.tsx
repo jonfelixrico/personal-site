@@ -6,7 +6,7 @@ export function HomeSection() {
         <div>web developer.</div>
       </div>
 
-      <div className="font-mono w-3/5">
+      <div className="font-mono w-4/6">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
