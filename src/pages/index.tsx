@@ -5,8 +5,8 @@ import { ShowcaseSection } from '@/components/showcase-section'
 
 export default function Home() {
   return (
-    <main className="bg-gray-500">
-      <div className="mx-auto bg-white" style={{ maxWidth: '1200px' }}>
+    <main>
+      <div className="mx-auto" style={{ maxWidth: '1200px' }}>
         <HomeSection />
         <ExperienceSection />
         <ShowcaseSection />
