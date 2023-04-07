@@ -7,10 +7,21 @@ export default function Home() {
   return (
     <main>
       <div className="mx-auto max-w-screen-lg">
-        <HomeSection />
-        <ExperienceSection />
-        <ShowcaseSection />
-        <ContactsSection />
+        <div className="border-b">
+          <HomeSection />
+        </div>
+
+        <div className="border-b">
+          <ExperienceSection />
+        </div>
+
+        <div className="border-b">
+          <ShowcaseSection />
+        </div>
+
+        <div className="border-b">
+          <ContactsSection />
+        </div>
       </div>
     </main>
   )
