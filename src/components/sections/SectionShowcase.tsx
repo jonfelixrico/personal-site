@@ -1,4 +1,4 @@
-export function ShowcaseSection() {
+export function SectionShowcase() {
   return (
     <div className="min-h-screen mt-14">
       <div className="mb-5 flex flex-row items-center">

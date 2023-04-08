@@ -1,31 +1,31 @@
-import { AboutMeSection } from '@/components/about-me-section'
-import { ContactsSection } from '@/components/contacts-section'
-import { ExperienceSection } from '@/components/experience-section'
-import { HomeSection } from '@/components/home-section'
-import { ShowcaseSection } from '@/components/showcase-section'
+import { SectionAboutMe } from '@/components/sections/SectionAboutMe'
+import { SectionContacts } from '@/components/sections/SectionContacts'
+import { SectionExperience } from '@/components/sections/SectionExperience'
+import { SectionHome } from '@/components/sections/SectionHome'
+import { SectionShowcase } from '@/components/sections/SectionShowcase'
 
 export default function Home() {
   return (
     <main>
       <div className="mx-auto max-w-screen-lg px-5">
         <div className="border-b">
-          <HomeSection />
+          <SectionHome />
         </div>
 
         <div className="border-b">
-          <AboutMeSection />
+          <SectionAboutMe />
         </div>
 
         <div className="border-b">
-          <ExperienceSection />
+          <SectionExperience />
         </div>
 
         <div className="border-b">
-          <ShowcaseSection />
+          <SectionShowcase />
         </div>
 
         <div className="border-b">
-          <ContactsSection />
+          <SectionContacts />
         </div>
       </div>
     </main>
