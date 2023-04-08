@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import PortfolioList from '@/components/portfolio/PortfolioList'
 
 export default function Portfolio() {
   return (
@@ -16,12 +17,7 @@ export default function Portfolio() {
             <div className="border-b flex-grow" />
           </div>
 
-          <div className="grid grid-cols-2 grid-rows-auto gap-3">
-            <div className="bg-gray-500 h-40"></div>
-            <div className="bg-gray-500 h-10"></div>
-            <div className="bg-gray-500 h-40"></div>
-            <div className="bg-gray-500 h-40"></div>
-          </div>
+          <PortfolioList />
         </div>
       </main>
     </>
