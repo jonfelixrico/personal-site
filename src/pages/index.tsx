@@ -2,7 +2,6 @@ import HomeSectionAboutMe from '@/components/home/HomeSectionAboutMe'
 import HomeSectionContacts from '@/components/home/HomeSectionContacts'
 import HomeSectionExperience from '@/components/home/HomeSectionExperience'
 import HomeSectionMain from '@/components/home/HomeSectionMain'
-import SectionShowcase from '@/components/SectionShowcase'
 
 export default function Home() {
   return (
