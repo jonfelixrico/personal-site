@@ -1,4 +1,4 @@
-export default function SectionHome() {
+export default function HomeSectionMain() {
   return (
     <div className="min-h-screen flex flex-col justify-center">
       <div className="mb-10 text-8xl font-sans font-semibold">

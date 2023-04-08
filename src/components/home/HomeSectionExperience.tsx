@@ -1,4 +1,4 @@
-export default function SectionExperience() {
+export default function HomeSectionExperience() {
   return (
     <div className="min-h-screen pt-20">
       <div className="mb-5 flex flex-row items-center">
