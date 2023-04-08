@@ -7,7 +7,7 @@ import { ReactNode } from 'react'
  * @param props
  * @returns
  */
-export function ConditionallyRender(props: {
+export default function ConditionallyRender(props: {
   /**
    * Render the component?
    */
