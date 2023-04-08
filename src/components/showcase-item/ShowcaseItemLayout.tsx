@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import ConditionallyRender from '../ConditionallyRender'
+import ConditionallyRender from '@components/ConditionallyRender'
 
 interface ShowcaseItemProps {
   previewPosition: 'left' | 'right'
