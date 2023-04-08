@@ -6,16 +6,12 @@ export default function PortfolioCard(props: {
   right: ReactNode
   larger: 'left' | 'right'
 }) {
-  if (props.larger === 'left') {
-    return (
-      <div className="grid grid-col-5 rounded-lg drop-shadow-md">
-        <div className={props.larger === 'left' ? 'row-span-3' : 'row-span-2'}>
-          {props.left}
-        </div>
-        <div className="row-auto">{props.right}</div>
+  return (
+    <div className="grid grid-col-5 rounded-lg drop-shadow-md">
+      <div className={props.larger === 'left' ? 'row-span-3' : 'row-span-2'}>
+        {props.left}
       </div>
-    )
-  }
-
-  return
+      <div className="row-auto">{props.right}</div>
+    </div>
+  )
 }
