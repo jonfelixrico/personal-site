@@ -21,10 +21,6 @@ export default function Home() {
         </div>
 
         <div className="border-b">
-          <SectionShowcase />
-        </div>
-
-        <div className="border-b">
           <HomeSectionContacts />
         </div>
       </div>
