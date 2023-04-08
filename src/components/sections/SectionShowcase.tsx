@@ -1,3 +1,5 @@
+import ShowcaseItemLayout from '@components/showcase-item/ShowcaseItemLayout'
+
 export default function SectionShowcase() {
   return (
     <div className="min-h-screen mt-14">
@@ -15,20 +17,23 @@ export default function SectionShowcase() {
       </div>
 
       <div className="grid grid-cols-1 gap-3">
-        <div className="grid grid-cols-3 gap-3">
-          <div>Test</div>
-          <div className="bg-gray-500 col-span-2 h-80 mb-3" />
-        </div>
+        <ShowcaseItemLayout
+          details={<div>Test</div>}
+          preview={<div className="bg-gray-500 h-80" />}
+          previewPosition="left"
+        />
 
-        <div className="grid grid-cols-3 gap-3">
-          <div className="bg-gray-500 col-span-2 h-80 mb-3" />
-          <div>Test</div>
-        </div>
+        <ShowcaseItemLayout
+          details={<div>Test</div>}
+          preview={<div className="bg-gray-500 h-80" />}
+          previewPosition="right"
+        />
 
-        <div className="grid grid-cols-3 gap-3">
-          <div>Test</div>
-          <div className="bg-gray-500 col-span-2 h-80 mb-3" />
-        </div>
+        <ShowcaseItemLayout
+          details={<div>Test</div>}
+          preview={<div className="bg-gray-500 h-80" />}
+          previewPosition="left"
+        />
       </div>
     </div>
   )
