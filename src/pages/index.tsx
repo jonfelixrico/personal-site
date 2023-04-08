@@ -1,8 +1,8 @@
-import SectionAboutMe from '@/components/home-sections/SectionAboutMe'
-import SectionContacts from '@/components/home-sections/SectionContacts'
-import SectionExperience from '@/components/home-sections/SectionExperience'
-import SectionHome from '@/components/home-sections/SectionHome'
-import SectionShowcase from '@/components/home-sections/SectionShowcase'
+import SectionAboutMe from '@/components/home/SectionAboutMe'
+import SectionContacts from '@/components/home/SectionContacts'
+import SectionExperience from '@/components/home/SectionExperience'
+import SectionHome from '@/components/home/SectionHome'
+import SectionShowcase from '@/components/home/SectionShowcase'
 
 export default function Home() {
   return (
