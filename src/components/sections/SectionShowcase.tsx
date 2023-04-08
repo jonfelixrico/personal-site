@@ -19,19 +19,19 @@ export default function SectionShowcase() {
       <div className="grid grid-cols-1 gap-3">
         <ShowcaseItemLayout
           details={<div>Test</div>}
-          preview={<div className="bg-gray-500 h-80" />}
+          preview={<div className="bg-gray-500 h-96 w-1/2" />}
           previewPosition="left"
         />
 
         <ShowcaseItemLayout
           details={<div>Test</div>}
-          preview={<div className="bg-gray-500 h-80" />}
+          preview={<div className="bg-gray-500 h-80 w-full" />}
           previewPosition="right"
         />
 
         <ShowcaseItemLayout
           details={<div>Test</div>}
-          preview={<div className="bg-gray-500 h-80" />}
+          preview={<div className="bg-gray-500 h-80 w-full" />}
           previewPosition="left"
         />
       </div>
