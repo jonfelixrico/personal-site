@@ -6,14 +6,14 @@ const classNames = cnFactory.bind(styles)
 
 export default function Navbar() {
   return (
-    <div
+    <nav
       className={classNames(
-        'flex flex-row items-center justify-end gap-5 p-2',
+        'flex flex-row items-center justify-end gap-5',
         styles.navbar
       )}
     >
       <Link href="/">Home</Link>
       <Link href="/portfolio">Portfolio</Link>
-    </div>
+    </nav>
   )
 }
