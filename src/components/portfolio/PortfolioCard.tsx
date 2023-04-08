@@ -28,7 +28,7 @@ export default function PortfolioCard(props: {
   reverse?: boolean
 }) {
   return (
-    <div className="grid grid-cols-5 grid-rows-1 rounded-lg shadow-md overflow-hidden">
+    <div className="grid grid-cols-5 grid-rows-1 rounded-lg shadow-md overflow-hidden bg-white">
       <Content
         details={props.details}
         preview={props.preview}
