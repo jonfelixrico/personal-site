@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Jon Felix Rico | Home</title>
+        <title>Jon Felix Rico • Home</title>
       </Head>
 
       <main className="snap-y snap-mandatory overflow-y-auto h-screen">
