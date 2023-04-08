@@ -1,17 +1,39 @@
 import { ReactNode } from 'react'
-import classNames from 'classnames'
+
+export function Content(props: {
+  details: ReactNode
+  preview: ReactNode
+  reverse?: boolean
+}) {
+  if (!props.reverse) {
+    return (
+      <>
+        <div className="col-span-3">{props.preview}</div>
+        <div className="col-span-2">{props.details}</div>
+      </>
+    )
+  }
+
+  return (
+    <>
+      <div className="col-span-2">{props.details}</div>
+      <div className="col-span-3">{props.preview}</div>
+    </>
+  )
+}
 
 export default function PortfolioCard(props: {
-  left: ReactNode
-  right: ReactNode
-  larger: 'left' | 'right'
+  details: ReactNode
+  preview: ReactNode
+  reverse?: boolean
 }) {
   return (
-    <div className="grid grid-cols-5 grid-rows-1 rounded-lg drop-shadow-md">
-      <div className={props.larger === 'left' ? 'col-span-3' : 'col-span-2'}>
-        {props.left}
-      </div>
-      <div className="col-auto">{props.right}</div>
+    <div className="grid grid-cols-5 grid-rows-1 rounded-lg shadow-md overflow-hidden">
+      <Content
+        details={props.details}
+        preview={props.preview}
+        reverse={props.reverse}
+      />
     </div>
   )
 }
