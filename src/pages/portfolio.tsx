@@ -1,3 +1,13 @@
+import Head from 'next/head'
+
 export default function Portfolio() {
-  return <main></main>
+  return (
+    <>
+      <Head>
+        <title>Jon Felix Rico • Portfolio</title>
+      </Head>
+
+      <main>test</main>
+    </>
+  )
 }
