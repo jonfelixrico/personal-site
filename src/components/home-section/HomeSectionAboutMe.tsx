@@ -6,6 +6,9 @@ export default function HomeSectionAboutMe() {
           <div className="font-mono text-5xl font-semibold text-primary">
             &lt;about-me /&gt;
           </div>
+          <div className="font-mono text-secondary text-xl">
+            // lorem ipsum dolor
+          </div>
         </div>
 
         <div>
