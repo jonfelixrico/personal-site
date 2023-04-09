@@ -1,3 +1,8 @@
 .navbar {
   height: 52px;
+
+  .navlink.active {
+    // TODO change this to follow the "primary" color of the theme
+    color: blue;
+  }
 }
