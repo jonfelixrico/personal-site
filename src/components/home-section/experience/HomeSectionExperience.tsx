@@ -1,4 +1,17 @@
 import Card from '@/components/Card'
+import { ReactNode } from 'react'
+
+export function SubSectionLayout(props: {
+  title: string
+  children: ReactNode
+}) {
+  return (
+    <div className="flex flex-col gap-3">
+      <div className="text-2xl font-semibold">{props.title}</div>
+      <Card className="p-2 flex-grow">{props.children}</Card>
+    </div>
+  )
+}
 
 export default function HomeSectionExperience() {
   return (
@@ -27,20 +40,10 @@ export default function HomeSectionExperience() {
         </div>
 
         <div className="grid grid-cols-2 gap-5">
-          <div>
-            <div className="text-2xl font-semibold mb-3">
-              The bread and butter
-            </div>
-            <Card className="p-2">Test</Card>
-          </div>
-
-          <div>
-            <div className="text-2xl font-semibold mb-3">
-              Other toys I&apos;ve played with
-            </div>
-
-            <Card className="p-2">Test</Card>
-          </div>
+          <SubSectionLayout title="The bread and butter">Test</SubSectionLayout>
+          <SubSectionLayout title="Other toys I've played with">
+            Test2
+          </SubSectionLayout>
         </div>
       </div>
     </div>
