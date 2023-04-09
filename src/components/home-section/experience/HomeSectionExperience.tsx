@@ -49,7 +49,7 @@ export default function HomeSectionExperience() {
         </div>
 
         <div className="flex flex-col items-center">
-          <div>See where I applied them</div>
+          <div>Wanna see them at work?</div>
           <div>Let's work together?</div>
         </div>
       </div>
