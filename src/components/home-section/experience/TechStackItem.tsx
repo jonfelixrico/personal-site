@@ -26,7 +26,7 @@ function SubItem(props: TechSubItem) {
       placement="top"
       mouseLeaveDelay={0}
     >
-      <div className="relative h-8 w-8 cursor-help">
+      <div className="relative h-6 w-6 cursor-help">
         <Image
           alt={`Icon of ${props.name}`}
           src={props.iconSrc}
@@ -53,7 +53,7 @@ export default function TechStackItem(props: TechStackItemProps) {
         <div className="text-xl font-semibold">{props.name}</div>
 
         <ConditionallyRender render={!!props.items?.length}>
-          <div className="flex flex-row gap-1">
+          <div className="flex flex-row gap-1 items-center">
             {props.items?.map((item) => (
               <SubItem
                 iconSrc={item.iconSrc}
