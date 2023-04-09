@@ -1,6 +1,6 @@
 import { createElement, ReactNode } from 'react'
 
-export default function Tag(props: {
+export default function FakeElement(props: {
   children?: ReactNode
   name: string
   className?: string
