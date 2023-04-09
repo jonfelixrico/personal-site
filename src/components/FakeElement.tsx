@@ -1,16 +1,18 @@
 import { createElement, ReactNode } from 'react'
+import classnames from 'classnames'
 
 export default function FakeElement(props: {
   children?: ReactNode
   name: string
   className?: string
+  tagClass?: string
   tag?: string
 }) {
   if (!props.children) {
     return createElement(
       props.tag ?? 'div',
       {
-        className: props.className,
+        className: classnames(props.className, props.tagClass),
       },
       <>&lt;{props.name}&nbsp;/&gt;</>
     )
@@ -22,7 +24,9 @@ export default function FakeElement(props: {
       className: props.className,
     },
     <>
-      &lt;{props.name}&gt;{props.children}&lt;/{props.name}&gt;
+      <span className={props.tagClass}>&lt;{props.name}&gt;</span>
+      <span>{props.children}</span>
+      <span className={props.tagClass}>&lt;/{props.name}&gt;</span>
     </>
   )
 }
