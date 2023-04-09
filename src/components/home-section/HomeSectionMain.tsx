@@ -1,12 +1,12 @@
 export default function HomeSectionMain() {
   return (
     <div className="h-screen flex flex-col justify-center">
-      <div className="mb-10 text-8xl font-sans font-semibold">
+      <div className="mb-10 text-8xl font-semibold">
         <div>Jon Felix Rico,</div>
-        <div className="text-primary">web developer.</div>
+        <div className="text-primary font-mono">&lt;web developer /&gt;</div>
       </div>
 
-      <div className="font-mono w-4/6">
+      <div className="w-4/6">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
