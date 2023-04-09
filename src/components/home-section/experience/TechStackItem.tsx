@@ -13,31 +13,37 @@ export interface TechStackItemProps {
   items?: TechSubItem[]
 }
 
-function SubItem({ tech }: { tech: TechSubItem }) {
+function SubItem(props: TechSubItem) {
   return (
     <div className="relative h-8 w-8">
-      <Image alt={`Icon of ${tech.name}`} src={tech.iconSrc} fill />
+      <Image alt={`Icon of ${props.name}`} src={props.iconSrc} fill />
     </div>
   )
 }
 
-export default function TechStackItem({ tech }: { tech: TechStackItemProps }) {
+export default function TechStackItem(props: TechStackItemProps) {
   return (
     <div className="grid grid-cols-12 gap-2">
       <div className="relative">
-        <Image alt={`Icon of ${tech.name}`} src={tech.iconSrc} fill />
+        <Image alt={`Icon of ${props.name}`} src={props.iconSrc} fill />
       </div>
       <div className="col-span-11 flex flex-row justify-between items-center">
-        <div className="text-xl font-semibold">{tech.name}</div>
+        <div className="text-xl font-semibold">{props.name}</div>
 
-        <ConditionallyRender render={!!tech.items?.length}>
+        <ConditionallyRender render={!!props.items?.length}>
           <div className="flex flex-row gap-1">
-            {tech.items?.map((data) => SubItem({ tech: data }))}
+            {props.items?.map((item) => (
+              <SubItem
+                iconSrc={item.iconSrc}
+                name={item.name}
+                key={item.name}
+              />
+            ))}
           </div>
         </ConditionallyRender>
       </div>
 
-      <div className="col-start-2 col-span-11">{tech.testimony}</div>
+      <div className="col-start-2 col-span-11">{props.testimony}</div>
     </div>
   )
 }

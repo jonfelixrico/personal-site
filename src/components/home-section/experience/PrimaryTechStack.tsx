@@ -61,7 +61,13 @@ export default function PrimaryTechStack() {
   return (
     <div className="flex flex-col gap-4">
       {ITEMS.map((data) => (
-        <TechStackItem tech={data} key={data.name} />
+        <TechStackItem
+          iconSrc={data.iconSrc}
+          name={data.name}
+          items={data.items}
+          testimony={data.testimony}
+          key={data.name}
+        />
       ))}
     </div>
   )

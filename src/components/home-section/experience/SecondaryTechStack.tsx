@@ -83,7 +83,13 @@ export default function SecondaryTechStack() {
     <div className="flex flex-col gap-4">
       {ITEMS.slice(0, isExpanded ? undefined : COLLAPSED_ITEM_COUNT).map(
         (data) => (
-          <TechStackItem tech={data} key={data.name} />
+          <TechStackItem
+            iconSrc={data.iconSrc}
+            name={data.name}
+            items={data.items}
+            testimony={data.testimony}
+            key={data.name}
+          />
         )
       )}
 
