@@ -1,10 +1,7 @@
 import Card from '@/components/Card'
 import { ReactNode } from 'react'
 
-export function SubSectionLayout(props: {
-  title: string
-  children: ReactNode
-}) {
+function SubSectionLayout(props: { title: string; children: ReactNode }) {
   return (
     <div className="flex flex-col gap-3">
       <div className="text-2xl font-semibold">{props.title}</div>

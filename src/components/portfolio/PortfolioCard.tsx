@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import Card from '@/components/Card'
 
-export function Content(props: {
+function Content(props: {
   details: ReactNode
   preview: ReactNode
   reverse?: boolean
