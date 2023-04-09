@@ -8,7 +8,6 @@ const classNames = cnFactory.bind(styles)
 
 function NavLink(props: { href: string; children: ReactNode }) {
   const router = useRouter()
-
   const isActive = router.asPath === props.href
 
   return (
