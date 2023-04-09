@@ -1,5 +1,6 @@
 import Card from '@/components/Card'
 import { ReactNode } from 'react'
+import PrimaryTechStack from './PrimaryTechStack'
 import SecondaryTechStack from './SecondaryTechStack'
 import TechStackItem, { Tech } from './TechStackItem'
 
@@ -11,48 +12,6 @@ function SubSectionLayout(props: { title: string; children: ReactNode }) {
     </div>
   )
 }
-
-const BREAD_AND_BUTTER: Tech[] = [
-  {
-    iconSrc: 'tech-stack/vue-js.svg',
-    name: 'Vue.js',
-    testimony:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-    items: [
-      {
-        iconSrc: 'tech-stack/quasar-framework.svg',
-        name: 'Quasar Framework',
-      },
-      {
-        iconSrc: 'tech-stack/typescript.svg',
-        name: 'TypeScript',
-      },
-    ],
-  },
-
-  {
-    iconSrc: 'tech-stack/nest-js.svg',
-    name: 'Nest.js',
-    testimony:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-    items: [
-      {
-        iconSrc: 'tech-stack/express-js.svg',
-        name: 'Express.js',
-      },
-      {
-        iconSrc: 'tech-stack/typescript.svg',
-        name: 'TypeScript',
-      },
-    ],
-  },
-  {
-    iconSrc: 'tech-stack/mongodb.svg',
-    name: 'MongoDB',
-    testimony:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-  },
-]
 
 export default function HomeSectionExperience() {
   return (
@@ -82,9 +41,7 @@ export default function HomeSectionExperience() {
 
         <div className="grid grid-cols-2 gap-5">
           <SubSectionLayout title="The bread and butter">
-            <div className="flex flex-col gap-3">
-              {BREAD_AND_BUTTER.map((data) => TechStackItem({ tech: data }))}
-            </div>
+            <PrimaryTechStack />
           </SubSectionLayout>
           <SubSectionLayout title="Other fun stuff that I've played with">
             <SecondaryTechStack />
