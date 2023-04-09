@@ -1,5 +1,6 @@
 import Card from '@/components/Card'
 import { ReactNode } from 'react'
+import TechStackItem, { TechStackItemData } from './TechStackItem'
 
 function SubSectionLayout(props: { title: string; children: ReactNode }) {
   return (
@@ -9,6 +10,9 @@ function SubSectionLayout(props: { title: string; children: ReactNode }) {
     </div>
   )
 }
+
+const BREAD_AND_BUTTER: TechStackItemData[] = []
+const OTHERS: TechStackItemData[] = []
 
 export default function HomeSectionExperience() {
   return (
@@ -37,9 +41,11 @@ export default function HomeSectionExperience() {
         </div>
 
         <div className="grid grid-cols-2 gap-5">
-          <SubSectionLayout title="The bread and butter">Test</SubSectionLayout>
+          <SubSectionLayout title="The bread and butter">
+            {BREAD_AND_BUTTER.map(TechStackItem)}
+          </SubSectionLayout>
           <SubSectionLayout title="Other toys I've played with">
-            Test2
+            {OTHERS.map(TechStackItem)}
           </SubSectionLayout>
         </div>
       </div>
