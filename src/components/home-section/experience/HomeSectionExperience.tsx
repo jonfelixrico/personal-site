@@ -45,6 +45,12 @@ const BREAD_AND_BUTTER: Tech[] = [
       },
     ],
   },
+  {
+    iconSrc: 'tech-stack/mongodb.svg',
+    name: 'MongoDB',
+    testimony:
+      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+  },
 ]
 const OTHERS: Tech[] = [
   {
@@ -104,12 +110,6 @@ const OTHERS: Tech[] = [
   {
     iconSrc: 'tech-stack/postgresql.svg',
     name: 'PostgreSQL',
-    testimony:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-  },
-  {
-    iconSrc: 'tech-stack/mongodb.svg',
-    name: 'MongoDB',
     testimony:
       'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
   },
