@@ -2,8 +2,14 @@ import { createElement, ReactNode } from 'react'
 
 export default function SelfClosingTag(props: {
   children?: ReactNode
-  classNames?: string
+  className?: string
   tag?: string
 }) {
-  return <>&lt;{props.children}&nbsp;/&gt;</>
+  return createElement(
+    props.tag ?? 'div',
+    {
+      className: props.className,
+    },
+    <>&lt;{props.children}&nbsp;/&gt;</>
+  )
 }
