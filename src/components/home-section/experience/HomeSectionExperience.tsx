@@ -39,6 +39,10 @@ const BREAD_AND_BUTTER: Tech[] = [
         iconSrc: 'tech-stack/typescript.svg',
         name: 'TypeScript',
       },
+      {
+        iconSrc: 'tech-stack/express-js.svg',
+        name: 'Express.js',
+      },
     ],
   },
 ]
