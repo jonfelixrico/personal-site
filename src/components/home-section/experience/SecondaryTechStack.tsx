@@ -107,6 +107,16 @@ function ItemGithubActions() {
   )
 }
 
+function ItemNginx() {
+  return (
+    <TechStackItem
+      iconSrc="tech-stack/nginx.svg"
+      name="NGINX"
+      testimony="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+    />
+  )
+}
+
 const TECH_ITEMS = [
   ItemAngular,
   ItemReact,
@@ -115,6 +125,7 @@ const TECH_ITEMS = [
   ItemDiscordJs,
   ItemEventStoreDb,
   ItemGithubActions,
+  ItemNginx,
 ]
 
 function DynamicComponent(props: { is: () => JSX.Element }) {
