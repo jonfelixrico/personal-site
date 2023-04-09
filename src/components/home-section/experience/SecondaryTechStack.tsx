@@ -28,6 +28,7 @@ function ItemReact() {
     {
       iconSrc: 'tech-stack/next-js.svg',
       name: 'Next.js',
+      iconClass: 'invert',
     },
     {
       iconSrc: 'tech-stack/tailwind-css.svg',
