@@ -39,13 +39,18 @@ export default function HomeSectionExperience() {
           voluptas nulla pariatur?
         </div>
 
-        <div className="grid grid-cols-2 gap-5">
+        <div className="grid grid-cols-2 gap-5 mb-10">
           <SubSectionLayout title="The bread and butter">
             <PrimaryTechStack />
           </SubSectionLayout>
           <SubSectionLayout title="Other fun stuff that I've played with">
             <SecondaryTechStack />
           </SubSectionLayout>
+        </div>
+
+        <div className="flex flex-col items-center">
+          <div>See where I applied them</div>
+          <div>Let's work together?</div>
         </div>
       </div>
     </div>
