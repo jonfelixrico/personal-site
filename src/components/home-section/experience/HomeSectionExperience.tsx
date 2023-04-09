@@ -6,12 +6,30 @@ function SubSectionLayout(props: { title: string; children: ReactNode }) {
   return (
     <div className="flex flex-col gap-3">
       <div className="text-2xl font-semibold">{props.title}</div>
-      <Card className="p-2 flex-grow">{props.children}</Card>
+      <Card className="p-4 flex-grow">{props.children}</Card>
     </div>
   )
 }
 
 const BREAD_AND_BUTTER: TechStackItemData[] = [
+  {
+    iconSrc: 'tech-stack/quasar-framework.svg',
+    name: 'Quasar Framework',
+    testimony:
+      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+  },
+  {
+    iconSrc: 'tech-stack/vue-js.svg',
+    name: 'Vue.js',
+    testimony:
+      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+  },
+  {
+    iconSrc: 'tech-stack/typescript.svg',
+    name: 'TypeScript',
+    testimony:
+      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+  },
   {
     iconSrc: 'tech-stack/nest-js.svg',
     name: 'Nest.js',
@@ -23,7 +41,7 @@ const OTHERS: TechStackItemData[] = []
 
 export default function HomeSectionExperience() {
   return (
-    <div className="h-screen py-10">
+    <div className="min-h-screen py-10">
       <div className="row-start-2 row-span-4">
         <div className="mb-5">
           <div className="text-5xl font-semibold mb-2">Experience</div>
@@ -49,7 +67,9 @@ export default function HomeSectionExperience() {
 
         <div className="grid grid-cols-2 gap-5">
           <SubSectionLayout title="The bread and butter">
-            {BREAD_AND_BUTTER.map(TechStackItem)}
+            <div className="flex flex-col gap-3">
+              {BREAD_AND_BUTTER.map(TechStackItem)}
+            </div>
           </SubSectionLayout>
           <SubSectionLayout title="Other toys I've played with">
             {OTHERS.map(TechStackItem)}
