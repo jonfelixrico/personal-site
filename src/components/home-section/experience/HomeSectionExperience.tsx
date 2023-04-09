@@ -69,6 +69,10 @@ const OTHERS: Tech[] = [
         iconSrc: 'tech-stack/typescript.svg',
         name: 'TypeScript',
       },
+      {
+        iconSrc: 'tech-stack/next-js.svg',
+        name: 'Next.js',
+      },
     ],
   },
 ]
