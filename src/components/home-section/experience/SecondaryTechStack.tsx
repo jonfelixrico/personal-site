@@ -87,11 +87,13 @@ export default function SecondaryTechStack() {
         )
       )}
 
-      <div
-        className="text-center cursor-pointer"
-        onClick={() => setExpanded(!isExpanded)}
-      >
-        {isExpanded ? 'Show less' : 'Show more...'}
+      <div className="flex flex-row justify-center">
+        <div
+          className="cursor-pointer"
+          onClick={() => setExpanded(!isExpanded)}
+        >
+          {isExpanded ? 'Show less' : 'Show more...'}
+        </div>
       </div>
     </div>
   )
