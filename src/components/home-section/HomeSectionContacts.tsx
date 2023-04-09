@@ -1,6 +1,8 @@
-export default function HomeSectionContacts() {
+import classnames from 'classnames'
+
+export default function HomeSectionContacts(props: { className?: string }) {
   return (
-    <div className="h-screen grid grid-rows-6">
+    <div className={classnames('grid grid-rows-6', props.className)}>
       <div className="row-start-2 row-span-4">
         <div className="mb-5 flex flex-row items-center">
           <div className="font-sans text-4xl font-semibold mr-5">Contacts</div>

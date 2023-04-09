@@ -2,6 +2,7 @@ import Card from '@/components/Card'
 import { ReactNode } from 'react'
 import PrimaryTechStack from './PrimaryTechStack'
 import SecondaryTechStack from './SecondaryTechStack'
+import classnames from 'classnames'
 
 function SubSectionLayout(props: { title: string; children: ReactNode }) {
   return (
@@ -12,9 +13,9 @@ function SubSectionLayout(props: { title: string; children: ReactNode }) {
   )
 }
 
-export default function HomeSectionExperience() {
+export default function HomeSectionExperience(props: { className?: string }) {
   return (
-    <div className="min-h-screen py-10">
+    <div className={classnames('py-10', props.className)}>
       <div className="row-start-2 row-span-4">
         <div className="mb-5">
           <div className="font-mono text-5xl font-semibold text-primary">

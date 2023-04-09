@@ -1,6 +1,10 @@
-export default function HomeSectionMain() {
+import classnames from 'classnames'
+
+export default function HomeSectionMain(props: { className?: string }) {
   return (
-    <div className="h-screen flex flex-col justify-center">
+    <div
+      className={classnames('flex flex-col justify-center', props.className)}
+    >
       <div className="mb-10 text-8xl font-semibold">
         <div>Jon Felix Rico,</div>
         <div className="text-primary font-mono">&lt;web-developer /&gt;</div>

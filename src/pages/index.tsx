@@ -11,21 +11,18 @@ export default function Home() {
       </Head>
 
       <div className="snap-y snap-proximity overflow-y-auto h-screen">
-        <section className="snap-normal snap-start border-b">
-          <div className="mx-auto max-w-screen-lg ">
-            <HomeSectionMain />
-          </div>
+        <section className="snap-always snap-start h-screen">
+          <HomeSectionMain className="h-full mx-auto max-w-screen-lg" />
         </section>
-        <section className="snap-normal snap-start border-b">
-          <div className="mx-auto max-w-screen-lg ">
-            <HomeSectionExperience />
-          </div>
-        </section>
-        <section className="snap-normal snap-start">
-          <div className="mx-auto max-w-screen-lg ">
-            <HomeSectionContacts />
-          </div>
-        </section>
+
+        <div className="snap-always snap-start">
+          <section>
+            <HomeSectionExperience className="mx-auto max-w-screen-lg min-h-screen" />
+          </section>
+          <section>
+            <HomeSectionContacts className="mx-auto max-w-screen-lg min-h-screen" />
+          </section>
+        </div>
       </div>
     </>
   )
