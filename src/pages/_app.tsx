@@ -8,7 +8,10 @@ export default function App({ Component, pageProps }: AppProps) {
       <header className="px-8 fixed w-screen">
         <Navbar />
       </header>
-      <Component {...pageProps} />
+
+      <main className="bg-gray-100">
+        <Component {...pageProps} />
+      </main>
     </>
   )
 }
