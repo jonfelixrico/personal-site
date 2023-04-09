@@ -17,19 +17,18 @@ const BREAD_AND_BUTTER: TechStackItemData[] = [
     name: 'Quasar Framework',
     testimony:
       'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+    subItems: [
+      {
+        iconSrc: 'tech-stack/vue-js.svg',
+        name: 'Vue.js',
+      },
+      {
+        iconSrc: 'tech-stack/typescript.svg',
+        name: 'TypeScript',
+      },
+    ],
   },
-  {
-    iconSrc: 'tech-stack/vue-js.svg',
-    name: 'Vue.js',
-    testimony:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-  },
-  {
-    iconSrc: 'tech-stack/typescript.svg',
-    name: 'TypeScript',
-    testimony:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-  },
+
   {
     iconSrc: 'tech-stack/nest-js.svg',
     name: 'Nest.js',
