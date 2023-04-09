@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import PortfolioList from '@/components/portfolio/PortfolioList'
+import FakeElement from '@/components/FakeElement'
 
 export default function Portfolio() {
   return (
@@ -10,11 +11,14 @@ export default function Portfolio() {
 
       <div className="min-h-screen">
         <div className="mx-auto max-w-screen-lg py-10">
-          <div className="mb-5 flex flex-row items-center">
-            <div className="font-sans text-4xl font-semibold mr-5">
-              Some of my work
+          <div className="mb-10">
+            <FakeElement
+              className="font-mono text-5xl font-semibold text-primary"
+              name="experience"
+            />
+            <div className="font-mono text-secondary text-2xl">
+              &#47;&#47; lorem ipsum dolor
             </div>
-            <div className="border-b flex-grow" />
           </div>
 
           <PortfolioList />
