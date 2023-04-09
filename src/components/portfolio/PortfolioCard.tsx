@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
+import Card from '@/components/Card'
 
-export function Content(props: {
+function Content(props: {
   details: ReactNode
   preview: ReactNode
   reverse?: boolean
@@ -28,12 +29,12 @@ export default function PortfolioCard(props: {
   reverse?: boolean
 }) {
   return (
-    <div className="grid grid-cols-5 grid-rows-1 rounded-lg shadow-md overflow-hidden bg-white">
+    <Card className="grid grid-cols-5 grid-rows-1 h-full w-full">
       <Content
         details={props.details}
         preview={props.preview}
         reverse={props.reverse}
       />
-    </div>
+    </Card>
   )
 }

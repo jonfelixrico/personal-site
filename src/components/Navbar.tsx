@@ -4,7 +4,7 @@ import cnFactory from 'classnames/bind'
 import { useRouter } from 'next/router'
 import { ReactNode } from 'react'
 
-const classNames = cnFactory.bind(styles)
+const classnames = cnFactory.bind(styles)
 
 function NavLink(props: { href: string; children: ReactNode }) {
   const router = useRouter()
@@ -13,7 +13,8 @@ function NavLink(props: { href: string; children: ReactNode }) {
   return (
     <Link
       href={props.href}
-      className={classNames('navlink', { active: isActive })}
+      // TODO use primary color
+      className={classnames('navlink', { 'text-blue-500': isActive })}
     >
       {props.children}
     </Link>
@@ -23,7 +24,7 @@ function NavLink(props: { href: string; children: ReactNode }) {
 export default function Navbar() {
   return (
     <nav
-      className={classNames(
+      className={classnames(
         'flex flex-row items-center justify-end gap-5',
         styles.navbar
       )}

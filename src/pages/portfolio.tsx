@@ -8,7 +8,7 @@ export default function Portfolio() {
         <title>Jon Felix Rico • Portfolio</title>
       </Head>
 
-      <main className="min-h-screen bg-gray-100">
+      <div className="min-h-screen">
         <div className="mx-auto max-w-screen-lg py-10">
           <div className="mb-5 flex flex-row items-center">
             <div className="font-sans text-4xl font-semibold mr-5">
@@ -19,7 +19,7 @@ export default function Portfolio() {
 
           <PortfolioList />
         </div>
-      </main>
+      </div>
     </>
   )
 }
