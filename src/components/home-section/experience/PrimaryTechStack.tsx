@@ -17,7 +17,6 @@ const ITEMS: Tech[] = [
       },
     ],
   },
-
   {
     iconSrc: 'tech-stack/nest-js.svg',
     name: 'Nest.js',
@@ -39,6 +38,22 @@ const ITEMS: Tech[] = [
     name: 'MongoDB',
     testimony:
       'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+  },
+  {
+    iconSrc: 'tech-stack/database.svg',
+    name: 'Relational Databases',
+    testimony:
+      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+    items: [
+      {
+        iconSrc: 'tech-stack/postgresql.svg',
+        name: 'PostgreSQL',
+      },
+      {
+        iconSrc: 'tech-stack/mysql.svg',
+        name: 'MySQL',
+      },
+    ],
   },
 ]
 
