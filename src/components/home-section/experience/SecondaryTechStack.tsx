@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import TechStackItem, { Tech } from './TechStackItem'
+import TechStackItem, { TechStackItemProps } from './TechStackItem'
 
-const ITEMS: Tech[] = [
+const ITEMS: TechStackItemProps[] = [
   {
     iconSrc: 'tech-stack/angular.svg',
     name: 'Angular',

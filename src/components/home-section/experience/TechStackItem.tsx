@@ -6,7 +6,7 @@ export interface TechSubItem {
   name: string
 }
 
-export interface Tech {
+export interface TechStackItemProps {
   iconSrc: string
   name: string
   testimony: string
@@ -21,7 +21,7 @@ function SubItem({ tech }: { tech: TechSubItem }) {
   )
 }
 
-export default function TechStackItem({ tech }: { tech: Tech }) {
+export default function TechStackItem({ tech }: { tech: TechStackItemProps }) {
   return (
     <div className="grid grid-cols-12 gap-2">
       <div className="relative">

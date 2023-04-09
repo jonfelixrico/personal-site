@@ -1,6 +1,6 @@
-import TechStackItem, { Tech } from './TechStackItem'
+import TechStackItem, { TechStackItemProps } from './TechStackItem'
 
-const ITEMS: Tech[] = [
+const ITEMS: TechStackItemProps[] = [
   {
     iconSrc: 'tech-stack/vue-js.svg',
     name: 'Vue.js',
