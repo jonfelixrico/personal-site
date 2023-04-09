@@ -46,7 +46,32 @@ const BREAD_AND_BUTTER: Tech[] = [
     ],
   },
 ]
-const OTHERS: Tech[] = []
+const OTHERS: Tech[] = [
+  {
+    iconSrc: 'tech-stack/angular.svg',
+    name: 'Angular',
+    testimony:
+      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+    items: [
+      {
+        iconSrc: 'tech-stack/typescript.svg',
+        name: 'TypeScript',
+      },
+    ],
+  },
+  {
+    iconSrc: 'tech-stack/react.svg',
+    name: 'React',
+    testimony:
+      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+    items: [
+      {
+        iconSrc: 'tech-stack/typescript.svg',
+        name: 'TypeScript',
+      },
+    ],
+  },
+]
 
 export default function HomeSectionExperience() {
   return (
@@ -81,7 +106,9 @@ export default function HomeSectionExperience() {
             </div>
           </SubSectionLayout>
           <SubSectionLayout title="Other fun stuff that I've played with">
-            {OTHERS.map((data) => TechStackItem({ tech: data }))}
+            <div className="flex flex-col gap-3">
+              {OTHERS.map((data) => TechStackItem({ tech: data }))}
+            </div>
           </SubSectionLayout>
         </div>
       </div>
