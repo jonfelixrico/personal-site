@@ -17,8 +17,12 @@ export default function HomeSectionExperience() {
     <div className="min-h-screen py-10">
       <div className="row-start-2 row-span-4">
         <div className="mb-5">
-          <div className="text-5xl font-semibold mb-2">Experience</div>
-          <div>Lorem ipsum dolor.</div>
+          <div className="font-mono text-5xl font-semibold text-primary">
+            &lt;experience /&gt;
+          </div>
+          <div className="font-mono text-secondary text-xl">
+            &#47;&#47; lorem ipsum dolor
+          </div>
         </div>
 
         <div className="mb-5">
