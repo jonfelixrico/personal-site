@@ -8,7 +8,7 @@ export default function Card(props: {
   return (
     <div
       className={classnames(
-        'rounded-lg shadow-md overflow-hidden bg-white',
+        'rounded-lg shadow-md overflow-hidden bg-white bg-card',
         props.className
       )}
     >
