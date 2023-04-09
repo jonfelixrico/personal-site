@@ -15,7 +15,7 @@ export interface Tech {
 
 function SubItem({ tech }: { tech: TechSubItem }) {
   return (
-    <div className="relative h-6 w-6">
+    <div className="relative h-8 w-8">
       <Image alt={`Icon of ${tech.name}`} src={tech.iconSrc} fill />
     </div>
   )
