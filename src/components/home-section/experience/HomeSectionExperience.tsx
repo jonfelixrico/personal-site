@@ -47,11 +47,6 @@ export default function HomeSectionExperience() {
             <SecondaryTechStack />
           </SubSectionLayout>
         </div>
-
-        <div className="flex flex-col items-center">
-          <div>See the tech at work</div>
-          <div>Let&apos;s work together!</div>
-        </div>
       </div>
     </div>
   )
