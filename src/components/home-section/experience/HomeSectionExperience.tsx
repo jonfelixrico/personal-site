@@ -70,7 +70,7 @@ export default function HomeSectionExperience() {
               {BREAD_AND_BUTTER.map((data) => TechStackItem({ tech: data }))}
             </div>
           </SubSectionLayout>
-          <SubSectionLayout title="Other toys I've played with">
+          <SubSectionLayout title="Other fun stuff that I've played with">
             {OTHERS.map((data) => TechStackItem({ tech: data }))}
           </SubSectionLayout>
         </div>
