@@ -14,7 +14,6 @@ function NavLink(props: { href: string; name: string }) {
   return (
     <Link
       href={props.href}
-      // TODO use primary color
       className={classnames('font-semibold', { 'text-accent': isActive })}
     >
       <FakeElement name={props.name} />
