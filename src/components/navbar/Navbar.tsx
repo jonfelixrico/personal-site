@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import styles from '@/styles/Navbar.module.scss'
+import styles from './Navbar.module.scss'
 import cnFactory from 'classnames/bind'
 
 const classNames = cnFactory.bind(styles)
