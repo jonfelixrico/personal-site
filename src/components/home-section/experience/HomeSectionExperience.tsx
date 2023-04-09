@@ -83,6 +83,18 @@ const OTHERS: Tech[] = [
       },
     ],
   },
+  {
+    iconSrc: 'tech-stack/spring-boot.svg',
+    name: 'Spring Boot',
+    testimony:
+      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+    items: [
+      {
+        iconSrc: 'tech-stack/java.svg',
+        name: 'Next.js',
+      },
+    ],
+  },
 ]
 
 export default function HomeSectionExperience() {
