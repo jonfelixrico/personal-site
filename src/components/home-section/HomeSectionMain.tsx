@@ -3,7 +3,7 @@ export default function HomeSectionMain() {
     <div className="h-screen flex flex-col justify-center">
       <div className="mb-10 text-8xl font-sans font-semibold">
         <div>Jon Felix Rico,</div>
-        <div>web developer.</div>
+        <div className="text-primary">web developer.</div>
       </div>
 
       <div className="font-mono w-4/6">

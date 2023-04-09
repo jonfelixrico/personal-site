@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <Navbar />
       </header>
 
-      <main className="bg-gray-100">
+      <main className="bg-app text-body">
         <Component {...pageProps} />
       </main>
     </>
