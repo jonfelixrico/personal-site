@@ -1,4 +1,4 @@
-import TechStackItem, { TechStackItemProps } from './TechStackItem'
+import TechStackItem from './TechStackItem'
 
 function ItemVue() {
   const ITEMS = [
