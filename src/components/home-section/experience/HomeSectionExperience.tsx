@@ -11,7 +11,14 @@ function SubSectionLayout(props: { title: string; children: ReactNode }) {
   )
 }
 
-const BREAD_AND_BUTTER: TechStackItemData[] = []
+const BREAD_AND_BUTTER: TechStackItemData[] = [
+  {
+    iconSrc: 'tech-stack/nest-js.svg',
+    name: 'Nest.js',
+    testimony:
+      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+  },
+]
 const OTHERS: TechStackItemData[] = []
 
 export default function HomeSectionExperience() {
