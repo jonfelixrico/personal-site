@@ -31,7 +31,7 @@ function ItemReact() {
     },
     {
       iconSrc: 'tech-stack/tailwind-css.svg',
-      name: 'TailwindCSS',
+      name: 'Tailwind CSS',
     },
     {
       iconSrc: 'tech-stack/typescript.svg',
@@ -53,7 +53,7 @@ function ItemSpringBoot() {
   const ITEMS = [
     {
       iconSrc: 'tech-stack/java.svg',
-      name: 'Next.js',
+      name: 'Java',
     },
   ]
 
