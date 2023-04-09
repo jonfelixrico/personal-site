@@ -1,3 +1,5 @@
+import Card from '@/components/Card'
+
 export default function HomeSectionExperience() {
   return (
     <div className="h-screen py-10">
@@ -24,29 +26,20 @@ export default function HomeSectionExperience() {
           voluptas nulla pariatur?
         </div>
 
-        <div className="mb-5">
-          <div className="text-2xl font-semibold mb-3">
-            The bread and butter
+        <div className="grid grid-cols-2 gap-5">
+          <div>
+            <div className="text-2xl font-semibold mb-3">
+              The bread and butter
+            </div>
+            <Card className="p-2">Test</Card>
           </div>
 
-          <div className="grid grid-cols-3 gap-3">
-            {/* todo add tech stack here */}
-            <div className="border">test</div>
-            <div className="border">test</div>
-            <div className="border">test</div>
-          </div>
-        </div>
+          <div>
+            <div className="text-2xl font-semibold mb-3">
+              Other toys I&apos;ve played with
+            </div>
 
-        <div>
-          <div className="text-2xl font-semibold mb-3">
-            Other toys that I have played with
-          </div>
-
-          <div className="grid grid-cols-3 gap-3">
-            {/* todo add tech stack here */}
-            <div className="border">test</div>
-            <div className="border">test</div>
-            <div className="border">test</div>
+            <Card className="p-2">Test</Card>
           </div>
         </div>
       </div>
