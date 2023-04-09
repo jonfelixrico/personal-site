@@ -11,17 +11,17 @@ export default function Home() {
         <title>Jon Felix Rico • Home</title>
       </Head>
 
-      <div className="snap-y snap-mandatory overflow-y-auto h-screen">
-        <section className="mx-auto max-w-screen-lg snap-always snap-start">
+      <div className="snap-y snap-proximity overflow-y-auto h-screen">
+        <section className="mx-auto max-w-screen-lg snap-normal snap-start">
           <HomeSectionMain />
         </section>
-        <section className="mx-auto max-w-screen-lg snap-always snap-start">
+        <section className="mx-auto max-w-screen-lg snap-normal snap-start">
           <HomeSectionAboutMe />
         </section>
-        <section className="mx-auto max-w-screen-lg snap-always snap-start">
+        <section className="mx-auto max-w-screen-lg snap-normal snap-start">
           <HomeSectionExperience />
         </section>
-        <section className="mx-auto max-w-screen-lg snap-always snap-start">
+        <section className="mx-auto max-w-screen-lg snap-normal snap-start">
           <HomeSectionContacts />
         </section>
       </div>
