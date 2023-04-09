@@ -80,7 +80,7 @@ const COLLAPSED_ITEM_COUNT = 4
 export default function SecondaryTechStack() {
   const [isExpanded, setExpanded] = useState(false)
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-4">
       {ITEMS.slice(0, isExpanded ? undefined : COLLAPSED_ITEM_COUNT).map(
         (data) => (
           <TechStackItem tech={data} key={data.name} />

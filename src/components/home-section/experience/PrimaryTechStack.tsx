@@ -59,7 +59,7 @@ const ITEMS: Tech[] = [
 
 export default function PrimaryTechStack() {
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-4">
       {ITEMS.map((data) => (
         <TechStackItem tech={data} key={data.name} />
       ))}
