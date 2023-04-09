@@ -1,6 +1,6 @@
 export default function HomeSectionExperience() {
   return (
-    <div className="h-screen grid grid-rows-6">
+    <div className="h-screen py-10">
       <div className="row-start-2 row-span-4">
         <div className="mb-5">
           <div className="text-5xl font-semibold mb-2">Experience</div>
@@ -24,23 +24,30 @@ export default function HomeSectionExperience() {
           voluptas nulla pariatur?
         </div>
 
-        <div className="text-xl font-sans font-semibold mb-3">
-          Some of the tech I have worked with:
+        <div className="mb-5">
+          <div className="text-2xl font-semibold mb-3">
+            The bread and butter
+          </div>
+
+          <div className="grid grid-cols-3 gap-3">
+            {/* todo add tech stack here */}
+            <div className="border">test</div>
+            <div className="border">test</div>
+            <div className="border">test</div>
+          </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-3">
-          {/* todo add tech stack here */}
-          <div className="border">test</div>
-          <div className="border">test</div>
-          <div className="border">test</div>
-          <div className="border">test</div>
-          <div className="border">test</div>
-          <div className="border">test</div>
-          <div className="border">test</div>
-          <div className="border">test</div>
-          <div className="border">test</div>
-          <div className="border">test</div>
-          <div className="border">test</div>
+        <div>
+          <div className="text-2xl font-semibold mb-3">
+            Other toys that I have played with
+          </div>
+
+          <div className="grid grid-cols-3 gap-3">
+            {/* todo add tech stack here */}
+            <div className="border">test</div>
+            <div className="border">test</div>
+            <div className="border">test</div>
+          </div>
         </div>
       </div>
     </div>
