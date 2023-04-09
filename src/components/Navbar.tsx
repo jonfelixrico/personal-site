@@ -3,10 +3,11 @@ import styles from '@/styles/Navbar.module.scss'
 import cnFactory from 'classnames/bind'
 import { useRouter } from 'next/router'
 import { ReactNode } from 'react'
+import FakeElement from './FakeElement'
 
 const classnames = cnFactory.bind(styles)
 
-function NavLink(props: { href: string; children: ReactNode }) {
+function NavLink(props: { href: string; name: string }) {
   const router = useRouter()
   const isActive = router.asPath === props.href
 
@@ -14,9 +15,9 @@ function NavLink(props: { href: string; children: ReactNode }) {
     <Link
       href={props.href}
       // TODO use primary color
-      className={classnames('navlink', { 'text-accent': isActive })}
+      className={classnames('font-semibold', { 'text-accent': isActive })}
     >
-      {props.children}
+      <FakeElement name={props.name} />
     </Link>
   )
 }
@@ -29,8 +30,8 @@ export default function Navbar() {
         styles.navbar
       )}
     >
-      <NavLink href="/">home</NavLink>
-      <NavLink href="/portfolio">portfolio</NavLink>
+      <NavLink href="/" name="home" />
+      <NavLink href="/portfolio" name="portfolio" />
     </nav>
   )
 }
