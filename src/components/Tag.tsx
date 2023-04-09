@@ -6,6 +6,16 @@ export default function Tag(props: {
   className?: string
   tag?: string
 }) {
+  if (!props.children) {
+    return createElement(
+      props.tag ?? 'div',
+      {
+        className: props.className,
+      },
+      <>&lt;{props.name}&nbsp;/&gt;</>
+    )
+  }
+
   return createElement(
     props.tag ?? 'div',
     {
