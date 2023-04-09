@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import TechStackItem, { Tech } from './TechStackItem'
 
 const ITEMS: Tech[] = [
@@ -69,10 +70,23 @@ const ITEMS: Tech[] = [
   },
 ]
 
+const COLLAPSED_ITEM_COUNT = 3
 export default function SecondaryTechStack() {
+  const [isExpanded, setExpanded] = useState(false)
   return (
     <div className="flex flex-col gap-3">
-      {ITEMS.map((data) => TechStackItem({ tech: data }))}
+      {ITEMS.slice(0, isExpanded ? undefined : COLLAPSED_ITEM_COUNT).map(
+        (data) => (
+          <TechStackItem tech={data} key={data.name} />
+        )
+      )}
+
+      <div
+        className="text-center cursor-pointer"
+        onClick={() => setExpanded(!isExpanded)}
+      >
+        {isExpanded ? 'Show less' : 'Show more...'}
+      </div>
     </div>
   )
 }
