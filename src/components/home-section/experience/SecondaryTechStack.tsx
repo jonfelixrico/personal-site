@@ -132,7 +132,8 @@ export default function SecondaryTechStack() {
         )
       )}
 
-      <div className="flex flex-row justify-center">
+      {/* TODO use primary color */}
+      <div className="flex flex-row justify-center text-blue-500">
         <div
           className="cursor-pointer"
           onClick={() => setExpanded(!isExpanded)}

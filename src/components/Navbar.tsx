@@ -13,7 +13,8 @@ function NavLink(props: { href: string; children: ReactNode }) {
   return (
     <Link
       href={props.href}
-      className={classnames('navlink', { active: isActive })}
+      // TODO use primary color
+      className={classnames('navlink', { 'text-blue-500': isActive })}
     >
       {props.children}
     </Link>
