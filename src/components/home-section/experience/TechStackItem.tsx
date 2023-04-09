@@ -1,17 +1,19 @@
 import { ConditionallyRender } from '@/components/ConditionallyRender'
 import Image from 'next/image'
 
-export interface TechSubItem {
+interface TechSubItem {
   iconSrc: string
   name: string
 }
 
-export interface TechStackItemProps {
+interface TechItem {
   iconSrc: string
   name: string
   testimony: string
   items?: TechSubItem[]
 }
+
+export type TechStackItemProps = TechItem
 
 function SubItem(props: TechSubItem) {
   return (
