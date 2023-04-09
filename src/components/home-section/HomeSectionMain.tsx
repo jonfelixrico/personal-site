@@ -1,4 +1,5 @@
 import classnames from 'classnames'
+import SelfClosingTag from '../SelfClosingTag'
 
 export default function HomeSectionMain(props: { className?: string }) {
   return (
@@ -7,7 +8,9 @@ export default function HomeSectionMain(props: { className?: string }) {
     >
       <div className="mb-10 text-8xl font-semibold">
         <div>Jon Felix Rico,</div>
-        <div className="text-primary font-mono">&lt;web-developer /&gt;</div>
+        <SelfClosingTag className="text-primary font-mono">
+          web-developer
+        </SelfClosingTag>
       </div>
 
       <div className="w-4/6">
