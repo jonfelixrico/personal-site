@@ -1,14 +1,15 @@
 import classnames from 'classnames'
-import SelfClosingTag from '@/components/SelfClosingTag'
+import Tag from '@/components/Tag'
 
 export default function HomeSectionContacts(props: { className?: string }) {
   return (
     <div className={classnames('grid grid-rows-6', props.className)}>
       <div className="row-start-2 row-span-4">
         <div className="mb-5 flex flex-row items-center">
-          <SelfClosingTag className="font-mono text-5xl font-semibold text-primary">
-            contacts
-          </SelfClosingTag>
+          <Tag
+            className="font-mono text-5xl font-semibold text-primary"
+            name="contacts"
+          />
         </div>
 
         <div className="mb-5">

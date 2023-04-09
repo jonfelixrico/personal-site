@@ -3,7 +3,7 @@ import { ReactNode } from 'react'
 import PrimaryTechStack from './PrimaryTechStack'
 import SecondaryTechStack from './SecondaryTechStack'
 import classnames from 'classnames'
-import SelfClosingTag from '@/components/SelfClosingTag'
+import Tag from '@/components/Tag'
 
 function SubSectionLayout(props: { title: string; children: ReactNode }) {
   return (
@@ -19,9 +19,10 @@ export default function HomeSectionExperience(props: { className?: string }) {
     <div className={classnames('py-10', props.className)}>
       <div className="row-start-2 row-span-4">
         <div className="mb-5">
-          <SelfClosingTag className="font-mono text-5xl font-semibold text-primary">
-            experience
-          </SelfClosingTag>
+          <Tag
+            className="font-mono text-5xl font-semibold text-primary"
+            name="experience"
+          />
           <div className="font-mono text-secondary text-xl">
             &#47;&#47; lorem ipsum dolor
           </div>
