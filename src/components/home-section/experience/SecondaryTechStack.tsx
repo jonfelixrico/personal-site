@@ -51,6 +51,12 @@ const ITEMS: Tech[] = [
     ],
   },
   {
+    iconSrc: 'tech-stack/docker.svg',
+    name: 'Docker',
+    testimony:
+      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+  },
+  {
     iconSrc: 'tech-stack/discord-js.svg',
     name: 'Discord.js',
     testimony:
@@ -68,9 +74,15 @@ const ITEMS: Tech[] = [
     testimony:
       'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
   },
+  {
+    iconSrc: 'tech-stack/github-actions.svg',
+    name: 'Github Actions',
+    testimony:
+      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+  },
 ]
 
-const COLLAPSED_ITEM_COUNT = 3
+const COLLAPSED_ITEM_COUNT = 4
 export default function SecondaryTechStack() {
   const [isExpanded, setExpanded] = useState(false)
   return (
