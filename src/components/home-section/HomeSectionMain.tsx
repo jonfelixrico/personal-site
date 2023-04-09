@@ -7,7 +7,7 @@ export default function HomeSectionMain(props: { className?: string }) {
       className={classnames('flex flex-col justify-center', props.className)}
     >
       <div className="mb-10 text-8xl font-semibold">
-        <div>Jon Felix Rico,</div>
+        <div className="text-white">Jon Felix Rico,</div>
         <FakeElement className="text-primary font-mono" name="web-developer" />
       </div>
 
