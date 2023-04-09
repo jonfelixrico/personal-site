@@ -2,7 +2,6 @@ import Card from '@/components/Card'
 import { ReactNode } from 'react'
 import PrimaryTechStack from './PrimaryTechStack'
 import SecondaryTechStack from './SecondaryTechStack'
-import TechStackItem, { TechStackItemProps } from './TechStackItem'
 
 function SubSectionLayout(props: { title: string; children: ReactNode }) {
   return (
