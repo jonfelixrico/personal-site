@@ -7,7 +7,7 @@ export default function HomeSectionAboutMe() {
             &lt;about-me /&gt;
           </div>
           <div className="font-mono text-secondary text-xl">
-            // lorem ipsum dolor
+            &#47;&#47; lorem ipsum dolor
           </div>
         </div>
 
