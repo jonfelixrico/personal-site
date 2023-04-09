@@ -14,7 +14,7 @@ function NavLink(props: { href: string; children: ReactNode }) {
     <Link
       href={props.href}
       // TODO use primary color
-      className={classnames('navlink', { 'text-blue-500': isActive })}
+      className={classnames('navlink', { 'text-accent': isActive })}
     >
       {props.children}
     </Link>
@@ -25,12 +25,12 @@ export default function Navbar() {
   return (
     <nav
       className={classnames(
-        'flex flex-row items-center justify-end gap-5',
+        'flex flex-row items-center justify-end gap-5 font-mono',
         styles.navbar
       )}
     >
-      <NavLink href="/">Home</NavLink>
-      <NavLink href="/portfolio">Portfolio</NavLink>
+      <NavLink href="/">home</NavLink>
+      <NavLink href="/portfolio">portfolio</NavLink>
     </nav>
   )
 }
