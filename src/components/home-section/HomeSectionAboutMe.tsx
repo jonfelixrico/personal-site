@@ -2,9 +2,8 @@ export default function HomeSectionAboutMe() {
   return (
     <div className="h-screen grid grid-rows-6">
       <div className="row-start-2 row-span-4">
-        <div className="mb-5 flex flex-row items-center">
-          <div className="font-sans text-4xl font-semibold mr-5">About Me</div>
-          <div className="border-b flex-grow" />
+        <div className="font-mono text-4xl font-semibold mr-5 text-primary">
+          &lt;about-me /&gt;
         </div>
 
         <div className="font-mono mb-5">
