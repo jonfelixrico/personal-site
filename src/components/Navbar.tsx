@@ -9,14 +9,24 @@ const classnames = cnFactory.bind(styles)
 
 function NavLink(props: { href: string; name: string }) {
   const router = useRouter()
-  const isActive = router.asPath === props.href
+
+  if (router.asPath !== props.href) {
+    return (
+      <Link href={props.href} className="font-semibold text-accent">
+        <FakeElement name={props.name} />
+      </Link>
+    )
+  }
 
   return (
-    <Link
-      href={props.href}
-      className={classnames('font-semibold', { 'text-primary': isActive })}
-    >
-      <FakeElement name={props.name} />
+    <Link href={props.href} className="font-semibold text-accent">
+      <FakeElement
+        name={
+          <span>
+            {props.name} <span className="text-accent-2">active</span>
+          </span>
+        }
+      />
     </Link>
   )
 }
