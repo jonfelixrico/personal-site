@@ -28,6 +28,7 @@ function ItemReact() {
     {
       iconSrc: 'tech-stack/next-js.svg',
       name: 'Next.js',
+      iconClass: 'invert',
     },
     {
       iconSrc: 'tech-stack/tailwind-css.svg',
@@ -102,6 +103,7 @@ function ItemGithubActions() {
     <TechStackItem
       iconSrc="tech-stack/github-actions.svg"
       name="Github Actions"
+      iconClass="invert"
       testimony="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
     />
   )
@@ -132,8 +134,7 @@ export default function SecondaryTechStack() {
         )
       )}
 
-      {/* TODO use primary color */}
-      <div className="flex flex-row justify-center text-blue-500">
+      <div className="flex flex-row justify-center text-accent">
         <div
           className="cursor-pointer"
           onClick={() => setExpanded(!isExpanded)}

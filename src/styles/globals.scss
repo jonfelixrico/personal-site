@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-app {
+  background-color: #1e1e1e;
+}
+
+.text-app {
+  color: #cccccc;
+}
+
+.text-primary {
+  color: #be65c9;
+}
+
+.text-secondary {
+  color: #5f7831;
+}
+
+.text-accent,
+.text-accent-1 {
+  color: #4a9cd6;
+}
+
+.text-accent-2 {
+  color: #8cdcda;
+}
+
+.bg-card {
+  background-color: #252526;
+}
