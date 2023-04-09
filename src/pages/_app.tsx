@@ -8,13 +8,15 @@ import 'rc-tooltip/assets/bootstrap.css'
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <header className="px-8 fixed w-screen">
-        <Navbar />
-      </header>
+      <div className="text-app bg-app">
+        <header className="px-8 fixed w-screen">
+          <Navbar />
+        </header>
 
-      <main className="bg-app text-body">
-        <Component {...pageProps} />
-      </main>
+        <main>
+          <Component {...pageProps} />
+        </main>
+      </div>
     </>
   )
 }
