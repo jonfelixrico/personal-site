@@ -29,14 +29,12 @@ export default function PortfolioCard(props: {
   reverse?: boolean
 }) {
   return (
-    <Card>
-      <div className="grid grid-cols-5 grid-rows-1 h-full w-full">
-        <Content
-          details={props.details}
-          preview={props.preview}
-          reverse={props.reverse}
-        />
-      </div>
+    <Card className="grid grid-cols-5 grid-rows-1 h-full w-full">
+      <Content
+        details={props.details}
+        preview={props.preview}
+        reverse={props.reverse}
+      />
     </Card>
   )
 }
