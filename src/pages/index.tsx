@@ -11,7 +11,7 @@ export default function Home() {
         <title>Jon Felix Rico • Home</title>
       </Head>
 
-      <main className="snap-y snap-mandatory overflow-y-auto h-screen">
+      <main className="snap-y snap-mandatory overflow-y-auto h-screen bg-grey-100">
         <section className="mx-auto max-w-screen-lg snap-always snap-start">
           <HomeSectionMain />
         </section>
