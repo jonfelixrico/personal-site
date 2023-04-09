@@ -1,7 +1,7 @@
-import HomeSectionAboutMe from '@/components/home/HomeSectionAboutMe'
-import HomeSectionContacts from '@/components/home/HomeSectionContacts'
-import HomeSectionExperience from '@/components/home/HomeSectionExperience'
-import HomeSectionMain from '@/components/home/HomeSectionMain'
+import HomeSectionAboutMe from '@/components/home-section/HomeSectionAboutMe'
+import HomeSectionContacts from '@/components/home-section/HomeSectionContacts'
+import HomeSectionExperience from '@/components/home-section/HomeSectionExperience'
+import HomeSectionMain from '@/components/home-section/HomeSectionMain'
 import Head from 'next/head'
 
 export default function Home() {
