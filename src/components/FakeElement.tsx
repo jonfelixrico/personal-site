@@ -3,7 +3,7 @@ import classnames from 'classnames'
 
 export default function FakeElement(props: {
   children?: ReactNode
-  name: string
+  name: ReactNode
   className?: string
   tagClass?: string
   tag?: string
