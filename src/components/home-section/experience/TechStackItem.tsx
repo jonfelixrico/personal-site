@@ -53,7 +53,7 @@ export default function TechStackItem(props: TechStackItemProps) {
         </ConditionallyRender>
       </div>
 
-      <div className="col-start-2 col-span-11">{props.testimony}</div>
+      <div className="col-start-2 col-span-11 text-md">{props.testimony}</div>
     </div>
   )
 }
