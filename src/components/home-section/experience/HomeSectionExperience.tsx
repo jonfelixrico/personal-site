@@ -1,6 +1,6 @@
 import Card from '@/components/Card'
 import { ReactNode } from 'react'
-import TechStackItem, { TechStackItemData } from './TechStackItem'
+import TechStackItem, { Tech } from './TechStackItem'
 
 function SubSectionLayout(props: { title: string; children: ReactNode }) {
   return (
@@ -11,13 +11,13 @@ function SubSectionLayout(props: { title: string; children: ReactNode }) {
   )
 }
 
-const BREAD_AND_BUTTER: TechStackItemData[] = [
+const BREAD_AND_BUTTER: Tech[] = [
   {
     iconSrc: 'tech-stack/quasar-framework.svg',
     name: 'Quasar Framework',
     testimony:
       'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-    subItems: [
+    items: [
       {
         iconSrc: 'tech-stack/vue-js.svg',
         name: 'Vue.js',
@@ -36,7 +36,7 @@ const BREAD_AND_BUTTER: TechStackItemData[] = [
       'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
   },
 ]
-const OTHERS: TechStackItemData[] = []
+const OTHERS: Tech[] = []
 
 export default function HomeSectionExperience() {
   return (
@@ -67,11 +67,11 @@ export default function HomeSectionExperience() {
         <div className="grid grid-cols-2 gap-5">
           <SubSectionLayout title="The bread and butter">
             <div className="flex flex-col gap-3">
-              {BREAD_AND_BUTTER.map(TechStackItem)}
+              {BREAD_AND_BUTTER.map((data) => TechStackItem({ tech: data }))}
             </div>
           </SubSectionLayout>
           <SubSectionLayout title="Other toys I've played with">
-            {OTHERS.map(TechStackItem)}
+            {OTHERS.map((data) => TechStackItem({ tech: data }))}
           </SubSectionLayout>
         </div>
       </div>

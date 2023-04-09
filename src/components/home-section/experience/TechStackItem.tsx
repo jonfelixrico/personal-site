@@ -1,43 +1,43 @@
 import { ConditionallyRender } from '@/components/ConditionallyRender'
 import Image from 'next/image'
 
-export interface TechStackSubItemData {
+export interface TechSubItem {
   iconSrc: string
   name: string
 }
 
-export interface TechStackItemData {
+export interface Tech {
   iconSrc: string
   name: string
   testimony: string
-  subItems?: TechStackSubItemData[]
+  items?: TechSubItem[]
 }
 
-function SubItem(props: TechStackSubItemData) {
+function SubItem({ tech }: { tech: TechSubItem }) {
   return (
     <div className="relative h-6 w-6">
-      <Image alt={`Icon of ${props.name}`} src={props.iconSrc} fill />
+      <Image alt={`Icon of ${tech.name}`} src={tech.iconSrc} fill />
     </div>
   )
 }
 
-export default function TechStackItem(props: TechStackItemData) {
+export default function TechStackItem({ tech }: { tech: Tech }) {
   return (
     <div className="grid grid-cols-12 gap-2">
       <div className="relative">
-        <Image alt={`Icon of ${props.name}`} src={props.iconSrc} fill />
+        <Image alt={`Icon of ${tech.name}`} src={tech.iconSrc} fill />
       </div>
       <div className="col-span-11 flex flex-row justify-between items-center">
-        <div className="text-xl font-semibold">{props.name}</div>
+        <div className="text-xl font-semibold">{tech.name}</div>
 
-        <ConditionallyRender render={!!props.subItems?.length}>
+        <ConditionallyRender render={!!tech.items?.length}>
           <div className="flex flex-row gap-1">
-            {props.subItems?.map(SubItem)}
+            {tech.items?.map((data) => SubItem({ tech: data }))}
           </div>
         </ConditionallyRender>
       </div>
 
-      <div className="col-start-2 col-span-11">{props.testimony}</div>
+      <div className="col-start-2 col-span-11">{tech.testimony}</div>
     </div>
   )
 }
