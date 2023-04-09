@@ -59,6 +59,7 @@ export default function TechStackItem(props: TechStackItemProps) {
                 iconSrc={item.iconSrc}
                 name={item.name}
                 key={item.name}
+                iconClass={item.iconClass}
               />
             ))}
           </div>
