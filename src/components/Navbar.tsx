@@ -14,7 +14,7 @@ function NavLink(props: { href: string; name: string }) {
   return (
     <Link
       href={props.href}
-      className={classnames('font-semibold', { 'text-accent': isActive })}
+      className={classnames('font-semibold', { 'text-primary': isActive })}
     >
       <FakeElement name={props.name} />
     </Link>
