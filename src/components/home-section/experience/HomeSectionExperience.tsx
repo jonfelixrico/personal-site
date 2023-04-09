@@ -34,6 +34,12 @@ const BREAD_AND_BUTTER: Tech[] = [
     name: 'Nest.js',
     testimony:
       'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+    items: [
+      {
+        iconSrc: 'tech-stack/typescript.svg',
+        name: 'TypeScript',
+      },
+    ],
   },
 ]
 const OTHERS: Tech[] = []
