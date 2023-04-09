@@ -49,8 +49,8 @@ export default function HomeSectionExperience() {
         </div>
 
         <div className="flex flex-col items-center">
-          <div>Wanna see them at work?</div>
-          <div>Let's work together?</div>
+          <div>See the tech at work</div>
+          <div>Let's work together!</div>
         </div>
       </div>
     </div>
