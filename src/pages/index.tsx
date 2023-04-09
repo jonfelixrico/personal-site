@@ -10,19 +10,17 @@ export default function Home() {
         <title>Jon Felix Rico • Home</title>
       </Head>
 
-      <div className="snap-y snap-proximity overflow-y-auto h-screen">
-        <section className="snap-always snap-start h-screen">
+      <div>
+        <section className="snap-always snap-start h-screen bg-card">
           <HomeSectionMain className="h-full mx-auto max-w-screen-lg" />
         </section>
 
-        <div className="snap-always snap-start">
-          <section>
-            <HomeSectionExperience className="mx-auto max-w-screen-lg min-h-screen" />
-          </section>
-          <section>
-            <HomeSectionContacts className="mx-auto max-w-screen-lg min-h-screen" />
-          </section>
-        </div>
+        <section>
+          <HomeSectionExperience className="mx-auto max-w-screen-lg min-h-screen" />
+        </section>
+        <section>
+          <HomeSectionContacts className="mx-auto max-w-screen-lg min-h-screen" />
+        </section>
       </div>
     </>
   )
