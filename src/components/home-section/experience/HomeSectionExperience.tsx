@@ -101,6 +101,24 @@ const OTHERS: Tech[] = [
     testimony:
       'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
   },
+  {
+    iconSrc: 'tech-stack/postgresql.svg',
+    name: 'PostgreSQL',
+    testimony:
+      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+  },
+  {
+    iconSrc: 'tech-stack/mongodb.svg',
+    name: 'MongoDB',
+    testimony:
+      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+  },
+  {
+    iconSrc: 'tech-stack/eventstoredb.svg',
+    name: 'EventStoreDB',
+    testimony:
+      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+  },
 ]
 
 export default function HomeSectionExperience() {
