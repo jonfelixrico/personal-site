@@ -100,12 +100,12 @@ function ItemGithubActions() {
 }
 
 const TECH_ITEMS = [
-  ItemAngular,
   ItemReact,
   ItemSpringBoot,
   ItemDocker,
   ItemEventStoreDb,
   ItemGithubActions,
+  ItemAngular,
 ]
 
 const COLLAPSED_ITEM_COUNT = 4
