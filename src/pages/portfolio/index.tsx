@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import FakeElement from '@/components/fake-code/FakeElement'
-import { FakeComment } from '@/components/fake-code/FakeComment'
+import FakeComment from '@/components/fake-code/FakeComment'
 import PortfolioList from '@/components/portfolio/PortfolioList'
 
 export default function Portfolio() {
