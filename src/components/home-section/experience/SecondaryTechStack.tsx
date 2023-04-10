@@ -78,16 +78,6 @@ function ItemDocker() {
   )
 }
 
-function ItemDiscordJs() {
-  return (
-    <TechStackItem
-      iconSrc="tech-stack/discord-js.svg"
-      name="Discord.js"
-      testimony="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
-    />
-  )
-}
-
 function ItemEventStoreDb() {
   return (
     <TechStackItem
@@ -114,7 +104,6 @@ const TECH_ITEMS = [
   ItemReact,
   ItemSpringBoot,
   ItemDocker,
-  ItemDiscordJs,
   ItemEventStoreDb,
   ItemGithubActions,
 ]
