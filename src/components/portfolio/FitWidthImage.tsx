@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
 
-export default function WidthAdaptiveImage(props: {
+export default function FitWidthImage(props: {
   src: string
   alt: string
   width: number
