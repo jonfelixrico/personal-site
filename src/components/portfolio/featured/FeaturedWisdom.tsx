@@ -4,6 +4,7 @@ import Image from 'next/image'
 import IconWithTooltip from '@/components/IconWithTooltip'
 import cnFactory from 'classnames/bind'
 import styles from './TechStack.module.scss'
+import Card from '@/components/Card'
 
 const classnames = cnFactory.bind(styles)
 
@@ -16,14 +17,14 @@ export default function FeaturedWisdom() {
 
   return (
     <div className="grid grid-cols-12">
-      <div className="col-span-4 flex flex-col justify-center gap-3">
-        <div className="text-2xl">Wisdom Bot</div>
+      <div className="col-span-6 col-start-1 flex flex-col justify-center gap-3 row-start-1 z-10">
+        <div className="text-2xl text-accent">Wisdom Bot</div>
 
-        <div>
+        <Card className="p-3">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
           sollicitudin et tortor vel ullamcorper. Praesent dolor massa, dapibus
           vel sollicitudin vulputate, ultricies vel libero.
-        </div>
+        </Card>
 
         <div className={classnames('flex flex-row gap-3', styles['tech-list'])}>
           <IconWithTooltip
@@ -59,7 +60,10 @@ export default function FeaturedWisdom() {
         </div>
       </div>
 
-      <div className="col-span-8 flex flex-col justify-center" ref={ref}>
+      <div
+        className="col-start-5 col-span-8 flex flex-col justify-center row-start-1"
+        ref={ref}
+      >
         <ConditionallyRender render={!!height}>
           <Image
             width={width}
