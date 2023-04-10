@@ -24,6 +24,11 @@ export default function FeaturedWisdom() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
           sollicitudin et tortor vel ullamcorper. Praesent dolor massa, dapibus
           vel sollicitudin vulputate, ultricies vel libero.
+          <br />
+          <br />
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+          sollicitudin et tortor vel ullamcorper. Praesent dolor massa, dapibus
+          vel sollicitudin vulputate, ultricies vel libero.
         </Card>
 
         <div className={classnames('flex flex-row gap-3', styles['tech-list'])}>
