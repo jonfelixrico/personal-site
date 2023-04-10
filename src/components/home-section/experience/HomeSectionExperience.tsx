@@ -18,12 +18,8 @@ export default function HomeSectionExperience(props: { className?: string }) {
     <div className={classnames('py-10', props.className)}>
       <div className="row-start-2 row-span-4">
         <div className="mb-5">
-          <div className="font-mono text-5xl font-semibold text-primary">
-            Experience
-          </div>
-          <div className="font-mono text-secondary text-2xl">
-            Lorem ipsum dolor
-          </div>
+          <div className="text-5xl font-semibold text-primary">Experience</div>
+          <div className="text-secondary text-2xl">Lorem ipsum dolor</div>
         </div>
 
         <div className="mb-10 text-xl">
