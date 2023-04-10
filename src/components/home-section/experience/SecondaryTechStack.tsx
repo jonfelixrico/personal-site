@@ -1,5 +1,5 @@
 import { createElement, useState } from 'react'
-import TechStackItem, { TechStackItemProps } from './TechStackItem'
+import TechStackItem from './TechStackItem'
 
 function ItemAngular() {
   const ITEMS = [

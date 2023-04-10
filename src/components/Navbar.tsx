@@ -2,7 +2,6 @@ import Link from 'next/link'
 import styles from '@/styles/Navbar.module.scss'
 import cnFactory from 'classnames/bind'
 import { useRouter } from 'next/router'
-import { ReactNode } from 'react'
 import FakeElement from './fake-code/FakeElement'
 
 const classnames = cnFactory.bind(styles)

@@ -1,4 +1,3 @@
-import { ReactNode } from 'react'
 import { useResizeDetector } from 'react-resize-detector'
 
 export default function PortfolioList() {
