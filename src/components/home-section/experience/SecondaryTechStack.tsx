@@ -1,5 +1,5 @@
 import { createElement, useState } from 'react'
-import TechStackItem, { TechStackItemProps } from './TechStackItem'
+import TechStackItem from './TechStackItem'
 
 function ItemAngular() {
   const ITEMS = [
@@ -119,19 +119,16 @@ const TECH_ITEMS = [
   ItemGithubActions,
 ]
 
-function DynamicComponent(props: { is: () => JSX.Element }) {
-  return createElement(props.is)
-}
-
 const COLLAPSED_ITEM_COUNT = 4
 export default function SecondaryTechStack() {
   const [isExpanded, setExpanded] = useState(false)
   return (
     <div className="flex flex-col gap-4">
       {TECH_ITEMS.slice(0, isExpanded ? undefined : COLLAPSED_ITEM_COUNT).map(
-        (component, index) => (
-          <DynamicComponent is={component} key={index} />
-        )
+        (component, index) =>
+          createElement(component, {
+            key: index,
+          })
       )}
 
       <div className="flex flex-row justify-center text-accent">

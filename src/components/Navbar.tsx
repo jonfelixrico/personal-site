@@ -2,8 +2,7 @@ import Link from 'next/link'
 import styles from '@/styles/Navbar.module.scss'
 import cnFactory from 'classnames/bind'
 import { useRouter } from 'next/router'
-import { ReactNode } from 'react'
-import FakeElement from './FakeElement'
+import FakeElement from './fake-code/FakeElement'
 
 const classnames = cnFactory.bind(styles)
 
@@ -40,7 +39,9 @@ export default function Navbar() {
       )}
     >
       <NavLink href="/" name="home" />
-      <NavLink href="/portfolio" name="portfolio" />
+      <NavLink href="/#section-experience" name="experience" />
+      <NavLink href="/#section-portfolio" name="portfolio" />
+      <NavLink href="/#section-contacts" name="contacts" />
     </nav>
   )
 }

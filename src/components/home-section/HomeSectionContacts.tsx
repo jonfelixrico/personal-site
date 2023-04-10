@@ -1,5 +1,5 @@
 import classnames from 'classnames'
-import FakeElement from '@/components/FakeElement'
+import FakeElement from '@/components/fake-code/FakeElement'
 
 export default function HomeSectionContacts(props: { className?: string }) {
   return (

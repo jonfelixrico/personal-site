@@ -1,6 +1,6 @@
 import { ConditionallyRender } from '@/components/ConditionallyRender'
+import IconWithTooltip from '@/components/IconWithTooltip'
 import Image from 'next/image'
-import Tooltip from 'rc-tooltip'
 
 interface TechSubItem {
   iconSrc: string
@@ -17,26 +17,6 @@ interface TechItem {
 }
 
 export type TechStackItemProps = TechItem
-
-function SubItem(props: TechSubItem) {
-  return (
-    <Tooltip
-      overlay={<span>{props.name}</span>}
-      trigger={['click', 'hover']}
-      placement="top"
-      mouseLeaveDelay={0}
-    >
-      <div className="relative h-6 w-6 cursor-help">
-        <Image
-          alt={`Icon of ${props.name}`}
-          src={props.iconSrc}
-          fill
-          className={props.iconClass}
-        />
-      </div>
-    </Tooltip>
-  )
-}
 
 export default function TechStackItem(props: TechStackItemProps) {
   return (
@@ -55,11 +35,12 @@ export default function TechStackItem(props: TechStackItemProps) {
         <ConditionallyRender render={!!props.items?.length}>
           <div className="flex flex-row gap-1 items-center">
             {props.items?.map((item) => (
-              <SubItem
-                iconSrc={item.iconSrc}
-                name={item.name}
-                key={item.name}
+              <IconWithTooltip
+                tooltipLabel={item.name}
+                src={item.iconSrc}
                 iconClass={item.iconClass}
+                className="h-6 w-6"
+                key={item.name}
               />
             ))}
           </div>

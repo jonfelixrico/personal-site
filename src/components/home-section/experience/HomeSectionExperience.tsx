@@ -3,7 +3,7 @@ import { ReactNode } from 'react'
 import PrimaryTechStack from './PrimaryTechStack'
 import SecondaryTechStack from './SecondaryTechStack'
 import classnames from 'classnames'
-import FakeElement from '@/components/FakeElement'
+import FakeElement from '@/components/fake-code/FakeElement'
 
 function SubSectionLayout(props: { title: string; children: ReactNode }) {
   return (
