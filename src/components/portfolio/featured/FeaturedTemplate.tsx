@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Card from '@/components/Card'
 import { ReactNode } from 'react'
 import classnames from 'classnames'
+import IconWithTooltip from '@/components/IconWithTooltip'
 
 function FitWidthImage(props: {
   src: string
@@ -32,18 +33,34 @@ function FitWidthImage(props: {
   )
 }
 
+interface Tech {
+  iconSrc: string
+  name: string
+  iconClass?: string
+}
+
 export default function FeaturedTemplate(props: {
-  techList: ReactNode
   details: ReactNode
   projectName: string
   imageSrc: string
+  techList: Tech[]
 }) {
   return (
     <div className="grid grid-cols-12">
       <div className="col-span-6 col-start-1 flex flex-col justify-center gap-3 row-start-1 z-10">
         <div className="text-2xl text-accent">{props.projectName}</div>
         <Card className="p-3">{props.details}</Card>
-        {props.techList}
+        <div className="flex flex-row gap-3">
+          {props.techList.map(({ iconSrc, iconClass, name }) => (
+            <IconWithTooltip
+              src={iconSrc}
+              tooltipLabel={name}
+              iconClass={iconClass}
+              className="relative h-6 w-6"
+              key={name}
+            />
+          ))}
+        </div>
       </div>
 
       <FitWidthImage
