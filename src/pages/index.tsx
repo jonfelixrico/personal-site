@@ -2,6 +2,7 @@ import HomeSectionContacts from '@/components/home-section/HomeSectionContacts'
 import HomeSectionExperience from '@/components/home-section/experience/HomeSectionExperience'
 import HomeSectionMain from '@/components/home-section/HomeSectionMain'
 import Head from 'next/head'
+import HomeSectionPortfolio from '@/components/home-section/HomeSectionPortfolio'
 
 export default function Home() {
   return (
@@ -18,6 +19,11 @@ export default function Home() {
         <section>
           <HomeSectionExperience className="mx-auto max-w-screen-lg min-h-screen" />
         </section>
+
+        <section>
+          <HomeSectionPortfolio className="mx-auto max-w-screen-lg min-h-screen" />
+        </section>
+
         <section>
           <HomeSectionContacts className="mx-auto max-w-screen-lg min-h-screen" />
         </section>
