@@ -1,5 +1,4 @@
 import classnames from 'classnames'
-import FakeElement from '@/components/fake-code/FakeElement'
 
 export default function HomeSectionMain(props: { className?: string }) {
   return (
@@ -8,7 +7,7 @@ export default function HomeSectionMain(props: { className?: string }) {
     >
       <div className="mb-10 text-8xl font-semibold">
         <div className="text-white">Jon Felix Rico,</div>
-        <FakeElement className="text-primary font-mono" name="web-developer" />
+        <div className="text-primary font-mono">&lt;web-developer /&gt;</div>
       </div>
 
       <div className="w-5/6 text-xl">
