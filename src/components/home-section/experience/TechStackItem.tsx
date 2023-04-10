@@ -1,6 +1,6 @@
 import { ConditionallyRender } from '@/components/ConditionallyRender'
+import IconWithTooltip from '@/components/IconWithTooltip'
 import Image from 'next/image'
-import Tooltip from 'rc-tooltip'
 
 interface TechSubItem {
   iconSrc: string
@@ -20,21 +20,12 @@ export type TechStackItemProps = TechItem
 
 function SubItem(props: TechSubItem) {
   return (
-    <Tooltip
-      overlay={<span>{props.name}</span>}
-      trigger={['click', 'hover']}
-      placement="top"
-      mouseLeaveDelay={0}
-    >
-      <div className="relative h-6 w-6 cursor-help">
-        <Image
-          alt={`Icon of ${props.name}`}
-          src={props.iconSrc}
-          fill
-          className={props.iconClass}
-        />
-      </div>
-    </Tooltip>
+    <IconWithTooltip
+      tooltipLabel={props.name}
+      src={props.iconSrc}
+      iconClass={props.iconClass}
+      className="h-6 w-6"
+    />
   )
 }
 
