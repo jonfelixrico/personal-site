@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import PortfolioList from '@/components/portfolio/PortfolioList'
 import FakeElement from '@/components/fake-code/FakeElement'
+import { FakeComment } from '@/components/fake-code/FakeComment'
 
 export default function Portfolio() {
   return (
@@ -17,7 +18,7 @@ export default function Portfolio() {
               name="portfolio"
             />
             <div className="font-mono text-secondary text-2xl">
-              &#47;&#47; lorem ipsum dolor
+              <FakeComment>lorem ipsum dolor</FakeComment>
             </div>
           </div>
 
