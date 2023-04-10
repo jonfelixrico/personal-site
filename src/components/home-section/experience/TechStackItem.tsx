@@ -18,17 +18,6 @@ interface TechItem {
 
 export type TechStackItemProps = TechItem
 
-function SubItem(props: TechSubItem) {
-  return (
-    <IconWithTooltip
-      tooltipLabel={props.name}
-      src={props.iconSrc}
-      iconClass={props.iconClass}
-      className="h-6 w-6"
-    />
-  )
-}
-
 export default function TechStackItem(props: TechStackItemProps) {
   return (
     <div className="grid grid-cols-12 gap-2">
@@ -46,11 +35,12 @@ export default function TechStackItem(props: TechStackItemProps) {
         <ConditionallyRender render={!!props.items?.length}>
           <div className="flex flex-row gap-1 items-center">
             {props.items?.map((item) => (
-              <SubItem
-                iconSrc={item.iconSrc}
-                name={item.name}
-                key={item.name}
+              <IconWithTooltip
+                tooltipLabel={item.name}
+                src={item.iconSrc}
                 iconClass={item.iconClass}
+                className="h-6 w-6"
+                key={item.name}
               />
             ))}
           </div>
