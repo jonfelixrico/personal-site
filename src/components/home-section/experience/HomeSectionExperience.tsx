@@ -3,7 +3,6 @@ import { ReactNode } from 'react'
 import PrimaryTechStack from './PrimaryTechStack'
 import SecondaryTechStack from './SecondaryTechStack'
 import classnames from 'classnames'
-import FakeElement from '@/components/fake-code/FakeElement'
 
 function SubSectionLayout(props: { title: string; children: ReactNode }) {
   return (
@@ -19,12 +18,11 @@ export default function HomeSectionExperience(props: { className?: string }) {
     <div className={classnames('py-10', props.className)}>
       <div className="row-start-2 row-span-4">
         <div className="mb-5">
-          <FakeElement
-            className="font-mono text-5xl font-semibold text-primary"
-            name="experience"
-          />
+          <div className="font-mono text-5xl font-semibold text-primary">
+            Experience
+          </div>
           <div className="font-mono text-secondary text-2xl">
-            &#47;&#47; lorem ipsum dolor
+            Lorem ipsum dolor
           </div>
         </div>
 
