@@ -1,18 +1,12 @@
 import classnames from 'classnames'
-import FakeElement from '@/components/fake-code/FakeElement'
 
 export default function HomeSectionContacts(props: { className?: string }) {
   return (
     <div className={classnames('grid grid-rows-6', props.className)}>
       <div className="row-start-2 row-span-4">
         <div className="mb-5">
-          <FakeElement
-            className="font-mono text-5xl font-semibold text-primary"
-            name="contacts"
-          />
-          <div className="font-mono text-secondary text-2xl">
-            &#47;&#47; lorem ipsum dolor
-          </div>
+          <div className="text-5xl font-semibold text-primary">Contacts</div>
+          <div className="text-secondary text-2xl">Lorem ipsum dolor</div>
         </div>
 
         <div className="mb-5 text-xl">
