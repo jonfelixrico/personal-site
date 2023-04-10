@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import PortfolioList from '@/components/portfolio/PortfolioList'
 import FakeElement from '@/components/fake-code/FakeElement'
 import { FakeComment } from '@/components/fake-code/FakeComment'
+import PortfolioListV2 from '@/components/portfolio/PortfolioListV2'
 
 export default function Portfolio() {
   return (
@@ -22,7 +22,7 @@ export default function Portfolio() {
             </div>
           </div>
 
-          <PortfolioList />
+          <PortfolioListV2 />
         </div>
       </div>
     </>
