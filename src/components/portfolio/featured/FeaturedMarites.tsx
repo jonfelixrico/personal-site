@@ -10,11 +10,6 @@ export default function FeaturedMarites() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
           sollicitudin et tortor vel ullamcorper. Praesent dolor massa, dapibus
           vel sollicitudin vulputate, ultricies vel libero.
-          <br />
-          <br />
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-          sollicitudin et tortor vel ullamcorper. Praesent dolor massa, dapibus
-          vel sollicitudin vulputate, ultricies vel libero.
         </div>
       }
       techList={[
