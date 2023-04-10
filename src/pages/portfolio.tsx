@@ -14,7 +14,7 @@ export default function Portfolio() {
           <div className="mb-10">
             <FakeElement
               className="font-mono text-5xl font-semibold text-primary"
-              name="experience"
+              name="portfolio"
             />
             <div className="font-mono text-secondary text-2xl">
               &#47;&#47; lorem ipsum dolor
