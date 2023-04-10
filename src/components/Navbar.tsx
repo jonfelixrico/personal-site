@@ -2,30 +2,22 @@ import Link from 'next/link'
 import styles from '@/styles/Navbar.module.scss'
 import cnFactory from 'classnames/bind'
 import { useRouter } from 'next/router'
-import FakeElement from './fake-code/FakeElement'
 
 const classnames = cnFactory.bind(styles)
 
 function NavLink(props: { href: string; name: string }) {
   const router = useRouter()
-
-  if (router.asPath !== props.href) {
-    return (
-      <Link href={props.href} className="font-semibold text-accent">
-        <FakeElement name={props.name} />
-      </Link>
-    )
-  }
+  const isActive = router.asPath === props.href
 
   return (
-    <Link href={props.href} className="font-semibold text-accent">
-      <FakeElement
-        name={
-          <span>
-            {props.name} <span className="text-accent-2">active</span>
-          </span>
-        }
-      />
+    <Link href={props.href}>
+      <div
+        className={classnames('text-accent', {
+          'underline underline-offset-8': isActive,
+        })}
+      >
+        {props.name}
+      </div>
     </Link>
   )
 }
@@ -34,14 +26,14 @@ export default function Navbar() {
   return (
     <nav
       className={classnames(
-        'flex flex-row items-center justify-end gap-5 font-mono',
+        'flex flex-row items-center justify-end gap-5',
         styles.navbar
       )}
     >
-      <NavLink href="/" name="home" />
-      <NavLink href="/#section-experience" name="experience" />
-      <NavLink href="/#section-portfolio" name="portfolio" />
-      <NavLink href="/#section-contacts" name="contacts" />
+      <NavLink href="/" name="Home" />
+      <NavLink href="/#section-experience" name="Experience" />
+      <NavLink href="/#section-portfolio" name="Portfolio" />
+      <NavLink href="/#section-contacts" name="Contacts" />
     </nav>
   )
 }
