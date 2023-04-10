@@ -12,19 +12,22 @@ export default function Home() {
       </Head>
 
       <div>
-        <section className="snap-always snap-start h-screen bg-card">
+        <section
+          className="snap-always snap-start h-screen bg-card"
+          id="section-main"
+        >
           <HomeSectionMain className="h-full mx-auto max-w-screen-lg" />
         </section>
 
-        <section>
+        <section id="section-experience">
           <HomeSectionExperience className="mx-auto max-w-screen-lg min-h-screen" />
         </section>
 
-        <section>
+        <section id="section-portfolio">
           <HomeSectionPortfolio className="mx-auto max-w-screen-lg min-h-screen" />
         </section>
 
-        <section>
+        <section id="section-contacts">
           <HomeSectionContacts className="mx-auto max-w-screen-lg min-h-screen" />
         </section>
       </div>

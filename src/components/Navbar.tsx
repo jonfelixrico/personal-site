@@ -38,8 +38,10 @@ export default function Navbar() {
         styles.navbar
       )}
     >
-      <NavLink href="/" name="home" />
-      <NavLink href="/portfolio" name="portfolio" />
+      <NavLink href="/#section-main" name="home" />
+      <NavLink href="/#section-experience" name="experience" />
+      <NavLink href="/#section-portfolio" name="portfolio" />
+      <NavLink href="/#section-contacts" name="contacts" />
     </nav>
   )
 }
