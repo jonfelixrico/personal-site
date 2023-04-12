@@ -10,12 +10,12 @@ interface ContactItemData {
 const ITEMS: ContactItemData[] = [
   {
     src: 'icons/github.svg',
-    href: 'https://github.com',
+    href: 'https://github.com/jonfelixrico',
     label: 'GitHub',
   },
   {
     src: 'icons/linkedin.svg',
-    href: 'https://linkedin.com',
+    href: 'https://www.linkedin.com/in/jonfelixrico',
     label: 'LinkedIn',
   },
 ]
