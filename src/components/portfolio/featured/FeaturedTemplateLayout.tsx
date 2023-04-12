@@ -39,7 +39,7 @@ interface Tech {
   iconClass?: string
 }
 
-export default function FeaturedTemplate(props: {
+export default function FeaturedTemplateLayout(props: {
   details: ReactNode
   projectName: string
   imageSrc: string

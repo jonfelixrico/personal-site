@@ -1,8 +1,8 @@
-import FeaturedTemplate from './FeaturedTemplate'
+import FeaturedTemplateLayout from './FeaturedTemplateLayout'
 
 export default function FeaturedMarites() {
   return (
-    <FeaturedTemplate
+    <FeaturedTemplateLayout
       projectName="Marites"
       imageSrc="/portfolio/wisdom/panel/home.png"
       details={

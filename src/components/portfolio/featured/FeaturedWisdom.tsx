@@ -1,8 +1,8 @@
-import FeaturedTemplate from './FeaturedTemplate'
+import FeaturedTemplateLayout from './FeaturedTemplateLayout'
 
 export default function FeaturedWisdom() {
   return (
-    <FeaturedTemplate
+    <FeaturedTemplateLayout
       projectName="Wisdom Bot"
       imageSrc="/portfolio/wisdom/panel/home.png"
       details={
