@@ -1,9 +1,6 @@
 import Link from 'next/link'
-import styles from '@/styles/Navbar.module.scss'
-import cnFactory from 'classnames/bind'
 import { useRouter } from 'next/router'
-
-const classnames = cnFactory.bind(styles)
+import classnames from 'classnames'
 
 function NavLink(props: { href: string; name: string }) {
   const router = useRouter()
@@ -24,12 +21,7 @@ function NavLink(props: { href: string; name: string }) {
 
 export default function Navbar() {
   return (
-    <nav
-      className={classnames(
-        'flex flex-row items-center justify-end gap-5',
-        styles.navbar
-      )}
-    >
+    <nav className="flex flex-row items-center justify-end gap-5 h-12">
       <NavLink href="/" name="Home" />
       <NavLink href="/#section-experience" name="Experience" />
       <NavLink href="/#section-portfolio" name="Portfolio" />
