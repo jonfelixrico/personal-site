@@ -19,9 +19,14 @@ function NavLink(props: { href: string; name: string }) {
   )
 }
 
-export default function Navbar() {
+export default function Navbar(props: { className?: string }) {
   return (
-    <nav className="flex flex-row items-center justify-end gap-5 h-12">
+    <nav
+      className={classnames(
+        'flex flex-row items-center justify-end gap-5 ',
+        props.className
+      )}
+    >
       <NavLink href="/" name="Home" />
       <NavLink href="/#section-experience" name="Experience" />
       <NavLink href="/#section-portfolio" name="Portfolio" />
