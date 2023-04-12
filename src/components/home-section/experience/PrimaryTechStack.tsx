@@ -55,37 +55,12 @@ function ItemMongoDb() {
   )
 }
 
-function ItemRelationalDatabases() {
-  const ITEMS = [
-    {
-      iconSrc: 'tech-stack/postgresql.svg',
-      name: 'PostgreSQL',
-    },
-    {
-      iconSrc: 'tech-stack/mysql.svg',
-      name: 'MySQL',
-      iconClass: 'invert',
-    },
-  ]
-
-  return (
-    <TechStackItem
-      iconSrc="tech-stack/database.svg"
-      name="Relational Databases"
-      items={ITEMS}
-      iconClass="invert"
-      testimony="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
-    />
-  )
-}
-
 export default function PrimaryTechStack() {
   return (
     <div className="flex flex-col gap-4">
       <ItemVue />
       <ItemNestJs />
       <ItemMongoDb />
-      <ItemRelationalDatabases />
     </div>
   )
 }

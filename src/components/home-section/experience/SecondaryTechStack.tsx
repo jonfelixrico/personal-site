@@ -78,16 +78,6 @@ function ItemDocker() {
   )
 }
 
-function ItemDiscordJs() {
-  return (
-    <TechStackItem
-      iconSrc="tech-stack/discord-js.svg"
-      name="Discord.js"
-      testimony="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
-    />
-  )
-}
-
 function ItemEventStoreDb() {
   return (
     <TechStackItem
@@ -109,17 +99,41 @@ function ItemGithubActions() {
   )
 }
 
+function ItemRelationalDatabases() {
+  const ITEMS = [
+    {
+      iconSrc: 'tech-stack/postgresql.svg',
+      name: 'PostgreSQL',
+    },
+    {
+      iconSrc: 'tech-stack/mysql.svg',
+      name: 'MySQL',
+      iconClass: 'invert',
+    },
+  ]
+
+  return (
+    <TechStackItem
+      iconSrc="tech-stack/database.svg"
+      name="Relational Databases"
+      items={ITEMS}
+      iconClass="invert"
+      testimony="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+    />
+  )
+}
+
 const TECH_ITEMS = [
-  ItemAngular,
-  ItemReact,
+  ItemRelationalDatabases,
   ItemSpringBoot,
   ItemDocker,
-  ItemDiscordJs,
+  ItemReact,
+  ItemAngular,
   ItemEventStoreDb,
   ItemGithubActions,
 ]
 
-const COLLAPSED_ITEM_COUNT = 4
+const COLLAPSED_ITEM_COUNT = 3
 export default function SecondaryTechStack() {
   const [isExpanded, setExpanded] = useState(false)
   return (
