@@ -21,8 +21,17 @@ const ITEMS: ContactItemData[] = [
 ]
 
 function ContactItem(props: ContactItemData) {
+  function onClick() {
+    // TODO add comfirmation
+    window.open(props.href)
+  }
+
   return (
-    <div className="relative h-6 w-6 pointer-events-auto">
+    <div
+      className="relative h-6 w-6 pointer-events-auto cursor-pointer"
+      role="link"
+      onClick={onClick}
+    >
       <Image alt={props.label} src={props.src} fill />
     </div>
   )
