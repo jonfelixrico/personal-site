@@ -23,39 +23,39 @@ export default function FeaturedWisdom() {
           items={[
             {
               name: 'Quasar Framework',
-              iconSrc: 'tech-stack/quasar-framework.svg',
+              iconSrc: 'icons/quasar-framework.svg',
             },
             {
               name: 'Vue.js',
-              iconSrc: 'tech-stack/vue-js.svg',
+              iconSrc: 'icons/vue-js.svg',
             },
             {
               name: 'TypeScript',
-              iconSrc: 'tech-stack/typescript.svg',
+              iconSrc: 'icons/typescript.svg',
             },
             {
               name: 'Nest.js',
-              iconSrc: 'tech-stack/nest-js.svg',
+              iconSrc: 'icons/nest-js.svg',
             },
             {
               name: 'Discord.js',
-              iconSrc: 'tech-stack/discord-js.svg',
+              iconSrc: 'icons/discord-js.svg',
             },
             {
               name: 'Spring Boot',
-              iconSrc: 'tech-stack/spring-boot.svg',
+              iconSrc: 'icons/spring-boot.svg',
             },
             {
               name: 'Java',
-              iconSrc: 'tech-stack/java.svg',
+              iconSrc: 'icons/java.svg',
             },
             {
               name: 'EventStoreDB',
-              iconSrc: 'tech-stack/eventstoredb.svg',
+              iconSrc: 'icons/eventstoredb.svg',
             },
             {
               name: 'MongoDB',
-              iconSrc: 'tech-stack/mongodb.svg',
+              iconSrc: 'icons/mongodb.svg',
             },
           ]}
         />
