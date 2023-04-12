@@ -30,3 +30,9 @@
 .bg-card {
   background-color: #252526;
 }
+
+.text-orientation-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  // transform: rotate(180deg);
+}

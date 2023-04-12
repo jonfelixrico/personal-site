@@ -4,18 +4,18 @@ import TechStackItem from './TechStackItem'
 function ItemAngular() {
   const ITEMS = [
     {
-      iconSrc: 'tech-stack/angular-material.svg',
+      iconSrc: 'icons/angular-material.svg',
       name: 'Angular Material',
     },
     {
-      iconSrc: 'tech-stack/typescript.svg',
+      iconSrc: 'icons/typescript.svg',
       name: 'TypeScript',
     },
   ]
 
   return (
     <TechStackItem
-      iconSrc="tech-stack/angular.svg"
+      iconSrc="icons/angular.svg"
       name="Angular"
       items={ITEMS}
       testimony="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
@@ -26,23 +26,23 @@ function ItemAngular() {
 function ItemReact() {
   const ITEMS = [
     {
-      iconSrc: 'tech-stack/next-js.svg',
+      iconSrc: 'icons/next-js.svg',
       name: 'Next.js',
       iconClass: 'invert',
     },
     {
-      iconSrc: 'tech-stack/tailwind-css.svg',
+      iconSrc: 'icons/tailwind-css.svg',
       name: 'Tailwind CSS',
     },
     {
-      iconSrc: 'tech-stack/typescript.svg',
+      iconSrc: 'icons/typescript.svg',
       name: 'TypeScript',
     },
   ]
 
   return (
     <TechStackItem
-      iconSrc="tech-stack/react.svg"
+      iconSrc="icons/react.svg"
       name="React"
       items={ITEMS}
       testimony="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
@@ -53,14 +53,14 @@ function ItemReact() {
 function ItemSpringBoot() {
   const ITEMS = [
     {
-      iconSrc: 'tech-stack/java.svg',
+      iconSrc: 'icons/java.svg',
       name: 'Java',
     },
   ]
 
   return (
     <TechStackItem
-      iconSrc="tech-stack/spring-boot.svg"
+      iconSrc="icons/spring-boot.svg"
       name="Spring Boot"
       items={ITEMS}
       testimony="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
@@ -71,7 +71,7 @@ function ItemSpringBoot() {
 function ItemDocker() {
   return (
     <TechStackItem
-      iconSrc="tech-stack/docker.svg"
+      iconSrc="icons/docker.svg"
       name="Docker"
       testimony="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
     />
@@ -81,7 +81,7 @@ function ItemDocker() {
 function ItemEventStoreDb() {
   return (
     <TechStackItem
-      iconSrc="tech-stack/eventstoredb.svg"
+      iconSrc="icons/eventstoredb.svg"
       name="EventStoreDB"
       testimony="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
     />
@@ -91,7 +91,7 @@ function ItemEventStoreDb() {
 function ItemGithubActions() {
   return (
     <TechStackItem
-      iconSrc="tech-stack/github-actions.svg"
+      iconSrc="icons/github-actions.svg"
       name="Github Actions"
       iconClass="invert"
       testimony="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
@@ -102,11 +102,11 @@ function ItemGithubActions() {
 function ItemRelationalDatabases() {
   const ITEMS = [
     {
-      iconSrc: 'tech-stack/postgresql.svg',
+      iconSrc: 'icons/postgresql.svg',
       name: 'PostgreSQL',
     },
     {
-      iconSrc: 'tech-stack/mysql.svg',
+      iconSrc: 'icons/mysql.svg',
       name: 'MySQL',
       iconClass: 'invert',
     },
@@ -114,7 +114,7 @@ function ItemRelationalDatabases() {
 
   return (
     <TechStackItem
-      iconSrc="tech-stack/database.svg"
+      iconSrc="icons/database.svg"
       name="Relational Databases"
       items={ITEMS}
       iconClass="invert"

@@ -18,19 +18,19 @@ export default function FeaturedMarites() {
           items={[
             {
               name: 'Quasar Framework',
-              iconSrc: 'tech-stack/quasar-framework.svg',
+              iconSrc: 'icons/quasar-framework.svg',
             },
             {
               name: 'Vue.js',
-              iconSrc: 'tech-stack/vue-js.svg',
+              iconSrc: 'icons/vue-js.svg',
             },
             {
               name: 'TypeScript',
-              iconSrc: 'tech-stack/typescript.svg',
+              iconSrc: 'icons/typescript.svg',
             },
             {
               name: 'PocketBase',
-              iconSrc: 'tech-stack/pocketbase.svg',
+              iconSrc: 'icons/pocketbase.svg',
             },
           ]}
         />
