@@ -26,7 +26,7 @@ export default function Home() {
             </section>
 
             <section id="section-experience">
-              <HomeSectionExperience className="mx-auto max-w-screen-lg min-h-screen" />
+              <HomeSectionExperience />
             </section>
 
             <section id="section-portfolio">
