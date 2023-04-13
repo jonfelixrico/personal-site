@@ -61,14 +61,26 @@ export function MainTechSection(props: { className?: string }) {
             <MainTechIcon src="icons/vue-js.svg" alt="Vue" />
             <MainTechIcon src="icons/quasar-framework.svg" alt="Vue" />
           </div>
-          <h4 className="text-2xl text-white text-center">Front-end</h4>
+          <h4 className="text-2xl text-white text-center mb-3">Front-end</h4>
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo.
+          </p>
         </MainTechCard>
 
         <MainTechCard className="row-start-1 col-span-4">
           <div className="row-start-1 flex flex-row justify-center">
             <MainTechIcon src="icons/nest-js.svg" alt="Vue" />
           </div>
-          <h4 className="text-2xl text-white text-center">Back-end</h4>
+          <h4 className="text-2xl text-white text-center mb-3">Back-end</h4>
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo.
+          </p>
         </MainTechCard>
 
         <MainTechCard className="row-start-2 col-start-3 col-span-4">
@@ -77,7 +89,13 @@ export function MainTechSection(props: { className?: string }) {
             <MainTechIcon src="icons/mysql.svg" alt="Vue" />
             <MainTechIcon src="icons/postgresql.svg" alt="Vue" />
           </div>
-          <h4 className="text-2xl text-white text-center">Databases</h4>
+          <h4 className="text-2xl text-white text-center mb-3">Databases</h4>
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo.
+          </p>
         </MainTechCard>
       </div>
     </div>
