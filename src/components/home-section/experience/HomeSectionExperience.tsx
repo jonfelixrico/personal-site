@@ -49,7 +49,7 @@ function MainTechIcon(props: { src: string; alt: string; className?: string }) {
   )
 }
 
-export function MainTechSection(props: { className?: string }) {
+function MainTechSection(props: { className?: string }) {
   return (
     <div className={props.className}>
       <h3 className="text-center text-4xl text-accent mb-5">
