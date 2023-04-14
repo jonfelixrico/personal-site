@@ -55,8 +55,8 @@ export function MainTechSection(props: { className?: string }) {
       <h3 className="text-center text-4xl text-accent mb-5">
         The bread and butter
       </h3>
-      <div className="grid grid-cols-8 w-full gap-4">
-        <MainTechCard className="row-start-1 col-span-4">
+      <div className="grid grid-cols-12 w-full gap-4">
+        <MainTechCard className="row-start-1 col-span-6">
           <div className="flex flex-row justify-center">
             <MainTechIcon src="icons/vue-js.svg" alt="Vue" />
             <MainTechIcon src="icons/quasar-framework.svg" alt="Vue" />
@@ -70,7 +70,7 @@ export function MainTechSection(props: { className?: string }) {
           </p>
         </MainTechCard>
 
-        <MainTechCard className="row-start-1 col-span-4">
+        <MainTechCard className="row-start-1 col-span-6">
           <div className="row-start-1 flex flex-row justify-center">
             <MainTechIcon src="icons/nest-js.svg" alt="Vue" />
           </div>
@@ -83,7 +83,7 @@ export function MainTechSection(props: { className?: string }) {
           </p>
         </MainTechCard>
 
-        <MainTechCard className="row-start-2 col-start-3 col-span-4">
+        <MainTechCard className="row-start-2 col-start-4 col-span-6">
           <div className="flex flex-row justify-center">
             <MainTechIcon src="icons/mongodb.svg" alt="Vue" />
             <MainTechIcon src="icons/mysql.svg" alt="Vue" />
