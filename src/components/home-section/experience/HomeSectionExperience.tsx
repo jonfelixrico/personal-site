@@ -208,23 +208,21 @@ function SecondaryTechSection(props: { className?: string }) {
         ...and others that I've fiddled with
       </h3>
 
-      <div className="flex flex-row justify-center">
-        <div className="flex flex-row flex-wrap gap-6">
-          <TechIcon src="icons/react.svg" alt="React" />
-          <TechIcon src="icons/next-js.svg" alt="React" />
-          <TechIcon src="icons/tailwind-css.svg" alt="React" />
-          <TechIcon src="icons/angular.svg" alt="React" />
-          <TechIcon src="icons/express-js.svg" alt="React" />
-          <TechIcon src="icons/node-js.svg" alt="React" />
-          <TechIcon src="icons/typescript.svg" alt="React" />
-          <TechIcon src="icons/spring-boot.svg" alt="React" />
-          <TechIcon src="icons/eventstoredb.svg" alt="React" />
-          <TechIcon src="icons/mysql.svg" alt="React" />
-          <TechIcon src="icons/java.svg" alt="React" />
-          <TechIcon src="icons/pocketbase.svg" alt="React" />
-          <TechIcon src="icons/nginx.svg" alt="React" />
-          <TechIcon src="icons/discord-js.svg" alt="React" />
-        </div>
+      <div className="flex flex-row flex-wrap gap-6">
+        <TechIcon src="icons/react.svg" alt="React" />
+        <TechIcon src="icons/next-js.svg" alt="React" />
+        <TechIcon src="icons/tailwind-css.svg" alt="React" />
+        <TechIcon src="icons/angular.svg" alt="React" />
+        <TechIcon src="icons/express-js.svg" alt="React" />
+        <TechIcon src="icons/node-js.svg" alt="React" />
+        <TechIcon src="icons/typescript.svg" alt="React" />
+        <TechIcon src="icons/spring-boot.svg" alt="React" />
+        <TechIcon src="icons/eventstoredb.svg" alt="React" />
+        <TechIcon src="icons/mysql.svg" alt="React" />
+        <TechIcon src="icons/java.svg" alt="React" />
+        <TechIcon src="icons/pocketbase.svg" alt="React" />
+        <TechIcon src="icons/nginx.svg" alt="React" />
+        <TechIcon src="icons/discord-js.svg" alt="React" />
       </div>
     </div>
   )
