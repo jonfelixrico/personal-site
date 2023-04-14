@@ -1,7 +1,7 @@
 import classnames from 'classnames'
-import ContentMain from './ContentMain'
+import ContentPrimaryTech from './ContentPrimaryTech'
 
-import SecondaryTechContent from './SecondaryTechContent'
+import ContentSecondaryTech from './ContentSecondaryTech'
 
 function HeaderAndDescription(props: { className?: string }) {
   return (
@@ -45,7 +45,7 @@ export default function HomeSectionExperience(props: { className?: string }) {
             The bread and butter
           </h3>
 
-          <ContentMain />
+          <ContentPrimaryTech />
         </div>
 
         <div className="mx-auto max-w-screen-lg px-5">
@@ -53,7 +53,7 @@ export default function HomeSectionExperience(props: { className?: string }) {
             ...and others that I've fiddled with
           </h3>
 
-          <SecondaryTechContent />
+          <ContentSecondaryTech />
         </div>
       </div>
     </div>

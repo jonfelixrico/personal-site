@@ -44,7 +44,7 @@ function IconList(props: { icons: Icon[]; className?: string }) {
   )
 }
 
-export default function ContentMain() {
+export default function ContentPrimaryTech() {
   return (
     <div className="grid md:grid-cols-2 w-full gap-4">
       <ItemLayout

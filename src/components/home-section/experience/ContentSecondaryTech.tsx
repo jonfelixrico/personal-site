@@ -64,7 +64,7 @@ const ICONS: Icon[] = [
   },
 ]
 
-export default function SecondaryTechContent() {
+export default function ContentSecondaryTech() {
   return (
     <div className="flex flex-row flex-wrap gap-6">
       {ICONS.map(({ src, label }, index) => (
