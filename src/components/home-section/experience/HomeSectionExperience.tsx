@@ -188,18 +188,64 @@ function MainTechSection(props: { className?: string }) {
   )
 }
 
-function TechIcon(props: { src: string; alt: string; className?: string }) {
-  return (
-    <div
-      className={classnames(
-        'relative lg:h-24 lg:w-24 md:h-20 md:w-20 sm:h-16 sm:w-16 h-12 w-12',
-        props.className
-      )}
-    >
-      <Image src={props.src} alt={props.alt} fill />
-    </div>
-  )
-}
+const ICONS: Icon[] = [
+  {
+    src: 'icons/react.svg',
+    label: 'React',
+  },
+  {
+    src: 'icons/next-js.svg',
+    label: 'Next.js',
+  },
+  {
+    src: 'icons/tailwind-css.svg',
+    label: 'TailwindCSS',
+  },
+  {
+    src: 'icons/angular.svg',
+    label: 'Angular',
+  },
+  {
+    src: 'icons/express-js.svg',
+    label: 'Express.js',
+  },
+  {
+    src: 'icons/node-js.svg',
+    label: 'NodeJS',
+  },
+  {
+    src: 'icons/typescript.svg',
+    label: 'TypeScript',
+  },
+  {
+    src: 'icons/spring-boot.svg',
+    label: 'Spring Boot',
+  },
+  {
+    src: 'icons/eventstoredb.svg',
+    label: 'EventStoreDB',
+  },
+  {
+    src: 'icons/mysql.svg',
+    label: 'MySQL',
+  },
+  {
+    src: 'icons/java.svg',
+    label: 'Java',
+  },
+  {
+    src: 'icons/pocketbase.svg',
+    label: 'PocketBase',
+  },
+  {
+    src: 'icons/nginx.svg',
+    label: 'NGINX',
+  },
+  {
+    src: 'icons/discord-js.svg',
+    label: 'Discord.js',
+  },
+]
 
 function SecondaryTechSection(props: { className?: string }) {
   return (
@@ -209,20 +255,14 @@ function SecondaryTechSection(props: { className?: string }) {
       </h3>
 
       <div className="flex flex-row flex-wrap gap-6">
-        <TechIcon src="icons/react.svg" alt="React" />
-        <TechIcon src="icons/next-js.svg" alt="React" />
-        <TechIcon src="icons/tailwind-css.svg" alt="React" />
-        <TechIcon src="icons/angular.svg" alt="React" />
-        <TechIcon src="icons/express-js.svg" alt="React" />
-        <TechIcon src="icons/node-js.svg" alt="React" />
-        <TechIcon src="icons/typescript.svg" alt="React" />
-        <TechIcon src="icons/spring-boot.svg" alt="React" />
-        <TechIcon src="icons/eventstoredb.svg" alt="React" />
-        <TechIcon src="icons/mysql.svg" alt="React" />
-        <TechIcon src="icons/java.svg" alt="React" />
-        <TechIcon src="icons/pocketbase.svg" alt="React" />
-        <TechIcon src="icons/nginx.svg" alt="React" />
-        <TechIcon src="icons/discord-js.svg" alt="React" />
+        {ICONS.map(({ src, label }, index) => (
+          <div
+            key={index}
+            className="relative lg:h-24 lg:w-24 md:h-20 md:w-20 sm:h-16 sm:w-16 h-12 w-12"
+          >
+            <Image src={src} alt={label} fill />
+          </div>
+        ))}
       </div>
     </div>
   )
