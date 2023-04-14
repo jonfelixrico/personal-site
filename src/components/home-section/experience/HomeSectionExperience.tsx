@@ -72,7 +72,9 @@ function MainTechIconList(props: { icons: Icon[]; className?: string }) {
       )}
     >
       {props.icons.map(({ src, label }, index) => (
-        <TechIcon src={src} alt={label} key={index} />
+        <div className={'relative h-20 w-20'} key={index}>
+          <Image src={src} alt={label} fill />
+        </div>
       ))}
     </div>
   )
