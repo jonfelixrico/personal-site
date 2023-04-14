@@ -42,7 +42,7 @@ function MainTechItem(props: {
   return (
     <div className={classnames('p-3 rounded-lg bg-app', props.className)}>
       <div className="flex flex-row items-center justify-between mb-3">
-        <h4 className="text-4xl text-white">{props.header}</h4>
+        <h4 className="text-3xl text-white">{props.header}</h4>
         {props.side}
       </div>
       {props.body}
@@ -75,9 +75,12 @@ function MainTechIconList(props: { icons: Icon[]; className?: string }) {
 function MainTechSection(props: { className?: string }) {
   return (
     <div className={props.className}>
-      <h3 className="text-center text-4xl text-accent mb-5">
-        The bread and butter
-      </h3>
+      <div className="mb-5">
+        <h3 className="text-center text-4xl text-accent">
+          The bread and butter
+        </h3>
+      </div>
+
       <div className="grid grid-cols-12 w-full gap-4">
         <MainTechItem
           header="Front-end"
@@ -199,11 +202,13 @@ function TechIcon(props: { src: string; alt: string; className?: string }) {
 function SecondaryTechSection(props: { className?: string }) {
   return (
     <div className={props.className}>
-      <h3 className="text-center text-4xl text-accent mb-5">
-        Other stuff that I have experienced fiddling with
-      </h3>
+      <div className="mb-5">
+        <h3 className="text-center text-4xl text-accent">
+          ...and others that I've fiddled with
+        </h3>
+      </div>
       <div className="flex flex-row justify-center">
-        <div className="grid grid-cols-6 gap-4">
+        <div className="flex flex-row flex-wrap gap-6">
           <TechIcon src="icons/react.svg" alt="React" />
           <TechIcon src="icons/next-js.svg" alt="React" />
           <TechIcon src="icons/tailwind-css.svg" alt="React" />
@@ -229,11 +234,10 @@ export default function HomeSectionExperience(props: { className?: string }) {
     <div className={classnames('py-10 min-h-screen', props.className)}>
       <HeaderAndDescription className="mx-auto max-w-screen-lg" />
 
-      <div className="bg-card py-8 mb-10">
-        <MainTechSection className="mx-auto max-w-screen-lg" />
+      <div className="bg-card py-8">
+        <MainTechSection className="mx-auto max-w-screen-lg mb-20" />
+        <SecondaryTechSection className="mx-auto max-w-screen-lg" />
       </div>
-
-      <SecondaryTechSection className="mx-auto max-w-screen-lg" />
     </div>
   )
 }
