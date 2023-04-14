@@ -64,7 +64,10 @@ function MainTechIconList(props: { icons: Icon[]; className?: string }) {
       )}
     >
       {props.icons.map(({ src, label }, index) => (
-        <div className={'relative h-20 w-20'} key={index}>
+        <div
+          className={'relative lg:h-20 lg:w-20 md:h-16 md:w-16 h-12 w-12'}
+          key={index}
+        >
           <Image src={src} alt={label} fill />
         </div>
       ))}
@@ -79,7 +82,7 @@ function MainTechSection(props: { className?: string }) {
         The bread and butter
       </h3>
 
-      <div className="grid grid-cols-12 w-full gap-4">
+      <div className="grid md:grid-cols-2 w-full gap-4">
         <MainTechItem
           header="Front-end"
           body={
@@ -105,7 +108,6 @@ function MainTechSection(props: { className?: string }) {
               ]}
             />
           }
-          className="col-span-6"
         />
 
         <MainTechItem
@@ -128,7 +130,6 @@ function MainTechSection(props: { className?: string }) {
               ]}
             />
           }
-          className="col-span-6"
         />
 
         <MainTechItem
@@ -155,7 +156,6 @@ function MainTechSection(props: { className?: string }) {
               ]}
             />
           }
-          className="col-span-6"
         />
 
         <MainTechItem
@@ -182,7 +182,6 @@ function MainTechSection(props: { className?: string }) {
               ]}
             />
           }
-          className="col-span-6"
         />
       </div>
     </div>
@@ -229,11 +228,11 @@ function SecondaryTechSection(props: { className?: string }) {
 export default function HomeSectionExperience(props: { className?: string }) {
   return (
     <div className={classnames('py-10 min-h-screen', props.className)}>
-      <HeaderAndDescription className="mx-auto max-w-screen-lg" />
+      <HeaderAndDescription className="mx-auto max-w-screen-lg px-5" />
 
       <div className="bg-card py-8">
-        <MainTechSection className="mx-auto max-w-screen-lg mb-20" />
-        <SecondaryTechSection className="mx-auto max-w-screen-lg" />
+        <MainTechSection className="mx-auto max-w-screen-lg mb-20 px-5" />
+        <SecondaryTechSection className="mx-auto max-w-screen-lg px-5" />
       </div>
     </div>
   )
