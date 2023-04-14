@@ -28,7 +28,7 @@ const ICONS: Icon[] = [
   },
   {
     src: 'icons/node-js.svg',
-    label: 'NodeJS',
+    label: 'Node.js',
   },
   {
     src: 'icons/typescript.svg',
