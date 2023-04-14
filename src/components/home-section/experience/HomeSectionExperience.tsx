@@ -65,7 +65,7 @@ function MainTechIconList(props: { icons: Icon[]; className?: string }) {
     >
       {props.icons.map(({ src, label }, index) => (
         <div
-          className={'relative lg:h-20 lg:w-20 md:h-16 md:w-16 h-12 w-12'}
+          className={'relative lg:h-20 lg:w-20 md:h-14 md:w-14 h-12 w-12'}
           key={index}
         >
           <Image src={src} alt={label} fill />
@@ -190,7 +190,12 @@ function MainTechSection(props: { className?: string }) {
 
 function TechIcon(props: { src: string; alt: string; className?: string }) {
   return (
-    <div className={classnames('relative h-24 w-24', props.className)}>
+    <div
+      className={classnames(
+        'relative lg:h-24 lg:w-24 md:h-20 md:w-20 sm:h-16 sm:w-16 h-12 w-12',
+        props.className
+      )}
+    >
       <Image src={props.src} alt={props.alt} fill />
     </div>
   )
