@@ -75,11 +75,9 @@ function MainTechIconList(props: { icons: Icon[]; className?: string }) {
 function MainTechSection(props: { className?: string }) {
   return (
     <div className={props.className}>
-      <div className="mb-5">
-        <h3 className="text-center text-4xl text-accent">
-          The bread and butter
-        </h3>
-      </div>
+      <h3 className="text-center text-4xl text-accent mb-5">
+        The bread and butter
+      </h3>
 
       <div className="grid grid-cols-12 w-full gap-4">
         <MainTechItem
@@ -202,11 +200,10 @@ function TechIcon(props: { src: string; alt: string; className?: string }) {
 function SecondaryTechSection(props: { className?: string }) {
   return (
     <div className={props.className}>
-      <div className="mb-5">
-        <h3 className="text-center text-4xl text-accent">
-          ...and others that I've fiddled with
-        </h3>
-      </div>
+      <h3 className="text-center text-4xl text-accent mb-5">
+        ...and others that I've fiddled with
+      </h3>
+
       <div className="flex flex-row justify-center">
         <div className="flex flex-row flex-wrap gap-6">
           <TechIcon src="icons/react.svg" alt="React" />
