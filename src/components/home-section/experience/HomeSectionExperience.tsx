@@ -41,10 +41,47 @@ function MainTechCard(props: { children?: ReactNode; className?: string }) {
   )
 }
 
-function MainTechIcon(props: { src: string; alt: string; className?: string }) {
+function MainTechItem(props: {
+  body: ReactNode
+  header: string
+  side: ReactNode
+  className?: string
+}) {
   return (
-    <div className={classnames('relative h-16 w-16', props.className)}>
+    <div className={classnames('p-3 rounded-lg bg-app', props.className)}>
+      <div className="flex flex-row items-center justify-between mb-3">
+        <h4 className="text-4xl text-white">{props.header}</h4>
+        {props.side}
+      </div>
+      {props.body}
+    </div>
+  )
+}
+
+interface Icon {
+  src: string
+  label: string
+}
+
+function TechIcon(props: { src: string; alt: string; className?: string }) {
+  return (
+    <div className={classnames('relative h-20 w-20', props.className)}>
       <Image src={props.src} alt={props.alt} fill />
+    </div>
+  )
+}
+
+function MainTechIconList(props: { icons: Icon[]; className?: string }) {
+  return (
+    <div
+      className={classnames(
+        'flex flex-row justify-center gap-3',
+        props.className
+      )}
+    >
+      {props.icons.map(({ src, label }, index) => (
+        <TechIcon src={src} alt={label} key={index} />
+      ))}
     </div>
   )
 }
@@ -56,47 +93,99 @@ function MainTechSection(props: { className?: string }) {
         The bread and butter
       </h3>
       <div className="grid grid-cols-12 w-full gap-4">
-        <MainTechCard className="row-start-1 col-span-6">
-          <div className="flex flex-row justify-center">
-            <MainTechIcon src="icons/vue-js.svg" alt="Vue" />
-            <MainTechIcon src="icons/quasar-framework.svg" alt="Vue" />
-          </div>
-          <h4 className="text-2xl text-white text-center mb-3">Front-end</h4>
-          <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo.
-          </p>
-        </MainTechCard>
+        <MainTechItem
+          header="Front-end"
+          body={
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo.
+            </p>
+          }
+          side={
+            <MainTechIconList
+              icons={[
+                {
+                  src: 'icons/vue-js.svg',
+                  label: 'Vue',
+                },
 
-        <MainTechCard className="row-start-1 col-span-6">
-          <div className="row-start-1 flex flex-row justify-center">
-            <MainTechIcon src="icons/nest-js.svg" alt="Vue" />
-          </div>
-          <h4 className="text-2xl text-white text-center mb-3">Back-end</h4>
-          <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo.
-          </p>
-        </MainTechCard>
+                {
+                  src: 'icons/quasar-framework.svg',
+                  label: 'Quasar Framework',
+                },
+              ]}
+            />
+          }
+          className="row-start-1 col-span-6"
+        />
 
-        <MainTechCard className="row-start-2 col-start-4 col-span-6">
-          <div className="flex flex-row justify-center">
-            <MainTechIcon src="icons/mongodb.svg" alt="Vue" />
-            <MainTechIcon src="icons/mysql.svg" alt="Vue" />
-            <MainTechIcon src="icons/postgresql.svg" alt="Vue" />
-          </div>
-          <h4 className="text-2xl text-white text-center mb-3">Databases</h4>
-          <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo.
-          </p>
-        </MainTechCard>
+        <MainTechItem
+          header="Back-end"
+          body={
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo.
+            </p>
+          }
+          side={
+            <MainTechIconList
+              icons={[
+                {
+                  src: 'icons/nest-js.svg',
+                  label: 'Nest.js',
+                },
+              ]}
+            />
+          }
+          className="row-start-1 col-span-6"
+        />
+
+        <MainTechItem
+          header="Databases"
+          body={
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo.
+            </p>
+          }
+          side={
+            <MainTechIconList
+              icons={[
+                {
+                  src: 'icons/mongodb.svg',
+                  label: 'MongoDB',
+                },
+                {
+                  src: 'icons/postgresql.svg',
+                  label: 'PostgreSQL',
+                },
+              ]}
+            />
+          }
+          className="row-start-2 col-span-6 col-start-4"
+        />
+      </div>
+    </div>
+  )
+}
+
+function SecondaryTechSection(props: { className?: string }) {
+  return (
+    <div className={props.className}>
+      <h3 className="text-center text-4xl text-accent mb-5">
+        Other stuff that I've used
+      </h3>
+      <div className="flex flex-row">
+        <TechIcon src="icons/react.svg" alt="React" />
+        <TechIcon src="icons/docker.svg" alt="React" />
+        <TechIcon src="icons/spring-boot.svg" alt="React" />
+        <TechIcon src="icons/angular.svg" alt="React" />
       </div>
     </div>
   )
@@ -107,9 +196,11 @@ export default function HomeSectionExperience(props: { className?: string }) {
     <div className={classnames('py-10 min-h-screen', props.className)}>
       <HeaderAndDescription className="mx-auto max-w-screen-lg" />
 
-      <div className="bg-card py-8">
+      <div className="bg-card py-8 mb-10">
         <MainTechSection className="mx-auto max-w-screen-lg" />
       </div>
+
+      <SecondaryTechSection className="mx-auto max-w-screen-lg" />
     </div>
   )
 }
