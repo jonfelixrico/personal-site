@@ -2,7 +2,7 @@ import IconWithTooltip from '@/components/IconWithTooltip'
 import classnames from 'classnames'
 import { ReactNode } from 'react'
 
-function MainTechItem(props: {
+function ItemLayout(props: {
   body: ReactNode
   header: string
   side: ReactNode
@@ -24,7 +24,7 @@ interface Icon {
   label: string
 }
 
-function MainTechIconList(props: { icons: Icon[]; className?: string }) {
+function IconList(props: { icons: Icon[]; className?: string }) {
   return (
     <div
       className={classnames(
@@ -47,7 +47,7 @@ function MainTechIconList(props: { icons: Icon[]; className?: string }) {
 export default function ContentMain() {
   return (
     <div className="grid md:grid-cols-2 w-full gap-4">
-      <MainTechItem
+      <ItemLayout
         header="Front-end"
         body={
           <p>
@@ -58,7 +58,7 @@ export default function ContentMain() {
           </p>
         }
         side={
-          <MainTechIconList
+          <IconList
             icons={[
               {
                 src: 'icons/vue-js.svg',
@@ -74,7 +74,7 @@ export default function ContentMain() {
         }
       />
 
-      <MainTechItem
+      <ItemLayout
         header="Back-end"
         body={
           <p>
@@ -85,7 +85,7 @@ export default function ContentMain() {
           </p>
         }
         side={
-          <MainTechIconList
+          <IconList
             icons={[
               {
                 src: 'icons/nest-js.svg',
@@ -96,7 +96,7 @@ export default function ContentMain() {
         }
       />
 
-      <MainTechItem
+      <ItemLayout
         header="Databases"
         body={
           <p>
@@ -107,7 +107,7 @@ export default function ContentMain() {
           </p>
         }
         side={
-          <MainTechIconList
+          <IconList
             icons={[
               {
                 src: 'icons/mongodb.svg',
@@ -122,7 +122,7 @@ export default function ContentMain() {
         }
       />
 
-      <MainTechItem
+      <ItemLayout
         header="Automation & Deployment"
         body={
           <p>
@@ -133,7 +133,7 @@ export default function ContentMain() {
           </p>
         }
         side={
-          <MainTechIconList
+          <IconList
             icons={[
               {
                 src: 'icons/docker.svg',
