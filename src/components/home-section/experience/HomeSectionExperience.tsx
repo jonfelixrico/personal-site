@@ -33,14 +33,6 @@ function HeaderAndDescription(props: { className?: string }) {
   )
 }
 
-function MainTechCard(props: { children?: ReactNode; className?: string }) {
-  return (
-    <div className={classnames('p-3 rounded-lg bg-app', props.className)}>
-      {props.children}
-    </div>
-  )
-}
-
 function MainTechItem(props: {
   body: ReactNode
   header: string
