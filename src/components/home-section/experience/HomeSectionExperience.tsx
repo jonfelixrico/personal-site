@@ -1,6 +1,6 @@
 import classnames from 'classnames'
-import Image from 'next/image'
-import { ReactNode } from 'react'
+import ContentMain from './ContentMain'
+
 import SecondaryTechContent from './SecondaryTechContent'
 
 function HeaderAndDescription(props: { className?: string }) {
@@ -34,168 +34,19 @@ function HeaderAndDescription(props: { className?: string }) {
   )
 }
 
-function MainTechItem(props: {
-  body: ReactNode
-  header: string
-  side: ReactNode
-  className?: string
-}) {
-  return (
-    <div className={classnames('p-3 rounded-lg bg-app', props.className)}>
-      <div className="flex flex-row items-center justify-between mb-3">
-        <h4 className="text-3xl text-white">{props.header}</h4>
-        {props.side}
-      </div>
-      {props.body}
-    </div>
-  )
-}
-
-interface Icon {
-  src: string
-  label: string
-}
-
-function MainTechIconList(props: { icons: Icon[]; className?: string }) {
-  return (
-    <div
-      className={classnames(
-        'flex flex-row justify-center gap-3',
-        props.className
-      )}
-    >
-      {props.icons.map(({ src, label }, index) => (
-        <div
-          className={'relative lg:h-20 lg:w-20 md:h-14 md:w-14 h-12 w-12'}
-          key={index}
-        >
-          <Image src={src} alt={label} fill />
-        </div>
-      ))}
-    </div>
-  )
-}
-
-function MainTechSection(props: { className?: string }) {
-  return (
-    <div className={props.className}>
-      <h3 className="text-center text-4xl text-accent mb-5">
-        The bread and butter
-      </h3>
-
-      <div className="grid md:grid-cols-2 w-full gap-4">
-        <MainTechItem
-          header="Front-end"
-          body={
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo.
-            </p>
-          }
-          side={
-            <MainTechIconList
-              icons={[
-                {
-                  src: 'icons/vue-js.svg',
-                  label: 'Vue',
-                },
-
-                {
-                  src: 'icons/quasar-framework.svg',
-                  label: 'Quasar Framework',
-                },
-              ]}
-            />
-          }
-        />
-
-        <MainTechItem
-          header="Back-end"
-          body={
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo.
-            </p>
-          }
-          side={
-            <MainTechIconList
-              icons={[
-                {
-                  src: 'icons/nest-js.svg',
-                  label: 'Nest.js',
-                },
-              ]}
-            />
-          }
-        />
-
-        <MainTechItem
-          header="Databases"
-          body={
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo.
-            </p>
-          }
-          side={
-            <MainTechIconList
-              icons={[
-                {
-                  src: 'icons/mongodb.svg',
-                  label: 'MongoDB',
-                },
-                {
-                  src: 'icons/postgresql.svg',
-                  label: 'PostgreSQL',
-                },
-              ]}
-            />
-          }
-        />
-
-        <MainTechItem
-          header="Automation & Deployment"
-          body={
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo.
-            </p>
-          }
-          side={
-            <MainTechIconList
-              icons={[
-                {
-                  src: 'icons/docker.svg',
-                  label: 'Docker',
-                },
-                {
-                  src: 'icons/github-actions.svg',
-                  label: 'Github Actions',
-                },
-              ]}
-            />
-          }
-        />
-      </div>
-    </div>
-  )
-}
-
 export default function HomeSectionExperience(props: { className?: string }) {
   return (
     <div className={classnames('py-10 min-h-screen', props.className)}>
       <HeaderAndDescription className="mx-auto max-w-screen-lg px-5" />
 
       <div className="bg-card py-8">
-        <MainTechSection className="mx-auto max-w-screen-lg mb-20 px-5" />
+        <div className="mx-auto max-w-screen-lg px-5 mb-10">
+          <h3 className="text-center text-4xl text-accent mb-5">
+            The bread and butter
+          </h3>
+
+          <ContentMain />
+        </div>
 
         <div className="mx-auto max-w-screen-lg px-5">
           <h3 className="text-center text-4xl text-accent mb-5">
