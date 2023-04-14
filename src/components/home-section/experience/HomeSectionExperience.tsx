@@ -55,14 +55,6 @@ interface Icon {
   label: string
 }
 
-function TechIcon(props: { src: string; alt: string; className?: string }) {
-  return (
-    <div className={classnames('relative h-20 w-20', props.className)}>
-      <Image src={props.src} alt={props.alt} fill />
-    </div>
-  )
-}
-
 function MainTechIconList(props: { icons: Icon[]; className?: string }) {
   return (
     <div
@@ -112,7 +104,7 @@ function MainTechSection(props: { className?: string }) {
               ]}
             />
           }
-          className="row-start-1 col-span-6"
+          className="col-span-6"
         />
 
         <MainTechItem
@@ -135,7 +127,7 @@ function MainTechSection(props: { className?: string }) {
               ]}
             />
           }
-          className="row-start-1 col-span-6"
+          className="col-span-6"
         />
 
         <MainTechItem
@@ -162,9 +154,44 @@ function MainTechSection(props: { className?: string }) {
               ]}
             />
           }
-          className="row-start-2 col-span-6 col-start-4"
+          className="col-span-6"
+        />
+
+        <MainTechItem
+          header="Automation & Deployment"
+          body={
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo.
+            </p>
+          }
+          side={
+            <MainTechIconList
+              icons={[
+                {
+                  src: 'icons/docker.svg',
+                  label: 'Docker',
+                },
+                {
+                  src: 'icons/github-actions.svg',
+                  label: 'Github Actions',
+                },
+              ]}
+            />
+          }
+          className="col-span-6"
         />
       </div>
+    </div>
+  )
+}
+
+function TechIcon(props: { src: string; alt: string; className?: string }) {
+  return (
+    <div className={classnames('relative h-32 w-32', props.className)}>
+      <Image src={props.src} alt={props.alt} fill />
     </div>
   )
 }
@@ -180,6 +207,7 @@ function SecondaryTechSection(props: { className?: string }) {
         <TechIcon src="icons/docker.svg" alt="React" />
         <TechIcon src="icons/spring-boot.svg" alt="React" />
         <TechIcon src="icons/angular.svg" alt="React" />
+        <TechIcon src="icons/eventstoredb.svg" alt="React" />
       </div>
     </div>
   )
