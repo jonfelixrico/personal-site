@@ -190,7 +190,7 @@ function MainTechSection(props: { className?: string }) {
 
 function TechIcon(props: { src: string; alt: string; className?: string }) {
   return (
-    <div className={classnames('relative h-32 w-32', props.className)}>
+    <div className={classnames('relative h-24 w-24', props.className)}>
       <Image src={props.src} alt={props.alt} fill />
     </div>
   )
@@ -200,14 +200,25 @@ function SecondaryTechSection(props: { className?: string }) {
   return (
     <div className={props.className}>
       <h3 className="text-center text-4xl text-accent mb-5">
-        Other stuff that I've used
+        Other stuff that I have experienced fiddling with
       </h3>
-      <div className="flex flex-row">
-        <TechIcon src="icons/react.svg" alt="React" />
-        <TechIcon src="icons/docker.svg" alt="React" />
-        <TechIcon src="icons/spring-boot.svg" alt="React" />
-        <TechIcon src="icons/angular.svg" alt="React" />
-        <TechIcon src="icons/eventstoredb.svg" alt="React" />
+      <div className="flex flex-row justify-center">
+        <div className="grid grid-cols-6 gap-4">
+          <TechIcon src="icons/react.svg" alt="React" />
+          <TechIcon src="icons/next-js.svg" alt="React" />
+          <TechIcon src="icons/tailwind-css.svg" alt="React" />
+          <TechIcon src="icons/angular.svg" alt="React" />
+          <TechIcon src="icons/express-js.svg" alt="React" />
+          <TechIcon src="icons/node-js.svg" alt="React" />
+          <TechIcon src="icons/typescript.svg" alt="React" />
+          <TechIcon src="icons/spring-boot.svg" alt="React" />
+          <TechIcon src="icons/eventstoredb.svg" alt="React" />
+          <TechIcon src="icons/mysql.svg" alt="React" />
+          <TechIcon src="icons/java.svg" alt="React" />
+          <TechIcon src="icons/pocketbase.svg" alt="React" />
+          <TechIcon src="icons/nginx.svg" alt="React" />
+          <TechIcon src="icons/discord-js.svg" alt="React" />
+        </div>
       </div>
     </div>
   )
