@@ -40,17 +40,26 @@ export default function FeaturedTemplateLayout(props: {
 }) {
   return (
     <div className="grid grid-cols-12">
-      <div className="col-span-6 col-start-1 flex flex-col justify-center gap-3 row-start-1 z-10">
+      <div className="md:col-span-6 md:col-start-1 col-span-12 flex flex-col justify-center gap-3 row-start-1 z-10">
         <div className="text-2xl text-accent">{props.projectName}</div>
-        <Card className="p-3">{props.details}</Card>
+        <Card>
+          <FitWidthImage
+            src={props.imageSrc}
+            alt={`Preview of ${props.projectName}`}
+            className="md:hidden w-full"
+          />
+          <div className="p-3">{props.details}</div>
+        </Card>
         {props.footer}
       </div>
 
-      <FitWidthImage
-        src={props.imageSrc}
-        alt={`Preview of ${props.projectName}`}
-        className="col-start-5 col-span-8 flex flex-col justify-center row-start-1"
-      />
+      <div className="md:block hidden col-start-5 col-span-8 row-start-1">
+        <FitWidthImage
+          src={props.imageSrc}
+          alt={`Preview of ${props.projectName}`}
+          className="w-full"
+        />
+      </div>
     </div>
   )
 }
