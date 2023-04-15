@@ -1,8 +1,6 @@
 import classnames from 'classnames'
 import ContentPrimaryTech from './ContentPrimaryTech'
 
-import ContentSecondaryTech from './ContentSecondaryTech'
-
 function HeaderAndDescription(props: { className?: string }) {
   return (
     <div className={classnames('row-start-2 row-span-4', props.className)}>
