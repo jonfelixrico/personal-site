@@ -47,14 +47,6 @@ export default function HomeSectionExperience(props: { className?: string }) {
 
           <ContentPrimaryTech />
         </div>
-
-        <div className="mx-auto max-w-screen-lg px-5">
-          <h3 className="text-center text-4xl text-accent mb-5">
-            ...and others that I've fiddled with
-          </h3>
-
-          <ContentSecondaryTech />
-        </div>
       </div>
     </div>
   )
