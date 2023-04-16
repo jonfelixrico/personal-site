@@ -1,5 +1,8 @@
 import { NavbarSectionId } from '@/models/navbar-section-id.enum'
-import classnames from 'classnames'
+import bindableCf from 'classnames/bind'
+import styles from './Navbar.module.scss'
+
+const classnames = bindableCf.bind(styles)
 
 interface NavLink {
   section: NavbarSectionId
