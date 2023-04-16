@@ -17,7 +17,6 @@ export default function Home() {
         <Navbar
           className="h-full w-full"
           activeSection={activeSection ?? undefined}
-          onLinkClick={setActiveSection}
         />
       </header>
       <main className="relative">

@@ -28,7 +28,6 @@ const LINKS: NavLink[] = [
 export default function Navbar(props: {
   className?: string
   activeSection?: string
-  onLinkClick?: (id: string) => void
 }) {
   return (
     <nav
@@ -45,11 +44,6 @@ export default function Navbar(props: {
             'underline underline-offset-8':
               NavbarSectionId[section] == props.activeSection,
           })}
-          onClick={() => {
-            if (props.onLinkClick) {
-              props.onLinkClick(NavbarSectionId[section])
-            }
-          }}
         >
           {label}
         </a>
