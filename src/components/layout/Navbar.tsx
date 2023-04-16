@@ -39,16 +39,16 @@ export default function Navbar(props: {
         'flex flex-row items-center justify-end gap-4',
         'px-8',
         props.className,
-        {
-          'bg-app shadow-lg': !props.transparent,
-        }
+
+        'navbar',
+        { 'shadow-md': !props.transparent, transparent: props.transparent }
       )}
     >
       {LINKS.map(({ section, label }) => (
         <a
           href={`#${section}`}
           key={section}
-          className={classnames('text-accent', {
+          className={classnames('text-white font-semibold', {
             'underline underline-offset-8': section == props.activeSection,
           })}
         >

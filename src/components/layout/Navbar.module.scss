@@ -1,0 +1,11 @@
+@import 'src/styles/variables.scss';
+
+.navbar {
+  background: $bg-app-2;
+
+  &.transparent {
+    background: transparent;
+  }
+
+  transition: background 0.2s;
+}
