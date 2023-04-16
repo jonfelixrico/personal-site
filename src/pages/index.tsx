@@ -34,7 +34,7 @@ export default function Home() {
             </section>
 
             <section id="section-contacts">
-              <HomeSectionContacts className="mx-auto max-w-screen-lg min-h-screen" />
+              <HomeSectionContacts className="mx-auto max-w-screen-lg min-h-screen section-px" />
             </section>
           </div>
         </main>

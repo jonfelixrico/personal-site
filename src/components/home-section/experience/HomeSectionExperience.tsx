@@ -35,7 +35,7 @@ function HeaderAndDescription(props: { className?: string }) {
 export default function HomeSectionExperience() {
   return (
     <div className="py-10 min-h-screen">
-      <HeaderAndDescription className="mx-auto max-w-screen-lg px-5" />
+      <HeaderAndDescription className="mx-auto max-w-screen-lg section-px" />
 
       <div className="bg-app-2 py-8">
         <div className="mx-auto max-w-screen-lg px-5 mb-10">

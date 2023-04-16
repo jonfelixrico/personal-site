@@ -3,7 +3,7 @@ export default function HomeSectionMain() {
     <div
       className="h-screen
       flex flex-col justify-center
-      bg-app-2"
+      bg-app-2 section-px"
     >
       <div className="mx-auto max-w-screen-lg">
         <div className="mb-10 text-8xl font-semibold">

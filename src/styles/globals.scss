@@ -37,3 +37,9 @@
   writing-mode: vertical-rl;
   text-orientation: mixed;
 }
+
+.section-px {
+  $section-px: 1.25rem;
+  padding-left: $section-px;
+  padding-right: $section-px;
+}
