@@ -31,19 +31,6 @@ function FitWidthImage(props: {
   )
 }
 
-function Card(props: { children: ReactNode; className?: string }) {
-  return (
-    <div
-      className={classnames(
-        'rounded-lg shadow-md overflow-hidden bg-card',
-        props.className
-      )}
-    >
-      {props.children}
-    </div>
-  )
-}
-
 export default function FeaturedTemplateLayout(props: {
   details: ReactNode
   projectName: string
@@ -54,18 +41,18 @@ export default function FeaturedTemplateLayout(props: {
     <div className="grid grid-cols-12">
       <div className="md:col-span-6 md:col-start-1 col-span-12 flex flex-col justify-center gap-3 row-start-1 z-10">
         <div className="text-2xl text-accent">{props.projectName}</div>
-        <Card>
+        <div className="rounded-lg overflow-hidden bg-app-2 shadow-md">
           <FitWidthImage
             src={props.imageSrc}
             alt={`Preview of ${props.projectName}`}
             className="md:hidden w-full"
           />
           <div className="p-3">{props.details}</div>
-        </Card>
+        </div>
         {props.footer}
       </div>
 
-      <div className="md:block hidden col-start-5 col-span-8 row-start-1">
+      <div className="md:block hidden col-start-5 col-span-8 row-start-1 rounded-lg overflow-hidden">
         <FitWidthImage
           src={props.imageSrc}
           alt={`Preview of ${props.projectName}`}

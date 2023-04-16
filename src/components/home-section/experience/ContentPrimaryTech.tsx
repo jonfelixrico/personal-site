@@ -9,7 +9,9 @@ function ItemLayout(props: {
   className?: string
 }) {
   return (
-    <div className={classnames('p-3 rounded-lg bg-app', props.className)}>
+    <div
+      className={classnames('p-3 rounded-lg bg-app shadow-md', props.className)}
+    >
       <div className="flex flex-row items-center justify-between mb-3">
         <h4 className="text-3xl text-white">{props.header}</h4>
         {props.side}
@@ -26,9 +28,7 @@ interface Icon {
 
 function IconList(props: { icons: Icon[] }) {
   return (
-    <div
-      className="flex flex-row justify-center gap-3"
-    >
+    <div className="flex flex-row justify-center gap-3">
       {props.icons.map(({ src, label }, index) => (
         <IconWithTooltip
           className="lg:h-20 lg:w-20 md:h-14 md:w-14 h-12 w-12"
