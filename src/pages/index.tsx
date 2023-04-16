@@ -23,7 +23,7 @@ export default function Home() {
       <main className="relative">
         <ContactsOverlay classNames="absolute w-full h-full py-5 px-8" />
         <HomeContent
-          className="h-screen overflow-auto"
+          className="h-screen overflow-auto scroll-smooth"
           onVisibleSectionChange={setActiveSection}
         />
       </main>
