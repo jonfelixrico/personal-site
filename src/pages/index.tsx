@@ -1,8 +1,8 @@
-import HomeSectionContacts from '@/components/sections/HomeSectionContacts'
+import HomeSectionContacts from '@/components/section/HomeSectionContacts'
 import HomeSectionExperience from '@/components/experience/HomeSectionExperience'
-import HomeSectionMain from '@/components/sections/HomeSectionMain'
+import HomeSectionMain from '@/components/section/HomeSectionMain'
 import Head from 'next/head'
-import HomeSectionPortfolio from '@/components/sections/HomeSectionPortfolio'
+import HomeSectionPortfolio from '@/components/section/HomeSectionPortfolio'
 import ContactsOverlay from '@/components/contacts/ContactsOverlay'
 import Navbar, { NavbarSectionIds } from '@/components/layout/Navbar'
 
