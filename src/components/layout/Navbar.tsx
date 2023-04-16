@@ -41,7 +41,7 @@ export default function Navbar(props: {
         props.className,
 
         'navbar',
-        { 'shadow-md': !props.transparent, transparent: props.transparent }
+        { transparent: props.transparent }
       )}
     >
       {LINKS.map(({ section, label }) => (
