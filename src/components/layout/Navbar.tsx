@@ -1,4 +1,4 @@
-import { NavbarSectionId } from '@/model/navbar-section-id.enum'
+import { NavbarSectionId } from '@/models/navbar-section-id.enum'
 import classnames from 'classnames'
 
 interface NavLink {
