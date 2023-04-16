@@ -41,7 +41,6 @@ export default function FeaturedTemplateLayout(props: {
   details: ReactNode
   title: string
   imageSrc: string
-  footer?: ReactNode
   techList: Tech[]
 }) {
   return (
