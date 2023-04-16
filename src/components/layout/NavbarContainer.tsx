@@ -55,7 +55,7 @@ export default function NavbarContainer(props: {
         </nav>
       </header>
       <main className={props.mainClassName}>
-        <ScrollSpy>{props.children}</ScrollSpy>
+        <ScrollSpy useBoxMethod>{props.children}</ScrollSpy>
       </main>
     </div>
   )
