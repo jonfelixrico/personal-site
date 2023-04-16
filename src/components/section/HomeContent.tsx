@@ -1,10 +1,10 @@
 import { ReactNode, useEffect, useRef } from 'react'
-import { NavbarSectionIds } from '../layout/Navbar'
 import HomeSectionContacts from './HomeSectionContacts'
 import HomeSectionExperience from './HomeSectionExperience'
 import HomeSectionMain from './HomeSectionMain'
 import HomeSectionPortfolio from './HomeSectionPortfolio'
 import { useIntersection } from 'react-use'
+import { NavbarSectionId } from '@/model/navbar-section-id.enum'
 
 function SectionWrapper({
   id,
@@ -43,28 +43,28 @@ export default function HomeContent(props: {
   return (
     <div className={props.className}>
       <SectionWrapper
-        id={NavbarSectionIds.HOME}
+        id={NavbarSectionId.HOME}
         onVisible={props.onVisibleSectionChange}
       >
         <HomeSectionMain />
       </SectionWrapper>
 
       <SectionWrapper
-        id={NavbarSectionIds.EXPERIENCE}
+        id={NavbarSectionId.EXPERIENCE}
         onVisible={props.onVisibleSectionChange}
       >
         <HomeSectionExperience />
       </SectionWrapper>
 
       <SectionWrapper
-        id={NavbarSectionIds.PORTFOLIO}
+        id={NavbarSectionId.PORTFOLIO}
         onVisible={props.onVisibleSectionChange}
       >
         <HomeSectionPortfolio />
       </SectionWrapper>
 
       <SectionWrapper
-        id={NavbarSectionIds.CONTACTS}
+        id={NavbarSectionId.CONTACTS}
         onVisible={props.onVisibleSectionChange}
       >
         <HomeSectionContacts className="mx-auto max-w-screen-lg min-h-screen Section-px" />
