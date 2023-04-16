@@ -25,7 +25,7 @@ export default function FeaturedMarites() {
         },
       ]}
       side={
-        <>
+        <div className="flex flex-row gap-3">
           <a
             href="https://marites.jonfelixrico.dev"
             className="text-accent-2 text-xl"
@@ -41,7 +41,7 @@ export default function FeaturedMarites() {
           >
             <BsGithub />
           </a>
-        </>
+        </div>
       }
     />
   )
