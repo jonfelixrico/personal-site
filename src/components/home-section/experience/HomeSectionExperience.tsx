@@ -37,7 +37,7 @@ export default function HomeSectionExperience() {
     <div className="py-10 min-h-screen">
       <HeaderAndDescription className="mx-auto max-w-screen-lg px-5" />
 
-      <div className="bg-card py-8">
+      <div className="bg-app-2 py-8">
         <div className="mx-auto max-w-screen-lg px-5 mb-10">
           <h3 className="text-center text-4xl text-accent mb-5">
             The bread and butter
