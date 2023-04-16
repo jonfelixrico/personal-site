@@ -1,6 +1,6 @@
 @import 'src/styles/variables.scss';
 
-.navbar {
+.nav-bar {
   @apply shadow-md opacity-95;
   background: $bg-app-1;
 
@@ -11,4 +11,12 @@
 
   transition-property: background, box-shadow, opacity;
   transition-duration: 0.25s;
+}
+
+.nav-link {
+  @apply text-white font-semibold;
+
+  &.active {
+    @apply underline underline-offset-8;
+  }
 }

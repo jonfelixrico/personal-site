@@ -4,12 +4,12 @@ import styles from './Navbar.module.scss'
 
 const classnames = bindableCf.bind(styles)
 
-interface NavLink {
+interface NavLinkData {
   section: NavbarSectionId
   label: string
 }
 
-const LINKS: NavLink[] = [
+const LINKS: NavLinkData[] = [
   {
     section: NavbarSectionId.HOME,
     label: 'Home',
@@ -28,6 +28,24 @@ const LINKS: NavLink[] = [
   },
 ]
 
+function NavLink({
+  section,
+  label,
+  isActive,
+}: NavLinkData & { isActive?: boolean }) {
+  return (
+    <a
+      href={`#${section}`}
+      key={section}
+      className={classnames('nav-link', {
+        active: isActive,
+      })}
+    >
+      {label}
+    </a>
+  )
+}
+
 export default function Navbar(props: {
   className?: string
   activeSection?: string
@@ -40,20 +58,17 @@ export default function Navbar(props: {
         'px-8',
         props.className,
 
-        'navbar',
+        'nav-bar',
         { transparent: props.transparent }
       )}
     >
       {LINKS.map(({ section, label }) => (
-        <a
-          href={`#${section}`}
+        <NavLink
+          section={section}
+          label={label}
+          isActive={section === props.activeSection}
           key={section}
-          className={classnames('text-white font-semibold', {
-            'underline underline-offset-8': section == props.activeSection,
-          })}
-        >
-          {label}
-        </a>
+        />
       ))}
     </nav>
   )
