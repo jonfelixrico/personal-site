@@ -15,7 +15,7 @@ export default function NavbarContainer(props: {
   return (
     <div>
       <header>
-        <nav className="'flex flex-row items-center justify-end gap-5">
+        <nav className="flex flex-row items-center justify-end gap-5">
           <a href={`#${NavbarSectionIds.HOME}`}>Home</a>
           <a href={`#${NavbarSectionIds.EXPERIENCE}`}>Experience</a>
           <a href={`#${NavbarSectionIds.PORTFOLIO}`}>Portfolio</a>
