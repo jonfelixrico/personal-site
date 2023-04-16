@@ -1,4 +1,6 @@
 import { FeaturedLayout } from './FeaturedTemplates'
+import { BsGithub } from 'react-icons/bs'
+import { CgArrowTopRightR } from 'react-icons/cg'
 
 export default function FeaturedMarites() {
   return (
@@ -22,6 +24,25 @@ export default function FeaturedMarites() {
           iconSrc: 'icons/pocketbase.svg',
         },
       ]}
+      side={
+        <>
+          <a
+            href="https://marites.jonfelixrico.dev"
+            className="text-accent-2 text-xl"
+            target="_blank"
+          >
+            <CgArrowTopRightR />
+          </a>
+
+          <a
+            href="https://github.com/jonfelixrico/marites"
+            className="text-accent-2 text-xl"
+            target="_blank"
+          >
+            <BsGithub />
+          </a>
+        </>
+      }
     />
   )
 }

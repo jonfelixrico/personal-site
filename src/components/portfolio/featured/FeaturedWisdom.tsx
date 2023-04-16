@@ -1,3 +1,4 @@
+import { CgArrowTopRightR } from 'react-icons/cg'
 import { FeaturedLayout } from './FeaturedTemplates'
 
 export default function FeaturedWisdom() {
@@ -39,6 +40,15 @@ export default function FeaturedWisdom() {
           iconSrc: 'icons/mongodb.svg',
         },
       ]}
+      side={
+        <a
+          href="https://wisdom.csaservers.com"
+          className="text-accent-2 text-xl"
+          target="_blank"
+        >
+          <CgArrowTopRightR />
+        </a>
+      }
     />
   )
 }
