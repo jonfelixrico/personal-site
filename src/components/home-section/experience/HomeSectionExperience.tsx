@@ -32,9 +32,9 @@ function HeaderAndDescription(props: { className?: string }) {
   )
 }
 
-export default function HomeSectionExperience(props: { className?: string }) {
+export default function HomeSectionExperience() {
   return (
-    <div className={classnames('py-10 min-h-screen', props.className)}>
+    <div className="py-10 min-h-screen">
       <HeaderAndDescription className="mx-auto max-w-screen-lg px-5" />
 
       <div className="bg-card py-8">
