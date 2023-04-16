@@ -2,8 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-.bg-app {
+.bg-app,
+.bg-app-1 {
   background-color: #1e1e1e;
+}
+
+.bg-card,
+.bg-app-2 {
+  background-color: #252526;
 }
 
 .text-app {
@@ -25,10 +31,6 @@
 
 .text-accent-2 {
   color: #8cdcda;
-}
-
-.bg-card {
-  background-color: #252526;
 }
 
 .text-orientation-vertical {
