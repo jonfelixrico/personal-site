@@ -6,12 +6,24 @@ export default function HomeSectionMain() {
       bg-app-2"
     >
       <div className="mx-auto max-w-screen-lg section-px">
-        <div className="mb-10 text-8xl font-semibold">
-          <div className="text-white">Jon Felix Rico,</div>
-          <div className="text-primary font-mono">&lt;web-developer /&gt;</div>
+        <div className="mb-10 font-semibold">
+          <div
+            className="
+            text-white
+            text-6xl sm:text-7xl md:text-8xl "
+          >
+            Jon Felix Rico,
+          </div>
+          <div
+            className="
+            text-primary font-mono
+            text-4xl sm:text-6xl md:text-7xl lg:text-8xl"
+          >
+            &lt;web-developer /&gt;
+          </div>
         </div>
 
-        <div className="w-5/6 text-xl">
+        <div className="lg:w-5/6 text-xl">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
