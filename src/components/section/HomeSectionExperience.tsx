@@ -34,11 +34,11 @@ function HeaderAndDescription(props: { className?: string }) {
 
 export default function HomeSectionExperience() {
   return (
-    <div className="py-10 min-h-screen">
+    <div className="pt-10 min-h-screen">
       <HeaderAndDescription className="mx-auto max-w-screen-lg section-px" />
 
-      <div className="bg-app-2 py-8">
-        <div className="mx-auto max-w-screen-lg px-5 mb-10">
+      <div className="bg-app-2 py-10">
+        <div className="mx-auto max-w-screen-lg section-px">
           <h3 className="text-center text-4xl text-accent mb-5">
             The bread and butter
           </h3>
