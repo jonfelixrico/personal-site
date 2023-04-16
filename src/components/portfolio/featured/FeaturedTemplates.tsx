@@ -45,15 +45,14 @@ export function FeaturedLayout(props: {
   side?: ReactNode
 }) {
   return (
-    <div className="grid grid-cols-12">
+    <div className="grid grid-cols-12 isolate">
       <div
         className="
         lg:col-span-6 lg:col-start-1
         md:col-span-7 md:col-start-1
-        col-span-12
+        col-span-12 row-start-1 
         flex flex-col justify-center gap-3
-        row-start-1 z-10
-        isolate"
+        z-10"
       >
         <div className="flex flex-row items-center gap-3 justify-between md:justify-start">
           <h5 className="text-2xl text-accent">{props.title}</h5>
