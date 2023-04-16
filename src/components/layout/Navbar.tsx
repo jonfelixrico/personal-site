@@ -35,7 +35,7 @@ export default function Navbar(props: { className?: string }) {
   return (
     <nav
       className={classnames(
-        'flex flex-row items-center justify-end gap-50',
+        'flex flex-row items-center justify-end gap-4',
         props.className
       )}
     >
