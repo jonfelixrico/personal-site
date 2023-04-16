@@ -37,6 +37,14 @@ interface Tech {
   name: string
 }
 
+export function FeaturedLinkIcon(props: { src: string; alt: string }) {
+  return (
+    <div className="w-10 h-10 relative">
+      <Image fill src={props.src} alt={props.alt} />
+    </div>
+  )
+}
+
 export function FeaturedLayout(props: {
   details: ReactNode
   title: string
