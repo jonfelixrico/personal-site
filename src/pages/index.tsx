@@ -30,7 +30,7 @@ export default function Home() {
             </section>
 
             <section id="section-portfolio">
-              <HomeSectionPortfolio className="mx-auto max-w-screen-lg min-h-screen" />
+              <HomeSectionPortfolio />
             </section>
 
             <section id="section-contacts">

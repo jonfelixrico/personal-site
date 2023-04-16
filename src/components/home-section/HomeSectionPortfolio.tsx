@@ -1,9 +1,8 @@
-import classnames from 'classnames'
 import PortfolioList from '../portfolio/PortfolioList'
 
-export default function HomeSectionPortfolio(props: { className?: string }) {
+export default function HomeSectionPortfolio() {
   return (
-    <div className={classnames('py-10', props.className)}>
+    <div className="mx-auto max-w-screen-lg min-h-screen">
       <div className="row-start-2 row-span-4">
         <div className="mb-5">
           <div className="text-5xl font-semibold text-primary">Portfolio</div>
