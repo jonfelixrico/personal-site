@@ -46,7 +46,14 @@ export function FeaturedLayout(props: {
 }) {
   return (
     <div className="grid grid-cols-12">
-      <div className="md:col-span-6 md:col-start-1 col-span-12 flex flex-col justify-center gap-3 row-start-1 z-10">
+      <div
+        className="
+        lg:col-span-6 lg:col-start-1
+        md:col-span-7 md:col-start-1
+        col-span-12
+        flex flex-col justify-center gap-3
+        row-start-1 z-10"
+      >
         <div className="flex flex-row items-center gap-3 justify-between md:justify-start">
           <h5 className="text-2xl text-accent">{props.title}</h5>
           <div>{props.side}</div>
@@ -60,7 +67,7 @@ export function FeaturedLayout(props: {
           />
           <div className="p-3">{props.details}</div>
         </div>
-        
+
         <div className="flex flex-row gap-3">
           {props.techList.map(({ iconSrc, name }) => (
             <IconWithTooltip
@@ -76,7 +83,12 @@ export function FeaturedLayout(props: {
         </div>
       </div>
 
-      <div className="md:block hidden col-start-5 col-span-8 row-start-1 rounded-lg overflow-hidden">
+      <div
+        className="
+        md:block hidden
+        col-start-5 col-span-8 row-start-1
+        rounded-lg overflow-hidden"
+      >
         <FitWidthImage
           src={props.imageSrc}
           alt={`Preview of ${props.title}`}
