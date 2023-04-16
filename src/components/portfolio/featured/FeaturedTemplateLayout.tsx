@@ -1,7 +1,6 @@
 import { useResizeDetector } from 'react-resize-detector'
 import { ConditionallyRender } from '@/components/ConditionallyRender'
 import Image from 'next/image'
-import Card from '@/components/Card'
 import { ReactNode } from 'react'
 import classnames from 'classnames'
 
@@ -28,6 +27,19 @@ function FitWidthImage(props: {
           className="object-fill"
         />
       </ConditionallyRender>
+    </div>
+  )
+}
+
+function Card(props: { children: ReactNode; className?: string }) {
+  return (
+    <div
+      className={classnames(
+        'rounded-lg shadow-md overflow-hidden bg-card',
+        props.className
+      )}
+    >
+      {props.children}
     </div>
   )
 }
