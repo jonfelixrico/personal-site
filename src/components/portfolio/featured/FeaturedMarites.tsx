@@ -14,16 +14,8 @@ export default function FeaturedMarites() {
       }
       techList={[
         {
-          name: 'Quasar Framework',
-          iconSrc: 'icons/quasar-framework.svg',
-        },
-        {
           name: 'Vue.js',
           iconSrc: 'icons/vue-js.svg',
-        },
-        {
-          name: 'TypeScript',
-          iconSrc: 'icons/typescript.svg',
         },
         {
           name: 'PocketBase',

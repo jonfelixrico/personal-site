@@ -19,32 +19,16 @@ export default function FeaturedWisdom() {
       }
       techList={[
         {
-          name: 'Quasar Framework',
-          iconSrc: 'icons/quasar-framework.svg',
-        },
-        {
           name: 'Vue.js',
           iconSrc: 'icons/vue-js.svg',
-        },
-        {
-          name: 'TypeScript',
-          iconSrc: 'icons/typescript.svg',
         },
         {
           name: 'Nest.js',
           iconSrc: 'icons/nest-js.svg',
         },
         {
-          name: 'Discord.js',
-          iconSrc: 'icons/discord-js.svg',
-        },
-        {
           name: 'Spring Boot',
           iconSrc: 'icons/spring-boot.svg',
-        },
-        {
-          name: 'Java',
-          iconSrc: 'icons/java.svg',
         },
         {
           name: 'EventStoreDB',
