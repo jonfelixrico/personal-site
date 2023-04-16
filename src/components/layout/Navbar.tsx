@@ -28,12 +28,17 @@ const LINKS: NavLink[] = [
 export default function Navbar(props: {
   className?: string
   activeSection?: string
+  transparent?: boolean
 }) {
   return (
     <nav
       className={classnames(
         'flex flex-row items-center justify-end gap-4',
-        props.className
+        'px-8',
+        props.className,
+        {
+          'bg-app shadow-lg': !props.transparent,
+        }
       )}
     >
       {LINKS.map(({ section, label }) => (
