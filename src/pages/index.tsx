@@ -13,7 +13,7 @@ export default function Home() {
         <title>Jon Felix Rico • Home</title>
       </Head>
 
-      <header className="h-12 fixed w-screen px-8 z-10">
+      <header className="h-16 fixed w-screen px-8 z-10 bg-app shadow-lg">
         <Navbar
           className="h-full w-full"
           activeSection={activeSection ?? undefined}
