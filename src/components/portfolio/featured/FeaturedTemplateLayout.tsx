@@ -42,11 +42,15 @@ export default function FeaturedTemplateLayout(props: {
   title: string
   imageSrc: string
   techList: Tech[]
+  side?: ReactNode
 }) {
   return (
     <div className="grid grid-cols-12">
       <div className="md:col-span-6 md:col-start-1 col-span-12 flex flex-col justify-center gap-3 row-start-1 z-10">
-        <div className="text-2xl text-accent">{props.title}</div>
+        <div className="flex flex-row items-center gap-3">
+          <h5 className="text-2xl text-accent">{props.title}</h5>
+          {props.side}
+        </div>
         <div className="rounded-lg overflow-hidden bg-app-2 shadow-md">
           <FitWidthImage
             src={props.imageSrc}
