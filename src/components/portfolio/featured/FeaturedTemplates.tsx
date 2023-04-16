@@ -51,6 +51,7 @@ export function FeaturedLayout(props: {
           <h5 className="text-2xl text-accent">{props.title}</h5>
           <div>{props.side}</div>
         </div>
+
         <div className="rounded-lg overflow-hidden bg-app-2 shadow-md">
           <FitWidthImage
             src={props.imageSrc}
@@ -59,6 +60,7 @@ export function FeaturedLayout(props: {
           />
           <div className="p-3">{props.details}</div>
         </div>
+        
         <div className="flex flex-row gap-3">
           {props.techList.map(({ iconSrc, name }) => (
             <IconWithTooltip
