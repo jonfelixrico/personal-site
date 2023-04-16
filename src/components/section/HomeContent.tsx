@@ -19,7 +19,7 @@ function SectionWrapper({
   const intersection = useIntersection(ref, {
     root: null,
     rootMargin: '0px',
-    threshold: [0, 1],
+    threshold: [0.75, 1],
   })
 
   const ratio = intersection?.intersectionRatio ?? 0
