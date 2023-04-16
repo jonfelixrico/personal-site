@@ -2,10 +2,16 @@ import Head from 'next/head'
 import ContactsOverlay from '@/components/contacts/ContactsOverlay'
 import Navbar from '@/components/layout/Navbar'
 import HomeContent from '@/components/section/HomeContent'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
+import { useScroll } from 'react-use'
+
+const NAVBAR_HEIGHT = 54
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState<null | string>(null)
+
+  const scrollRef = useRef<HTMLDivElement>(null)
+  const { y } = useScroll(scrollRef)
 
   return (
     <>
@@ -13,15 +19,22 @@ export default function Home() {
         <title>Jon Felix Rico • Home</title>
       </Head>
 
-      <header className="h-16 fixed w-screen z-10">
+      <header
+        className="fixed w-screen z-10"
+        style={{ height: `${NAVBAR_HEIGHT}px` }}
+      >
         <Navbar
           className="h-full w-full"
           activeSection={activeSection ?? undefined}
+          transparent={y <= NAVBAR_HEIGHT}
         />
       </header>
       <main className="relative">
         <ContactsOverlay classNames="absolute w-full h-full py-5 px-8" />
-        <div className="h-screen overflow-auto scroll-smooth scrollbar-invisible">
+        <div
+          className="h-screen overflow-auto scroll-smooth scrollbar-invisible"
+          ref={scrollRef}
+        >
           <HomeContent onVisibleSectionChange={setActiveSection} />
         </div>
       </main>
