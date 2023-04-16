@@ -4,9 +4,7 @@ import HomeSectionMain from '@/components/home-section/HomeSectionMain'
 import Head from 'next/head'
 import HomeSectionPortfolio from '@/components/home-section/HomeSectionPortfolio'
 import ContactsOverlay from '@/components/contacts/ContactsOverlay'
-import NavbarContainer, {
-  NavbarSectionIds,
-} from '@/components/layout/NavbarContainer'
+import Navbar, { NavbarSectionIds } from '@/components/layout/Navbar'
 
 export default function Home() {
   return (
@@ -15,26 +13,30 @@ export default function Home() {
         <title>Jon Felix Rico • Home</title>
       </Head>
 
-      <NavbarContainer>
-        {/* TODO return this */}
-        {/* <ContactsOverlay classNames="absolute w-full h-full py-5 px-8" /> */}
+      <header className="h-12 fixed w-screen px-8 z-10">
+        <Navbar className="h-full w-full" />
+      </header>
+      <main className="relative">
+        <ContactsOverlay classNames="absolute w-full h-full py-5 px-8" />
 
-        <section id={NavbarSectionIds.HOME}>
-          <HomeSectionMain />
-        </section>
+        <div className="h-screen overflow-auto">
+          <section id={NavbarSectionIds.HOME}>
+            <HomeSectionMain />
+          </section>
 
-        <section id={NavbarSectionIds.EXPERIENCE}>
-          <HomeSectionExperience />
-        </section>
+          <section id={NavbarSectionIds.EXPERIENCE}>
+            <HomeSectionExperience />
+          </section>
 
-        <section id={NavbarSectionIds.PORTFOLIO}>
-          <HomeSectionPortfolio />
-        </section>
+          <section id={NavbarSectionIds.PORTFOLIO}>
+            <HomeSectionPortfolio />
+          </section>
 
-        <section id={NavbarSectionIds.CONTACTS}>
-          <HomeSectionContacts className="mx-auto max-w-screen-lg min-h-screen section-px" />
-        </section>
-      </NavbarContainer>
+          <section id={NavbarSectionIds.CONTACTS}>
+            <HomeSectionContacts className="mx-auto max-w-screen-lg min-h-screen section-px" />
+          </section>
+        </div>
+      </main>
     </>
   )
 }
