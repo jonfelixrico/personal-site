@@ -43,7 +43,7 @@ export default function FeaturedWisdom() {
       side={
         <a
           href="https://wisdom.csaservers.com"
-          className="text-accent-2 text-xl"
+          className="text-accent-2 text-2xl"
           target="_blank"
         >
           <CgArrowTopRightR />
