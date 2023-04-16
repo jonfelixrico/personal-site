@@ -72,7 +72,10 @@ export function FeaturedLayout(props: {
             <IconWithTooltip
               src={iconSrc}
               tooltipLabel={name}
-              className="relative h-10 w-10"
+              className="relative
+              lg:h-10 lg:w-10
+              md:h-8 md:w-8
+              h-6 w-6"
               key={name}
             />
           ))}
