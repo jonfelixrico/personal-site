@@ -31,7 +31,11 @@ const LINKS: NavLink[] = [
   },
 ]
 
-export default function Navbar(props: { className?: string }) {
+export default function Navbar(props: {
+  className?: string
+  activeSection?: string
+  onLinkClick?: (id: string) => void
+}) {
   return (
     <nav
       className={classnames(
@@ -42,8 +46,16 @@ export default function Navbar(props: { className?: string }) {
       {LINKS.map(({ section, label }) => (
         <a
           href={`#${NavbarSectionIds[section]}`}
-          data-to-scrollspy-id={NavbarSectionIds[section]}
           key={section}
+          className={classnames('text-accent', {
+            'underline underline-offset-8':
+              NavbarSectionIds[section] == props.activeSection,
+          })}
+          onClick={() => {
+            if (props.onLinkClick) {
+              props.onLinkClick(NavbarSectionIds[section])
+            }
+          }}
         >
           {label}
         </a>
