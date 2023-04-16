@@ -1,5 +1,5 @@
 import classnames from 'classnames'
-import ContentPrimaryTech from './ContentPrimaryTech'
+import ContentPrimaryTech from '../experience/ContentPrimaryTech'
 
 function HeaderAndDescription(props: { className?: string }) {
   return (

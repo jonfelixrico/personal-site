@@ -1,5 +1,5 @@
 import HomeSectionContacts from '@/components/section/HomeSectionContacts'
-import HomeSectionExperience from '@/components/experience/HomeSectionExperience'
+import HomeSectionExperience from '@/components/section/HomeSectionExperience'
 import HomeSectionMain from '@/components/section/HomeSectionMain'
 import Head from 'next/head'
 import HomeSectionPortfolio from '@/components/section/HomeSectionPortfolio'
