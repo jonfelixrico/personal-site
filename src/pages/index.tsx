@@ -4,7 +4,7 @@ import HomeSectionMain from '@/components/home-section/HomeSectionMain'
 import Head from 'next/head'
 import HomeSectionPortfolio from '@/components/home-section/HomeSectionPortfolio'
 import ContactsOverlay from '@/components/contacts/ContactsOverlay'
-import Navbar from '@/components/Navbar'
+import Navbar from '@/components/layout/Navbar'
 
 export default function Home() {
   return (
