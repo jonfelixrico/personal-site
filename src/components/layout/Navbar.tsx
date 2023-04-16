@@ -2,25 +2,25 @@ import { NavbarSectionId } from '@/model/navbar-section-id.enum'
 import classnames from 'classnames'
 
 interface NavLink {
-  section: keyof typeof NavbarSectionId
+  section: NavbarSectionId
   label: string
 }
 
 const LINKS: NavLink[] = [
   {
-    section: 'HOME',
+    section: NavbarSectionId.HOME,
     label: 'Home',
   },
   {
-    section: 'EXPERIENCE',
+    section: NavbarSectionId.EXPERIENCE,
     label: 'Experience',
   },
   {
-    section: 'PORTFOLIO',
+    section: NavbarSectionId.PORTFOLIO,
     label: 'Portfolio',
   },
   {
-    section: 'CONTACTS',
+    section: NavbarSectionId.CONTACTS,
     label: 'Contacts',
   },
 ]
@@ -38,11 +38,10 @@ export default function Navbar(props: {
     >
       {LINKS.map(({ section, label }) => (
         <a
-          href={`#${NavbarSectionId[section]}`}
+          href={`#${section}`}
           key={section}
           className={classnames('text-accent', {
-            'underline underline-offset-8':
-              NavbarSectionId[section] == props.activeSection,
+            'underline underline-offset-8': section == props.activeSection,
           })}
         >
           {label}
