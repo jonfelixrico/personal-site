@@ -28,7 +28,7 @@ export default function FeaturedMarites() {
         <div className="flex flex-row gap-3">
           <a
             href="https://marites.jonfelixrico.dev"
-            className="text-accent-2 text-xl"
+            className="text-accent-2 text-2xl"
             target="_blank"
           >
             <CgArrowTopRightR />
@@ -36,7 +36,7 @@ export default function FeaturedMarites() {
 
           <a
             href="https://github.com/jonfelixrico/marites"
-            className="text-accent-2 text-xl"
+            className="text-accent-2 text-2xl"
             target="_blank"
           >
             <BsGithub />

@@ -55,7 +55,7 @@ export function FeaturedLayout(props: {
         z-10"
       >
         <div className="flex flex-row items-center gap-3 justify-between md:justify-start">
-          <h5 className="text-2xl text-accent">{props.title}</h5>
+          <h5 className="text-4xl text-accent">{props.title}</h5>
           <div>{props.side}</div>
         </div>
 
