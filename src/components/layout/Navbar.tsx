@@ -54,7 +54,8 @@ export default function Navbar(props: {
   return (
     <nav
       className={classnames(
-        'flex flex-row items-center justify-end gap-4',
+        'flex flex-row items-center gap-4',
+        'justify-between sm:justify-end',
         'px-8',
         props.className,
 
