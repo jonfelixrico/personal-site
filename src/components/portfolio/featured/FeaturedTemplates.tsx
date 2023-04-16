@@ -37,7 +37,7 @@ interface Tech {
   name: string
 }
 
-export default function FeaturedTemplateLayout(props: {
+export function FeaturedLayout(props: {
   details: ReactNode
   title: string
   imageSrc: string
