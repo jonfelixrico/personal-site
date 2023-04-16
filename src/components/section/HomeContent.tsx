@@ -37,11 +37,10 @@ function SectionWrapper({
 }
 
 export default function HomeContent(props: {
-  className?: string
   onVisibleSectionChange?: (id: string) => void
 }) {
   return (
-    <div className={props.className}>
+    <>
       <SectionWrapper
         id={NavbarSectionId.HOME}
         onVisible={props.onVisibleSectionChange}
@@ -69,6 +68,6 @@ export default function HomeContent(props: {
       >
         <HomeSectionContacts className="mx-auto max-w-screen-lg min-h-screen Section-px" />
       </SectionWrapper>
-    </div>
+    </>
   )
 }
