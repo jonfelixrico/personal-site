@@ -1,36 +1,53 @@
-import Link from 'next/link'
-import { useRouter } from 'next/router'
 import classnames from 'classnames'
 
-function NavLink(props: { href: string; name: string }) {
-  const router = useRouter()
-  const isActive = router.asPath === props.href
-
-  return (
-    <Link href={props.href}>
-      <div
-        className={classnames('text-accent', {
-          'underline underline-offset-8': isActive,
-        })}
-      >
-        {props.name}
-      </div>
-    </Link>
-  )
+export enum NavbarSectionIds {
+  HOME = 'section-home',
+  EXPERIENCE = 'section-experience',
+  PORTFOLIO = 'section-portfolio',
+  CONTACTS = 'section-contacts',
 }
+
+interface NavLink {
+  section: keyof typeof NavbarSectionIds
+  label: string
+}
+
+const LINKS: NavLink[] = [
+  {
+    section: 'HOME',
+    label: 'Home',
+  },
+  {
+    section: 'EXPERIENCE',
+    label: 'Experience',
+  },
+  {
+    section: 'PORTFOLIO',
+    label: 'Portfolio',
+  },
+  {
+    section: 'CONTACTS',
+    label: 'Contacts',
+  },
+]
 
 export default function Navbar(props: { className?: string }) {
   return (
     <nav
       className={classnames(
-        'flex flex-row items-center justify-end gap-5 ',
+        'flex flex-row items-center justify-end gap-50',
         props.className
       )}
     >
-      <NavLink href="/" name="Home" />
-      <NavLink href="/#section-experience" name="Experience" />
-      <NavLink href="/#section-portfolio" name="Portfolio" />
-      <NavLink href="/#section-contacts" name="Contacts" />
+      {LINKS.map(({ section, label }) => (
+        <a
+          href={`#${NavbarSectionIds[section]}`}
+          data-to-scrollspy-id={NavbarSectionIds[section]}
+          key={section}
+        >
+          {label}
+        </a>
+      ))}
     </nav>
   )
 }
