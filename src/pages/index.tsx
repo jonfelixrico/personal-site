@@ -1,10 +1,7 @@
-import HomeSectionContacts from '@/components/section/HomeSectionContacts'
-import HomeSectionExperience from '@/components/section/HomeSectionExperience'
-import HomeSectionMain from '@/components/section/HomeSectionMain'
 import Head from 'next/head'
-import HomeSectionPortfolio from '@/components/section/HomeSectionPortfolio'
 import ContactsOverlay from '@/components/contacts/ContactsOverlay'
-import Navbar, { NavbarSectionIds } from '@/components/layout/Navbar'
+import Navbar from '@/components/layout/Navbar'
+import HomeContent from '@/components/section/HomeContent'
 
 export default function Home() {
   return (
@@ -18,24 +15,7 @@ export default function Home() {
       </header>
       <main className="relative">
         <ContactsOverlay classNames="absolute w-full h-full py-5 px-8" />
-
-        <div className="h-screen overflow-auto">
-          <section id={NavbarSectionIds.HOME}>
-            <HomeSectionMain />
-          </section>
-
-          <section id={NavbarSectionIds.EXPERIENCE}>
-            <HomeSectionExperience />
-          </section>
-
-          <section id={NavbarSectionIds.PORTFOLIO}>
-            <HomeSectionPortfolio />
-          </section>
-
-          <section id={NavbarSectionIds.CONTACTS}>
-            <HomeSectionContacts className="mx-auto max-w-screen-lg min-h-screen section-px" />
-          </section>
-        </div>
+        <HomeContent className="h-screen overflow-auto" />
       </main>
     </>
   )
