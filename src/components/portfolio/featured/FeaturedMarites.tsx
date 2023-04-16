@@ -4,7 +4,7 @@ import FeaturedTemplateTechList from './FeaturedTemplateTechList'
 export default function FeaturedMarites() {
   return (
     <FeaturedTemplateLayout
-      projectName="Marites"
+      title="Marites"
       imageSrc="/portfolio/wisdom/panel/home.png"
       details={
         <div>

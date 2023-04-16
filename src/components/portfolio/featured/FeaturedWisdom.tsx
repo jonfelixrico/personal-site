@@ -4,7 +4,7 @@ import FeaturedTemplateTechList from './FeaturedTemplateTechList'
 export default function FeaturedWisdom() {
   return (
     <FeaturedTemplateLayout
-      projectName="Wisdom Bot"
+      title="Wisdom Bot"
       imageSrc="/portfolio/wisdom/panel/home.png"
       details={
         <div>
