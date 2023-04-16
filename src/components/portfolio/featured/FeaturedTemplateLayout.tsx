@@ -61,7 +61,7 @@ export default function FeaturedTemplateLayout(props: {
             <IconWithTooltip
               src={iconSrc}
               tooltipLabel={name}
-              className="relative h-6 w-6"
+              className="relative h-10 w-10"
               key={name}
             />
           ))}
