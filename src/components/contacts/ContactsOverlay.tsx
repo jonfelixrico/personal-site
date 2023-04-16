@@ -49,7 +49,9 @@ export default function ContactsOverlay(props: { classNames?: string }) {
     <div
       className={classnames(
         props.classNames,
-        'flex flex-row justify-between items-end pointer-events-none'
+        // show for large screens, hide for smaller screens
+        'hidden lg:flex',
+        'flex-row justify-between items-end pointer-events-none'
       )}
     >
       <div className="flex flex-col gap-4">

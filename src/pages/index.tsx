@@ -18,11 +18,11 @@ export default function Home() {
           <Navbar className="h-full w-full" />
         </header>
         <main className="relative">
-          <ContactsOverlay classNames="absolute w-full h-full py-5 px-8 lg:visible invisible" />
+          <ContactsOverlay classNames="absolute w-full h-full py-5 px-8" />
 
           <div className="h-screen overflow-auto">
-            <section className="h-screen bg-card" id="section-main">
-              <HomeSectionMain className="h-full mx-auto max-w-screen-lg" />
+            <section id="section-main">
+              <HomeSectionMain />
             </section>
 
             <section id="section-experience">
@@ -30,11 +30,11 @@ export default function Home() {
             </section>
 
             <section id="section-portfolio">
-              <HomeSectionPortfolio className="mx-auto max-w-screen-lg min-h-screen" />
+              <HomeSectionPortfolio />
             </section>
 
             <section id="section-contacts">
-              <HomeSectionContacts className="mx-auto max-w-screen-lg min-h-screen" />
+              <HomeSectionContacts className="mx-auto max-w-screen-lg min-h-screen section-px" />
             </section>
           </div>
         </main>

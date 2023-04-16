@@ -1,8 +1,6 @@
 import classnames from 'classnames'
 import ContentPrimaryTech from './ContentPrimaryTech'
 
-import ContentSecondaryTech from './ContentSecondaryTech'
-
 function HeaderAndDescription(props: { className?: string }) {
   return (
     <div className={classnames('row-start-2 row-span-4', props.className)}>
@@ -34,26 +32,18 @@ function HeaderAndDescription(props: { className?: string }) {
   )
 }
 
-export default function HomeSectionExperience(props: { className?: string }) {
+export default function HomeSectionExperience() {
   return (
-    <div className={classnames('py-10 min-h-screen', props.className)}>
-      <HeaderAndDescription className="mx-auto max-w-screen-lg px-5" />
+    <div className="py-10 min-h-screen">
+      <HeaderAndDescription className="mx-auto max-w-screen-lg section-px" />
 
-      <div className="bg-card py-8">
+      <div className="bg-app-2 py-8">
         <div className="mx-auto max-w-screen-lg px-5 mb-10">
           <h3 className="text-center text-4xl text-accent mb-5">
             The bread and butter
           </h3>
 
           <ContentPrimaryTech />
-        </div>
-
-        <div className="mx-auto max-w-screen-lg px-5">
-          <h3 className="text-center text-4xl text-accent mb-5">
-            ...and others that I've fiddled with
-          </h3>
-
-          <ContentSecondaryTech />
         </div>
       </div>
     </div>

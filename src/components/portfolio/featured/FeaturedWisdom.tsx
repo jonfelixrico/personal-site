@@ -1,10 +1,10 @@
-import FeaturedTemplateLayout from './FeaturedTemplateLayout'
-import FeaturedTemplateTechList from './FeaturedTemplateTechList'
+import { CgArrowTopRightR } from 'react-icons/cg'
+import { FeaturedLayout } from './FeaturedTemplates'
 
 export default function FeaturedWisdom() {
   return (
-    <FeaturedTemplateLayout
-      projectName="Wisdom Bot"
+    <FeaturedLayout
+      title="Wisdom Bot"
       imageSrc="/portfolio/wisdom/panel/home.png"
       details={
         <div>
@@ -18,47 +18,36 @@ export default function FeaturedWisdom() {
           vel sollicitudin vulputate, ultricies vel libero.
         </div>
       }
-      footer={
-        <FeaturedTemplateTechList
-          items={[
-            {
-              name: 'Quasar Framework',
-              iconSrc: 'icons/quasar-framework.svg',
-            },
-            {
-              name: 'Vue.js',
-              iconSrc: 'icons/vue-js.svg',
-            },
-            {
-              name: 'TypeScript',
-              iconSrc: 'icons/typescript.svg',
-            },
-            {
-              name: 'Nest.js',
-              iconSrc: 'icons/nest-js.svg',
-            },
-            {
-              name: 'Discord.js',
-              iconSrc: 'icons/discord-js.svg',
-            },
-            {
-              name: 'Spring Boot',
-              iconSrc: 'icons/spring-boot.svg',
-            },
-            {
-              name: 'Java',
-              iconSrc: 'icons/java.svg',
-            },
-            {
-              name: 'EventStoreDB',
-              iconSrc: 'icons/eventstoredb.svg',
-            },
-            {
-              name: 'MongoDB',
-              iconSrc: 'icons/mongodb.svg',
-            },
-          ]}
-        />
+      techList={[
+        {
+          name: 'Vue.js',
+          iconSrc: 'icons/vue-js.svg',
+        },
+        {
+          name: 'Nest.js',
+          iconSrc: 'icons/nest-js.svg',
+        },
+        {
+          name: 'Spring Boot',
+          iconSrc: 'icons/spring-boot.svg',
+        },
+        {
+          name: 'EventStoreDB',
+          iconSrc: 'icons/eventstoredb.svg',
+        },
+        {
+          name: 'MongoDB',
+          iconSrc: 'icons/mongodb.svg',
+        },
+      ]}
+      side={
+        <a
+          href="https://wisdom.csaservers.com"
+          className="text-accent-2 text-xl"
+          target="_blank"
+        >
+          <CgArrowTopRightR />
+        </a>
       }
     />
   )

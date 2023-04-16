@@ -24,14 +24,9 @@ interface Icon {
   label: string
 }
 
-function IconList(props: { icons: Icon[]; className?: string }) {
+function IconList(props: { icons: Icon[] }) {
   return (
-    <div
-      className={classnames(
-        'flex flex-row justify-center gap-3',
-        props.className
-      )}
-    >
+    <div className="flex flex-row justify-center gap-3">
       {props.icons.map(({ src, label }, index) => (
         <IconWithTooltip
           className="lg:h-20 lg:w-20 md:h-14 md:w-14 h-12 w-12"
