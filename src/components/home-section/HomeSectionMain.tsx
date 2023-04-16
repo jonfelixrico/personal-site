@@ -3,9 +3,9 @@ export default function HomeSectionMain() {
     <div
       className="h-screen
       flex flex-col justify-center
-      bg-app-2 section-px"
+      bg-app-2"
     >
-      <div className="mx-auto max-w-screen-lg">
+      <div className="mx-auto max-w-screen-lg section-px">
         <div className="mb-10 text-8xl font-semibold">
           <div className="text-white">Jon Felix Rico,</div>
           <div className="text-primary font-mono">&lt;web-developer /&gt;</div>
