@@ -1,5 +1,4 @@
 import FeaturedTemplateLayout from './FeaturedTemplateLayout'
-import FeaturedTemplateTechList from './FeaturedTemplateTechList'
 
 export default function FeaturedWisdom() {
   return (
@@ -18,48 +17,44 @@ export default function FeaturedWisdom() {
           vel sollicitudin vulputate, ultricies vel libero.
         </div>
       }
-      footer={
-        <FeaturedTemplateTechList
-          items={[
-            {
-              name: 'Quasar Framework',
-              iconSrc: 'icons/quasar-framework.svg',
-            },
-            {
-              name: 'Vue.js',
-              iconSrc: 'icons/vue-js.svg',
-            },
-            {
-              name: 'TypeScript',
-              iconSrc: 'icons/typescript.svg',
-            },
-            {
-              name: 'Nest.js',
-              iconSrc: 'icons/nest-js.svg',
-            },
-            {
-              name: 'Discord.js',
-              iconSrc: 'icons/discord-js.svg',
-            },
-            {
-              name: 'Spring Boot',
-              iconSrc: 'icons/spring-boot.svg',
-            },
-            {
-              name: 'Java',
-              iconSrc: 'icons/java.svg',
-            },
-            {
-              name: 'EventStoreDB',
-              iconSrc: 'icons/eventstoredb.svg',
-            },
-            {
-              name: 'MongoDB',
-              iconSrc: 'icons/mongodb.svg',
-            },
-          ]}
-        />
-      }
+      techList={[
+        {
+          name: 'Quasar Framework',
+          iconSrc: 'icons/quasar-framework.svg',
+        },
+        {
+          name: 'Vue.js',
+          iconSrc: 'icons/vue-js.svg',
+        },
+        {
+          name: 'TypeScript',
+          iconSrc: 'icons/typescript.svg',
+        },
+        {
+          name: 'Nest.js',
+          iconSrc: 'icons/nest-js.svg',
+        },
+        {
+          name: 'Discord.js',
+          iconSrc: 'icons/discord-js.svg',
+        },
+        {
+          name: 'Spring Boot',
+          iconSrc: 'icons/spring-boot.svg',
+        },
+        {
+          name: 'Java',
+          iconSrc: 'icons/java.svg',
+        },
+        {
+          name: 'EventStoreDB',
+          iconSrc: 'icons/eventstoredb.svg',
+        },
+        {
+          name: 'MongoDB',
+          iconSrc: 'icons/mongodb.svg',
+        },
+      ]}
     />
   )
 }

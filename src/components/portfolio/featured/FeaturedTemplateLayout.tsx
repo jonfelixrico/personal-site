@@ -3,6 +3,7 @@ import { ConditionallyRender } from '@/components/ConditionallyRender'
 import Image from 'next/image'
 import { ReactNode } from 'react'
 import classnames from 'classnames'
+import IconWithTooltip from '@/components/IconWithTooltip'
 
 function FitWidthImage(props: {
   src: string
@@ -31,11 +32,17 @@ function FitWidthImage(props: {
   )
 }
 
+interface Tech {
+  iconSrc: string
+  name: string
+}
+
 export default function FeaturedTemplateLayout(props: {
   details: ReactNode
   title: string
   imageSrc: string
   footer?: ReactNode
+  techList: Tech[]
 }) {
   return (
     <div className="grid grid-cols-12">
@@ -49,7 +56,16 @@ export default function FeaturedTemplateLayout(props: {
           />
           <div className="p-3">{props.details}</div>
         </div>
-        {props.footer}
+        <div className="flex flex-row gap-3">
+          {props.techList.map(({ iconSrc, name }) => (
+            <IconWithTooltip
+              src={iconSrc}
+              tooltipLabel={name}
+              className="relative h-6 w-6"
+              key={name}
+            />
+          ))}
+        </div>
       </div>
 
       <div className="md:block hidden col-start-5 col-span-8 row-start-1 rounded-lg overflow-hidden">

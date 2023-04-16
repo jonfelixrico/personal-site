@@ -1,5 +1,4 @@
 import FeaturedTemplateLayout from './FeaturedTemplateLayout'
-import FeaturedTemplateTechList from './FeaturedTemplateTechList'
 
 export default function FeaturedMarites() {
   return (
@@ -13,28 +12,24 @@ export default function FeaturedMarites() {
           vel sollicitudin vulputate, ultricies vel libero.
         </div>
       }
-      footer={
-        <FeaturedTemplateTechList
-          items={[
-            {
-              name: 'Quasar Framework',
-              iconSrc: 'icons/quasar-framework.svg',
-            },
-            {
-              name: 'Vue.js',
-              iconSrc: 'icons/vue-js.svg',
-            },
-            {
-              name: 'TypeScript',
-              iconSrc: 'icons/typescript.svg',
-            },
-            {
-              name: 'PocketBase',
-              iconSrc: 'icons/pocketbase.svg',
-            },
-          ]}
-        />
-      }
+      techList={[
+        {
+          name: 'Quasar Framework',
+          iconSrc: 'icons/quasar-framework.svg',
+        },
+        {
+          name: 'Vue.js',
+          iconSrc: 'icons/vue-js.svg',
+        },
+        {
+          name: 'TypeScript',
+          iconSrc: 'icons/typescript.svg',
+        },
+        {
+          name: 'PocketBase',
+          iconSrc: 'icons/pocketbase.svg',
+        },
+      ]}
     />
   )
 }
