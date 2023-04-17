@@ -9,8 +9,7 @@
     @apply shadow-none opacity-100;
   }
 
-  transition-property: background, box-shadow, opacity;
-  transition-duration: 0.25s;
+  transition: background 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
 }
 
 .nav-link {
