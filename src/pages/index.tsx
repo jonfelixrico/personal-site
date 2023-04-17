@@ -35,7 +35,7 @@ export default function Home() {
         style={{ height: `${NAVBAR_HEIGHT}px` }}
       >
         <Navbar
-          className="h-full w-full"
+          className="h-full w-full absolute"
           activeSection={activeSection ?? undefined}
           transparent={y <= NAVBAR_HEIGHT}
           retracted={isGoingDown && y > height / 3}
