@@ -2,8 +2,9 @@ import Head from 'next/head'
 import ContactsOverlay from '@/components/contacts/ContactsOverlay'
 import Navbar from '@/components/layout/Navbar'
 import HomeContent from '@/components/section/HomeContent'
-import { useEffect, useRef, useState } from 'react'
-import { useScroll, useWindowSize } from 'react-use'
+import { useRef, useState } from 'react'
+import { useWindowSize } from 'react-use'
+import { useScrollYWithDirection } from '@/hooks/useScrollYWithDirection'
 
 const NAVBAR_HEIGHT = 54
 
@@ -11,18 +12,9 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState<null | string>(null)
 
   const scrollRef = useRef<HTMLDivElement>(null)
-  const { y } = useScroll(scrollRef)
-
-  const [history, setHistory] = useState([0, 0])
-  useEffect(() => {
-    setHistory((state) => {
-      return [state[1], y]
-    })
-  }, [y, setHistory])
+  const { y, direction } = useScrollYWithDirection(scrollRef)
 
   const { height } = useWindowSize()
-
-  const isGoingDown = history[1] > history[0]
 
   return (
     <>
@@ -38,7 +30,7 @@ export default function Home() {
           className="h-full w-full absolute"
           activeSection={activeSection ?? undefined}
           transparent={y <= NAVBAR_HEIGHT}
-          retracted={isGoingDown && y > height / 3}
+          retracted={direction === 'down' && y > height / 3}
         />
       </header>
       <main className="relative">
