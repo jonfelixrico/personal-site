@@ -13,14 +13,16 @@ export default function Home() {
   const scrollRef = useRef<HTMLDivElement>(null)
   const { y } = useScroll(scrollRef)
 
-  const [previousY, setPreviousY] = useState(0)
+  const [history, setHistory] = useState([0, 0])
   useEffect(() => {
-    setPreviousY(y)
-  }, [y, setPreviousY])
+    setHistory((state) => {
+      return [state[1], y]
+    })
+  }, [y, setHistory])
 
   const { height } = useWindowSize()
 
-  const isGoingDown = y > previousY
+  const isGoingDown = history[1] > history[0]
 
   return (
     <>
