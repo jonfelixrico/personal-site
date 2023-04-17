@@ -18,10 +18,20 @@
     top 0.5s ease;
 }
 
+$indicator-thickness: 4px;
+
 .nav-link {
   @apply text-white font-semibold;
+}
 
-  &.active {
-    @apply underline underline-offset-8;
-  }
+.indicator-container {
+  @apply absolute w-full pointer-events-none flex flex-row items-end justify-center;
+  height: calc(100% + 3px);
+}
+
+.indicator {
+  @apply rounded-full;
+
+  border-bottom: $indicator-thickness white solid;
+  width: $indicator-thickness;
 }

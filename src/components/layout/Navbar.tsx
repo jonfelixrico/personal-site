@@ -28,21 +28,16 @@ const LINKS: NavLinkData[] = [
   },
 ]
 
-function NavLink({
-  section,
-  label,
-  isActive,
-}: NavLinkData & { isActive?: boolean }) {
+function NavLink({ section, label }: NavLinkData & { isActive?: boolean }) {
   return (
-    <a
-      href={`#${section}`}
-      key={section}
-      className={classnames('nav-link', {
-        active: isActive,
-      })}
-    >
-      {label}
-    </a>
+    <div className={classnames('nav-link relative')}>
+      <div className={classnames('indicator-container')}>
+        <div className={classnames('indicator')} />
+      </div>
+      <a href={`#${section}`} key={section}>
+        {label}
+      </a>
+    </div>
   )
 }
 
