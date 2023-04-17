@@ -4,7 +4,7 @@ import HomeSectionExperience from './HomeSectionExperience'
 import HomeSectionMain from './HomeSectionMain'
 import HomeSectionPortfolio from './HomeSectionPortfolio'
 import { useIntersection } from 'react-use'
-import { NavbarSectionId } from '@/model/navbar-section-id.enum'
+import { NavbarSectionId } from '@/models/navbar-section-id.enum'
 
 function SectionWrapper({
   id,
@@ -37,11 +37,10 @@ function SectionWrapper({
 }
 
 export default function HomeContent(props: {
-  className?: string
   onVisibleSectionChange?: (id: string) => void
 }) {
   return (
-    <div className={props.className}>
+    <>
       <SectionWrapper
         id={NavbarSectionId.HOME}
         onVisible={props.onVisibleSectionChange}
@@ -69,6 +68,6 @@ export default function HomeContent(props: {
       >
         <HomeSectionContacts className="mx-auto max-w-screen-lg min-h-screen Section-px" />
       </SectionWrapper>
-    </div>
+    </>
   )
 }

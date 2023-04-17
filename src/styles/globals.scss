@@ -1,15 +1,17 @@
+@import './variables.scss';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .bg-app,
 .bg-app-1 {
-  background-color: #1e1e1e;
+  background-color: $bg-app-1;
 }
 
 .bg-card,
 .bg-app-2 {
-  background-color: #252526;
+  background-color: $bg-app-2;
 }
 
 .text-app {
@@ -42,4 +44,15 @@
   $section-px: 1.25rem;
   padding-left: $section-px;
   padding-right: $section-px;
+}
+
+// Hide scrollbar but keep functionality
+.scrollbar-invisible {
+  // For Chrome, Safari and Opera
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none; // IE and Edge
+  scrollbar-width: none; // Firefox
 }
