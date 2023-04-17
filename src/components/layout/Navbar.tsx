@@ -50,6 +50,7 @@ export default function Navbar(props: {
   className?: string
   activeSection?: string
   transparent?: boolean
+  retracted?: boolean
 }) {
   return (
     <nav
