@@ -18,20 +18,27 @@
     top 0.5s ease;
 }
 
-$indicator-thickness: 4px;
-
 .nav-link {
   @apply text-white font-semibold;
-}
 
-.indicator-container {
-  @apply absolute w-full pointer-events-none flex flex-row items-end justify-center;
-  height: calc(100% + 3px);
-}
+  &:hover .indicator,
+  &.active .indicator {
+    opacity: 1;
+    bottom: 0;
+  }
 
-.indicator {
-  @apply rounded-full;
+  &.active .indicator {
+    width: 90%;
+  }
 
-  border-bottom: $indicator-thickness white solid;
-  width: $indicator-thickness;
+  .indicator {
+    @apply absolute rounded;
+
+    border-bottom: 3px solid white;
+    width: 25%;
+    opacity: 0;
+    bottom: -10%;
+
+    transition: width 0.5s, opacity 0.2s, bottom 0.1s;
+  }
 }
