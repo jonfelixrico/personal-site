@@ -21,7 +21,24 @@
 .nav-link {
   @apply text-white font-semibold;
 
-  &.active {
-    @apply underline underline-offset-8;
+  &:hover .indicator,
+  &.active .indicator {
+    opacity: 1;
+    bottom: 0;
+  }
+
+  &.active .indicator {
+    width: 90%;
+  }
+
+  .indicator {
+    @apply absolute rounded;
+
+    border-bottom: 2px solid white;
+    width: 25%;
+    opacity: 0;
+    bottom: -10%;
+
+    transition: width 0.5s, opacity 0.2s, bottom 0.1s;
   }
 }

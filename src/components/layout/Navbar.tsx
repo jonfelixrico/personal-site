@@ -34,15 +34,18 @@ function NavLink({
   isActive,
 }: NavLinkData & { isActive?: boolean }) {
   return (
-    <a
-      href={`#${section}`}
-      key={section}
-      className={classnames('nav-link', {
-        active: isActive,
-      })}
+    <div
+      className={classnames(
+        'relative flex flex-row justify-center items-end',
+        styles['nav-link'],
+        { active: isActive }
+      )}
     >
-      {label}
-    </a>
+      <div className={styles['indicator']} />
+      <a href={`#${section}`} className="mb-1">
+        {label}
+      </a>
+    </div>
   )
 }
 
