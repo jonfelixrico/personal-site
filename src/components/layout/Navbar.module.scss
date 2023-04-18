@@ -21,13 +21,17 @@
 .nav-link {
   @apply text-white font-semibold;
 
-  &:hover .indicator,
-  &.active .indicator {
-    opacity: 1;
-    bottom: 0;
+  // This is to prevent the hover event from sticking around after a click in a touchscreen
+  @media (hover: hover) and (pointer: fine) {
+    &:hover .indicator {
+      opacity: 1;
+      bottom: 0;
+    }
   }
 
   &.active .indicator {
+    opacity: 1;
+    bottom: 0;
     width: 90%;
   }
 
