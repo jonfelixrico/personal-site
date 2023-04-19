@@ -34,7 +34,7 @@ export default function Home() {
           retracted={direction === 'down' && y > height / 3}
         />
       </header>
-      <main className="relative">
+      <main className="relative overflow-hidden">
         <ContactsOverlay
           classNames="absolute w-full h-full py-5 px-8"
           hidden={activeSection === NavbarSectionId.CONTACTS}
