@@ -61,13 +61,18 @@ export default function ContactsOverlay(props: {
         { hidden: props.hidden }
       )}
     >
-      <div className="flex flex-col gap-4">
+      <div className={classnames('flex flex-col gap-4', 'item', 'left')}>
         {ITEMS.map(({ src, href, label }, index) => (
           <ContactItem href={href} src={src} label={label} key={index} />
         ))}
       </div>
       <div
-        className="text-orientation-vertical pointer-events-auto cursor-pointer"
+        className={classnames(
+          'text-orientation-vertical',
+          'pointer-events-auto cursor-pointer',
+          'item',
+          'right'
+        )}
         onClick={promptEmail}
       >
         {EMAIL}

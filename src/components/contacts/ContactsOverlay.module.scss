@@ -4,5 +4,26 @@
 
   &.hidden {
     opacity: 0;
+
+    .item.left {
+      left: -100%;
+    }
+
+    .item.right {
+      right: -100%;
+    }
+  }
+
+  .item {
+    @apply relative;
+    transition: left 0.5s, right 0.5s;
+  }
+
+  .item.left {
+    left: 0;
+  }
+
+  .item.right {
+    right: 0;
   }
 }
