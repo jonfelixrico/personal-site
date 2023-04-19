@@ -5,7 +5,6 @@ import HomeContent from '@/components/section/HomeContent'
 import { useRef, useState } from 'react'
 import { useWindowSize } from 'react-use'
 import { useScrollYWithDirection } from '@/hooks/useScrollYWithDirection'
-import classnames from 'classnames'
 import { NavbarSectionId } from '@/models/navbar-section-id.enum'
 
 const NAVBAR_HEIGHT = 54
