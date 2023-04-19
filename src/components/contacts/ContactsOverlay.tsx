@@ -57,11 +57,13 @@ export default function ContactsOverlay(props: {
         // show for large screens, hide for smaller screens
         'hidden lg:flex',
         'flex-row justify-between items-end pointer-events-none',
-        'overlay',
-        { hidden: props.hidden }
+        styles.overlay,
+        { [styles.hidden]: props.hidden }
       )}
     >
-      <div className={classnames('flex flex-col gap-4', 'item', 'left')}>
+      <div
+        className={classnames('flex flex-col gap-4', styles.item, styles.left)}
+      >
         {ITEMS.map(({ src, href, label }, index) => (
           <ContactItem href={href} src={src} label={label} key={index} />
         ))}
@@ -70,8 +72,8 @@ export default function ContactsOverlay(props: {
         className={classnames(
           'text-orientation-vertical',
           'pointer-events-auto cursor-pointer',
-          'item',
-          'right'
+          styles.item,
+          styles.right
         )}
         onClick={promptEmail}
       >
