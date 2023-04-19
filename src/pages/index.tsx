@@ -5,6 +5,8 @@ import HomeContent from '@/components/section/HomeContent'
 import { useRef, useState } from 'react'
 import { useWindowSize } from 'react-use'
 import { useScrollYWithDirection } from '@/hooks/useScrollYWithDirection'
+import classnames from 'classnames'
+import { NavbarSectionId } from '@/models/navbar-section-id.enum'
 
 const NAVBAR_HEIGHT = 54
 
@@ -34,7 +36,10 @@ export default function Home() {
         />
       </header>
       <main className="relative">
-        <ContactsOverlay classNames="absolute w-full h-full py-5 px-8" />
+        <ContactsOverlay
+          classNames="absolute w-full h-full py-5 px-8"
+          hidden={activeSection === NavbarSectionId.CONTACTS}
+        />
         <div
           className="h-screen overflow-auto scroll-smooth scrollbar-invisible"
           ref={scrollRef}

@@ -39,7 +39,10 @@ function ContactItem(props: ContactItemData) {
   )
 }
 
-export default function ContactsOverlay(props: { classNames?: string }) {
+export default function ContactsOverlay(props: {
+  classNames?: string
+  hidden?: boolean
+}) {
   function promptEmail() {
     // TODO add dialog for constent
     window.open(`mailto:${EMAIL}`)
