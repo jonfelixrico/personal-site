@@ -19,30 +19,40 @@
 }
 
 .nav-link {
-  @apply text-white font-semibold;
+  @apply text-white font-semibold relative;
 
   // This is to prevent the hover event from sticking around after a click in a touchscreen
   @media (hover: hover) and (pointer: fine) {
-    &:hover .indicator {
+    &:hover::before {
       opacity: 1;
-      bottom: 0;
+
+      bottom: -10%;
     }
   }
 
-  &.active .indicator {
+  &.active::before {
     opacity: 1;
-    bottom: 0;
+
     width: 90%;
+    left: 5%;
+
+    bottom: -10%;
   }
 
-  .indicator {
+  &::before {
     @apply absolute rounded;
 
-    border-bottom: 2px solid white;
-    width: 25%;
-    opacity: 0;
-    bottom: -10%;
+    // required for ::before to appear
+    content: '';
 
-    transition: width 0.5s, opacity 0.2s, bottom 0.1s;
+    border: 1.5px solid white;
+    opacity: 0;
+
+    bottom: -20%;
+
+    width: 40%;
+    left: 30%;
+
+    transition: width 0.5s, left 0.5s, opacity 0.2s, bottom 0.1s;
   }
 }
