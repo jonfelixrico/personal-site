@@ -41,7 +41,7 @@
   }
 
   &::before {
-    @apply absolute rounded;
+    @apply absolute rounded pointer-events-none;
 
     // required for ::before to appear
     content: '';
