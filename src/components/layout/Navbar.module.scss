@@ -21,22 +21,23 @@
 .nav-link {
   @apply text-white font-semibold relative;
 
+  $emphasis-opacity: 1;
+  $emphasis-bottom: 1;
+
   // This is to prevent the hover event from sticking around after a click in a touchscreen
   @media (hover: hover) and (pointer: fine) {
     &:hover::before {
-      opacity: 1;
-
-      bottom: -15%;
+      opacity: $emphasis-opacity;
+      bottom: $emphasis-bottom;
     }
   }
 
   &.active::before {
-    opacity: 1;
+    opacity: $emphasis-opacity;
+    bottom: $emphasis-bottom;
 
     width: 90%;
     left: 5%;
-
-    bottom: -15%;
   }
 
   &::before {
