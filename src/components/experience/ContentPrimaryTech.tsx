@@ -1,4 +1,3 @@
-import IconWithTooltip from '@/components/IconWithTooltip'
 import classnames from 'classnames'
 import Image from 'next/image'
 import { ReactNode } from 'react'
@@ -19,26 +18,6 @@ function ItemLayout(props: {
         <h4 className="text-4xl text-white font-semibold">{props.header}</h4>
       </div>
       {props.body}
-    </div>
-  )
-}
-
-function IconList(props: {
-  icons: {
-    src: string
-    label: string
-  }[]
-}) {
-  return (
-    <div className="flex flex-row justify-center gap-3">
-      {props.icons.map(({ src, label }, index) => (
-        <IconWithTooltip
-          className="lg:h-20 lg:w-20 md:h-14 md:w-14 h-12 w-12"
-          key={index}
-          tooltipLabel={label}
-          src={src}
-        />
-      ))}
     </div>
   )
 }
