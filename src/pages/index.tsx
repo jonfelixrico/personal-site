@@ -5,6 +5,7 @@ import HomeContent from '@/components/section/HomeContent'
 import { useRef, useState } from 'react'
 import { useScroll } from 'react-use'
 import { NavbarSectionId } from '@/models/navbar-section-id.enum'
+import NavbarLayout from '@/components/layout/NavbarLayout'
 
 const NAVBAR_HEIGHT = 54
 
@@ -24,11 +25,12 @@ export default function Home() {
         className="fixed w-screen z-10"
         style={{ height: `${NAVBAR_HEIGHT}px` }}
       >
-        <NavLinks
-          className="h-full w-full absolute"
-          activeSection={activeSection ?? undefined}
+        <NavbarLayout
           transparent={y <= NAVBAR_HEIGHT}
-        />
+          className="h-full w-full absolute flex flex-row items-center gap-4 justify-end px-8"
+        >
+          <NavLinks activeSection={activeSection ?? undefined} />
+        </NavbarLayout>
       </header>
       <main className="relative overflow-hidden">
         <ContactsOverlay

@@ -50,13 +50,7 @@ export default function NavLinks(props: {
   activeSection?: string
 }) {
   return (
-    <nav
-      className={classnames(
-        'flex flex-row items-center gap-4',
-        'justify-between sm:justify-end',
-        'px-8'
-      )}
-    >
+    <>
       {LINKS.map(({ section, label }) => (
         <NavLink
           section={section}
@@ -65,6 +59,6 @@ export default function NavLinks(props: {
           key={section}
         />
       ))}
-    </nav>
+    </>
   )
 }
