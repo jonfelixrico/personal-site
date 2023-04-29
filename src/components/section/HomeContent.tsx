@@ -1,6 +1,6 @@
 import { ReactNode, useEffect, useRef } from 'react'
 import HomeSectionContacts from './HomeSectionContacts'
-import HomeSectionExperience from './HomeSectionExperience'
+import HomeSectionSkills from './HomeSectionSkills'
 import HomeSectionMain from './HomeSectionMain'
 import HomeSectionPortfolio from './HomeSectionPortfolio'
 import { useIntersection } from 'react-use'
@@ -52,7 +52,7 @@ export default function HomeContent(props: {
         id={NavbarSectionId.EXPERIENCE}
         onVisible={props.onVisibleSectionChange}
       >
-        <HomeSectionExperience />
+        <HomeSectionSkills />
       </SectionWrapper>
 
       <SectionWrapper
@@ -66,7 +66,7 @@ export default function HomeContent(props: {
         id={NavbarSectionId.CONTACTS}
         onVisible={props.onVisibleSectionChange}
       >
-        <HomeSectionContacts className="mx-auto max-w-screen-lg min-h-screen Section-px" />
+        <HomeSectionContacts />
       </SectionWrapper>
     </>
   )

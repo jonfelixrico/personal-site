@@ -1,146 +1,84 @@
-import IconWithTooltip from '@/components/IconWithTooltip'
 import classnames from 'classnames'
+import Image from 'next/image'
 import { ReactNode } from 'react'
 
 function ItemLayout(props: {
   body: ReactNode
   header: string
-  side: ReactNode
+  side?: ReactNode
   className?: string
+  iconSrc: string
 }) {
   return (
-    <div className={classnames('p-3 rounded-lg bg-app', props.className)}>
-      <div className="flex flex-row items-center justify-between mb-3">
-        <h4 className="text-3xl text-white">{props.header}</h4>
-        {props.side}
+    <div className={classnames('p-5 rounded-lg bg-app-2', props.className)}>
+      <div className="flex flex-row items-center mb-3 gap-3">
+        <div className="relative h-12 w-12">
+          <Image alt={props.header} src={props.iconSrc} fill />
+        </div>
+        <h4 className="text-4xl text-white">{props.header}</h4>
       </div>
       {props.body}
     </div>
   )
 }
 
-interface Icon {
-  src: string
-  label: string
-}
-
-function IconList(props: { icons: Icon[] }) {
-  return (
-    <div className="flex flex-row justify-center gap-3">
-      {props.icons.map(({ src, label }, index) => (
-        <IconWithTooltip
-          className="lg:h-20 lg:w-20 md:h-14 md:w-14 h-12 w-12"
-          key={index}
-          tooltipLabel={label}
-          src={src}
-        />
-      ))}
-    </div>
-  )
-}
-
 export default function ContentPrimaryTech() {
   return (
-    <div className="grid md:grid-cols-2 w-full gap-4">
+    <div className="grid lg:grid-cols-8 w-full gap-4">
       <ItemLayout
+        className="lg:col-span-4"
         header="Front-end"
         body={
           <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo.
+            I have been working with Vue.js (under the Quasar Framework) for
+            more than three years. I have built complex and interactive user
+            interfaces with this front-end stack. It is my go-to whenever I want
+            to work on a personal project.
+            <br />
+            <br />
+            In addition to my "bread and butter" above, I also have experience
+            building web apps with Angular (with Angular Material) and React
+            (with Next.js).
           </p>
         }
-        side={
-          <IconList
-            icons={[
-              {
-                src: 'icons/vue-js.svg',
-                label: 'Vue',
-              },
-
-              {
-                src: 'icons/quasar-framework.svg',
-                label: 'Quasar Framework',
-              },
-            ]}
-          />
-        }
+        iconSrc="icons/frontend.svg"
       />
 
       <ItemLayout
+        className="lg:col-span-4"
         header="Back-end"
         body={
           <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo.
+            I have experience in back-end development, using either Java or
+            JavaScript (with Nest.js). Before, I used to work with Java
+            exclusively but now I'm using JavaScript more.
+            <br />
+            <br />
+            I've also worked with both SQL and NoSQL databases such as MySQL and
+            MongoDB, respectively. I've also been experimenting with the concept
+            of EventSourcing (via EventSourceDB) in my personal projects.
           </p>
         }
-        side={
-          <IconList
-            icons={[
-              {
-                src: 'icons/nest-js.svg',
-                label: 'Nest.js',
-              },
-            ]}
-          />
-        }
+        iconSrc="icons/api.svg"
       />
 
       <ItemLayout
-        header="Databases"
+        className="lg:col-span-4 lg:col-start-3"
+        header="DevOps"
         body={
           <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo.
+            Just recently, I've started to expore DevOps by incorporating CI/CD
+            into my personal projects via Docker and GitHub actions. I have also
+            taken steps to create my own deployment set-up where I self-host my
+            projects with my home servers.
+            <br />
+            <br />
+            I'm very excited about furthering my DevOps journey. My next
+            milestone would be figuring out how to make continuous deployment
+            work with my home servers.
           </p>
         }
-        side={
-          <IconList
-            icons={[
-              {
-                src: 'icons/mongodb.svg',
-                label: 'MongoDB',
-              },
-              {
-                src: 'icons/postgresql.svg',
-                label: 'PostgreSQL',
-              },
-            ]}
-          />
-        }
-      />
-
-      <ItemLayout
-        header="Automation & Deployment"
-        body={
-          <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo.
-          </p>
-        }
-        side={
-          <IconList
-            icons={[
-              {
-                src: 'icons/docker.svg',
-                label: 'Docker',
-              },
-              {
-                src: 'icons/github-actions.svg',
-                label: 'Github Actions',
-              },
-            ]}
-          />
-        }
+        iconSrc="icons/cicd.svg"
       />
     </div>
   )
