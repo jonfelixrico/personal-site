@@ -49,7 +49,6 @@ export default function Navbar(props: {
   className?: string
   activeSection?: string
   transparent?: boolean
-  retracted?: boolean
 }) {
   return (
     <nav
@@ -60,7 +59,7 @@ export default function Navbar(props: {
         props.className,
 
         'nav-bar',
-        { transparent: props.transparent, retracted: props.retracted }
+        { transparent: props.transparent }
       )}
     >
       {LINKS.map(({ section, label }) => (

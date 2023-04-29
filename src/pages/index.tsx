@@ -3,8 +3,7 @@ import ContactsOverlay from '@/components/contacts/ContactsOverlay'
 import Navbar from '@/components/layout/Navbar'
 import HomeContent from '@/components/section/HomeContent'
 import { useRef, useState } from 'react'
-import { useWindowSize } from 'react-use'
-import { useScrollYWithDirection } from '@/hooks/useScrollYWithDirection'
+import { useScroll } from 'react-use'
 import { NavbarSectionId } from '@/models/navbar-section-id.enum'
 
 const NAVBAR_HEIGHT = 54
@@ -13,9 +12,7 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState<null | string>(null)
 
   const scrollRef = useRef<HTMLDivElement>(null)
-  const { y, direction } = useScrollYWithDirection(scrollRef)
-
-  const { height } = useWindowSize()
+  const { y } = useScroll(scrollRef)
 
   return (
     <>
@@ -31,7 +28,6 @@ export default function Home() {
           className="h-full w-full absolute"
           activeSection={activeSection ?? undefined}
           transparent={y <= NAVBAR_HEIGHT}
-          retracted={direction === 'down' && y > height / 3}
         />
       </header>
       <main className="relative overflow-hidden">
