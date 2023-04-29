@@ -100,10 +100,10 @@ export default function ContentPrimaryTech() {
         header="Databases"
         body={
           <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo.
+            I have received formal training in SQL databases and I am able to
+            work with designing database structures and creating transactions.
+            Aside from SQL, I also have worked with NoSQL databases. NoSQL
+            databases are my first choice whenever I make my personal projects.
           </p>
         }
         side={
