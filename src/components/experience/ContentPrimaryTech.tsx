@@ -41,8 +41,9 @@ function IconList(props: { icons: Icon[] }) {
 
 export default function ContentPrimaryTech() {
   return (
-    <div className="grid md:grid-cols-2 w-full gap-4">
+    <div className="grid lg:grid-cols-8 w-full gap-4">
       <ItemLayout
+        className="lg:col-span-4"
         header="Front-end"
         body={
           <p>
@@ -70,6 +71,7 @@ export default function ContentPrimaryTech() {
       />
 
       <ItemLayout
+        className="lg:col-span-4"
         header="Back-end"
         body={
           <p>
@@ -97,37 +99,7 @@ export default function ContentPrimaryTech() {
       />
 
       <ItemLayout
-        header="Databases"
-        body={
-          <p>
-            I have received formal training in SQL databases and I am able to
-            work with designing database structures and creating transactions.
-            Aside from SQL, I also have worked with NoSQL databases such as
-            MongoDB.
-            <br />
-            <br />
-            When it comes to personal projects, I choose between using MongoDB
-            or MySQL, though I prefer wrapping them in object-relational mapping
-            libraries to make development and maintenance simpler.
-          </p>
-        }
-        side={
-          <IconList
-            icons={[
-              {
-                src: 'icons/mongodb.svg',
-                label: 'MongoDB',
-              },
-              {
-                src: 'icons/mysql.svg',
-                label: 'MySQL',
-              },
-            ]}
-          />
-        }
-      />
-
-      <ItemLayout
+        className="lg:col-span-4 lg:col-start-3"
         header="DevOps"
         body={
           <p>
