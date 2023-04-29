@@ -11,7 +11,7 @@ function ContactCard(props: { label: string; src: string }) {
   )
 }
 
-export default function HomeSectionContacts() {
+export default function ContactsSection() {
   return (
     <div
       className="section-width section-px min-h-screen
