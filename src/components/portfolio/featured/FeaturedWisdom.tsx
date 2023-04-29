@@ -1,5 +1,6 @@
 import { CgArrowTopRightR } from 'react-icons/cg'
 import { FeaturedLayout, LinkButton } from './FeaturedTemplates'
+import { BsGithub } from 'react-icons/bs'
 
 export default function FeaturedWisdom() {
   return (
@@ -64,11 +65,37 @@ export default function FeaturedWisdom() {
         },
       ]}
       bottom={
-        <LinkButton
-          href="https://wisdom.csaservers.com"
-          icon={<CgArrowTopRightR className="text-2xl" />}
-          label="Demo"
-        />
+        <div className="flex flex-row flex-wrap gap-3">
+          <LinkButton
+            href="https://wisdom.csaservers.com"
+            icon={<CgArrowTopRightR className="text-2xl" />}
+            label="Demo"
+          />
+
+          <LinkButton
+            href="https://github.com/jonfelixrico/wisdom-core-2022"
+            icon={<BsGithub className="text-2xl" />}
+            label="Code - Quotes REST API"
+          />
+
+          <LinkButton
+            href="https://github.com/jonfelixrico/wisdom-bot-2022"
+            icon={<BsGithub className="text-2xl" />}
+            label="Code - Bot"
+          />
+
+          <LinkButton
+            href="https://github.com/jonfelixrico/wisdom-panel-client-2022"
+            icon={<BsGithub className="text-2xl" />}
+            label="Code - Web app, front-end"
+          />
+
+          <LinkButton
+            href="https://github.com/jonfelixrico/wisdom-panel-server-2022"
+            icon={<BsGithub className="text-2xl" />}
+            label="Code - Web app, back-end"
+          />
+        </div>
       }
     />
   )
