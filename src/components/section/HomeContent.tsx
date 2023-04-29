@@ -4,7 +4,7 @@ import HomeSectionSkills from './HomeSectionSkills'
 import HomeSectionMain from './HomeSectionMain'
 import HomeSectionPortfolio from './HomeSectionPortfolio'
 import { useIntersection } from 'react-use'
-import { NavbarSectionId } from '@/models/navbar-section-id.enum'
+import { Section } from '@/models/section.enum'
 
 function SectionWrapper({
   id,
@@ -42,28 +42,28 @@ export default function HomeContent(props: {
   return (
     <>
       <SectionWrapper
-        id={NavbarSectionId.HOME}
+        id={Section.HOME}
         onVisible={props.onVisibleSectionChange}
       >
         <HomeSectionMain />
       </SectionWrapper>
 
       <SectionWrapper
-        id={NavbarSectionId.EXPERIENCE}
+        id={Section.SKILLS}
         onVisible={props.onVisibleSectionChange}
       >
         <HomeSectionSkills />
       </SectionWrapper>
 
       <SectionWrapper
-        id={NavbarSectionId.PORTFOLIO}
+        id={Section.PORTFOLIO}
         onVisible={props.onVisibleSectionChange}
       >
         <HomeSectionPortfolio />
       </SectionWrapper>
 
       <SectionWrapper
-        id={NavbarSectionId.CONTACTS}
+        id={Section.CONTACTS}
         onVisible={props.onVisibleSectionChange}
       >
         <HomeSectionContacts />

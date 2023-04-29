@@ -1,29 +1,29 @@
-import { NavbarSectionId } from '@/models/navbar-section-id.enum'
+import { Section } from '@/models/section.enum'
 import bindableCf from 'classnames/bind'
 import styles from './NavLinks.module.scss'
 
 const classnames = bindableCf.bind(styles)
 
 interface NavLinkData {
-  section: NavbarSectionId
+  section: Section
   label: string
 }
 
 const LINKS: NavLinkData[] = [
   {
-    section: NavbarSectionId.HOME,
+    section: Section.HOME,
     label: 'Home',
   },
   {
-    section: NavbarSectionId.EXPERIENCE,
+    section: Section.SKILLS,
     label: 'Experience',
   },
   {
-    section: NavbarSectionId.PORTFOLIO,
+    section: Section.PORTFOLIO,
     label: 'Portfolio',
   },
   {
-    section: NavbarSectionId.CONTACTS,
+    section: Section.CONTACTS,
     label: 'Contacts',
   },
 ]

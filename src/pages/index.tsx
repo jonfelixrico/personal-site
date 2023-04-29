@@ -4,7 +4,7 @@ import NavLinks from '@/components/layout/NavLinks'
 import HomeContent from '@/components/section/HomeContent'
 import { useRef, useState } from 'react'
 import { useScroll } from 'react-use'
-import { NavbarSectionId } from '@/models/navbar-section-id.enum'
+import { Section } from '@/models/section.enum'
 import NavbarLayout from '@/components/layout/NavbarLayout'
 
 const NAVBAR_HEIGHT = 54
@@ -35,7 +35,7 @@ export default function Home() {
       <main className="relative overflow-hidden">
         <ContactsOverlay
           classNames="absolute w-full h-full py-5 px-8"
-          hidden={activeSection === NavbarSectionId.CONTACTS}
+          hidden={activeSection === Section.CONTACTS}
         />
         <div
           className="h-screen overflow-auto scroll-smooth scrollbar-invisible"
