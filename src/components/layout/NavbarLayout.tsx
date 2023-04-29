@@ -4,7 +4,7 @@ import { ReactNode } from 'react'
 
 const classnames = bindableCf.bind(styles)
 
-export default function Navbar(props: {
+export default function NavbarLayout(props: {
   className?: string
   activeSection?: string
   transparent?: boolean
