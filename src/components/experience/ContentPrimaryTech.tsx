@@ -5,7 +5,7 @@ import { ReactNode } from 'react'
 function ItemLayout(props: {
   body: ReactNode
   header: string
-  side: ReactNode
+  side?: ReactNode
   className?: string
 }) {
   return (
@@ -53,21 +53,6 @@ export default function ContentPrimaryTech() {
             want to work on a personal project.
           </p>
         }
-        side={
-          <IconList
-            icons={[
-              {
-                src: 'icons/vue-js.svg',
-                label: 'Vue',
-              },
-
-              {
-                src: 'icons/quasar-framework.svg',
-                label: 'Quasar Framework',
-              },
-            ]}
-          />
-        }
       />
 
       <ItemLayout
@@ -86,16 +71,6 @@ export default function ContentPrimaryTech() {
             object-relational mapping to microservice gateways.
           </p>
         }
-        side={
-          <IconList
-            icons={[
-              {
-                src: 'icons/nest-js.svg',
-                label: 'Nest.js',
-              },
-            ]}
-          />
-        }
       />
 
       <ItemLayout
@@ -113,20 +88,6 @@ export default function ContentPrimaryTech() {
             milestone would be figuring out how to make continuous deployment
             work with my home servers.
           </p>
-        }
-        side={
-          <IconList
-            icons={[
-              {
-                src: 'icons/docker.svg',
-                label: 'Docker',
-              },
-              {
-                src: 'icons/github-actions.svg',
-                label: 'Github Actions',
-              },
-            ]}
-          />
         }
       />
     </div>
