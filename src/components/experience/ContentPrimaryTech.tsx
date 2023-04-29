@@ -107,7 +107,7 @@ export default function ContentPrimaryTech() {
             <br />
             <br />
             When it comes to personal projects, I choose between using MongoDB
-            or MySQL. I also prefer wrapping them in object-relational mapping
+            or MySQL, though I prefer wrapping them in object-relational mapping
             libraries to make development and maintenance simpler.
           </p>
         }
