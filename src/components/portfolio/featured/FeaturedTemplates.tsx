@@ -80,7 +80,7 @@ export function FeaturedLayout(props: {
         flex flex-col justify-center gap-4
         z-10"
       >
-        <h5 className="text-4xl text-accent">{props.title}</h5>
+        <h5 className="text-4xl text-accent font-medium">{props.title}</h5>
         <div className="rounded-lg overflow-hidden bg-app-1 shadow-md p-3 relative">
           <Image
             className="absolute object-cover object-center opacity-10 grayscale md:hidden"
