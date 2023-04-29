@@ -83,7 +83,7 @@ export default function Home() {
         <main>
           <Sections onVisibleSectionChange={setActiveSection} />
         </main>
-        <footer className="p-2 flex flex-col items-center">
+        <footer className="p-2 flex flex-col items-center text-sm">
           <div>
             Built by <span>Jon Felix Rico</span>
           </div>
