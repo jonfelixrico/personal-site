@@ -102,8 +102,13 @@ export default function ContentPrimaryTech() {
           <p>
             I have received formal training in SQL databases and I am able to
             work with designing database structures and creating transactions.
-            Aside from SQL, I also have worked with NoSQL databases. NoSQL
-            databases are my first choice whenever I make my personal projects.
+            Aside from SQL, I also have worked with NoSQL databases such as
+            MongoDB.
+            <br />
+            <br />
+            When it comes to personal projects, I choose between using MongoDB
+            or MySQL. I also prefer wrapping them in object-relational mapping
+            libraries to make development and maintenance simpler.
           </p>
         }
         side={
@@ -114,8 +119,8 @@ export default function ContentPrimaryTech() {
                 label: 'MongoDB',
               },
               {
-                src: 'icons/postgresql.svg',
-                label: 'PostgreSQL',
+                src: 'icons/mysql.svg',
+                label: 'MySQL',
               },
             ]}
           />
