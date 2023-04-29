@@ -1,17 +1,3 @@
-@import 'src/styles/variables.scss';
-
-.nav-bar {
-  @apply shadow-md opacity-95;
-  background: $bg-app-1;
-
-  &.transparent {
-    background: transparent;
-    @apply shadow-none opacity-100;
-  }
-
-  transition: background 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
-}
-
 .nav-link {
   @apply text-white font-semibold relative;
 
