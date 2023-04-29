@@ -1,7 +1,7 @@
 export default function HomeSectionContacts() {
   return (
-    <div className="section-width section-px min-h-screen grid grid-rows-6">
-      <div className="row-start-2 row-span-4">
+    <div className="section-width section-px min-h-screen">
+      <div className="row-start-2 row-span-4 py-10">
         <div className="mb-5">
           <div className="text-5xl font-semibold text-primary">Contacts</div>
           <div className="text-secondary text-2xl">Lorem ipsum dolor</div>
