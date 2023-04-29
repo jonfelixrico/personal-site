@@ -5,7 +5,6 @@ import HomeSectionMain from './HomeSectionMain'
 import HomeSectionPortfolio from './HomeSectionPortfolio'
 import { useIntersection } from 'react-use'
 import { NavbarSectionId } from '@/models/navbar-section-id.enum'
-import HomeSectionAboutMe from './HomeSectionAboutMe'
 
 function SectionWrapper({
   id,

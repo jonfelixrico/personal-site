@@ -9,7 +9,7 @@ function ItemLayout(props: {
   className?: string
 }) {
   return (
-    <div className={classnames('p-3 rounded-lg bg-app', props.className)}>
+    <div className={classnames('p-3 rounded-lg bg-app-2', props.className)}>
       <div className="flex flex-row items-center justify-between mb-3">
         <h4 className="text-3xl text-white">{props.header}</h4>
         {props.side}
