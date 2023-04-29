@@ -1,8 +1,5 @@
-import bindableCf from 'classnames/bind'
 import Image from 'next/image'
-import styles from './ContactsOverlay.module.scss'
-
-const classnames = bindableCf.bind(styles)
+import classnames from 'classnames'
 interface ContactItemData {
   src: string
   href: string
@@ -41,10 +38,7 @@ function ContactItem(props: ContactItemData) {
   )
 }
 
-export default function ContactsOverlay(props: {
-  classNames?: string
-  hidden?: boolean
-}) {
+export default function ContactsOverlay(props: { classNames?: string }) {
   function promptEmail() {
     // TODO add dialog for constent
     window.open(`mailto:${EMAIL}`)
@@ -56,14 +50,10 @@ export default function ContactsOverlay(props: {
         props.classNames,
         // show for large screens, hide for smaller screens
         'hidden lg:flex',
-        'flex-row justify-between items-end pointer-events-none',
-        styles.overlay,
-        { [styles.hidden]: props.hidden }
+        'flex-row justify-between items-end pointer-events-none'
       )}
     >
-      <div
-        className={classnames('flex flex-col gap-4', styles.item, styles.left)}
-      >
+      <div className={classnames('flex flex-col gap-4')}>
         {ITEMS.map(({ src, href, label }, index) => (
           <ContactItem href={href} src={src} label={label} key={index} />
         ))}
@@ -71,9 +61,7 @@ export default function ContactsOverlay(props: {
       <div
         className={classnames(
           'text-orientation-vertical',
-          'pointer-events-auto cursor-pointer',
-          styles.item,
-          styles.right
+          'pointer-events-auto cursor-pointer'
         )}
         onClick={promptEmail}
       >
