@@ -58,7 +58,7 @@ export function LinkButton(props: {
       )}
     >
       {props.icon}
-      <span className="font-medium text-lg">{props.label}</span>
+      <span className="font-medium text-sm">{props.label}</span>
     </a>
   )
 }

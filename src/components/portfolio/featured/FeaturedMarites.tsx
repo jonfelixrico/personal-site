@@ -45,13 +45,13 @@ export default function FeaturedMarites() {
         <div className="flex flex-row gap-3">
           <LinkButton
             href="https://marites.jonfelixrico.dev"
-            icon={<CgArrowTopRightR className="text-2xl" />}
+            icon={<CgArrowTopRightR className="text-lg" />}
             label="Demo"
           />
 
           <LinkButton
             href="https://github.com/jonfelixrico/marites"
-            icon={<BsGithub className="text-2xl" />}
+            icon={<BsGithub className="text-lg" />}
             label="Code"
           />
         </div>
