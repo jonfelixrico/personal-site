@@ -2,8 +2,11 @@ import { useResizeDetector } from 'react-resize-detector'
 import { ConditionallyRender } from '@/components/ConditionallyRender'
 import Image from 'next/image'
 import { ReactNode } from 'react'
-import classnames from 'classnames'
 import IconWithTooltip from '@/components/IconWithTooltip'
+import styles from './FeaturedTemplates.module.scss'
+import bindableCf from 'classnames/bind'
+
+const classnames = bindableCf.bind(styles)
 
 function FitWidthImage(props: {
   src: string
@@ -37,6 +40,29 @@ interface Tech {
   name: string
 }
 
+export function LinkButton(props: {
+  icon?: ReactNode
+  label: string
+  href: string
+  className?: string
+}) {
+  return (
+    <a
+      href={props.href}
+      target="_blank"
+      className={classnames(
+        styles['link-button'],
+        props.className,
+        'rounded-md bg-app-1 overflow-hidden px-2 py-1',
+        'inline-flex flex-row items-center gap-2'
+      )}
+    >
+      {props.icon}
+      <span className="font-semibold text-lg">{props.label}</span>
+    </a>
+  )
+}
+
 export function FeaturedLayout(props: {
   details: ReactNode
   title: string
@@ -51,7 +77,7 @@ export function FeaturedLayout(props: {
         lg:col-span-6 lg:col-start-1
         md:col-span-7 md:col-start-1
         col-span-12 row-start-1 
-        flex flex-col justify-center gap-3
+        flex flex-col justify-center gap-4
         z-10"
       >
         <h5 className="text-4xl text-accent">{props.title}</h5>
