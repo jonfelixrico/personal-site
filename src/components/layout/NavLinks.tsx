@@ -1,6 +1,6 @@
 import { NavbarSectionId } from '@/models/navbar-section-id.enum'
 import bindableCf from 'classnames/bind'
-import styles from './Navbar.module.scss'
+import styles from './NavLinks.module.scss'
 
 const classnames = bindableCf.bind(styles)
 
@@ -45,21 +45,16 @@ function NavLink({
   )
 }
 
-export default function Navbar(props: {
+export default function NavLinks(props: {
   className?: string
   activeSection?: string
-  transparent?: boolean
 }) {
   return (
     <nav
       className={classnames(
         'flex flex-row items-center gap-4',
         'justify-between sm:justify-end',
-        'px-8',
-        props.className,
-
-        'nav-bar',
-        { transparent: props.transparent }
+        'px-8'
       )}
     >
       {LINKS.map(({ section, label }) => (
