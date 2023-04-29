@@ -24,7 +24,8 @@ export default function HomeSectionMain() {
         </div>
 
         <div className="lg:w-5/6 text-xl">
-          I'm a web developer specializing in front-end technologies for&nbsp;
+          I&apos;m a web developer specializing in front-end technologies
+          for&nbsp;
           <a target="_blank" href="https://www.azeus.com">
             Azeus Systems
           </a>
