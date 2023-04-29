@@ -46,10 +46,10 @@ export default function ContentPrimaryTech() {
         header="Front-end"
         body={
           <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo.
+            I have more than three years of experience with Quasar Framework
+            (which is built on top of Vue). I have built complex and interactive
+            user interfaces with this front-end stack. It is my go-to whenever I
+            want to work on a personal project.
           </p>
         }
         side={
