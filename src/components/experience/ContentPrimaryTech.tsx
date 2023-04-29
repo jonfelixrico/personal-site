@@ -36,9 +36,9 @@ export default function ContentPrimaryTech() {
             to work on a personal project.
             <br />
             <br />
-            In addition to my "bread and butter" above, I also have experience
-            building web apps with Angular (with Angular Material) and React
-            (with Next.js).
+            In addition to my &quot;bread and butter&quot; above, I also have
+            experience building web apps with Angular (with Angular Material)
+            and React (with Next.js).
           </p>
         }
         iconSrc="icons/frontend.svg"
@@ -51,12 +51,13 @@ export default function ContentPrimaryTech() {
           <p>
             I have experience in back-end development, using either Java or
             JavaScript (with Nest.js). Before, I used to work with Java
-            exclusively but now I'm using JavaScript more.
+            exclusively but now I&apos;m using JavaScript more.
             <br />
             <br />
-            I've also worked with both SQL and NoSQL databases such as MySQL and
-            MongoDB, respectively. I've also been experimenting with the concept
-            of EventSourcing (via EventSourceDB) in my personal projects.
+            I&apos;ve also worked with both SQL and NoSQL databases such as
+            MySQL and MongoDB, respectively. I&apos;ve also been experimenting
+            with the concept of EventSourcing (via EventSourceDB) in my personal
+            projects.
           </p>
         }
         iconSrc="icons/api.svg"
@@ -67,13 +68,13 @@ export default function ContentPrimaryTech() {
         header="DevOps"
         body={
           <p>
-            Just recently, I've started to expore DevOps by incorporating CI/CD
-            into my personal projects via Docker and GitHub actions. I have also
-            taken steps to create my own deployment set-up where I self-host my
-            projects with my home servers.
+            Just recently, I&apos;ve started to expore DevOps by incorporating
+            CI/CD into my personal projects via Docker and GitHub actions. I
+            have also taken steps to create my own deployment set-up where I
+            self-host my projects with my home servers.
             <br />
             <br />
-            I'm very excited about furthering my DevOps journey. My next
+            I&apos;m very excited about furthering my DevOps journey. My next
             milestone would be figuring out how to make continuous deployment
             work with my home servers.
           </p>
