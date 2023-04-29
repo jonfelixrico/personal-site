@@ -4,7 +4,6 @@ import NavLinks from '@/components/layout/NavLinks'
 import HomeContent from '@/components/section/HomeContent'
 import { useRef, useState } from 'react'
 import { useScroll } from 'react-use'
-import { Section } from '@/models/section.enum'
 import NavbarLayout from '@/components/layout/NavbarLayout'
 
 const NAVBAR_HEIGHT = 54
