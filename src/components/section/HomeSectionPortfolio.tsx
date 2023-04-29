@@ -14,8 +14,6 @@ export default function HomeSectionPortfolio() {
 
           <PortfolioList />
         </div>
-
-        <PortfolioList />
       </div>
     </div>
   )
