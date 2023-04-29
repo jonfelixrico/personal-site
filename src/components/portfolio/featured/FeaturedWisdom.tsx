@@ -67,7 +67,7 @@ export default function FeaturedWisdom() {
         <LinkButton
           href="https://wisdom.csaservers.com"
           icon={<CgArrowTopRightR className="text-2xl" />}
-          label="Visit"
+          label="Demo"
         />
       }
     />
