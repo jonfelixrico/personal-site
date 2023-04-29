@@ -58,7 +58,7 @@ export default function ContentPrimaryTech() {
             <br />
             <br />
             In addition to my "bread and butter" above, I also have experience
-            building web sites with Angular (with Angular Material) and React
+            building web apps with Angular (with Angular Material) and React
             (with Next.js).
           </p>
         }
