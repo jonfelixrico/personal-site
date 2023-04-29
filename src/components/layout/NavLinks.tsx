@@ -1,4 +1,4 @@
-import { Section } from '@/models/navbar-section-id.enum'
+import { Section } from '@/models/section.enum'
 import bindableCf from 'classnames/bind'
 import styles from './NavLinks.module.scss'
 
@@ -15,7 +15,7 @@ const LINKS: NavLinkData[] = [
     label: 'Home',
   },
   {
-    section: Section.EXPERIENCE,
+    section: Section.SKILLS,
     label: 'Experience',
   },
   {

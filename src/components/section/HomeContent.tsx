@@ -3,7 +3,7 @@ import HomeSectionSkills from './HomeSectionSkills'
 import HomeSectionMain from './HomeSectionMain'
 import HomeSectionPortfolio from './HomeSectionPortfolio'
 import { useIntersection } from 'react-use'
-import { Section } from '@/models/navbar-section-id.enum'
+import { Section } from '@/models/section.enum'
 
 function SectionWrapper({
   id,
@@ -48,7 +48,7 @@ export default function HomeContent(props: {
       </SectionWrapper>
 
       <SectionWrapper
-        id={Section.EXPERIENCE}
+        id={Section.SKILLS}
         onVisible={props.onVisibleSectionChange}
       >
         <HomeSectionSkills />
