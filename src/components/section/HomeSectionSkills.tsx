@@ -7,7 +7,9 @@ export default function HomeSectionSkills() {
         <div className="section-width section-px">
           <div className="mb-5">
             <h2 className="text-5xl font-semibold text-primary">Skills</h2>
-            <div className="text-secondary text-2xl">Lorem ipsum dolor</div>
+            <div className="text-secondary text-2xl">
+              What I&apos;ve cultivated so far
+            </div>
           </div>
 
           <ContentPrimaryTech />
