@@ -65,21 +65,24 @@ export function FeaturedLayout(props: {
             alt={`Preview of ${props.title}`}
             className="md:hidden w-full"
           />
-          <div className="p-3">{props.details}</div>
-        </div>
-
-        <div className="flex flex-row gap-3">
-          {props.techList.map(({ iconSrc, name }) => (
-            <IconWithTooltip
-              src={iconSrc}
-              tooltipLabel={name}
-              className="relative
-              lg:h-12 lg:w-12
-              md:h-10 md:w-10
-              h-8 w-8"
-              key={name}
-            />
-          ))}
+          <div className="p-3">
+            <div className="mb-5">{props.details}</div>
+            <div>
+              <div className="text-xs mb-1">Tech involved:</div>
+              <div className="flex flex-row gap-3">
+                {props.techList.map(({ iconSrc, name }) => (
+                  <IconWithTooltip
+                    src={iconSrc}
+                    tooltipLabel={name}
+                    className="relative
+                    h-6 w-6
+                    md:h-8 md:w-8"
+                    key={name}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
