@@ -1,5 +1,5 @@
 import { CgArrowTopRightR } from 'react-icons/cg'
-import { FeaturedLayout } from './FeaturedTemplates'
+import { FeaturedLayout, LinkButton } from './FeaturedTemplates'
 
 export default function FeaturedWisdom() {
   return (
@@ -64,13 +64,11 @@ export default function FeaturedWisdom() {
         },
       ]}
       bottom={
-        <a
+        <LinkButton
           href="https://wisdom.csaservers.com"
-          className="text-accent-2 text-2xl"
-          target="_blank"
-        >
-          <CgArrowTopRightR />
-        </a>
+          icon={<CgArrowTopRightR className="inline-block text-2xl" />}
+          label="Live demo"
+        />
       }
     />
   )
