@@ -33,10 +33,7 @@ export default function Home() {
         </NavbarLayout>
       </header>
       <main className="relative overflow-hidden">
-        <ContactsOverlay
-          classNames="absolute w-full h-full py-5 px-8"
-          hidden={activeSection === Section.CONTACTS}
-        />
+        <ContactsOverlay classNames="absolute w-full h-full py-5 px-8" />
         <div
           className="h-screen overflow-auto scroll-smooth scrollbar-invisible"
           ref={scrollRef}
