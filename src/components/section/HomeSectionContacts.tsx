@@ -1,8 +1,6 @@
-import classnames from 'classnames'
-
-export default function HomeSectionContacts(props: { className?: string }) {
+export default function HomeSectionContacts() {
   return (
-    <div className={classnames('grid grid-rows-6 section-px', props.className)}>
+    <div className="section-width section-px grid grid-rows-6">
       <div className="row-start-2 row-span-4">
         <div className="mb-5">
           <div className="text-5xl font-semibold text-primary">Contacts</div>

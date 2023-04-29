@@ -66,7 +66,7 @@ export default function HomeContent(props: {
         id={NavbarSectionId.CONTACTS}
         onVisible={props.onVisibleSectionChange}
       >
-        <HomeSectionContacts className="mx-auto max-w-screen-lg min-h-screen Section-px" />
+        <HomeSectionContacts />
       </SectionWrapper>
     </>
   )

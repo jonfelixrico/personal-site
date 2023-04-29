@@ -46,6 +46,10 @@
   padding-right: $section-px;
 }
 
+.section-width {
+  @apply mx-auto max-w-screen-lg;
+}
+
 // Hide scrollbar but keep functionality
 .scrollbar-invisible {
   // For Chrome, Safari and Opera

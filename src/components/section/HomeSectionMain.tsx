@@ -5,7 +5,7 @@ export default function HomeSectionMain() {
       flex flex-col justify-center
       bg-app-2"
     >
-      <div className="mx-auto max-w-screen-lg section-px">
+      <div className="section-width section-px">
         <div className="mb-10 font-semibold">
           <div
             className="
