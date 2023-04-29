@@ -27,7 +27,7 @@ export default function Home() {
       >
         <NavbarLayout
           transparent={y <= NAVBAR_HEIGHT}
-          className="h-full w-full absolute flex flex-row items-center gap-4 justify-end px-8"
+          className="h-full w-full absolute flex flex-row items-center gap-4 justify-between sm:justify-end px-8"
         >
           <NavLinks activeSection={activeSection ?? undefined} />
         </NavbarLayout>
