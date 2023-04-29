@@ -6,7 +6,6 @@ const classnames = bindableCf.bind(styles)
 
 export default function NavbarLayout(props: {
   className?: string
-  activeSection?: string
   transparent?: boolean
   children?: ReactNode
 }) {
