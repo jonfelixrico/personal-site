@@ -59,7 +59,7 @@ export function FeaturedLayout(props: {
           <div>{props.side}</div>
         </div>
 
-        <div className="rounded-lg overflow-hidden bg-app shadow-md">
+        <div className="rounded-lg overflow-hidden bg-app-2 shadow-md">
           <FitWidthImage
             src={props.imageSrc}
             alt={`Preview of ${props.title}`}

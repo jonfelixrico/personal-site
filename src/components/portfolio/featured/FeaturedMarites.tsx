@@ -11,7 +11,7 @@ export default function FeaturedMarites() {
         <div>
           Marites is a chat app inspired by{' '}
           <a target="_blank" href="https://www.youtube.com/watch?v=zQyrwxMPm88">
-            Fireship&apos;s chat app video
+            Fireship's chat app video
           </a>{' '}
           where he built it using PocketBase and React.
           <br />
