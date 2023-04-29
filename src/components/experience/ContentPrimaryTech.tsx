@@ -1,5 +1,6 @@
 import IconWithTooltip from '@/components/IconWithTooltip'
 import classnames from 'classnames'
+import Image from 'next/image'
 import { ReactNode } from 'react'
 
 function ItemLayout(props: {
@@ -7,24 +8,27 @@ function ItemLayout(props: {
   header: string
   side?: ReactNode
   className?: string
+  iconSrc: string
 }) {
   return (
-    <div className={classnames('p-3 rounded-lg bg-app-2', props.className)}>
-      <div className="flex flex-row items-center justify-between mb-3">
-        <h4 className="text-3xl text-white">{props.header}</h4>
-        {props.side}
+    <div className={classnames('p-5 rounded-lg bg-app-2', props.className)}>
+      <div className="flex flex-row items-center mb-3 gap-3">
+        <div className="relative h-16 w-16">
+          <Image alt={props.header} src={props.iconSrc} fill />
+        </div>
+        <h4 className="text-4xl text-white font-semibold">{props.header}</h4>
       </div>
       {props.body}
     </div>
   )
 }
 
-interface Icon {
-  src: string
-  label: string
-}
-
-function IconList(props: { icons: Icon[] }) {
+function IconList(props: {
+  icons: {
+    src: string
+    label: string
+  }[]
+}) {
   return (
     <div className="flex flex-row justify-center gap-3">
       {props.icons.map(({ src, label }, index) => (
@@ -53,6 +57,7 @@ export default function ContentPrimaryTech() {
             want to work on a personal project.
           </p>
         }
+        iconSrc="icons/frontend.svg"
       />
 
       <ItemLayout
@@ -71,6 +76,7 @@ export default function ContentPrimaryTech() {
             object-relational mapping to microservice gateways.
           </p>
         }
+        iconSrc="icons/api.svg"
       />
 
       <ItemLayout
@@ -89,6 +95,7 @@ export default function ContentPrimaryTech() {
             work with my home servers.
           </p>
         }
+        iconSrc="icons/cicd.svg"
       />
     </div>
   )
