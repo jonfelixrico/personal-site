@@ -14,26 +14,32 @@ import { Section } from '@/models/section.enum'
 function Sections(props: { onVisibleSectionChange?: (id: string) => void }) {
   return (
     <>
-      <SectionWrapper
-        id={Section.HOME}
-        onVisible={props.onVisibleSectionChange}
-      >
-        <HomeSectionMain />
-      </SectionWrapper>
+      <div className="relative">
+        <div className="absolute h-full w-full">
+          <ContactsOverlay classNames="sticky h-screen w-screen py-5 px-8 top-0" />
+        </div>
 
-      <SectionWrapper
-        id={Section.SKILLS}
-        onVisible={props.onVisibleSectionChange}
-      >
-        <HomeSectionSkills />
-      </SectionWrapper>
+        <SectionWrapper
+          id={Section.HOME}
+          onVisible={props.onVisibleSectionChange}
+        >
+          <HomeSectionMain />
+        </SectionWrapper>
 
-      <SectionWrapper
-        id={Section.PORTFOLIO}
-        onVisible={props.onVisibleSectionChange}
-      >
-        <HomeSectionPortfolio />
-      </SectionWrapper>
+        <SectionWrapper
+          id={Section.SKILLS}
+          onVisible={props.onVisibleSectionChange}
+        >
+          <HomeSectionSkills />
+        </SectionWrapper>
+
+        <SectionWrapper
+          id={Section.PORTFOLIO}
+          onVisible={props.onVisibleSectionChange}
+        >
+          <HomeSectionPortfolio />
+        </SectionWrapper>
+      </div>
 
       <SectionWrapper
         id={Section.CONTACTS}
@@ -59,7 +65,10 @@ export default function Home() {
         <title>Jon Felix Rico • Home</title>
       </Head>
 
-      <div>
+      <div
+        className="scrollbar-invisible scroll-smooth overflow-auto h-screen relative"
+        ref={scrollRef}
+      >
         <header
           className="fixed w-screen z-10"
           style={{ height: `${NAVBAR_HEIGHT}px` }}
@@ -71,14 +80,8 @@ export default function Home() {
             <NavLinks activeSection={activeSection ?? undefined} />
           </NavbarLayout>
         </header>
-        <main className="relative overflow-hidden">
-          <ContactsOverlay classNames="absolute w-full h-full py-5 px-8" />
-          <div
-            className="h-screen overflow-auto scroll-smooth scrollbar-invisible"
-            ref={scrollRef}
-          >
-            <Sections onVisibleSectionChange={setActiveSection} />
-          </div>
+        <main>
+          <Sections onVisibleSectionChange={setActiveSection} />
         </main>
       </div>
     </>
