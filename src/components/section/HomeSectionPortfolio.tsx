@@ -7,7 +7,9 @@ export default function HomeSectionPortfolio() {
         <div className="row-start-2 row-span-4">
           <div className="mb-5">
             <div className="text-5xl font-semibold text-primary">Portfolio</div>
-            <div className="text-secondary text-2xl">Lorem ipsum dolor</div>
+            <div className="text-secondary text-2xl">
+              Things that I&apos;ve been up to recently
+            </div>
           </div>
 
           <PortfolioList />
