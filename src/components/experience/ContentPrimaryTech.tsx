@@ -128,13 +128,18 @@ export default function ContentPrimaryTech() {
       />
 
       <ItemLayout
-        header="Automation & Deployment"
+        header="DevOps"
         body={
           <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo.
+            Just recently, I've started to expore DevOps by incorporating CI/CD
+            into my personal projects via Docker and GitHub actions. I have also
+            taken steps to create my own deployment set-up where I self-host my
+            projects with my home servers.
+            <br />
+            <br />
+            I'm very excited about furthering my DevOps journey. My next
+            milestone would be figuring out how to make continuous deployment
+            work with my home servers.
           </p>
         }
         side={
