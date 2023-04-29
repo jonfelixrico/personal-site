@@ -73,10 +73,15 @@ export default function ContentPrimaryTech() {
         header="Back-end"
         body={
           <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo.
+            For any sort of back-end work with JavaScript, Nest.js is my
+            technology of choice. So far, I have used it with making web app
+            back-ends and Discord bots.
+            <br />
+            <br />I like using it because it has the straightforwardness of
+            Express.js but with the project structure and dependency-injection
+            system of Angular. It is also similar to Java's Spring Boot in a way
+            that you can choose from many add-ons, ranging from
+            object-relational mapping to microservice gateways.
           </p>
         }
         side={
