@@ -2,8 +2,11 @@ import { useResizeDetector } from 'react-resize-detector'
 import { ConditionallyRender } from '@/components/ConditionallyRender'
 import Image from 'next/image'
 import { ReactNode } from 'react'
-import classnames from 'classnames'
 import IconWithTooltip from '@/components/IconWithTooltip'
+import styles from './FeaturedTemplates.module.scss'
+import bindableCf from 'classnames/bind'
+
+const classnames = bindableCf.bind(styles)
 
 function FitWidthImage(props: {
   src: string
@@ -37,12 +40,35 @@ interface Tech {
   name: string
 }
 
+export function LinkButton(props: {
+  icon?: ReactNode
+  label: string
+  href: string
+  className?: string
+}) {
+  return (
+    <a
+      href={props.href}
+      target="_blank"
+      className={classnames(
+        styles['link-button'],
+        props.className,
+        'rounded-md bg-app-1 overflow-hidden px-2 py-1',
+        'inline-flex flex-row items-center gap-2'
+      )}
+    >
+      {props.icon}
+      <span className="font-medium text-sm">{props.label}</span>
+    </a>
+  )
+}
+
 export function FeaturedLayout(props: {
   details: ReactNode
   title: string
   imageSrc: string
   techList: Tech[]
-  side?: ReactNode
+  bottom?: ReactNode
 }) {
   return (
     <div className="grid grid-cols-12 isolate">
@@ -51,36 +77,39 @@ export function FeaturedLayout(props: {
         lg:col-span-6 lg:col-start-1
         md:col-span-7 md:col-start-1
         col-span-12 row-start-1 
-        flex flex-col justify-center gap-3
+        flex flex-col justify-center gap-4
         z-10"
       >
-        <div className="flex flex-row items-center gap-3 justify-between md:justify-start">
-          <h5 className="text-4xl text-accent">{props.title}</h5>
-          <div>{props.side}</div>
-        </div>
-
-        <div className="rounded-lg overflow-hidden bg-app-1 shadow-md">
-          <FitWidthImage
+        <h5 className="text-4xl text-accent font-medium">{props.title}</h5>
+        <div className="rounded-lg overflow-hidden bg-app-1 shadow-md p-3 relative">
+          <Image
+            className="absolute object-cover object-center opacity-10 grayscale md:hidden"
             src={props.imageSrc}
             alt={`Preview of ${props.title}`}
-            className="md:hidden w-full"
+            fill
+            draggable="false"
           />
-          <div className="p-3">{props.details}</div>
-        </div>
 
-        <div className="flex flex-row gap-3">
-          {props.techList.map(({ iconSrc, name }) => (
-            <IconWithTooltip
-              src={iconSrc}
-              tooltipLabel={name}
-              className="relative
-              lg:h-12 lg:w-12
-              md:h-10 md:w-10
-              h-8 w-8"
-              key={name}
-            />
-          ))}
+          <div className="relative">
+            <div className="mb-5">{props.details}</div>
+            <div>
+              <div className="text-xs mb-1">Tech involved:</div>
+              <div className="flex flex-row gap-3">
+                {props.techList.map(({ iconSrc, name }) => (
+                  <IconWithTooltip
+                    src={iconSrc}
+                    tooltipLabel={name}
+                    className="relative
+                    h-6 w-6
+                    md:h-8 md:w-8"
+                    key={name}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
+        <div>{props.bottom}</div>
       </div>
 
       <div

@@ -1,4 +1,4 @@
-import { FeaturedLayout } from './FeaturedTemplates'
+import { FeaturedLayout, LinkButton } from './FeaturedTemplates'
 import { BsGithub } from 'react-icons/bs'
 import { CgArrowTopRightR } from 'react-icons/cg'
 
@@ -41,23 +41,19 @@ export default function FeaturedMarites() {
           iconSrc: 'icons/pocketbase.svg',
         },
       ]}
-      side={
+      bottom={
         <div className="flex flex-row gap-3">
-          <a
+          <LinkButton
             href="https://marites.jonfelixrico.dev"
-            className="text-accent-2 text-2xl"
-            target="_blank"
-          >
-            <CgArrowTopRightR />
-          </a>
+            icon={<CgArrowTopRightR className="text-lg" />}
+            label="Demo"
+          />
 
-          <a
+          <LinkButton
             href="https://github.com/jonfelixrico/marites"
-            className="text-accent-2 text-2xl"
-            target="_blank"
-          >
-            <BsGithub />
-          </a>
+            icon={<BsGithub className="text-lg" />}
+            label="Code"
+          />
         </div>
       }
     />

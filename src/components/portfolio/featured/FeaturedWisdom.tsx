@@ -1,5 +1,6 @@
 import { CgArrowTopRightR } from 'react-icons/cg'
-import { FeaturedLayout } from './FeaturedTemplates'
+import { FeaturedLayout, LinkButton } from './FeaturedTemplates'
+import { BsGithub } from 'react-icons/bs'
 
 export default function FeaturedWisdom() {
   return (
@@ -63,14 +64,38 @@ export default function FeaturedWisdom() {
           iconSrc: 'icons/mongodb.svg',
         },
       ]}
-      side={
-        <a
-          href="https://wisdom.csaservers.com"
-          className="text-accent-2 text-2xl"
-          target="_blank"
-        >
-          <CgArrowTopRightR />
-        </a>
+      bottom={
+        <div className="flex flex-row flex-wrap gap-3">
+          <LinkButton
+            href="https://wisdom.csaservers.com"
+            icon={<CgArrowTopRightR className="text-lg" />}
+            label="Demo"
+          />
+
+          <LinkButton
+            href="https://github.com/jonfelixrico/wisdom-core-2022"
+            icon={<BsGithub className="text-lg" />}
+            label="Code - Quotes REST API"
+          />
+
+          <LinkButton
+            href="https://github.com/jonfelixrico/wisdom-bot-2022"
+            icon={<BsGithub className="text-lg" />}
+            label="Code - Bot"
+          />
+
+          <LinkButton
+            href="https://github.com/jonfelixrico/wisdom-panel-client-2022"
+            icon={<BsGithub className="text-lg" />}
+            label="Code - Web app, front-end"
+          />
+
+          <LinkButton
+            href="https://github.com/jonfelixrico/wisdom-panel-server-2022"
+            icon={<BsGithub className="text-lg" />}
+            label="Code - Web app, back-end"
+          />
+        </div>
       }
     />
   )
