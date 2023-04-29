@@ -2,7 +2,7 @@ import PortfolioList from '../portfolio/PortfolioList'
 
 export default function HomeSectionPortfolio() {
   return (
-    <div className="bg-app-2">
+    <div className="bg-app-2 pt-10">
       <div className="section-width min-h-screen section-px py-10">
         <div className="row-start-2 row-span-4">
           <div className="mb-5">
