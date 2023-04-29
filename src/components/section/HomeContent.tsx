@@ -49,11 +49,6 @@ export default function HomeContent(props: {
         <HomeSectionMain />
       </SectionWrapper>
 
-      {/* TODO wrap this */}
-      <section>
-        <HomeSectionAboutMe />
-      </section>
-
       <SectionWrapper
         id={NavbarSectionId.EXPERIENCE}
         onVisible={props.onVisibleSectionChange}
