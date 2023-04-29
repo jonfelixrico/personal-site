@@ -83,6 +83,17 @@ export default function Home() {
         <main>
           <Sections onVisibleSectionChange={setActiveSection} />
         </main>
+        <footer className="p-2 flex flex-col items-center">
+          <div>
+            Built by <span>Jon Felix Rico</span>
+          </div>
+          <div>
+            Icons from{' '}
+            <a href="https://icons8.com" target="_blank">
+              Icons8
+            </a>
+          </div>
+        </footer>
       </div>
     </>
   )
