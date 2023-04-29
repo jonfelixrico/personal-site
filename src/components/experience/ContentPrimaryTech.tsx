@@ -12,10 +12,10 @@ function ItemLayout(props: {
   return (
     <div className={classnames('p-5 rounded-lg bg-app-2', props.className)}>
       <div className="flex flex-row items-center mb-3 gap-3">
-        <div className="relative h-16 w-16">
+        <div className="relative h-12 w-12">
           <Image alt={props.header} src={props.iconSrc} fill />
         </div>
-        <h4 className="text-4xl text-white font-semibold">{props.header}</h4>
+        <h4 className="text-4xl text-white">{props.header}</h4>
       </div>
       {props.body}
     </div>
