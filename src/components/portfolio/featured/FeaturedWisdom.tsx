@@ -43,6 +43,10 @@ export default function FeaturedWisdom() {
           iconSrc: 'icons/vue-js.svg',
         },
         {
+          name: 'Quasar Framework',
+          iconSrc: 'icons/quasar-framework.svg',
+        },
+        {
           name: 'Nest.js',
           iconSrc: 'icons/nest-js.svg',
         },
