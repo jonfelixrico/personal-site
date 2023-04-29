@@ -22,28 +22,19 @@ const ITEMS: ContactItemData[] = [
 const EMAIL = 'jonfelixrico.work@gmail.com'
 
 function ContactItem(props: ContactItemData) {
-  function promptOpenNewTab() {
-    // TODO add comfirmation
-    window.open(props.href)
-  }
-
   return (
-    <div
+    <a
       className="relative h-6 w-6 pointer-events-auto cursor-pointer"
       role="link"
-      onClick={promptOpenNewTab}
+      href={props.href}
+      target="_blank"
     >
       <Image alt={props.label} src={props.src} fill />
-    </div>
+    </a>
   )
 }
 
 export default function ContactsOverlay(props: { classNames?: string }) {
-  function promptEmail() {
-    // TODO add dialog for constent
-    window.open(`mailto:${EMAIL}`)
-  }
-
   return (
     <div
       className={classnames(
@@ -58,15 +49,17 @@ export default function ContactsOverlay(props: { classNames?: string }) {
           <ContactItem href={href} src={src} label={label} key={index} />
         ))}
       </div>
-      <div
+      <a
         className={classnames(
           'text-orientation-vertical',
-          'pointer-events-auto cursor-pointer'
+          'pointer-events-auto cursor-pointer',
+          'text-white'
         )}
-        onClick={promptEmail}
+        href={`mailto:${EMAIL}`}
+        target="_blank"
       >
         {EMAIL}
-      </div>
+      </a>
     </div>
   )
 }
