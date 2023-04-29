@@ -1,5 +1,4 @@
 import { ReactNode, useEffect, useRef } from 'react'
-import HomeSectionContacts from './HomeSectionContacts'
 import HomeSectionSkills from './HomeSectionSkills'
 import HomeSectionMain from './HomeSectionMain'
 import HomeSectionPortfolio from './HomeSectionPortfolio'
