@@ -23,7 +23,7 @@ function FitWidthImage(props: {
           height={height}
           src={props.src}
           alt={`Preview of ${props.alt}`}
-          quality={90}
+          quality={100}
           priority
           className="object-fill"
         />
