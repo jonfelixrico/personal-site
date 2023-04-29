@@ -1,5 +1,4 @@
 import { ReactNode, useEffect, useRef } from 'react'
-import HomeSectionContacts from './HomeSectionContacts'
 import HomeSectionSkills from './HomeSectionSkills'
 import HomeSectionMain from './HomeSectionMain'
 import HomeSectionPortfolio from './HomeSectionPortfolio'
@@ -60,13 +59,6 @@ export default function HomeContent(props: {
         onVisible={props.onVisibleSectionChange}
       >
         <HomeSectionPortfolio />
-      </SectionWrapper>
-
-      <SectionWrapper
-        id={NavbarSectionId.CONTACTS}
-        onVisible={props.onVisibleSectionChange}
-      >
-        <HomeSectionContacts />
       </SectionWrapper>
     </>
   )
