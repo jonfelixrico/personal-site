@@ -4,7 +4,7 @@ export default function HomeSectionContacts() {
       <div className="row-start-2 row-span-4 py-10">
         <div className="mb-5">
           <div className="text-5xl font-semibold text-primary">Contacts</div>
-          <div className="text-secondary text-2xl">Lorem ipsum dolor</div>
+          <div className="text-secondary text-2xl">Let&apos;s talk!</div>
         </div>
 
         <div className="mb-5 text-xl">
