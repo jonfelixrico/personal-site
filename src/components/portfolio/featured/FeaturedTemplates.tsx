@@ -55,13 +55,16 @@ export function FeaturedLayout(props: {
         z-10"
       >
         <h5 className="text-4xl text-accent">{props.title}</h5>
-        <div className="rounded-lg overflow-hidden bg-app-1 shadow-md">
-          <FitWidthImage
+        <div className="rounded-lg overflow-hidden bg-app-1 shadow-md p-3 relative">
+          <Image
+            className="absolute object-cover object-center opacity-10 grayscale md:hidden"
             src={props.imageSrc}
             alt={`Preview of ${props.title}`}
-            className="md:hidden w-full"
+            fill
+            draggable="false"
           />
-          <div className="p-3">
+
+          <div className="relative">
             <div className="mb-5">{props.details}</div>
             <div>
               <div className="text-xs mb-1">Tech involved:</div>
