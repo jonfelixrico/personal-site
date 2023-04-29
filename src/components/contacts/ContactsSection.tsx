@@ -1,13 +1,24 @@
 import Image from 'next/image'
+import styles from './ContactsSection.module.scss'
+import bindableCf from 'classnames/bind'
 
-function ContactCard(props: { label: string; src: string }) {
+const classnames = bindableCf.bind(styles)
+
+function ContactCard(props: { label: string; src: string; href: string }) {
   return (
-    <div className="bg-app-2 rounded-lg p-4">
+    <a
+      className={classnames(
+        'bg-app-2 rounded-lg p-4 cursor-pointer',
+        styles['contact-card']
+      )}
+      href={props.href}
+      target="_blank"
+    >
       <div className="flex flex-row gap-3 items-center justify-center">
         <Image src={props.src} alt="" height="50" width="50" />
         <div className="text-2xl">{props.label}</div>
       </div>
-    </div>
+    </a>
   )
 }
 
@@ -32,11 +43,20 @@ export default function ContactsSection() {
         <ContactCard
           label="linkedin.com/in/jonfelixrico"
           src="icons/linkedin.svg"
+          href="https://www.linkedin.com/in/jonfelixrico/"
         />
 
-        <ContactCard label="jonfelixrico@gmail.com" src="icons/email.svg" />
+        <ContactCard
+          label="jonfelixrico@gmail.com"
+          src="icons/email.svg"
+          href="mailto:jonfelixrico@gmail.com"
+        />
 
-        <ContactCard label="github.com/jonfelixrico" src="icons/github.svg" />
+        <ContactCard
+          label="github.com/jonfelixrico"
+          src="icons/github.svg"
+          href="https://github.com/jonfelixrico"
+        />
       </div>
     </div>
   )

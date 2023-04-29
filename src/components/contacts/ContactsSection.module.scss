@@ -1,0 +1,12 @@
+@import 'src/styles/variables.scss';
+
+.contact-card {
+  border: 2px solid;
+  border-color: rgba(black, 0);
+
+  &:hover {
+    border-color: rgba($primary, 1);
+  }
+
+  transition: border-color 0.25s;
+}
