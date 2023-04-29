@@ -1,11 +1,49 @@
 import Head from 'next/head'
 import ContactsOverlay from '@/components/contacts/ContactsOverlay'
 import NavLinks from '@/components/layout/NavLinks'
-import HomeContent from '@/components/section/HomeContent'
 import { useRef, useState } from 'react'
 import { useScroll } from 'react-use'
-import { Section } from '@/models/section.enum'
 import NavbarLayout from '@/components/layout/NavbarLayout'
+import { SectionWrapper } from '@/components/section/SectionWrapper'
+import HomeSectionMain from '@/components/section/HomeSectionMain'
+import HomeSectionSkills from '@/components/section/HomeSectionSkills'
+import HomeSectionPortfolio from '@/components/section/HomeSectionPortfolio'
+import ContactsSection from '@/components/contacts/ContactsSection'
+import { Section } from '@/models/section.enum'
+
+function Sections(props: { onVisibleSectionChange?: (id: string) => void }) {
+  return (
+    <>
+      <SectionWrapper
+        id={Section.HOME}
+        onVisible={props.onVisibleSectionChange}
+      >
+        <HomeSectionMain />
+      </SectionWrapper>
+
+      <SectionWrapper
+        id={Section.SKILLS}
+        onVisible={props.onVisibleSectionChange}
+      >
+        <HomeSectionSkills />
+      </SectionWrapper>
+
+      <SectionWrapper
+        id={Section.PORTFOLIO}
+        onVisible={props.onVisibleSectionChange}
+      >
+        <HomeSectionPortfolio />
+      </SectionWrapper>
+
+      <SectionWrapper
+        id={Section.CONTACTS}
+        onVisible={props.onVisibleSectionChange}
+      >
+        <ContactsSection />
+      </SectionWrapper>
+    </>
+  )
+}
 
 const NAVBAR_HEIGHT = 54
 
@@ -33,15 +71,12 @@ export default function Home() {
         </NavbarLayout>
       </header>
       <main className="relative overflow-hidden">
-        <ContactsOverlay
-          classNames="absolute w-full h-full py-5 px-8"
-          hidden={activeSection === Section.CONTACTS}
-        />
+        <ContactsOverlay classNames="absolute w-full h-full py-5 px-8" />
         <div
           className="h-screen overflow-auto scroll-smooth scrollbar-invisible"
           ref={scrollRef}
         >
-          <HomeContent onVisibleSectionChange={setActiveSection} />
+          <Sections onVisibleSectionChange={setActiveSection} />
         </div>
       </main>
     </>
