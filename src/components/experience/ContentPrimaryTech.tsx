@@ -51,8 +51,8 @@ export default function ContentPrimaryTech() {
         header="Front-end"
         body={
           <p>
-            I have more than three years of experience with Vue.js (under the
-            Quasar Framework). I have built complex and interactive user
+            I have been working with Vue.js (under the Quasar Framework) for
+            more than three years. I have built complex and interactive user
             interfaces with this front-end stack. It is my go-to whenever I want
             to work on a personal project.
             <br />
@@ -70,15 +70,14 @@ export default function ContentPrimaryTech() {
         header="Back-end"
         body={
           <p>
-            For any sort of back-end work with JavaScript, Nest.js is my
-            technology of choice. So far, I have used it with making web app
-            back-ends and Discord bots.
+            I have experience in back-end development, using either Java or
+            JavaScript (with Nest.js). Before, I used to work with Java
+            exclusively but now I'm using JavaScript more.
             <br />
-            <br />I like using it because it has the straightforwardness of
-            Express.js but with the project structure and dependency-injection
-            system of Angular. It is also similar to Java's Spring Boot in a way
-            that you can choose from many add-ons, ranging from
-            object-relational mapping to microservice gateways.
+            <br />
+            I've also worked with both SQL and NoSQL databases such as MySQL and
+            MongoDB, respectively. I've also been experimenting with the concept
+            of EventSourcing (via EventSourceDB) in my personal projects.
           </p>
         }
         iconSrc="icons/api.svg"
