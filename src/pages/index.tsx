@@ -59,26 +59,28 @@ export default function Home() {
         <title>Jon Felix Rico • Home</title>
       </Head>
 
-      <header
-        className="fixed w-screen z-10"
-        style={{ height: `${NAVBAR_HEIGHT}px` }}
-      >
-        <NavbarLayout
-          transparent={y <= NAVBAR_HEIGHT}
-          className="h-full w-full absolute flex flex-row items-center gap-4 justify-between sm:justify-end px-8"
+      <div>
+        <header
+          className="fixed w-screen z-10"
+          style={{ height: `${NAVBAR_HEIGHT}px` }}
         >
-          <NavLinks activeSection={activeSection ?? undefined} />
-        </NavbarLayout>
-      </header>
-      <main className="relative overflow-hidden">
-        <ContactsOverlay classNames="absolute w-full h-full py-5 px-8" />
-        <div
-          className="h-screen overflow-auto scroll-smooth scrollbar-invisible"
-          ref={scrollRef}
-        >
-          <Sections onVisibleSectionChange={setActiveSection} />
-        </div>
-      </main>
+          <NavbarLayout
+            transparent={y <= NAVBAR_HEIGHT}
+            className="h-full w-full absolute flex flex-row items-center gap-4 justify-between sm:justify-end px-8"
+          >
+            <NavLinks activeSection={activeSection ?? undefined} />
+          </NavbarLayout>
+        </header>
+        <main className="relative overflow-hidden">
+          <ContactsOverlay classNames="absolute w-full h-full py-5 px-8" />
+          <div
+            className="h-screen overflow-auto scroll-smooth scrollbar-invisible"
+            ref={scrollRef}
+          >
+            <Sections onVisibleSectionChange={setActiveSection} />
+          </div>
+        </main>
+      </div>
     </>
   )
 }
