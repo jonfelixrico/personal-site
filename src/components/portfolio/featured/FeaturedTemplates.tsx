@@ -42,7 +42,7 @@ export function FeaturedLayout(props: {
   title: string
   imageSrc: string
   techList: Tech[]
-  side?: ReactNode
+  bottom?: ReactNode
 }) {
   return (
     <div className="grid grid-cols-12 isolate">
@@ -54,11 +54,7 @@ export function FeaturedLayout(props: {
         flex flex-col justify-center gap-3
         z-10"
       >
-        <div className="flex flex-row items-center gap-3 justify-between md:justify-start">
-          <h5 className="text-4xl text-accent">{props.title}</h5>
-          <div>{props.side}</div>
-        </div>
-
+        <h5 className="text-4xl text-accent">{props.title}</h5>
         <div className="rounded-lg overflow-hidden bg-app-1 shadow-md">
           <FitWidthImage
             src={props.imageSrc}
@@ -84,6 +80,7 @@ export function FeaturedLayout(props: {
             </div>
           </div>
         </div>
+        <div>{props.bottom}</div>
       </div>
 
       <div

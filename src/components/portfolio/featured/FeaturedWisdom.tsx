@@ -63,7 +63,7 @@ export default function FeaturedWisdom() {
           iconSrc: 'icons/mongodb.svg',
         },
       ]}
-      side={
+      bottom={
         <a
           href="https://wisdom.csaservers.com"
           className="text-accent-2 text-2xl"

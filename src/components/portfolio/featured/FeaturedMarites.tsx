@@ -41,7 +41,7 @@ export default function FeaturedMarites() {
           iconSrc: 'icons/pocketbase.svg',
         },
       ]}
-      side={
+      bottom={
         <div className="flex flex-row gap-3">
           <a
             href="https://marites.jonfelixrico.dev"
