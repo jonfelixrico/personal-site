@@ -1,10 +1,12 @@
 import { useResizeDetector } from 'react-resize-detector'
 import { ConditionallyRender } from '@/components/ConditionallyRender'
 import Image from 'next/image'
-import { ReactNode } from 'react'
+import { Fragment } from 'react'
 import IconWithTooltip from '@/components/IconWithTooltip'
-import styles from './FeaturedTemplates.module.scss'
+import styles from './FeaturedProject.module.scss'
 import bindableCf from 'classnames/bind'
+import Markdown from 'markdown-to-jsx'
+import { Project } from '@/types/project.interface'
 
 const classnames = bindableCf.bind(styles)
 
@@ -35,13 +37,8 @@ function FitWidthImage(props: {
   )
 }
 
-interface Tech {
-  iconSrc: string
-  name: string
-}
-
-export function LinkButton(props: {
-  icon?: ReactNode
+function LinkButton(props: {
+  icon: string
   label: string
   href: string
   className?: string
@@ -57,19 +54,14 @@ export function LinkButton(props: {
         'inline-flex flex-row items-center gap-2'
       )}
     >
-      {props.icon}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={props.icon} alt={props.label} />
       <span className="font-medium text-sm">{props.label}</span>
     </a>
   )
 }
 
-export function FeaturedLayout(props: {
-  details: ReactNode
-  title: string
-  imageSrc: string
-  techList: Tech[]
-  bottom?: ReactNode
-}) {
+export function FeaturedProject(props: Project) {
   return (
     <div className="grid grid-cols-12 isolate">
       <div
@@ -84,32 +76,51 @@ export function FeaturedLayout(props: {
         <div className="rounded-lg overflow-hidden bg-app-1 shadow-md p-3 relative">
           <Image
             className="absolute object-cover object-center opacity-10 grayscale md:hidden"
-            src={props.imageSrc}
+            src={props.image}
             alt={`Preview of ${props.title}`}
             fill
             draggable="false"
           />
 
           <div className="relative">
-            <div className="mb-5">{props.details}</div>
+            <div
+              // gap and flex-col are here because I can't seem to make line breaks work with markdown
+              // TODO figure out how to make line breaks work
+              className={classnames(
+                'mb-5 gap-2 flex flex-col',
+                styles.description
+              )}
+            >
+              <Markdown
+                options={{
+                  wrapper: Fragment,
+                }}
+              >
+                {props.description}
+              </Markdown>
+            </div>
             <div>
               <div className="text-xs mb-1">Tech involved:</div>
               <div className="flex flex-row gap-3">
-                {props.techList.map(({ iconSrc, name }) => (
+                {props.tech.map(({ icon, label }) => (
                   <IconWithTooltip
-                    src={iconSrc}
-                    tooltipLabel={name}
+                    src={icon}
+                    tooltipLabel={label}
                     className="relative
                     h-6 w-6
                     md:h-8 md:w-8"
-                    key={name}
+                    key={label}
                   />
                 ))}
               </div>
             </div>
           </div>
         </div>
-        <div>{props.bottom}</div>
+        <div className="flex flex-row flex-wrap gap-3">
+          {props.links.map(({ icon, label, url }, index) => (
+            <LinkButton icon={icon} label={label} href={url} key={index} />
+          ))}
+        </div>
       </div>
 
       <div
@@ -119,7 +130,7 @@ export function FeaturedLayout(props: {
         rounded-lg overflow-hidden"
       >
         <FitWidthImage
-          src={props.imageSrc}
+          src={props.image}
           alt={`Preview of ${props.title}`}
           className="w-full"
         />
