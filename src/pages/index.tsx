@@ -9,7 +9,7 @@ import HomeSectionMain from '@/components/section/HomeSectionMain'
 import HomeSectionSkills from '@/components/section/HomeSectionSkills'
 import HomeSectionPortfolio from '@/components/section/HomeSectionPortfolio'
 import ContactsSection from '@/components/contacts/ContactsSection'
-import { Section } from '@/models/section.enum'
+import { Section } from '@/types/section.enum'
 
 function Sections(props: { onVisibleSectionChange?: (id: string) => void }) {
   return (
