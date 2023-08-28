@@ -1,0 +1,62 @@
+@import './variables.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-app,
+.bg-app-1 {
+  background-color: $bg-app-1;
+}
+
+.bg-card,
+.bg-app-2 {
+  background-color: $bg-app-2;
+}
+
+.text-app {
+  color: #cccccc;
+}
+
+.text-primary {
+  color: #be65c9;
+}
+
+.text-secondary {
+  color: #5f7831;
+}
+
+.text-accent,
+.text-accent-1 {
+  color: #4a9cd6;
+}
+
+.text-accent-2 {
+  color: #8cdcda;
+}
+
+.text-orientation-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.section-px {
+  $section-px: 1.25rem;
+  padding-left: $section-px;
+  padding-right: $section-px;
+}
+
+.section-width {
+  @apply mx-auto max-w-screen-xl;
+}
+
+// Hide scrollbar but keep functionality
+.scrollbar-invisible {
+  // For Chrome, Safari and Opera
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none; // IE and Edge
+  scrollbar-width: none; // Firefox
+}

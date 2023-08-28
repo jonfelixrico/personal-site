@@ -1,3 +1,13 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "rules": {
+    // fix for enum false-positives, see https://github.com/typescript-eslint/typescript-eslint/issues/2621
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error"
+  }
 }

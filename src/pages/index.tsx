@@ -1,124 +1,101 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import Head from 'next/head'
+import ContactsOverlay from '@/components/contacts/ContactsOverlay'
+import NavLinks from '@/components/layout/NavLinks'
+import { useRef, useState } from 'react'
+import { useScroll } from 'react-use'
+import NavbarLayout from '@/components/layout/NavbarLayout'
+import { SectionWrapper } from '@/components/section/SectionWrapper'
+import HomeSectionMain from '@/components/section/HomeSectionMain'
+import HomeSectionSkills from '@/components/section/HomeSectionSkills'
+import HomeSectionPortfolio from '@/components/section/HomeSectionPortfolio'
+import ContactsSection from '@/components/contacts/ContactsSection'
+import { Section } from '@/types/section.enum'
 
-const inter = Inter({ subsets: ['latin'] })
+function Sections(props: { onVisibleSectionChange?: (id: string) => void }) {
+  return (
+    <>
+      <div className="relative">
+        <div className="absolute h-full w-full">
+          <ContactsOverlay classNames="sticky h-screen w-screen py-5 px-8 top-0 pointer-events-none" />
+        </div>
+
+        <SectionWrapper
+          id={Section.HOME}
+          onVisible={props.onVisibleSectionChange}
+        >
+          <HomeSectionMain />
+        </SectionWrapper>
+
+        <SectionWrapper
+          id={Section.SKILLS}
+          onVisible={props.onVisibleSectionChange}
+        >
+          <HomeSectionSkills />
+        </SectionWrapper>
+
+        <SectionWrapper
+          id={Section.PORTFOLIO}
+          onVisible={props.onVisibleSectionChange}
+        >
+          <HomeSectionPortfolio />
+        </SectionWrapper>
+      </div>
+
+      <SectionWrapper
+        id={Section.CONTACTS}
+        onVisible={props.onVisibleSectionChange}
+      >
+        <ContactsSection />
+      </SectionWrapper>
+    </>
+  )
+}
+
+const NAVBAR_HEIGHT = 54
 
 export default function Home() {
+  const [activeSection, setActiveSection] = useState<null | string>(null)
+
+  const scrollRef = useRef<HTMLDivElement>(null)
+  const { y } = useScroll(scrollRef)
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
+    <>
+      <Head>
+        <title>Jon Felix Rico • Home</title>
+      </Head>
+
+      <div
+        className="scrollbar-invisible scroll-smooth overflow-auto h-screen relative"
+        ref={scrollRef}
+      >
+        <header
+          className="fixed w-screen z-10"
+          style={{ height: `${NAVBAR_HEIGHT}px` }}
+        >
+          <NavbarLayout
+            transparent={y <= NAVBAR_HEIGHT}
+            className="h-full w-full absolute flex flex-row items-center gap-4 justify-between sm:justify-end px-8"
+          >
+            <NavLinks activeSection={activeSection ?? undefined} />
+          </NavbarLayout>
+        </header>
+        <main>
+          <Sections onVisibleSectionChange={setActiveSection} />
+        </main>
+        <footer className="p-2 flex flex-col items-center text-sm">
           <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
+            href="https://github.com/jonfelixrico/personal-site"
             target="_blank"
-            rel="noopener noreferrer"
           >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
+            Built by <span className="font-semibold">Jon Felix Rico</span>
           </a>
-        </div>
+          {/* For compliance with Icons8 */}
+          <a href="https://icons8.com" target="_blank">
+            Icons from <span className="font-semibold">Icons8</span>
+          </a>
+        </footer>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </>
   )
 }
