@@ -1,7 +1,7 @@
 import { useResizeDetector } from 'react-resize-detector'
 import { ConditionallyRender } from '@/components/ConditionallyRender'
 import Image from 'next/image'
-import { ReactNode } from 'react'
+import { Fragment, ReactNode } from 'react'
 import IconWithTooltip from '@/components/IconWithTooltip'
 import styles from './FeaturedProject.module.scss'
 import bindableCf from 'classnames/bind'
@@ -82,8 +82,21 @@ export function FeaturedProject(props: Project) {
           />
 
           <div className="relative">
-            <div className={classnames('mb-5', styles.description)}>
-              <Markdown>{props.description}</Markdown>
+            <div
+              // gap and flex-col are here because I can't seem to make line breaks work with markdown
+              // TODO figure out how to make line breaks work
+              className={classnames(
+                'mb-5 gap-2 flex flex-col',
+                styles.description
+              )}
+            >
+              <Markdown
+                options={{
+                  wrapper: Fragment,
+                }}
+              >
+                {props.description}
+              </Markdown>
             </div>
             <div>
               <div className="text-xs mb-1">Tech involved:</div>
