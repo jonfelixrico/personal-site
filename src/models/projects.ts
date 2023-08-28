@@ -1,6 +1,7 @@
 export interface Project {
   title: string
   description: string
+  image: string
 
   links: {
     icon: string
@@ -38,6 +39,7 @@ const data: Project[] = [
     hold dearly and had so much fun with since it allowed me to scratch
     the technical itch of the things that I was curious with.
     `,
+    image: 'portfolio/wisdom/panel/home.png',
 
     tech: [
       {
