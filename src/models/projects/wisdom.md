@@ -3,7 +3,9 @@ quotes that the users submited. It also has a web app that allows the
 users to have a bigger picture of what quotes have been submitted in
 their Discord server.
 
+
 This is quite a big project which consists of 4 components:
+
 
 - The Quotes REST API which stores and dispenses the user-submitted
   quotes. Powered by Spring Boot, MongoDB, and EventStoreDB.
