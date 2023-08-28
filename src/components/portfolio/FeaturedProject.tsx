@@ -1,7 +1,7 @@
 import { useResizeDetector } from 'react-resize-detector'
 import { ConditionallyRender } from '@/components/ConditionallyRender'
 import Image from 'next/image'
-import { Fragment, ReactNode } from 'react'
+import { Fragment } from 'react'
 import IconWithTooltip from '@/components/IconWithTooltip'
 import styles from './FeaturedProject.module.scss'
 import bindableCf from 'classnames/bind'
@@ -51,8 +51,7 @@ function LinkButton(props: {
         styles['link-button'],
         props.className,
         'rounded-md bg-app-1 overflow-hidden px-2 py-1',
-        'inline-flex flex-row items-center gap-2',
-        'relative'
+        'inline-flex flex-row items-center gap-2'
       )}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
