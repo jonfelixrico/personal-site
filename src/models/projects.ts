@@ -39,32 +39,32 @@ const data: Project[] = [
     hold dearly and had so much fun with since it allowed me to scratch
     the technical itch of the things that I was curious with.
     `,
-    image: 'portfolio/wisdom/panel/home.png',
+    image: '/portfolio/wisdom/panel/home.png',
 
     tech: [
       {
         label: 'Vue.js',
-        icon: 'icons/vue-js.svg',
+        icon: '/icons/vue-js.svg',
       },
       {
         label: 'Quasar Framework',
-        icon: 'icons/quasar-framework.svg',
+        icon: '/icons/quasar-framework.svg',
       },
       {
         label: 'Nest.js',
-        icon: 'icons/nest-js.svg',
+        icon: '/icons/nest-js.svg',
       },
       {
         label: 'Spring Boot',
-        icon: 'icons/spring-boot.svg',
+        icon: '/icons/spring-boot.svg',
       },
       {
         label: 'EventStoreDB',
-        icon: 'icons/eventstoredb.svg',
+        icon: '/icons/eventstoredb.svg',
       },
       {
         label: 'MongoDB',
-        icon: 'icons/mongodb.svg',
+        icon: '/icons/mongodb.svg',
       },
     ],
 
