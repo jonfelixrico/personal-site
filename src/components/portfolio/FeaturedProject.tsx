@@ -6,6 +6,7 @@ import IconWithTooltip from '@/components/IconWithTooltip'
 import styles from './FeaturedProject.module.scss'
 import bindableCf from 'classnames/bind'
 import { Project } from '@/models/projects'
+import Markdown from 'markdown-to-jsx'
 
 const classnames = bindableCf.bind(styles)
 
@@ -81,7 +82,9 @@ export function FeaturedProject(props: Project) {
           />
 
           <div className="relative">
-            <div className="mb-5">{props.description}</div>
+            <div className="mb-5">
+              <Markdown>{props.description}</Markdown>
+            </div>
             <div>
               <div className="text-xs mb-1">Tech involved:</div>
               <div className="flex flex-row gap-3">
