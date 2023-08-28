@@ -47,12 +47,12 @@ const project: Project = {
     {
       icon: 'icons/github.svg',
       label: 'Web app front-end',
-      url: 'https://github.com/jonfelixrico/wisdom-client-2022',
+      url: 'https://github.com/jonfelixrico/wisdom-panel-client-2022',
     },
     {
       icon: 'icons/github.svg',
       label: 'Web app back-end',
-      url: 'https://github.com/jonfelixrico/wisdom-server-2022',
+      url: 'https://github.com/jonfelixrico/wisdom-panel-server-2022',
     },
   ],
 }
