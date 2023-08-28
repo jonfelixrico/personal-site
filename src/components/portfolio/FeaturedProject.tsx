@@ -82,7 +82,7 @@ export function FeaturedProject(props: Project) {
           />
 
           <div className="relative">
-            <div className="mb-5">
+            <div className={classnames('mb-5', styles.description)}>
               <Markdown>{props.description}</Markdown>
             </div>
             <div>

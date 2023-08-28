@@ -5,3 +5,7 @@
   }
   transition: border-color 0.25s;
 }
+
+.description ul {
+  @apply list-disc list-outside ml-10;
+}
