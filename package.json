@@ -10,7 +10,7 @@
     "format": "prettier --check --ignore-path .gitignore \"**/*.{ts,tsx,json,css,scss}\"",
     "format:fix": "prettier --write --ignore-path .gitignore \"**/*.{ts,tsx,json,css,scss}\"",
     "docker:build": "docker build -t local/portfolio .",
-    "docker:run": "docker run -p 3000:3000 ---name portfolio local/portfolio"
+    "docker:run": "docker run -p 3000:3000 --name portfolio local/portfolio"
   },
   "dependencies": {
     "@types/node": "18.15.11",
