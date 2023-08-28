@@ -5,8 +5,8 @@ import { ReactNode } from 'react'
 import IconWithTooltip from '@/components/IconWithTooltip'
 import styles from './FeaturedProject.module.scss'
 import bindableCf from 'classnames/bind'
-import { Project } from '@/models/projects'
 import Markdown from 'markdown-to-jsx'
+import { Project } from '@/types/project.interface'
 
 const classnames = bindableCf.bind(styles)
 
