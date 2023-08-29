@@ -19,7 +19,7 @@ const ITEMS: ContactItemData[] = [
   },
 ]
 
-const EMAIL = 'jonfelixrico.work@gmail.com'
+const EMAIL = 'jonfelixrico@gmail.com'
 
 function ContactItem(props: ContactItemData) {
   return (
