@@ -41,13 +41,6 @@ function Sections(props: { onVisibleSectionChange?: (id: string) => void }) {
           <HomeSectionPortfolio />
         </SectionWrapper>
       </div>
-
-      <SectionWrapper
-        id={Section.CONTACTS}
-        onVisible={props.onVisibleSectionChange}
-      >
-        <ContactsSection />
-      </SectionWrapper>
     </>
   )
 }
