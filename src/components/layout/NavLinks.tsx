@@ -16,7 +16,7 @@ const LINKS: NavLinkData[] = [
   },
   {
     section: Section.SKILLS,
-    label: 'Experience',
+    label: 'Skills',
   },
   {
     section: Section.PORTFOLIO,
