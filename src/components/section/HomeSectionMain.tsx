@@ -14,7 +14,7 @@ const ITEMS = [
   },
   {
     iconSrc: 'icons/email.svg',
-    href: ContactInfo.EMAIL,
+    href: `mailto:${ContactInfo.EMAIL}`,
     label: 'Email',
   },
 ]
