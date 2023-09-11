@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import classnames from 'classnames'
+import { ContactInfo } from '@/models/contact-info'
 interface ContactItemData {
   src: string
   href: string
@@ -9,17 +10,15 @@ interface ContactItemData {
 const ITEMS: ContactItemData[] = [
   {
     src: 'icons/github.svg',
-    href: 'https://github.com/jonfelixrico',
+    href: ContactInfo.GITHUB,
     label: 'GitHub',
   },
   {
     src: 'icons/linkedin.svg',
-    href: 'https://www.linkedin.com/in/jonfelixrico',
+    href: ContactInfo.LINKEDIN,
     label: 'LinkedIn',
   },
 ]
-
-const EMAIL = 'jonfelixrico@gmail.com'
 
 function ContactItem(props: ContactItemData) {
   return (
@@ -55,10 +54,10 @@ export default function ContactsOverlay(props: { classNames?: string }) {
           'pointer-events-auto cursor-pointer',
           'text-white'
         )}
-        href={`mailto:${EMAIL}`}
+        href={`mailto:${ContactInfo.EMAIL}`}
         target="_blank"
       >
-        {EMAIL}
+        {ContactInfo.EMAIL}
       </a>
     </div>
   )
