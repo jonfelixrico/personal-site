@@ -2,8 +2,24 @@ import { useMeasure } from 'react-use'
 import styles from './LinkButton.module.scss'
 import bindableCf from 'classnames/bind'
 import Image from 'next/image'
+import { ReactNode } from 'react'
 
 const classnames = bindableCf.bind(styles)
+
+function ImageWrapper(props: {
+  src: string
+  alt: string
+  children: ReactNode
+}) {
+  const [labelRef, { height }] = useMeasure<HTMLDivElement>()
+
+  return (
+    <>
+      <Image src={props.src} alt={props.alt} width={height} height={height} />
+      <div ref={labelRef}>{props.children}</div>
+    </>
+  )
+}
 
 export function LinkButton(props: {
   icon: string
@@ -11,8 +27,6 @@ export function LinkButton(props: {
   href: string
   className?: string
 }) {
-  const [labelRef, { height }] = useMeasure<HTMLSpanElement>()
-
   return (
     <a
       href={props.href}
@@ -24,15 +38,9 @@ export function LinkButton(props: {
         'inline-flex flex-row items-center gap-2'
       )}
     >
-      <Image
-        src={props.icon}
-        alt={props.label}
-        width={height}
-        height={height}
-      />
-      <span ref={labelRef} className="font-medium text-sm">
-        {props.label}
-      </span>
+      <ImageWrapper src={props.icon} alt={props.label}>
+        <span className="font-medium text-sm">{props.label}</span>
+      </ImageWrapper>
     </a>
   )
 }
