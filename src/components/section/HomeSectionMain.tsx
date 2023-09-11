@@ -1,3 +1,24 @@
+import { ContactInfo } from '@/models/contact-info'
+import { LinkButton } from '../common/LinkButton'
+
+const ITEMS = [
+  {
+    iconSrc: 'icons/github.svg',
+    href: ContactInfo.GITHUB,
+    label: 'GitHub',
+  },
+  {
+    iconSrc: 'icons/linkedin.svg',
+    href: ContactInfo.LINKEDIN,
+    label: 'LinkedIn',
+  },
+  {
+    iconSrc: 'icons/email.svg',
+    href: ContactInfo.EMAIL,
+    label: 'Email',
+  },
+]
+
 export default function HomeSectionMain() {
   return (
     <div
@@ -31,6 +52,12 @@ export default function HomeSectionMain() {
           </a>
           . During my downtime, I like building full-stack apps as my pet
           project or tinkering with tech.
+        </div>
+
+        <div className="flex flex-row gap-2 items-start">
+          {ITEMS.map(({ href, label, iconSrc }, index) => (
+            <LinkButton icon={iconSrc} label={label} href={href} key={index} />
+          ))}
         </div>
       </div>
     </div>
