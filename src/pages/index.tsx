@@ -10,6 +10,7 @@ import HomeSectionSkills from '@/components/section/HomeSectionSkills'
 import HomeSectionPortfolio from '@/components/section/HomeSectionPortfolio'
 import ContactsSection from '@/components/contacts/ContactsSection'
 import { Section } from '@/types/section.enum'
+import manifest from 'package.json'
 
 function Sections(props: { onVisibleSectionChange?: (id: string) => void }) {
   return (
@@ -84,6 +85,7 @@ export default function Home() {
           <Sections onVisibleSectionChange={setActiveSection} />
         </main>
         <footer className="p-2 flex flex-col items-center text-sm">
+          <div>v{manifest.version}</div>
           <a
             href="https://github.com/jonfelixrico/personal-site"
             target="_blank"
