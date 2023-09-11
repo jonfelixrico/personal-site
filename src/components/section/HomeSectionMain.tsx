@@ -56,7 +56,13 @@ export default function HomeSectionMain() {
 
         <div className="flex flex-row gap-2 items-start">
           {ITEMS.map(({ href, label, iconSrc }, index) => (
-            <LinkButton icon={iconSrc} label={label} href={href} key={index} />
+            <LinkButton
+              icon={iconSrc}
+              label={label}
+              href={href}
+              key={index}
+              className="text-xl font-medium"
+            />
           ))}
         </div>
       </div>
