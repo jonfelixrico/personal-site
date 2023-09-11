@@ -14,17 +14,17 @@ import manifest from 'package.json'
 function Sections(props: { onVisibleSectionChange?: (id: string) => void }) {
   return (
     <>
+      <SectionWrapper
+        id={Section.HOME}
+        onVisible={props.onVisibleSectionChange}
+      >
+        <HomeSectionMain />
+      </SectionWrapper>
+
       <div className="relative">
         <div className="absolute h-full w-full">
           <ContactsOverlay classNames="sticky h-screen w-screen py-5 px-8 top-0 pointer-events-none" />
         </div>
-
-        <SectionWrapper
-          id={Section.HOME}
-          onVisible={props.onVisibleSectionChange}
-        >
-          <HomeSectionMain />
-        </SectionWrapper>
 
         <SectionWrapper
           id={Section.SKILLS}
