@@ -95,7 +95,13 @@ export function FeaturedProject(props: Project) {
         </div>
         <div className="flex flex-row flex-wrap gap-3">
           {props.links.map(({ icon, label, url }, index) => (
-            <LinkButton icon={icon} label={label} href={url} key={index} />
+            <LinkButton
+              icon={icon}
+              label={label}
+              href={url}
+              key={index}
+              className="font-medium text-sm"
+            />
           ))}
         </div>
       </div>
