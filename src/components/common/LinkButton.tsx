@@ -1,5 +1,7 @@
+import { useMeasure } from 'react-use'
 import styles from './LinkButton.module.scss'
 import bindableCf from 'classnames/bind'
+import Image from 'next/image'
 
 const classnames = bindableCf.bind(styles)
 
@@ -9,6 +11,8 @@ export function LinkButton(props: {
   href: string
   className?: string
 }) {
+  const [labelRef, { height }] = useMeasure<HTMLSpanElement>()
+
   return (
     <a
       href={props.href}
@@ -20,9 +24,15 @@ export function LinkButton(props: {
         'inline-flex flex-row items-center gap-2'
       )}
     >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={props.icon} alt={props.label} />
-      <span className="font-medium text-sm">{props.label}</span>
+      <Image
+        src={props.icon}
+        alt={props.label}
+        width={height}
+        height={height}
+      />
+      <span ref={labelRef} className="font-medium text-sm">
+        {props.label}
+      </span>
     </a>
   )
 }
