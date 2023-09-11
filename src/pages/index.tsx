@@ -8,23 +8,23 @@ import { SectionWrapper } from '@/components/section/SectionWrapper'
 import HomeSectionMain from '@/components/section/HomeSectionMain'
 import HomeSectionSkills from '@/components/section/HomeSectionSkills'
 import HomeSectionPortfolio from '@/components/section/HomeSectionPortfolio'
-import ContactsSection from '@/components/contacts/ContactsSection'
 import { Section } from '@/types/section.enum'
+import manifest from 'package.json'
 
 function Sections(props: { onVisibleSectionChange?: (id: string) => void }) {
   return (
     <>
-      <div className="relative">
-        <div className="absolute h-full w-full">
-          <ContactsOverlay classNames="sticky h-screen w-screen py-5 px-8 top-0 pointer-events-none" />
-        </div>
+      <SectionWrapper
+        id={Section.HOME}
+        onVisible={props.onVisibleSectionChange}
+      >
+        <HomeSectionMain />
+      </SectionWrapper>
 
-        <SectionWrapper
-          id={Section.HOME}
-          onVisible={props.onVisibleSectionChange}
-        >
-          <HomeSectionMain />
-        </SectionWrapper>
+      <div className="relative">
+        <div className="absolute h-full w-full pointer-events-none">
+          <ContactsOverlay classNames="sticky h-screen w-screen py-5 px-8 top-0" />
+        </div>
 
         <SectionWrapper
           id={Section.SKILLS}
@@ -40,13 +40,6 @@ function Sections(props: { onVisibleSectionChange?: (id: string) => void }) {
           <HomeSectionPortfolio />
         </SectionWrapper>
       </div>
-
-      <SectionWrapper
-        id={Section.CONTACTS}
-        onVisible={props.onVisibleSectionChange}
-      >
-        <ContactsSection />
-      </SectionWrapper>
     </>
   )
 }
@@ -84,6 +77,7 @@ export default function Home() {
           <Sections onVisibleSectionChange={setActiveSection} />
         </main>
         <footer className="p-2 flex flex-col items-center text-sm">
+          <div>v{manifest.version}</div>
           <a
             href="https://github.com/jonfelixrico/personal-site"
             target="_blank"
