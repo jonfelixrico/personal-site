@@ -22,8 +22,8 @@ function Sections(props: { onVisibleSectionChange?: (id: string) => void }) {
       </SectionWrapper>
 
       <div className="relative">
-        <div className="absolute h-full w-full">
-          <ContactsOverlay classNames="sticky h-screen w-screen py-5 px-8 top-0 pointer-events-none" />
+        <div className="absolute h-full w-full pointer-events-none">
+          <ContactsOverlay classNames="sticky h-screen w-screen py-5 px-8 top-0" />
         </div>
 
         <SectionWrapper
