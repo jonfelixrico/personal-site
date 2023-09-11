@@ -22,10 +22,6 @@ const LINKS: NavLinkData[] = [
     section: Section.PORTFOLIO,
     label: 'Portfolio',
   },
-  {
-    section: Section.CONTACTS,
-    label: 'Contacts',
-  },
 ]
 
 function NavLink({
