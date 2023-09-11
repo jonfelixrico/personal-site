@@ -54,7 +54,7 @@ export default function HomeSectionMain() {
           project or tinkering with tech.
         </div>
 
-        <div className="flex flex-row gap-2 items-start">
+        <div className="flex flex-row flex-wrap gap-2 items-start">
           {ITEMS.map(({ href, label, iconSrc }, index) => (
             <LinkButton
               icon={iconSrc}
