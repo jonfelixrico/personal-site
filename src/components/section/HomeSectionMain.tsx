@@ -5,8 +5,8 @@ export default function HomeSectionMain() {
       flex flex-col justify-center
       bg-app-2"
     >
-      <div className="section-width section-px">
-        <div className="mb-10 font-semibold">
+      <div className="section-width section-px gap-10 flex flex-col">
+        <div className="font-semibold">
           <div
             className="
             text-white
