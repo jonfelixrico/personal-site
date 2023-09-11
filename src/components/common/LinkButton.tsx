@@ -39,7 +39,7 @@ export function LinkButton(props: {
       )}
     >
       <ImageWrapper src={props.icon} alt={props.label}>
-        <span className="font-medium text-sm">{props.label}</span>
+        {props.label}
       </ImageWrapper>
     </a>
   )
