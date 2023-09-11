@@ -10,7 +10,7 @@ export default function HomeSectionMain() {
           <div
             className="
             text-white
-            text-6xl sm:text-7xl md:text-8xl "
+            text-6xl sm:text-7xl md:text-8xl"
           >
             Jon Felix Rico,
           </div>
@@ -19,7 +19,7 @@ export default function HomeSectionMain() {
             text-primary font-mono
             text-4xl sm:text-6xl md:text-7xl lg:text-8xl"
           >
-            &lt;web-developer /&gt;
+            &lt;web-developer/&gt;
           </div>
         </div>
 
