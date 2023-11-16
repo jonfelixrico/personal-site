@@ -1,5 +1,5 @@
 import { Project } from '@/types/project.interface'
-import markdown from './wisdom.md'
+import markdown from './mockiyomi.md'
 
 const project: Project = {
   title: 'Mockiyomi',
