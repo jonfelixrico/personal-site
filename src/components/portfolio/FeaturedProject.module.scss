@@ -1,3 +1,10 @@
-.description ul {
-  @apply list-disc list-outside ml-10;
+.description {
+  ul {
+    @apply list-disc list-outside ml-10;
+  }
+
+  a {
+    text-decoration: underline;
+    font-weight: bold;
+  }
 }
