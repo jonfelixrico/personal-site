@@ -4,7 +4,7 @@ import markdown from './wisdom.md'
 const project: Project = {
   title: 'Mockiyomi',
   description: markdown,
-  image: '/portfolio/wisdom/panel/home.png',
+  image: '/portfolio/mockiyomi/preview.png',
 
   tech: [
     {
