@@ -4,7 +4,7 @@ import markdown from './pos.md'
 const project: Project = {
   title: '(WIP) Point-of-sale',
   description: markdown,
-  image: '/portfolio/mockiyomi/preview.png',
+  image: '/portfolio/pos/billing-details.png',
 
   tech: [
     {
