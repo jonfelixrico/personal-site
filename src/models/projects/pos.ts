@@ -12,12 +12,20 @@ const project: Project = {
       icon: '/icons/next-js.svg',
     },
     {
+      label: 'Cypress',
+      icon: '/icons/cypress.svg',
+    },
+    {
       label: 'Spring Boot',
       icon: '/icons/spring-boot.svg',
     },
     {
       label: 'PostgreSQL',
       icon: '/icons/postgresql.svg',
+    },
+    {
+      label: 'JUnit',
+      icon: '/icons/junit.svg',
     }
   ],
 
