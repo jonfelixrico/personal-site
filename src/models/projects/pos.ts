@@ -20,13 +20,13 @@ const project: Project = {
       icon: '/icons/spring-boot.svg',
     },
     {
+      label: 'JUnit',
+      icon: '/icons/junit.svg',
+    },
+    {
       label: 'PostgreSQL',
       icon: '/icons/postgresql.svg',
     },
-    {
-      label: 'JUnit',
-      icon: '/icons/junit.svg',
-    }
   ],
 
   links: [
