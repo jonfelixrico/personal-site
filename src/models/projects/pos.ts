@@ -27,6 +27,10 @@ const project: Project = {
       label: 'PostgreSQL',
       icon: '/icons/postgresql.svg',
     },
+    {
+      label: 'GitHub Actions',
+      icon: '/icons/github-actions.svg',
+    },
   ],
 
   links: [
