@@ -20,7 +20,7 @@ const project: Project = {
       url: 'https://github.com/jonfelixrico/mockiyomi',
     },
     {
-      icon: 'icons/github.svg',
+      icon: 'icons/new-tab.svg',
       label: 'Website',
       url: 'https://mockiyomi.jonfelixrico.dev',
     },
