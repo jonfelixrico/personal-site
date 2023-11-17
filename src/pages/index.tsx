@@ -60,6 +60,11 @@ export default function Home() {
 
       <div
         className="scrollbar-invisible scroll-smooth overflow-auto h-screen relative"
+        /*
+         * This is to compensate for the navbar potentially blocking some of the content when navigating to sections
+         * via fragment links (e.g. portfolio-website.com/#some-section)
+         */
+        style={{ scrollPaddingTop: `${NAVBAR_HEIGHT}px` }}
         ref={scrollRef}
       >
         <header
