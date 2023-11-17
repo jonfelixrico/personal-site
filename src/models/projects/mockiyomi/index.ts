@@ -5,11 +5,20 @@ const project: Project = {
   title: 'Mockiyomi',
   description: markdown,
   image: '/portfolio/mockiyomi/preview.png',
+  id: 'project-mockiyomi',
 
   tech: [
     {
       label: 'Next.js',
       icon: '/icons/next-js.svg',
+    },
+    {
+      label: 'TailwindCSS',
+      icon: '/icons/tailwind-css.svg',
+    },
+    {
+      label: 'Ant Design',
+      icon: '/icons/ant-design.svg',
     }
   ],
 
