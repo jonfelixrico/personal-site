@@ -2,7 +2,7 @@ export interface Project {
   title: string
   description: string
   image: string
-  id?: string
+  id: string
 
   links: {
     icon: string
