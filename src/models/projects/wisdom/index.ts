@@ -16,8 +16,16 @@ const project: Project = {
       icon: '/icons/quasar-framework.svg',
     },
     {
+      label: 'Cypress',
+      icon: '/icons/cypress.svg',
+    },
+    {
       label: 'Nest.js',
       icon: '/icons/nest-js.svg',
+    },
+    {
+      label: 'Jest',
+      icon: '/icons/jest.svg',
     },
     {
       label: 'Spring Boot',
@@ -30,6 +38,14 @@ const project: Project = {
     {
       label: 'MongoDB',
       icon: '/icons/mongodb.svg',
+    },
+    {
+      label: 'Docker',
+      icon: '/icons/docker.svg',
+    },
+    {
+      label: 'GitHub Actions',
+      icon: '/icons/github-actions.svg',
     },
   ],
 

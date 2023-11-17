@@ -10,6 +10,14 @@ const project: Project = {
     {
       label: 'Next.js',
       icon: '/icons/next-js.svg',
+    },
+    {
+      label: 'TailwindCSS',
+      icon: '/icons/tailwind-css.svg',
+    },
+    {
+      label: 'Ant Design',
+      icon: '/icons/ant-design.svg',
     }
   ],
 

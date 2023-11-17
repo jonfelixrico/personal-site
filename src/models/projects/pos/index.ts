@@ -2,7 +2,7 @@ import { Project } from '@/types/project.interface'
 import markdown from './pos.md'
 
 const project: Project = {
-  title: '(WIP) Point-of-sale',
+  title: 'Point-of-sale system',
   description: markdown,
   image: '/portfolio/pos/billing-details.png',
 
@@ -10,6 +10,10 @@ const project: Project = {
     {
       label: 'Next.js',
       icon: '/icons/next-js.svg',
+    },
+    {
+      label: 'Chakra UI',
+      icon: '/icons/chakra-ui.svg',
     },
     {
       label: 'Cypress',
