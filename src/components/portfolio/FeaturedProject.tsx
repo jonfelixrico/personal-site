@@ -38,7 +38,14 @@ function FitWidthImage(props: {
   )
 }
 
-export function FeaturedProject(props: Project) {
+export function FeaturedProject({
+  description,
+  image,
+  links,
+  tech,
+  title,
+  id
+}: Project) {
   return (
     <div className="grid grid-cols-12 isolate">
       <div
@@ -49,12 +56,12 @@ export function FeaturedProject(props: Project) {
         flex flex-col justify-center gap-4
         z-10"
       >
-        <h5 className="text-4xl text-accent font-medium">{props.title}</h5>
+        <h5 className="text-4xl text-accent font-medium">{title}</h5>
         <div className="rounded-lg overflow-hidden bg-app-1 shadow-md p-3 relative">
           <Image
             className="absolute object-cover object-center opacity-10 grayscale md:hidden"
-            src={props.image}
-            alt={`Preview of ${props.title}`}
+            src={image}
+            alt={`Preview of ${title}`}
             fill
             draggable="false"
           />
@@ -73,13 +80,13 @@ export function FeaturedProject(props: Project) {
                   wrapper: Fragment,
                 }}
               >
-                {props.description}
+                {description}
               </Markdown>
             </div>
             <div>
               <div className="text-xs mb-1">Tech involved:</div>
               <div className="flex flex-row gap-3">
-                {props.tech.map(({ icon, label }) => (
+                {tech.map(({ icon, label }) => (
                   <IconWithTooltip
                     src={icon}
                     tooltipLabel={label}
@@ -94,7 +101,7 @@ export function FeaturedProject(props: Project) {
           </div>
         </div>
         <div className="flex flex-row flex-wrap gap-3">
-          {props.links.map(({ icon, label, url }, index) => (
+          {links.map(({ icon, label, url }, index) => (
             <LinkButton
               icon={icon}
               label={label}
@@ -113,8 +120,8 @@ export function FeaturedProject(props: Project) {
         rounded-lg overflow-hidden"
       >
         <FitWidthImage
-          src={props.image}
-          alt={`Preview of ${props.title}`}
+          src={image}
+          alt={`Preview of ${title}`}
           className="w-full"
         />
       </div>
