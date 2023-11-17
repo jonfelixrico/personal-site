@@ -5,6 +5,7 @@ const project: Project = {
   title: 'Mockiyomi',
   description: markdown,
   image: '/portfolio/mockiyomi/preview.png',
+  id: 'project-mockiyomi',
 
   tech: [
     {

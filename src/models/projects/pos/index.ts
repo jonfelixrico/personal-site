@@ -5,6 +5,7 @@ const project: Project = {
   title: 'Point-of-sale system',
   description: markdown,
   image: '/portfolio/pos/billing-details.png',
+  id: 'project-pos',
 
   tech: [
     {
