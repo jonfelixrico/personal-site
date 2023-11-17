@@ -12,6 +12,10 @@ const project: Project = {
       icon: '/icons/next-js.svg',
     },
     {
+      label: 'Chakra UI',
+      icon: '/icons/chakra-ui.svg',
+    },
+    {
       label: 'Cypress',
       icon: '/icons/cypress.svg',
     },
