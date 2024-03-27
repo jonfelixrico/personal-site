@@ -1,6 +1,8 @@
 import { ReactNode, createContext, useContext, useState } from "react";
 
-const ActiveSectionContext = createContext<null | ReturnType<typeof useState<string>>>(null)
+type StateType = ReturnType<typeof useState<string>>
+
+const ActiveSectionContext = createContext<null | StateType>(null)
 
 export function ActiveSectionProvider ({
   children
@@ -13,6 +15,6 @@ export function ActiveSectionProvider ({
   </ActiveSectionContext.Provider>
 }
 
-export function useActiveSelection() {
-  return useContext(ActiveSectionContext)
+export function useActiveSelection(): StateType {
+  return useContext(ActiveSectionContext) ?? ['', () => {}]
 }
