@@ -16,7 +16,7 @@ import { SectionWrapper } from '@/modules/section/SectionWrapper'
 import HomeSectionMain from '@/modules/section/HomeSectionMain'
 import HomeSectionSkills from '@/modules/section/HomeSectionSkills'
 import HomeSectionPortfolio from '@/modules/section/HomeSectionPortfolio'
-import { Section } from '@/types/section.enum'
+import { Section } from '@/modules/layout/section.enum'
 import manifest from 'package.json'
 
 function Sections(props: { onVisibleSectionChange?: (id: string) => void }) {

@@ -1,4 +1,4 @@
-import { Section } from '@/types/section.enum'
+import { Section } from '@/modules/layout/section.enum'
 import bindableCf from 'classnames/bind'
 import styles from './NavLinks.module.scss'
 

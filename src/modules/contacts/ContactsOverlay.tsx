@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import classnames from 'classnames'
-import { ContactInfo } from '@/models/contact-info'
+import { ContactInfo } from '@/modules/contacts/contact-info'
 interface ContactItemData {
   src: string
   href: string

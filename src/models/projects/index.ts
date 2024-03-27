@@ -1,4 +1,4 @@
-import { Project } from '@/types/project.interface'
+import { Project } from '@/models/projects/project.interface'
 import wisdom from './wisdom'
 import mockiyomi from './mockiyomi'
 import pos from './pos'
