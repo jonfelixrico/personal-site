@@ -38,8 +38,8 @@ export function LinkButton({
       */}
       <img src={icon} aria-hidden="true" style={{
         // We're going with 1em because we want the icon to have the same height as the text.
-        width: '1.5em',
-        height: '1.5em'
+        width: '1em',
+        height: '1em'
       }} />
       <div>{label}</div>
     </a>
