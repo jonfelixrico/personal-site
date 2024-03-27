@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import ContactsOverlay from '@/components/contacts/ContactsOverlay'
 import NavLinks from '@/components/layout/NavLinks'
 import { useRef, useState } from 'react'
