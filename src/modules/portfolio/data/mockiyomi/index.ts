@@ -1,4 +1,4 @@
-import { Project } from '@/models/projects/project.interface'
+import { Project } from '@/modules/portfolio/data/project.interface'
 import markdown from './mockiyomi.md'
 
 const project: Project = {

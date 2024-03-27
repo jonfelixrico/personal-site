@@ -6,7 +6,7 @@ import IconWithTooltip from '@/modules/common/IconWithTooltip'
 import styles from './FeaturedProject.module.scss'
 import bindableCf from 'classnames/bind'
 import Markdown from 'markdown-to-jsx'
-import { Project } from '@/models/projects/project.interface'
+import { Project } from '@/modules/portfolio/data/project.interface'
 import { LinkButton } from '@/modules/common/LinkButton'
 
 const classnames = bindableCf.bind(styles)
