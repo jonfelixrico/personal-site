@@ -1,46 +1,43 @@
+'use client'
+
 import { useMeasure } from 'react-use'
 import styles from './LinkButton.module.scss'
 import bindableCf from 'classnames/bind'
 import Image from 'next/image'
-import { ReactNode } from 'react'
 
 const classnames = bindableCf.bind(styles)
 
-function ImageWrapper(props: {
-  src: string
-  alt: string
-  children: ReactNode
-}) {
-  const [labelRef, { height }] = useMeasure<HTMLDivElement>()
-
-  return (
-    <>
-      <Image src={props.src} alt={props.alt} width={height} height={height} />
-      <div ref={labelRef}>{props.children}</div>
-    </>
-  )
-}
-
-export function LinkButton(props: {
+export function LinkButton({
+  href,
+  icon,
+  label,
+  className
+}: {
   icon: string
   label: string
   href: string
   className?: string
 }) {
+  const [labelRef, { height: labelHeight }] = useMeasure<HTMLDivElement>()
+  
   return (
     <a
-      href={props.href}
+      href={href}
       target="_blank"
       className={classnames(
         styles['link-button'],
-        props.className,
+        className,
         'rounded-md bg-app-1 overflow-hidden px-2 py-1',
         'inline-flex flex-row items-center gap-2'
       )}
     >
-      <ImageWrapper src={props.icon} alt={props.label}>
-        {props.label}
-      </ImageWrapper>
+      <div style={{
+        minHeight: labelHeight || '1em',
+        minWidth: labelHeight || '1em'
+      }}>
+        <Image src={icon} alt={label} width={labelHeight} height={labelHeight} />
+      </div>
+      <div ref={labelRef}>{label}</div>
     </a>
   )
 }
