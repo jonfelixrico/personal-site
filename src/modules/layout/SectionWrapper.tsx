@@ -1,15 +1,18 @@
+'use client'
+
 import { ReactNode, useEffect, useRef } from 'react'
 import { useIntersection } from 'react-use'
+import { Section } from './section.enum'
+import { useActiveSelection } from './ActiveSectionContext'
 
 export function SectionWrapper({
   id,
-  onVisible,
-  children,
+  children
 }: {
-  id: string
-  children?: ReactNode
-  onVisible?: (id: string) => void
+  id: Section
+  children: ReactNode
 }) {
+  const setActiveSection = useActiveSelection()[1]
   const ref = useRef(null)
   const intersection = useIntersection(ref, {
     root: null,
@@ -17,12 +20,9 @@ export function SectionWrapper({
     threshold: [0.75, 1],
   })
 
-  const ratio = intersection?.intersectionRatio ?? 0
   useEffect(() => {
-    if (onVisible) {
-      onVisible(id)
-    }
-  }, [onVisible, ratio, id])
+    setActiveSection(id)
+  }, [setActiveSection, intersection, id])
 
   return (
     <section ref={ref} id={id}>
