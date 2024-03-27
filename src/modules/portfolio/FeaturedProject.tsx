@@ -1,3 +1,5 @@
+'use client'
+
 import { useResizeDetector } from 'react-resize-detector'
 import { ConditionallyRender } from '@/modules/common/ConditionallyRender'
 import Image from 'next/image'
