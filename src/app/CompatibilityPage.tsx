@@ -31,7 +31,7 @@ function Sections(props: { onVisibleSectionChange?: (id: string) => void }) {
         <HomeSectionMain />
       </SectionWrapper>
 
-      <ContactsOverlay overlayHeight={`calc(100dvh - ${NAVBAR_HEIGHT}px)`}>
+      <ContactsOverlay>
         <SectionWrapper
           id={Section.SKILLS}
           onVisible={props.onVisibleSectionChange}

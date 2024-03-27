@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import classnames from 'classnames'
 import { ContactInfo } from '@/modules/contacts/contact-info'
-import { CSSProperties, ReactNode } from 'react'
+import { ReactNode } from 'react'
 
 function ContactItem(props: {
   src: string
@@ -45,18 +45,15 @@ function ContactGroup() {
 }
 
 export default function ContactsOverlay({
-  children,
-  overlayHeight
+  children
 }: {
-  children: ReactNode,
-  overlayHeight: CSSProperties['height']
+  children: ReactNode
 }) {
   return (
     <div className="relative">
       <div className="absolute h-full w-full pointer-events-none">
         <div
-          className="sticky w-full py-5 px-8 top-0 flex flex-col justify-end"
-          style={{ height: overlayHeight }}
+          className="sticky w-full h-screen py-5 px-8 top-0 flex flex-col justify-end"
         >
           <ContactGroup />
         </div>
