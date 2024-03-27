@@ -7,7 +7,7 @@
  * TODO restructure the app to have client and server components
  */
 
-import ContactsOverlay from '@/components/contacts/ContactsOverlay'
+import ContactsOverlay from '@/modules/contacts/ContactsOverlay'
 import NavLinks from '@/components/layout/NavLinks'
 import { useRef, useState } from 'react'
 import { useScroll } from 'react-use'
