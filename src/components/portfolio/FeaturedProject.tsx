@@ -1,13 +1,13 @@
 import { useResizeDetector } from 'react-resize-detector'
-import { ConditionallyRender } from '@/components/common/ConditionallyRender'
+import { ConditionallyRender } from '@/modules/common/ConditionallyRender'
 import Image from 'next/image'
 import { Fragment } from 'react'
-import IconWithTooltip from '@/components/common/IconWithTooltip'
+import IconWithTooltip from '@/modules/common/IconWithTooltip'
 import styles from './FeaturedProject.module.scss'
 import bindableCf from 'classnames/bind'
 import Markdown from 'markdown-to-jsx'
 import { Project } from '@/types/project.interface'
-import { LinkButton } from '@/components/common/LinkButton'
+import { LinkButton } from '@/modules/common/LinkButton'
 
 const classnames = bindableCf.bind(styles)
 
