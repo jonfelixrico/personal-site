@@ -1,4 +1,4 @@
-import ContentPrimaryTech from '../experience/ContentPrimaryTech'
+import ContentPrimaryTech from '@/components/experience/ContentPrimaryTech'
 
 export default function HomeSectionSkills() {
   return (
