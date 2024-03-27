@@ -18,11 +18,6 @@ import HomeSectionSkills from '@/components/section/HomeSectionSkills'
 import HomeSectionPortfolio from '@/components/section/HomeSectionPortfolio'
 import { Section } from '@/types/section.enum'
 import manifest from 'package.json'
-import { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: 'Jon Felix Rico • Home',
-}
 
 function Sections(props: { onVisibleSectionChange?: (id: string) => void }) {
   return (
@@ -59,7 +54,7 @@ function Sections(props: { onVisibleSectionChange?: (id: string) => void }) {
 
 const NAVBAR_HEIGHT = 54
 
-export default function Home() {
+export default function CompatibilityPage() {
   const [activeSection, setActiveSection] = useState<null | string>(null)
 
   const scrollRef = useRef<HTMLDivElement>(null)
