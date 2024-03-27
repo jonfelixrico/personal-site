@@ -1,15 +1,16 @@
 'use client'
 
 import NavLinks from '@/modules/layout/NavLinks'
-import { ReactNode, useRef, useState } from 'react'
+import { ReactNode, useRef } from 'react'
 import { useScroll } from 'react-use'
 import NavbarLayout from '@/modules/layout/NavbarLayout'
 import manifest from 'package.json'
+import { useActiveSelection } from './ActiveSectionContext'
 
 const NAVBAR_HEIGHT = 54
 
 export default function MainLayout({ children }: { children: ReactNode }) {
-  const [activeSection, setActiveSection] = useState<null | string>(null)
+  const [activeSection] = useActiveSelection()
 
   const scrollRef = useRef<HTMLDivElement>(null)
   const { y } = useScroll(scrollRef)
@@ -32,7 +33,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
           transparent={y <= NAVBAR_HEIGHT}
           className="h-full w-full absolute flex flex-row items-center gap-4 justify-between sm:justify-end px-8"
         >
-          <NavLinks activeSection={activeSection ?? undefined} />
+          <NavLinks activeSection={activeSection} />
         </NavbarLayout>
       </header>
 
