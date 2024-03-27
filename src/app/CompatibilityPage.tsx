@@ -19,6 +19,8 @@ import HomeSectionPortfolio from '@/modules/section/HomeSectionPortfolio'
 import { Section } from '@/modules/layout/section.enum'
 import manifest from 'package.json'
 
+const NAVBAR_HEIGHT = 54
+
 function Sections(props: { onVisibleSectionChange?: (id: string) => void }) {
   return (
     <>
@@ -29,11 +31,7 @@ function Sections(props: { onVisibleSectionChange?: (id: string) => void }) {
         <HomeSectionMain />
       </SectionWrapper>
 
-      <div className="relative">
-        <div className="absolute h-full w-full pointer-events-none">
-          <ContactsOverlay classNames="sticky h-screen w-screen py-5 px-8 top-0" />
-        </div>
-
+      <ContactsOverlay overlayHeight={`calc(100dvh - ${NAVBAR_HEIGHT}px)`}>
         <SectionWrapper
           id={Section.SKILLS}
           onVisible={props.onVisibleSectionChange}
@@ -47,12 +45,10 @@ function Sections(props: { onVisibleSectionChange?: (id: string) => void }) {
         >
           <HomeSectionPortfolio />
         </SectionWrapper>
-      </div>
+      </ContactsOverlay>
     </>
   )
 }
-
-const NAVBAR_HEIGHT = 54
 
 export default function CompatibilityPage() {
   const [activeSection, setActiveSection] = useState<null | string>(null)

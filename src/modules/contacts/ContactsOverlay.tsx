@@ -1,26 +1,13 @@
 import Image from 'next/image'
 import classnames from 'classnames'
 import { ContactInfo } from '@/modules/contacts/contact-info'
-interface ContactItemData {
+import { CSSProperties, ReactNode } from 'react'
+
+function ContactItem(props: {
   src: string
   href: string
   label: string
-}
-
-const ITEMS: ContactItemData[] = [
-  {
-    src: 'icons/github.svg',
-    href: ContactInfo.GITHUB,
-    label: 'GitHub',
-  },
-  {
-    src: 'icons/linkedin.svg',
-    href: ContactInfo.LINKEDIN,
-    label: 'LinkedIn',
-  },
-]
-
-function ContactItem(props: ContactItemData) {
+}) {
   return (
     <a
       className="relative h-6 w-6 pointer-events-auto cursor-pointer"
@@ -33,20 +20,14 @@ function ContactItem(props: ContactItemData) {
   )
 }
 
-export default function ContactsOverlay(props: { classNames?: string }) {
+function ContactGroup() {
   return (
     <div
-      className={classnames(
-        props.classNames,
-        // show for large screens, hide for smaller screens
-        'hidden lg:flex',
-        'flex-row justify-between items-end pointer-events-none'
-      )}
+      className="hidden lg:flex flex-row justify-between items-end pointer-events-none"
     >
       <div className={classnames('flex flex-col gap-4')}>
-        {ITEMS.map(({ src, href, label }, index) => (
-          <ContactItem href={href} src={src} label={label} key={index} />
-        ))}
+        <ContactItem href={ContactInfo.GITHUB} src='icons/github.svg' label='GitHub' />
+        <ContactItem href={ContactInfo.LINKEDIN} src='icons/linkedin.svg' label='LinkedIn' />
       </div>
       <a
         className={classnames(
@@ -59,6 +40,29 @@ export default function ContactsOverlay(props: { classNames?: string }) {
       >
         {ContactInfo.EMAIL}
       </a>
+    </div>
+  ) 
+}
+
+export default function ContactsOverlay({
+  children,
+  overlayHeight
+}: {
+  children: ReactNode,
+  overlayHeight: CSSProperties['height']
+}) {
+  return (
+    <div className="relative">
+      <div className="absolute h-full w-full pointer-events-none">
+        <div
+          className="sticky w-full py-5 px-8 top-0 flex flex-col justify-end"
+          style={{ height: overlayHeight }}
+        >
+          <ContactGroup />
+        </div>
+      </div>
+
+      {children}
     </div>
   )
 }
