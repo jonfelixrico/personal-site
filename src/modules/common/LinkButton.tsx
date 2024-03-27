@@ -1,9 +1,8 @@
-'use client'
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
 
-import { useMeasure } from 'react-use'
 import styles from './LinkButton.module.scss'
 import bindableCf from 'classnames/bind'
-import Image from 'next/image'
 
 const classnames = bindableCf.bind(styles)
 
@@ -17,9 +16,7 @@ export function LinkButton({
   label: string
   href: string
   className?: string
-}) {
-  const [labelRef, { height: labelHeight }] = useMeasure<HTMLDivElement>()
-  
+}) { 
   return (
     <a
       href={href}
@@ -31,13 +28,20 @@ export function LinkButton({
         'inline-flex flex-row items-center gap-2'
       )}
     >
-      <div style={{
-        minHeight: labelHeight || '1em',
-        minWidth: labelHeight || '1em'
-      }}>
-        <Image src={icon} alt={label} width={labelHeight} height={labelHeight} />
-      </div>
-      <div ref={labelRef}>{label}</div>
+      {/*
+        We're doing aria hidden here since we already have the label to provide the screen reader context
+
+        We're not using Next's Image component here since we expect that icons used here are SVGs. Next does
+        leaves them as is and does not apply any optimization.
+
+        The main reason why we're not using Next.js image component, though, is it does not accept em values for the width and height.
+      */}
+      <img src={icon} aria-hidden="true" style={{
+        // We're going with 1em because we want the icon to have the same height as the text.
+        width: '1em',
+        height: '1em'
+      }} />
+      <div>{label}</div>
     </a>
   )
 }
