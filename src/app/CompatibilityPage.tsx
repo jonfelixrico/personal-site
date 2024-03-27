@@ -8,10 +8,10 @@
  */
 
 import ContactsOverlay from '@/modules/contacts/ContactsOverlay'
-import NavLinks from '@/components/layout/NavLinks'
+import NavLinks from '@/modules/layout/NavLinks'
 import { useRef, useState } from 'react'
 import { useScroll } from 'react-use'
-import NavbarLayout from '@/components/layout/NavbarLayout'
+import NavbarLayout from '@/modules/layout/NavbarLayout'
 import { SectionWrapper } from '@/modules/section/SectionWrapper'
 import HomeSectionMain from '@/modules/section/HomeSectionMain'
 import HomeSectionSkills from '@/modules/section/HomeSectionSkills'
