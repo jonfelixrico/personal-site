@@ -3,7 +3,7 @@
 import { ReactNode, useEffect, useMemo, useRef } from 'react'
 import { useIntersection } from 'react-use'
 import { Section } from './section.enum'
-import { useActiveSelection } from './ActiveSectionContext'
+import { useActiveSection } from './ActiveSectionContext'
 
 export function SectionWrapper({
   id,
@@ -12,7 +12,7 @@ export function SectionWrapper({
   id: Section
   children: ReactNode
 }) {
-  const [activeSelection, setActiveSelection] = useActiveSelection()
+  const [activeSelection, setActiveSelection] = useActiveSection()
   const ref = useRef(null)
   const intersection = useIntersection(ref, {
     root: null,

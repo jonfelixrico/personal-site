@@ -5,12 +5,12 @@ import { ReactNode, useRef } from 'react'
 import { useScroll } from 'react-use'
 import NavbarLayout from '@/modules/layout/NavbarLayout'
 import manifest from 'package.json'
-import { useActiveSelection } from './ActiveSectionContext'
+import { useActiveSection } from './ActiveSectionContext'
 
 const NAVBAR_HEIGHT = 54
 
 export default function MainLayout({ children }: { children: ReactNode }) {
-  const [activeSection] = useActiveSelection()
+  const [activeSection] = useActiveSection()
 
   const scrollRef = useRef<HTMLDivElement>(null)
   const { y } = useScroll(scrollRef)

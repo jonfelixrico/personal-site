@@ -18,6 +18,6 @@ export function ActiveSectionProvider ({
   </ActiveSectionContext.Provider>
 }
 
-export function useActiveSelection(): StateType {
+export function useActiveSection(): StateType {
   return useContext(ActiveSectionContext) ?? [undefined, () => {}]
 }
