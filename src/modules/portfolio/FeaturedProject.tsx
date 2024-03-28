@@ -46,7 +46,7 @@ export function FeaturedProject({
   links,
   tech,
   title,
-  id
+  id,
 }: Project) {
   return (
     <div className="grid grid-cols-12 isolate">
@@ -58,7 +58,9 @@ export function FeaturedProject({
         flex flex-col justify-center gap-4
         z-10"
       >
-        <h5 className="text-4xl text-accent font-medium" id={id}>{title}</h5>
+        <h5 className="text-4xl text-accent font-medium" id={id}>
+          {title}
+        </h5>
         <div className="rounded-lg overflow-hidden bg-app-1 shadow-md p-3 relative">
           <Image
             className="absolute object-cover object-center opacity-10 grayscale md:hidden"
@@ -74,7 +76,7 @@ export function FeaturedProject({
               // TODO figure out how to make line breaks work
               className={classnames(
                 'mb-5 gap-2 flex flex-col',
-                styles.description
+                styles.description,
               )}
             >
               <Markdown

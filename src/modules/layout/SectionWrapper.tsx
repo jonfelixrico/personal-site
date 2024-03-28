@@ -7,7 +7,7 @@ import { useActiveSection } from './ActiveSectionContext'
 
 export function SectionWrapper({
   id,
-  children
+  children,
 }: {
   id: Section
   children: ReactNode

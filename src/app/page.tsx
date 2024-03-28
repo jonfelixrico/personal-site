@@ -13,27 +13,23 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
-  return <ActiveSectionProvider>
-    <MainLayout>
-      <SectionWrapper
-          id={Section.HOME}
-        >
+  return (
+    <ActiveSectionProvider>
+      <MainLayout>
+        <SectionWrapper id={Section.HOME}>
           <HomeSectionMain />
         </SectionWrapper>
 
         <ContactsOverlay>
-          <SectionWrapper
-            id={Section.SKILLS}
-          >
+          <SectionWrapper id={Section.SKILLS}>
             <HomeSectionSkills />
           </SectionWrapper>
 
-          <SectionWrapper
-            id={Section.PORTFOLIO}
-          >
+          <SectionWrapper id={Section.PORTFOLIO}>
             <HomeSectionPortfolio />
           </SectionWrapper>
         </ContactsOverlay>
-    </MainLayout>
-  </ActiveSectionProvider>
+      </MainLayout>
+    </ActiveSectionProvider>
+  )
 }

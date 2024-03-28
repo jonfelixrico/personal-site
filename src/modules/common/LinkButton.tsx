@@ -10,13 +10,13 @@ export function LinkButton({
   href,
   icon,
   label,
-  className
+  className,
 }: {
   icon: string
   label: string
   href: string
   className?: string
-}) { 
+}) {
   return (
     <a
       href={href}
@@ -25,7 +25,7 @@ export function LinkButton({
         styles['link-button'],
         className,
         'rounded-md bg-app-1 overflow-hidden px-2 py-1',
-        'inline-flex flex-row items-center gap-2'
+        'inline-flex flex-row items-center gap-2',
       )}
     >
       {/*
@@ -36,11 +36,15 @@ export function LinkButton({
 
         The main reason why we're not using Next.js image component, though, is it does not accept em values for the width and height.
       */}
-      <img src={icon} aria-hidden="true" style={{
-        // We're going with 1em because we want the icon to have the same height as the text.
-        width: '1em',
-        height: '1em'
-      }} />
+      <img
+        src={icon}
+        aria-hidden="true"
+        style={{
+          // We're going with 1em because we want the icon to have the same height as the text.
+          width: '1em',
+          height: '1em',
+        }}
+      />
       <div>{label}</div>
     </a>
   )

@@ -19,9 +19,9 @@ export default function MainLayout({ children }: { children: ReactNode }) {
     <div
       className="scrollbar-invisible scroll-smooth overflow-auto h-screen relative"
       /*
-        * This is to compensate for the navbar potentially blocking some of the content when navigating to sections
-        * via fragment links (e.g. portfolio-website.com/#some-section)
-        */
+       * This is to compensate for the navbar potentially blocking some of the content when navigating to sections
+       * via fragment links (e.g. portfolio-website.com/#some-section)
+       */
       style={{ scrollPaddingTop: `${NAVBAR_HEIGHT}px` }}
       ref={scrollRef}
     >
@@ -37,16 +37,11 @@ export default function MainLayout({ children }: { children: ReactNode }) {
         </NavbarLayout>
       </header>
 
-      <main>
-        {children}
-      </main>
+      <main>{children}</main>
 
       <footer className="p-2 flex flex-col items-center text-sm">
         <div>v{manifest.version}</div>
-        <a
-          href="https://github.com/jonfelixrico/personal-site"
-          target="_blank"
-        >
+        <a href="https://github.com/jonfelixrico/personal-site" target="_blank">
           Built by <span className="font-semibold">Jon Felix Rico</span>
         </a>
         {/* For compliance with Icons8 */}

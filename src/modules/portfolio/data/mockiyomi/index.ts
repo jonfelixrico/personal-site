@@ -19,7 +19,7 @@ const project: Project = {
     {
       label: 'Ant Design',
       icon: '/icons/ant-design.svg',
-    }
+    },
   ],
 
   links: [

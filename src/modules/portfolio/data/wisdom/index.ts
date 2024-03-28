@@ -5,7 +5,7 @@ const project: Project = {
   title: 'Wisdom',
   description: markdown,
   image: '/portfolio/wisdom/panel/home.png',
-  id: 'project-wisdom',  
+  id: 'project-wisdom',
 
   tech: [
     {
