@@ -1,4 +1,4 @@
-import projects from '@/models/projects'
+import projects from '@/modules/portfolio/data'
 import { FeaturedProject } from './FeaturedProject'
 
 export default function PortfolioList() {

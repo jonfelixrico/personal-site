@@ -1,4 +1,4 @@
-import { Project } from '@/types/project.interface'
+import { Project } from '@/modules/portfolio/data/project.interface'
 import markdown from './mockiyomi.md'
 
 const project: Project = {
@@ -19,7 +19,7 @@ const project: Project = {
     {
       label: 'Ant Design',
       icon: '/icons/ant-design.svg',
-    }
+    },
   ],
 
   links: [

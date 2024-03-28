@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import Tooltip from 'rc-tooltip'
 import classnames from 'classnames'
+import Tooltip from '@/lib/Tooltip'
 
 export default function IconWithTooltip(props: {
   src: string

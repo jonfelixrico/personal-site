@@ -1,11 +1,11 @@
-import { Project } from '@/types/project.interface'
+import { Project } from '@/modules/portfolio/data/project.interface'
 import markdown from './wisdom.md'
 
 const project: Project = {
   title: 'Wisdom',
   description: markdown,
   image: '/portfolio/wisdom/panel/home.png',
-  id: 'project-wisdom',  
+  id: 'project-wisdom',
 
   tech: [
     {

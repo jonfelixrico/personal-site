@@ -1,5 +1,5 @@
-import { ContactInfo } from '@/models/contact-info'
-import { LinkButton } from '../common/LinkButton'
+import { ContactInfo } from '@/modules/contacts/contact-info'
+import { LinkButton } from '@/modules/common/LinkButton'
 
 const ITEMS = [
   {

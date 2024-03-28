@@ -1,13 +1,15 @@
+'use client'
+
 import { useResizeDetector } from 'react-resize-detector'
-import { ConditionallyRender } from '@/components/ConditionallyRender'
+import { ConditionallyRender } from '@/modules/common/ConditionallyRender'
 import Image from 'next/image'
 import { Fragment } from 'react'
-import IconWithTooltip from '@/components/IconWithTooltip'
+import IconWithTooltip from '@/modules/common/IconWithTooltip'
 import styles from './FeaturedProject.module.scss'
 import bindableCf from 'classnames/bind'
 import Markdown from 'markdown-to-jsx'
-import { Project } from '@/types/project.interface'
-import { LinkButton } from '@/components/common/LinkButton'
+import { Project } from '@/modules/portfolio/data/project.interface'
+import { LinkButton } from '@/modules/common/LinkButton'
 
 const classnames = bindableCf.bind(styles)
 
@@ -44,7 +46,7 @@ export function FeaturedProject({
   links,
   tech,
   title,
-  id
+  id,
 }: Project) {
   return (
     <div className="grid grid-cols-12 isolate">
@@ -56,7 +58,9 @@ export function FeaturedProject({
         flex flex-col justify-center gap-4
         z-10"
       >
-        <h5 className="text-4xl text-accent font-medium" id={id}>{title}</h5>
+        <h5 className="text-4xl text-accent font-medium" id={id}>
+          {title}
+        </h5>
         <div className="rounded-lg overflow-hidden bg-app-1 shadow-md p-3 relative">
           <Image
             className="absolute object-cover object-center opacity-10 grayscale md:hidden"
@@ -72,7 +76,7 @@ export function FeaturedProject({
               // TODO figure out how to make line breaks work
               className={classnames(
                 'mb-5 gap-2 flex flex-col',
-                styles.description
+                styles.description,
               )}
             >
               <Markdown

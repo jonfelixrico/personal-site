@@ -1,4 +1,4 @@
-import { Project } from '@/types/project.interface'
+import { Project } from '@/modules/portfolio/data/project.interface'
 import markdown from './pos.md'
 
 const project: Project = {
