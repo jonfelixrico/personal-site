@@ -21,7 +21,6 @@ export function SectionWrapper({
   })
 
   const isIntesecting = useMemo(() => {
-    console.log(intersection)
     return intersection?.isIntersecting ?? false
   }, [intersection])
 
