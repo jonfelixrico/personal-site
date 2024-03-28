@@ -44,6 +44,7 @@ export function LinkButton({
           width: '1em',
           height: '1em',
         }}
+        loading="lazy"
       />
       <div>{label}</div>
     </a>
