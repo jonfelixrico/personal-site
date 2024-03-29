@@ -17,8 +17,6 @@ type ContextType = {
 
 const ActiveSectionContext = createContext<null | ContextType>(null)
 
-
-
 export function ActiveSectionProvider({ children }: { children: ReactNode }) {
   const [state, setState] = useImmer<IntersectionMap>({})
 
