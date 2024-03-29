@@ -6,7 +6,18 @@ const project: Project = {
   description: markdown,
   image: '/portfolio/draw-together/preview.png',
   title: 'Draw Together',
-  links: [],
+  links: [
+    {
+      icon: '/icons/github.svg',
+      label: 'GitHub monorepo',
+      url: 'https://github.com/jonfelixrico/draw-together'
+    },
+    {
+      icon: '/icons/new-tab.svg',
+      label: 'Website',
+      url: 'https://draw-together.jonfelixrico.dev'
+    }
+  ],
   tech: [] 
 }
 
