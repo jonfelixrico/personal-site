@@ -1,3 +1,3 @@
-Draw together is an online drawing tool where multiple people can join in and draw along. The idea to create this demo app is inspired by [Skribbl](https://skribbl.io), but functionality-wise is like [Flockmod](https://flockmod.com) and [Aggie.io](https://aggie.io) but very, _very_ bare-bones.
+Draw together is an online drawing tool where multiple people can join in and draw along. The idea to create this demo app is inspired by [Skribbl](https://skribbl.io), but functionality-wise is like [Flockmod](https://flockmod.com) and [Aggie.io](https://aggie.io) although very, _very_ bare-bones.
 
-It is a single-page application made with React (with Vite as its bundler) on the front-end; and Express.js on the back-end, utilizing Socket\.IO to the real time multi-player functionality happen.
+It is a single-page application made with React on the front-end; and Express.js on the back-end, utilizing Socket\.IO to the real time multi-player functionality happen.
