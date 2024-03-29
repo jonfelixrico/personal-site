@@ -10,7 +10,7 @@ import { useActiveSection } from './ActiveSectionContext'
 const NAVBAR_HEIGHT = 54
 
 export default function MainLayout({ children }: { children: ReactNode }) {
-  const [activeSection] = useActiveSection()
+  const { activeSection } = useActiveSection()
 
   const scrollRef = useRef<HTMLDivElement>(null)
   const { y } = useScroll(scrollRef)
@@ -33,7 +33,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
           transparent={y <= NAVBAR_HEIGHT}
           className="h-full w-full absolute flex flex-row items-center gap-4 justify-between sm:justify-end px-8"
         >
-          <NavLinks activeSection={activeSection} />
+          <NavLinks activeSection={activeSection ?? undefined} />
         </NavbarLayout>
       </header>
 
