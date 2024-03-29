@@ -12,7 +12,7 @@ export function SectionWrapper({
   id: Section
   children: ReactNode
 }) {
-  const [activeSelection, setActiveSelection] = useActiveSection()
+  const { setIntersectionData } = useActiveSection()
   const ref = useRef(null)
   const intersection = useIntersection(ref, {
     root: null,
@@ -20,15 +20,14 @@ export function SectionWrapper({
     threshold: 0.5,
   })
 
-  const isIntesecting = useMemo(() => {
-    return intersection?.isIntersecting ?? false
+  const intersectionRatio = useMemo(() => {
+    const rawRatio = intersection?.intersectionRatio ?? 0
+    return parseFloat(rawRatio.toFixed(2))
   }, [intersection])
 
   useEffect(() => {
-    if (isIntesecting && id !== activeSelection) {
-      setActiveSelection(id)
-    }
-  }, [setActiveSelection, activeSelection, isIntesecting, id])
+    setIntersectionData(id, intersectionRatio)
+  }, [intersectionRatio, id, setIntersectionData])
 
   return (
     <section ref={ref} id={id}>
