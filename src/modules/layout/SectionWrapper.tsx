@@ -15,17 +15,22 @@ export function SectionWrapper({
   const { setIntersectionData } = useActiveSection()
   const ref = useRef(null)
   const intersection = useIntersection(ref, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5,
+    threshold: [0, 0.25, 0.5, 0.75, 1],
   })
 
   const intersectionRatio = useMemo(() => {
-    const rawRatio = intersection?.intersectionRatio ?? 0
-    return parseFloat(rawRatio.toFixed(2))
+    if (!intersection) {
+      return null
+    }
+
+    return parseFloat(intersection.intersectionRatio.toFixed(2))
   }, [intersection])
 
   useEffect(() => {
+    if (intersectionRatio == null) {
+      return
+    }
+
     setIntersectionData(id, intersectionRatio)
   }, [intersectionRatio, id, setIntersectionData])
 
