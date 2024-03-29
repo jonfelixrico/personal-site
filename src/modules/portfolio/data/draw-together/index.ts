@@ -4,7 +4,7 @@ import markdown from './draw-together.md'
 const project: Project = {
   id: 'draw-together',
   description: markdown,
-  image: '/portfolio/mockiyomi/preview.png',
+  image: '/portfolio/draw-together/preview.png',
   title: 'Draw Together',
   links: [],
   tech: [] 
