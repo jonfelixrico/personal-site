@@ -18,7 +18,20 @@ const project: Project = {
       url: 'https://draw-together.jonfelixrico.dev'
     }
   ],
-  tech: [] 
+  tech: [
+    {
+      icon: '/icons/react.svg',
+      label: 'React',
+    },
+    {
+      icon: '/icons/express-js.svg',
+      label: 'Express.js'
+    },
+    {
+      icon: '/icons/socket-io.svg',
+      label: 'Socket.IO'
+    }
+  ] 
 }
 
 export default project
