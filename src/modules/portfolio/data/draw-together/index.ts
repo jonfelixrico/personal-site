@@ -1,6 +1,7 @@
 import { Project } from '@/modules/portfolio/data/project.interface'
 import markdown from './draw-together.md'
 import {
+  ICON_BOOTSTRAP,
   ICON_EXPRESS_JS,
   ICON_GITHUB,
   ICON_NEW_TAB,
@@ -37,6 +38,10 @@ const project: Project = {
     {
       icon: ICON_SOCKET_IO,
       label: 'Socket.IO',
+    },
+    {
+      icon: ICON_BOOTSTRAP,
+      label: 'Bootstrap 5',
     },
   ],
 }
