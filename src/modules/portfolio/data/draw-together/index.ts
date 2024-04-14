@@ -1,5 +1,12 @@
 import { Project } from '@/modules/portfolio/data/project.interface'
 import markdown from './draw-together.md'
+import {
+  ICON_EXPRESS_JS,
+  ICON_GITHUB,
+  ICON_NEW_TAB,
+  ICON_REACT,
+  ICON_SOCKET_IO,
+} from '@/modules/common/icons'
 
 const project: Project = {
   id: 'draw-together',
@@ -8,30 +15,30 @@ const project: Project = {
   title: 'Draw Together',
   links: [
     {
-      icon: '/icons/github.svg',
+      icon: ICON_GITHUB,
       label: 'GitHub monorepo',
-      url: 'https://github.com/jonfelixrico/draw-together'
+      url: 'https://github.com/jonfelixrico/draw-together',
     },
     {
-      icon: '/icons/new-tab.svg',
+      icon: ICON_NEW_TAB,
       label: 'Website',
-      url: 'https://draw-together.jonfelixrico.dev'
-    }
+      url: 'https://draw-together.jonfelixrico.dev',
+    },
   ],
   tech: [
     {
-      icon: '/icons/react.svg',
+      icon: ICON_REACT,
       label: 'React',
     },
     {
-      icon: '/icons/express-js.svg',
-      label: 'Express.js'
+      icon: ICON_EXPRESS_JS,
+      label: 'Express.js',
     },
     {
-      icon: '/icons/socket-io.svg',
-      label: 'Socket.IO'
-    }
-  ] 
+      icon: ICON_SOCKET_IO,
+      label: 'Socket.IO',
+    },
+  ],
 }
 
 export default project
