@@ -2,13 +2,12 @@ import { Project } from '@/modules/portfolio/data/project.interface'
 import markdown from './wisdom.md'
 import {
   ICON_CYPRESS,
-  ICON_DOCKER,
   ICON_EVENTSTOREDB,
   ICON_GITHUB,
-  ICON_GITHUB_ACTIONS,
   ICON_JEST,
   ICON_MONGODB,
   ICON_NEST_JS,
+  ICON_NEW_TAB,
   ICON_QUASAR_FRAMEWORK,
   ICON_SPRING_BOOT,
   ICON_VUE_JS,
@@ -53,14 +52,6 @@ const project: Project = {
       label: 'MongoDB',
       icon: ICON_MONGODB,
     },
-    {
-      label: 'Docker',
-      icon: ICON_DOCKER,
-    },
-    {
-      label: 'GitHub Actions',
-      icon: ICON_GITHUB_ACTIONS,
-    },
   ],
 
   links: [
@@ -83,6 +74,11 @@ const project: Project = {
       icon: ICON_GITHUB,
       label: 'Web app back-end',
       url: 'https://github.com/jonfelixrico/wisdom-panel-server-2022',
+    },
+    {
+      icon: ICON_NEW_TAB,
+      label: 'Website',
+      url: 'https://wisdom.csaservers.com',
     },
   ],
 }
