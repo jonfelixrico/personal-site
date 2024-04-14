@@ -1,5 +1,18 @@
 import { Project } from '@/modules/portfolio/data/project.interface'
 import markdown from './wisdom.md'
+import {
+  ICON_CYPRESS,
+  ICON_DOCKER,
+  ICON_EVENTSTOREDB,
+  ICON_GITHUB,
+  ICON_GITHUB_ACTIONS,
+  ICON_JEST,
+  ICON_MONGODB,
+  ICON_NEST_JS,
+  ICON_QUASAR_FRAMEWORK,
+  ICON_SPRING_BOOT,
+  ICON_VUE_JS,
+} from '@/modules/common/icons'
 
 const project: Project = {
   title: 'Wisdom',
@@ -10,64 +23,64 @@ const project: Project = {
   tech: [
     {
       label: 'Vue.js',
-      icon: '/icons/vue-js.svg',
+      icon: ICON_VUE_JS,
     },
     {
       label: 'Quasar Framework',
-      icon: '/icons/quasar-framework.svg',
+      icon: ICON_QUASAR_FRAMEWORK,
     },
     {
       label: 'Cypress',
-      icon: '/icons/cypress.svg',
+      icon: ICON_CYPRESS,
     },
     {
       label: 'Nest.js',
-      icon: '/icons/nest-js.svg',
+      icon: ICON_NEST_JS,
     },
     {
       label: 'Jest',
-      icon: '/icons/jest.svg',
+      icon: ICON_JEST,
     },
     {
       label: 'Spring Boot',
-      icon: '/icons/spring-boot.svg',
+      icon: ICON_SPRING_BOOT,
     },
     {
       label: 'EventStoreDB',
-      icon: '/icons/eventstoredb.svg',
+      icon: ICON_EVENTSTOREDB,
     },
     {
       label: 'MongoDB',
-      icon: '/icons/mongodb.svg',
+      icon: ICON_MONGODB,
     },
     {
       label: 'Docker',
-      icon: '/icons/docker.svg',
+      icon: ICON_DOCKER,
     },
     {
       label: 'GitHub Actions',
-      icon: '/icons/github-actions.svg',
+      icon: ICON_GITHUB_ACTIONS,
     },
   ],
 
   links: [
     {
-      icon: 'icons/github.svg',
+      icon: ICON_GITHUB,
       label: 'REST API',
       url: 'https://github.com/jonfelixrico/wisdom-core-2022',
     },
     {
-      icon: 'icons/github.svg',
+      icon: ICON_GITHUB,
       label: 'Discord Bot',
       url: 'https://github.com/jonfelixrico/wisdom-bot-2022',
     },
     {
-      icon: 'icons/github.svg',
+      icon: ICON_GITHUB,
       label: 'Web app front-end',
       url: 'https://github.com/jonfelixrico/wisdom-panel-client-2022',
     },
     {
-      icon: 'icons/github.svg',
+      icon: ICON_GITHUB,
       label: 'Web app back-end',
       url: 'https://github.com/jonfelixrico/wisdom-panel-server-2022',
     },
