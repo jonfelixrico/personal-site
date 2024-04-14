@@ -1,8 +1,7 @@
 import { ContactInfo } from '@/modules/contacts/contact-info'
 import { LinkButton } from '@/modules/common/LinkButton'
 import { ICON_EMAIL, ICON_GITHUB, ICON_LINKEDIN } from '@/modules/common/icons'
-import IconCarousel from '@/modules/about/IconCarousel'
-import * as TECH_ICONS from '@/modules/common/tech-icons'
+import { TechIconCarousel } from '@/modules/about/TechIconCarousel'
 
 const ITEMS = [
   {
@@ -68,13 +67,8 @@ export default function HomeSectionMain() {
         </div>
       </div>
 
-      <div className="flex-none bg-app-3 py-3">
-        <IconCarousel
-          iconSize={100}
-          // We want to apply sorting to make the render sequence consistent/predictable
-          // TODO use toSorted (prefered); using sort only for now since Vercel builds are failing if toSorted is used
-          icons={Object.values(TECH_ICONS).sort((a, b) => a.localeCompare(b))}
-        />
+      <div className="flex-none bg-app-3">
+        <TechIconCarousel />
       </div>
     </div>
   )
