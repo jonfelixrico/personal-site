@@ -1,8 +1,10 @@
 'use client'
 
 import Image from 'next/image'
-import { useMemo } from 'react'
-import { useMeasure } from 'react-use'
+import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useInterval, useMeasure } from 'react-use'
+import range from 'lodash/range'
+import { useImmer } from 'use-immer'
 
 export default function TechCarousel({
   icons,
@@ -15,18 +17,38 @@ export default function TechCarousel({
 }) {
   const [ref, { width }] = useMeasure<HTMLDivElement>()
 
+  const [indexes, setIndexes] = useImmer(range(0, icons.length))
+  const doRotation = useCallback(() => {
+    setIndexes((indexes) => {
+      const idx = indexes.shift()
+      indexes.push(idx as number)
+    })
+  }, [setIndexes])
+
   const viewportCount = useMemo(
     () => Math.ceil(width / iconSize),
     [width, iconSize],
   )
-
   const viewportIcons = useMemo(() => {
-    return icons.slice(0, viewportCount)
-  }, [viewportCount, icons])
+    return indexes.map((idx) => icons[idx]).slice(0, viewportCount)
+  }, [viewportCount, icons, indexes])
+
+  const [offset, setOffset] = useState(0)
+  useInterval(() => {
+    setOffset((offset) => offset + 1)
+  }, 25)
+
+  useEffect(() => {
+    console.log(offset)
+    if (offset >= iconSize + gap) {
+      doRotation()
+      setOffset(0)
+    }
+  }, [offset, doRotation, setOffset, iconSize, gap])
 
   return (
     <div className="w-full select-none" ref={ref}>
-      <div className="overflow-clip flex flex-row" style={{ width }}>
+      <div className="overflow-hidden flex flex-row" style={{ width }}>
         {viewportIcons.map((iconSrc, index) => (
           <div
             key={iconSrc}
@@ -34,6 +56,7 @@ export default function TechCarousel({
               width: iconSize,
               height: iconSize,
               marginRight: index < viewportCount - 1 ? gap : 0,
+              transform: `translateX(${-offset}px)`,
             }}
             className="flex-none relative"
           >
