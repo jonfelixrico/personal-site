@@ -2,19 +2,20 @@
 
 import Image from 'next/image'
 import { useMemo } from 'react'
+import { useMeasure } from 'react-use'
 
 export default function TechCarousel({
   icons,
   iconSize,
-  containerWidth,
 }: {
   icons: string[]
   iconSize: number
-  containerWidth: number
 }) {
+  const [ref, { width }] = useMeasure<HTMLDivElement>()
+
   const viewportCount = useMemo(
-    () => Math.ceil(containerWidth / iconSize),
-    [containerWidth, iconSize],
+    () => Math.ceil(width / iconSize),
+    [width, iconSize],
   )
 
   const viewportIcons = useMemo(() => {
@@ -22,13 +23,17 @@ export default function TechCarousel({
   }, [viewportCount, icons])
 
   return (
-    <>
+    <div
+      className="w-full overflow-clip flex flex-row gap-x-1"
+      ref={ref}
+      style={{ width }}
+    >
       {viewportIcons.map((iconSrc) => (
         <div key={iconSrc}>
           {/* We're not giving this a proper alt because this component is purely for presentaiton only */}
           <Image width={iconSize} height={iconSize} src={iconSrc} alt="" />
         </div>
       ))}
-    </>
+    </div>
   )
 }
