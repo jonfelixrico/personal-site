@@ -12,8 +12,8 @@ export default function TechChip({
       <div
         className="relative"
         style={{
-          height: '1.25em',
-          width: '1.25em',
+          height: '1.75em',
+          width: '1.75em',
         }}
       >
         <Image fill src={src} alt={`Icon of ${label}`} />
