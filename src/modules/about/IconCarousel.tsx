@@ -7,7 +7,7 @@ import range from 'lodash/range'
 import { useImmer } from 'use-immer'
 
 /**
- * Implements a perpetually-cycling carousel of tech icons.
+ * Implements a perpetually-cycling carousel of icons.
  */
 export default function IconCarousel({
   icons,
