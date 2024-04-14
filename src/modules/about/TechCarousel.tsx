@@ -6,6 +6,9 @@ import { useInterval, useMeasure } from 'react-use'
 import range from 'lodash/range'
 import { useImmer } from 'use-immer'
 
+/**
+ * Implements a perpetually-cycling carousel of tech icons.
+ */
 export default function TechCarousel({
   icons,
   iconSize = 100,
@@ -17,33 +20,35 @@ export default function TechCarousel({
 }) {
   const [ref, { width }] = useMeasure<HTMLDivElement>()
 
-  const [indexes, setIndexes] = useImmer(range(0, icons.length))
-  const doRotation = useCallback(() => {
-    setIndexes((indexes) => {
+  const [iconPositions, setIconPositions] = useImmer(range(0, icons.length))
+  const moveFirstIconToLast = useCallback(() => {
+    setIconPositions((indexes) => {
       const idx = indexes.shift()
       indexes.push(idx as number)
     })
-  }, [setIndexes])
+  }, [setIconPositions])
 
-  const viewportCount = useMemo(
+  const iconCount = useMemo(
     () => Math.ceil(width / iconSize) + 1, // The +1 is a buffer
     [width, iconSize],
   )
-  const viewportIcons = useMemo(() => {
-    return indexes.map((idx) => icons[idx]).slice(0, viewportCount)
-  }, [viewportCount, icons, indexes])
+  const iconsToRender = useMemo(() => {
+    return iconPositions.map((idx) => icons[idx]).slice(0, iconCount)
+  }, [iconCount, icons, iconPositions])
 
+  // This is for animating the carousel
   const [offset, setOffset] = useState(0)
   useInterval(() => {
     setOffset((offset) => offset + 1)
   }, 25)
 
   useEffect(() => {
+    // Once the first item has been hidden, move it to the end of the list
     if (offset >= iconSize + gap) {
-      doRotation()
+      moveFirstIconToLast()
       setOffset(0)
     }
-  }, [offset, doRotation, setOffset, iconSize, gap])
+  }, [offset, moveFirstIconToLast, setOffset, iconSize, gap])
 
   return (
     <div className="w-full select-none" ref={ref}>
@@ -54,13 +59,13 @@ export default function TechCarousel({
             transform: `translateX(${-offset}px)`,
           }}
         >
-          {viewportIcons.map((iconSrc, index) => (
+          {iconsToRender.map((iconSrc, index) => (
             <div
               key={iconSrc}
               style={{
                 width: iconSize,
                 height: iconSize,
-                marginRight: index < viewportCount - 1 ? gap : 0,
+                marginRight: index < iconCount - 1 ? gap : 0,
               }}
               className="flex-none relative"
             >
