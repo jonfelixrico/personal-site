@@ -9,8 +9,8 @@ interface BreakpointEntry {
 }
 
 /*
- * These are intended to reflect bootstrap breakpoints defined in
- * https://react-bootstrap.netlify.app/docs/layout/breakpoints/#available-breakpoints
+ * sm-xl breakpoint values are from https://v1.tailwindcss.com/docs/breakpoints
+ * The rest are from https://react-bootstrap.netlify.app/docs/layout/breakpoints/#available-breakpoints
  */
 const SORTED_BREAKPOINTS: BreakpointEntry[] = [
   {
@@ -19,7 +19,7 @@ const SORTED_BREAKPOINTS: BreakpointEntry[] = [
   },
   {
     breakpoint: 'sm',
-    dimensions: 576,
+    dimensions: 640,
   },
   {
     breakpoint: 'md',
@@ -27,11 +27,11 @@ const SORTED_BREAKPOINTS: BreakpointEntry[] = [
   },
   {
     breakpoint: 'lg',
-    dimensions: 992,
+    dimensions: 1024,
   },
   {
     breakpoint: 'xl',
-    dimensions: 1200,
+    dimensions: 1280,
   },
   {
     breakpoint: 'xxl',
