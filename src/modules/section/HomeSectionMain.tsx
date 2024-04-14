@@ -1,19 +1,20 @@
 import { ContactInfo } from '@/modules/contacts/contact-info'
 import { LinkButton } from '@/modules/common/LinkButton'
+import { ICON_EMAIL, ICON_GITHUB, ICON_LINKEDIN } from '@/modules/common/icons'
 
 const ITEMS = [
   {
-    iconSrc: 'icons/github.svg',
+    iconSrc: ICON_GITHUB,
     href: ContactInfo.GITHUB,
     label: 'GitHub',
   },
   {
-    iconSrc: 'icons/linkedin.svg',
+    iconSrc: ICON_LINKEDIN,
     href: ContactInfo.LINKEDIN,
     label: 'LinkedIn',
   },
   {
-    iconSrc: 'icons/email.svg',
+    iconSrc: ICON_EMAIL,
     href: `mailto:${ContactInfo.EMAIL}`,
     label: 'Email',
   },

@@ -2,6 +2,7 @@ import Image from 'next/image'
 import classnames from 'classnames'
 import { ContactInfo } from '@/modules/contacts/contact-info'
 import { ReactNode } from 'react'
+import { ICON_GITHUB, ICON_LINKEDIN } from '@/modules/common/icons'
 
 function ContactItem(props: { src: string; href: string; label: string }) {
   return (
@@ -22,12 +23,12 @@ function ContactGroup() {
       <div className={classnames('flex flex-col gap-4')}>
         <ContactItem
           href={ContactInfo.GITHUB}
-          src="icons/github.svg"
+          src={ICON_GITHUB}
           label="GitHub"
         />
         <ContactItem
           href={ContactInfo.LINKEDIN}
-          src="icons/linkedin.svg"
+          src={ICON_LINKEDIN}
           label="LinkedIn"
         />
       </div>
