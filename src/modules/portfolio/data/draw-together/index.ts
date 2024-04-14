@@ -6,6 +6,7 @@ import {
   ICON_GITHUB,
   ICON_NEW_TAB,
   ICON_REACT,
+  ICON_REDUX,
   ICON_SOCKET_IO,
 } from '@/modules/common/icons'
 
@@ -30,6 +31,10 @@ const project: Project = {
     {
       icon: ICON_REACT,
       label: 'React',
+    },
+    {
+      icon: ICON_REDUX,
+      label: 'Redux',
     },
     {
       icon: ICON_EXPRESS_JS,
