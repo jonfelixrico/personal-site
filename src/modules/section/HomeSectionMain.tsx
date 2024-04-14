@@ -2,7 +2,7 @@ import { ContactInfo } from '@/modules/contacts/contact-info'
 import { LinkButton } from '@/modules/common/LinkButton'
 import { ICON_EMAIL, ICON_GITHUB, ICON_LINKEDIN } from '@/modules/common/icons'
 import TechCarousel from '@/modules/about/TechCarousel'
-import * as ICONS from '@/modules/common/icons'
+import * as ICONS from '@/modules/common/tech-icons'
 
 const ITEMS = [
   {
