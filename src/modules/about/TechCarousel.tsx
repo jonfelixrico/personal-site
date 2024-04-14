@@ -26,7 +26,7 @@ export default function TechCarousel({
   }, [setIndexes])
 
   const viewportCount = useMemo(
-    () => Math.ceil(width / iconSize),
+    () => Math.ceil(width / iconSize) + 1, // The +1 is a buffer
     [width, iconSize],
   )
   const viewportIcons = useMemo(() => {
@@ -39,7 +39,6 @@ export default function TechCarousel({
   }, 25)
 
   useEffect(() => {
-    console.log(offset)
     if (offset >= iconSize + gap) {
       doRotation()
       setOffset(0)
@@ -48,22 +47,28 @@ export default function TechCarousel({
 
   return (
     <div className="w-full select-none" ref={ref}>
-      <div className="overflow-hidden flex flex-row" style={{ width }}>
-        {viewportIcons.map((iconSrc, index) => (
-          <div
-            key={iconSrc}
-            style={{
-              width: iconSize,
-              height: iconSize,
-              marginRight: index < viewportCount - 1 ? gap : 0,
-              transform: `translateX(${-offset}px)`,
-            }}
-            className="flex-none relative"
-          >
-            {/* We're not giving this a proper alt because this component is purely for presentaiton only */}
-            <Image fill src={iconSrc} alt="" draggable="false" />
-          </div>
-        ))}
+      <div className="overflow-hidden" style={{ width }}>
+        <div
+          className="flex flex-row"
+          style={{
+            transform: `translateX(${-offset}px)`,
+          }}
+        >
+          {viewportIcons.map((iconSrc, index) => (
+            <div
+              key={iconSrc}
+              style={{
+                width: iconSize,
+                height: iconSize,
+                marginRight: index < viewportCount - 1 ? gap : 0,
+              }}
+              className="flex-none relative"
+            >
+              {/* We're not giving this a proper alt because this component is purely for presentaiton only */}
+              <Image fill src={iconSrc} alt="" draggable="false" />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )
