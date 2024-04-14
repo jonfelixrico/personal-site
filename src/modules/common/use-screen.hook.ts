@@ -11,6 +11,8 @@ interface BreakpointEntry {
 /*
  * sm-xl breakpoint values are from https://v1.tailwindcss.com/docs/breakpoints
  * The rest are from https://react-bootstrap.netlify.app/docs/layout/breakpoints/#available-breakpoints
+ *
+ * TODO find a way to extract the sm-xl breakpoint programmatically
  */
 const SORTED_BREAKPOINTS: BreakpointEntry[] = [
   {
