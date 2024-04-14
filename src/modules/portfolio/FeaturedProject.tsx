@@ -4,12 +4,12 @@ import { useResizeDetector } from 'react-resize-detector'
 import { ConditionallyRender } from '@/modules/common/ConditionallyRender'
 import Image from 'next/image'
 import { Fragment } from 'react'
-import IconWithTooltip from '@/modules/common/IconWithTooltip'
 import styles from './FeaturedProject.module.scss'
 import bindableCf from 'classnames/bind'
 import Markdown from 'markdown-to-jsx'
 import { Project } from '@/modules/portfolio/data/project.interface'
 import { LinkButton } from '@/modules/common/LinkButton'
+import TechChip from '@/modules/portfolio/TechChip'
 
 const classnames = bindableCf.bind(styles)
 
@@ -89,16 +89,9 @@ export function FeaturedProject({
             </div>
             <div>
               <div className="text-xs mb-1">Relevant technologies:</div>
-              <div className="flex flex-row gap-3">
+              <div className="flex flex-row gap-3 flex-wrap">
                 {tech.map(({ icon, label }) => (
-                  <IconWithTooltip
-                    src={icon}
-                    tooltipLabel={label}
-                    className="relative
-                    h-6 w-6
-                    md:h-8 md:w-8"
-                    key={label}
-                  />
+                  <TechChip src={icon} label={label} key={label} />
                 ))}
               </div>
             </div>
