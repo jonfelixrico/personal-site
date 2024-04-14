@@ -26,15 +26,16 @@ export default function TechCarousel({
     <div className="w-full select-none" ref={ref}>
       <div className="overflow-clip flex flex-row gap-x-7" style={{ width }}>
         {viewportIcons.map((iconSrc) => (
-          <div key={iconSrc}>
+          <div
+            key={iconSrc}
+            style={{
+              width: iconSize,
+              height: iconSize,
+            }}
+            className="flex-none relative"
+          >
             {/* We're not giving this a proper alt because this component is purely for presentaiton only */}
-            <Image
-              width={iconSize}
-              height={iconSize}
-              src={iconSrc}
-              alt=""
-              draggable="false"
-            />
+            <Image fill src={iconSrc} alt="" draggable="false" />
           </div>
         ))}
       </div>
