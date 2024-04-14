@@ -3,7 +3,7 @@ import markdown from './wisdom.md'
 import {
   ICON_CYPRESS,
   ICON_DOCKER,
-  ICON_EVENSOURCEDB,
+  ICON_EVENTSTOREDB,
   ICON_GITHUB,
   ICON_GITHUB_ACTIONS,
   ICON_JEST,
@@ -47,7 +47,7 @@ const project: Project = {
     },
     {
       label: 'EventStoreDB',
-      icon: ICON_EVENSOURCEDB,
+      icon: ICON_EVENTSTOREDB,
     },
     {
       label: 'MongoDB',
