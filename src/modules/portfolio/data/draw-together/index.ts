@@ -25,7 +25,7 @@ const project: Project = {
     },
     {
       icon: ICON_NEW_TAB,
-      label: 'Website',
+      label: 'Live Demo',
       url: 'https://draw-together.jonfelixrico.dev',
     },
   ],

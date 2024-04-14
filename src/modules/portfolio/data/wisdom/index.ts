@@ -7,6 +7,7 @@ import {
   ICON_JEST,
   ICON_MONGODB,
   ICON_NEST_JS,
+  ICON_NEW_TAB,
   ICON_QUASAR_FRAMEWORK,
   ICON_SPRING_BOOT,
   ICON_VUE_JS,
@@ -73,6 +74,11 @@ const project: Project = {
       icon: ICON_GITHUB,
       label: 'Web app back-end',
       url: 'https://github.com/jonfelixrico/wisdom-panel-server-2022',
+    },
+    {
+      icon: ICON_NEW_TAB,
+      label: 'Website',
+      url: 'https://wisdom.csaservers.com',
     },
   ],
 }
