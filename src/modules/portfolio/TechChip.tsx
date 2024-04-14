@@ -16,7 +16,12 @@ export default function TechChip({
           width: '1.75em',
         }}
       >
-        <Image fill src={src} alt={`Icon of ${label}`} />
+        <Image
+          fill
+          src={src}
+          alt={`Icon of ${label}`}
+          className="object-contain"
+        />
       </div>
       <div>{label}</div>
     </div>
