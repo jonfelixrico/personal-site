@@ -1,7 +1,7 @@
 import { ContactInfo } from '@/modules/contacts/contact-info'
 import { LinkButton } from '@/modules/common/LinkButton'
 import { ICON_EMAIL, ICON_GITHUB, ICON_LINKEDIN } from '@/modules/common/icons'
-import TechCarousel from '@/modules/about/TechCarousel'
+import IconCarousel from '@/modules/about/IconCarousel'
 import * as TECH_ICONS from '@/modules/common/tech-icons'
 
 const ITEMS = [
@@ -69,7 +69,7 @@ export default function HomeSectionMain() {
       </div>
 
       <div className="flex-none bg-app-3 py-3">
-        <TechCarousel
+        <IconCarousel
           iconSize={100}
           // We want to apply sorting to make the render sequence consistent/predictable
           icons={Object.values(TECH_ICONS).toSorted((a, b) =>

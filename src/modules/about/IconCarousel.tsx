@@ -9,7 +9,7 @@ import { useImmer } from 'use-immer'
 /**
  * Implements a perpetually-cycling carousel of tech icons.
  */
-export default function TechCarousel({
+export default function IconCarousel({
   icons,
   iconSize = 100,
   gap = 25,
