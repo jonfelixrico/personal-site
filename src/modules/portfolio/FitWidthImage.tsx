@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { useResizeDetector } from 'react-resize-detector'
 import { If, Then } from 'react-if'
 
-export function FitWidthImage(props: {
+export default function FitWidthImage(props: {
   src: string
   alt: string
   className?: string
