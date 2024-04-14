@@ -88,7 +88,7 @@ export function FeaturedProject({
               </Markdown>
             </div>
             <div>
-              <div className="text-xs mb-1">Tech involved:</div>
+              <div className="text-xs mb-1">Relevant technologies:</div>
               <div className="flex flex-row gap-3">
                 {tech.map(({ icon, label }) => (
                   <IconWithTooltip
