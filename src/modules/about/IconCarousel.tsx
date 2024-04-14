@@ -70,7 +70,13 @@ export default function IconCarousel({
               className="flex-none relative"
             >
               {/* We're not giving this a proper alt because this component is purely for presentaiton only */}
-              <Image fill src={iconSrc} alt="" draggable="false" />
+              <Image
+                fill
+                src={iconSrc}
+                alt=""
+                draggable="false"
+                className="object-contain"
+              />
             </div>
           ))}
         </div>
