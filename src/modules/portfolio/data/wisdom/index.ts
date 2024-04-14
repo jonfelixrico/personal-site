@@ -2,10 +2,8 @@ import { Project } from '@/modules/portfolio/data/project.interface'
 import markdown from './wisdom.md'
 import {
   ICON_CYPRESS,
-  ICON_DOCKER,
   ICON_EVENTSTOREDB,
   ICON_GITHUB,
-  ICON_GITHUB_ACTIONS,
   ICON_JEST,
   ICON_MONGODB,
   ICON_NEST_JS,
@@ -52,14 +50,6 @@ const project: Project = {
     {
       label: 'MongoDB',
       icon: ICON_MONGODB,
-    },
-    {
-      label: 'Docker',
-      icon: ICON_DOCKER,
-    },
-    {
-      label: 'GitHub Actions',
-      icon: ICON_GITHUB_ACTIONS,
     },
   ],
 

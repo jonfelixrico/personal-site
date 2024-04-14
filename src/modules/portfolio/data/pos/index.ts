@@ -4,7 +4,6 @@ import {
   ICON_CHAKRA_UI,
   ICON_CYPRESS,
   ICON_GITHUB,
-  ICON_GITHUB_ACTIONS,
   ICON_JUNIT,
   ICON_NEXT_JS,
   ICON_POSTGRESQL,
@@ -41,10 +40,6 @@ const project: Project = {
     {
       label: 'PostgreSQL',
       icon: ICON_POSTGRESQL,
-    },
-    {
-      label: 'GitHub Actions',
-      icon: ICON_GITHUB_ACTIONS,
     },
   ],
 
