@@ -1,5 +1,14 @@
 import { Project } from '@/modules/portfolio/data/project.interface'
 import markdown from './pos.md'
+import {
+  ICON_CHAKRA_UI,
+  ICON_CYPRESS,
+  ICON_GITHUB,
+  ICON_JUNIT,
+  ICON_NEXT_JS,
+  ICON_POSTGRESQL,
+  ICON_SPRING_BOOT,
+} from '@/modules/common/icons'
 
 const project: Project = {
   title: 'Point-of-sale system',
@@ -10,42 +19,38 @@ const project: Project = {
   tech: [
     {
       label: 'Next.js',
-      icon: '/icons/next-js.svg',
+      icon: ICON_NEXT_JS,
     },
     {
       label: 'Chakra UI',
-      icon: '/icons/chakra-ui.svg',
+      icon: ICON_CHAKRA_UI,
     },
     {
       label: 'Cypress',
-      icon: '/icons/cypress.svg',
+      icon: ICON_CYPRESS,
     },
     {
       label: 'Spring Boot',
-      icon: '/icons/spring-boot.svg',
+      icon: ICON_SPRING_BOOT,
     },
     {
       label: 'JUnit',
-      icon: '/icons/junit.svg',
+      icon: ICON_JUNIT,
     },
     {
       label: 'PostgreSQL',
-      icon: '/icons/postgresql.svg',
-    },
-    {
-      label: 'GitHub Actions',
-      icon: '/icons/github-actions.svg',
+      icon: ICON_POSTGRESQL,
     },
   ],
 
   links: [
     {
-      icon: 'icons/github.svg',
+      icon: ICON_GITHUB,
       label: 'Front-end repository',
       url: 'https://github.com/jonfelixrico/gowpet-pos-frontend',
     },
     {
-      icon: 'icons/github.svg',
+      icon: ICON_GITHUB,
       label: 'Back-end repository',
       url: 'https://github.com/jonfelixrico/gowpet-pos-backend',
     },

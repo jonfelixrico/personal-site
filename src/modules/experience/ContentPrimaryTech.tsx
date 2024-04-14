@@ -1,3 +1,4 @@
+import { ICON_API, ICON_CICD, ICON_FRONTEND } from '@/modules/common/icons'
 import classnames from 'classnames'
 import Image from 'next/image'
 import { ReactNode } from 'react'
@@ -41,7 +42,7 @@ export default function ContentPrimaryTech() {
             and React (with Next.js).
           </p>
         }
-        iconSrc="icons/frontend.svg"
+        iconSrc={ICON_FRONTEND}
       />
 
       <ItemLayout
@@ -60,7 +61,7 @@ export default function ContentPrimaryTech() {
             projects.
           </p>
         }
-        iconSrc="icons/api.svg"
+        iconSrc={ICON_API}
       />
 
       <ItemLayout
@@ -79,7 +80,7 @@ export default function ContentPrimaryTech() {
             work with my home servers.
           </p>
         }
-        iconSrc="icons/cicd.svg"
+        iconSrc={ICON_CICD}
       />
     </div>
   )

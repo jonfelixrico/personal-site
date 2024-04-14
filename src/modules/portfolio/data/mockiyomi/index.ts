@@ -1,5 +1,12 @@
 import { Project } from '@/modules/portfolio/data/project.interface'
 import markdown from './mockiyomi.md'
+import {
+  ICON_ANT_DESIGN,
+  ICON_GITHUB,
+  ICON_NEW_TAB,
+  ICON_NEXT_JS,
+  ICON_TAILWIND_CSS,
+} from '@/modules/common/icons'
 
 const project: Project = {
   title: 'Mockiyomi',
@@ -10,27 +17,27 @@ const project: Project = {
   tech: [
     {
       label: 'Next.js',
-      icon: '/icons/next-js.svg',
+      icon: ICON_NEXT_JS,
     },
     {
       label: 'TailwindCSS',
-      icon: '/icons/tailwind-css.svg',
+      icon: ICON_TAILWIND_CSS,
     },
     {
       label: 'Ant Design',
-      icon: '/icons/ant-design.svg',
+      icon: ICON_ANT_DESIGN,
     },
   ],
 
   links: [
     {
-      icon: 'icons/github.svg',
+      icon: ICON_GITHUB,
       label: 'GitHub repository',
       url: 'https://github.com/jonfelixrico/mockiyomi',
     },
     {
-      icon: 'icons/new-tab.svg',
-      label: 'Website',
+      icon: ICON_NEW_TAB,
+      label: 'Live Demo',
       url: 'https://mockiyomi.jonfelixrico.dev',
     },
   ],

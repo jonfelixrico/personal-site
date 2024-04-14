@@ -1,5 +1,16 @@
 import { Project } from '@/modules/portfolio/data/project.interface'
 import markdown from './draw-together.md'
+import {
+  ICON_BOOTSTRAP,
+  ICON_CYPRESS,
+  ICON_EXPRESS_JS,
+  ICON_GITHUB,
+  ICON_JEST,
+  ICON_NEW_TAB,
+  ICON_REACT,
+  ICON_REDUX,
+  ICON_SOCKET_IO,
+} from '@/modules/common/icons'
 
 const project: Project = {
   id: 'draw-together',
@@ -8,30 +19,46 @@ const project: Project = {
   title: 'Draw Together',
   links: [
     {
-      icon: '/icons/github.svg',
+      icon: ICON_GITHUB,
       label: 'GitHub monorepo',
-      url: 'https://github.com/jonfelixrico/draw-together'
+      url: 'https://github.com/jonfelixrico/draw-together',
     },
     {
-      icon: '/icons/new-tab.svg',
-      label: 'Website',
-      url: 'https://draw-together.jonfelixrico.dev'
-    }
+      icon: ICON_NEW_TAB,
+      label: 'Live Demo',
+      url: 'https://draw-together.jonfelixrico.dev',
+    },
   ],
   tech: [
     {
-      icon: '/icons/react.svg',
+      icon: ICON_REACT,
       label: 'React',
     },
     {
-      icon: '/icons/express-js.svg',
-      label: 'Express.js'
+      icon: ICON_REDUX,
+      label: 'Redux',
     },
     {
-      icon: '/icons/socket-io.svg',
-      label: 'Socket.IO'
-    }
-  ] 
+      icon: ICON_EXPRESS_JS,
+      label: 'Express.js',
+    },
+    {
+      icon: ICON_SOCKET_IO,
+      label: 'Socket.IO',
+    },
+    {
+      icon: ICON_BOOTSTRAP,
+      label: 'Bootstrap 5',
+    },
+    {
+      icon: ICON_CYPRESS,
+      label: 'Cypress',
+    },
+    {
+      icon: ICON_JEST,
+      label: 'Jest',
+    },
+  ],
 }
 
 export default project
