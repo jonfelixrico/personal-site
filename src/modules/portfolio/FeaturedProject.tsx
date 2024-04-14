@@ -59,7 +59,7 @@ export function FeaturedProject({
             </div>
             <div>
               <div className="text-xs mb-1">Relevant technologies:</div>
-              <div className="flex flex-row gap-3 flex-wrap">
+              <div className="flex flex-row gap-2 flex-wrap">
                 {tech.map(({ icon, label }) => (
                   <TechChip src={icon} label={label} key={label} />
                 ))}

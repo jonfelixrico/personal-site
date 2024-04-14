@@ -8,7 +8,7 @@ export default function TechChip({
   label: string
 }) {
   return (
-    <div className="flex flex-row gap-x-1 items-center">
+    <div className="flex flex-row gap-x-1 items-center bg-app-2 px-2 py-1 rounded-lg text-sm font-semibold">
       <div
         className="relative"
         style={{
