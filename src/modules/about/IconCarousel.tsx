@@ -28,9 +28,13 @@ export default function IconCarousel({
     })
   }, [setIconPositions])
 
+  const iconCount = useMemo(
+    () => Math.ceil(width / iconSize) + 1, // The +1 is a buffer
+    [width, iconSize],
+  )
   const iconsToRender = useMemo(() => {
-    return iconPositions.map((idx) => icons[idx])
-  }, [icons, iconPositions])
+    return iconPositions.map((idx) => icons[idx]).slice(0, iconCount)
+  }, [iconCount, icons, iconPositions])
 
   // This is for animating the carousel
   const [offset, setOffset] = useState(0)
@@ -61,7 +65,7 @@ export default function IconCarousel({
               style={{
                 width: iconSize,
                 height: iconSize,
-                marginRight: index < icons.length - 1 ? gap : 0,
+                marginRight: index < iconCount - 1 ? gap : 0,
               }}
               className="flex-none relative"
             >
