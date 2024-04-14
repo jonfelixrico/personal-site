@@ -1,44 +1,14 @@
-'use client'
-
-import { useResizeDetector } from 'react-resize-detector'
-import { ConditionallyRender } from '@/modules/common/ConditionallyRender'
 import Image from 'next/image'
 import { Fragment } from 'react'
-import IconWithTooltip from '@/modules/common/IconWithTooltip'
 import styles from './FeaturedProject.module.scss'
 import bindableCf from 'classnames/bind'
 import Markdown from 'markdown-to-jsx'
 import { Project } from '@/modules/portfolio/data/project.interface'
 import { LinkButton } from '@/modules/common/LinkButton'
+import TechChip from '@/modules/portfolio/TechChip'
+import FitWidthImage from '@/modules/portfolio/FitWidthImage'
 
 const classnames = bindableCf.bind(styles)
-
-function FitWidthImage(props: {
-  src: string
-  alt: string
-  className?: string
-}) {
-  const { width, ref } = useResizeDetector({
-    handleHeight: false,
-  })
-  const height = width ? width / (16 / 9) : undefined
-
-  return (
-    <div className={classnames(props.className, 'relative')} ref={ref}>
-      <ConditionallyRender render={!!height}>
-        <Image
-          width={width}
-          height={height}
-          src={props.src}
-          alt={`Preview of ${props.alt}`}
-          quality={100}
-          priority
-          className="object-fill"
-        />
-      </ConditionallyRender>
-    </div>
-  )
-}
 
 export function FeaturedProject({
   description,
@@ -88,17 +58,10 @@ export function FeaturedProject({
               </Markdown>
             </div>
             <div>
-              <div className="text-xs mb-1">Tech involved:</div>
-              <div className="flex flex-row gap-3">
+              <div className="text-xs mb-1">Relevant technologies:</div>
+              <div className="flex flex-row gap-2 flex-wrap">
                 {tech.map(({ icon, label }) => (
-                  <IconWithTooltip
-                    src={icon}
-                    tooltipLabel={label}
-                    className="relative
-                    h-6 w-6
-                    md:h-8 md:w-8"
-                    key={label}
-                  />
+                  <TechChip src={icon} label={label} key={label} />
                 ))}
               </div>
             </div>
