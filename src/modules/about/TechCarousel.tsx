@@ -23,17 +23,15 @@ export default function TechCarousel({
   }, [viewportCount, icons])
 
   return (
-    <div
-      className="w-full overflow-clip flex flex-row gap-x-1"
-      ref={ref}
-      style={{ width }}
-    >
-      {viewportIcons.map((iconSrc) => (
-        <div key={iconSrc}>
-          {/* We're not giving this a proper alt because this component is purely for presentaiton only */}
-          <Image width={iconSize} height={iconSize} src={iconSrc} alt="" />
-        </div>
-      ))}
+    <div className="w-full" ref={ref}>
+      <div className="overflow-clip flex flex-row gap-x-1" style={{ width }}>
+        {viewportIcons.map((iconSrc) => (
+          <div key={iconSrc}>
+            {/* We're not giving this a proper alt because this component is purely for presentaiton only */}
+            <Image width={iconSize} height={iconSize} src={iconSrc} alt="" />
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
