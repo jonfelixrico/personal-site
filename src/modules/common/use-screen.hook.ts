@@ -53,7 +53,7 @@ function generateBoolMap(): Record<Breakpoint, boolean> {
 }
 
 /**
- * Util for detecting what bootstrap breakpoint the screen is currently in.
+ * Util for detecting what breakpoint the screen is currently in.
  * Based the mechanism on https://quasar.dev/options/screen-plugin#screen-api
  */
 export function useScreen() {
