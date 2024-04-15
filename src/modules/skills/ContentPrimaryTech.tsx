@@ -5,8 +5,10 @@ import {
   ICON_BOOTSTRAP,
   ICON_CHAKRA_UI,
   ICON_CICD,
+  ICON_CYPRESS,
   ICON_FRONTEND,
   ICON_JAVASCRIPT,
+  ICON_JEST,
   ICON_NEXT_JS,
   ICON_QUASAR_FRAMEWORK,
   ICON_REACT,
@@ -95,16 +97,8 @@ export default function ContentPrimaryTech() {
         footer={
           <>
             <TechContainer
-              title="Main Technologies"
+              title="Frameworks"
               items={[
-                {
-                  label: 'TypeScript',
-                  src: ICON_TYPESCRIPT,
-                },
-                {
-                  label: 'JavaScript',
-                  src: ICON_JAVASCRIPT,
-                },
                 {
                   label: 'React',
                   src: ICON_REACT,
@@ -155,7 +149,7 @@ export default function ContentPrimaryTech() {
             />
 
             <TechContainer
-              title="Tools"
+              title="Tools and Languages"
               items={[
                 {
                   label: 'Webpack',
@@ -164,6 +158,22 @@ export default function ContentPrimaryTech() {
                 {
                   label: 'Vite',
                   src: ICON_VITE,
+                },
+                {
+                  label: 'TypeScript',
+                  src: ICON_TYPESCRIPT,
+                },
+                {
+                  label: 'JavaScript',
+                  src: ICON_JAVASCRIPT,
+                },
+                {
+                  label: 'Jest',
+                  src: ICON_JEST,
+                },
+                {
+                  label: 'Cypress',
+                  src: ICON_CYPRESS,
                 },
               ]}
             />
