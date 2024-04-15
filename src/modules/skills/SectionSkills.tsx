@@ -1,6 +1,7 @@
 import SkillFrontEnd from '@/modules/skills/SkillFrontEnd'
 import SkillBackEnd from '@/modules/skills/SkillBackEnd'
 import SkillDevOps from '@/modules/skills/SkillDevOps'
+import SkillSysAd from '@/modules/skills/SkillSysAd'
 
 export default function SectionSkills() {
   return (
@@ -19,7 +20,9 @@ export default function SectionSkills() {
 
             <SkillBackEnd className="lg:col-span-4" />
 
-            <SkillDevOps className="lg:col-span-4 lg:col-start-3" />
+            <SkillDevOps className="lg:col-span-4" />
+
+            <SkillSysAd className="lg:col-span-4" />
           </div>
         </div>
       </div>
