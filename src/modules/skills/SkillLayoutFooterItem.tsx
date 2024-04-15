@@ -1,4 +1,4 @@
-import TechChip from '@/modules/portfolio/TechChip'
+import TechChip from '@/modules/common/TechChip'
 
 export default function SkillLayoutFooterItem({
   title,

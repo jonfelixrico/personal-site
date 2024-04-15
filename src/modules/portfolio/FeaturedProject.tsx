@@ -5,7 +5,7 @@ import bindableCf from 'classnames/bind'
 import Markdown from 'markdown-to-jsx'
 import { Project } from '@/modules/portfolio/data/project.interface'
 import { LinkButton } from '@/modules/common/LinkButton'
-import TechChip from '@/modules/portfolio/TechChip'
+import TechChip from '@/modules/common/TechChip'
 import FitWidthImage from '@/modules/portfolio/FitWidthImage'
 
 const classnames = bindableCf.bind(styles)
