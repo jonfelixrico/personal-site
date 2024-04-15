@@ -36,7 +36,7 @@ import {
   ICON_VUE_JS,
   ICON_WEBPACK,
 } from '@/modules/common/icons'
-import SkillFooterItem from '@/modules/skills/SkillFooterItem'
+import SkillLayoutFooterItem from '@/modules/skills/SkillLayoutFooterItem'
 import SkillLayout from '@/modules/skills/SkillLayout'
 
 export default function ContentPrimaryTech() {
@@ -48,7 +48,7 @@ export default function ContentPrimaryTech() {
         iconSrc={ICON_FRONTEND}
         footer={
           <>
-            <SkillFooterItem
+            <SkillLayoutFooterItem
               title="Frameworks"
               items={[
                 {
@@ -74,7 +74,7 @@ export default function ContentPrimaryTech() {
               ]}
             />
 
-            <SkillFooterItem
+            <SkillLayoutFooterItem
               title="UI Libraries"
               items={[
                 {
@@ -100,7 +100,7 @@ export default function ContentPrimaryTech() {
               ]}
             />
 
-            <SkillFooterItem
+            <SkillLayoutFooterItem
               title="Tools and Languages"
               items={[
                 {
@@ -155,7 +155,7 @@ export default function ContentPrimaryTech() {
         iconSrc={ICON_API}
         footer={
           <>
-            <SkillFooterItem
+            <SkillLayoutFooterItem
               title="Server Technologies"
               items={[
                 {
@@ -177,7 +177,7 @@ export default function ContentPrimaryTech() {
               ]}
             />
 
-            <SkillFooterItem
+            <SkillLayoutFooterItem
               title="Databases"
               items={[
                 {
@@ -199,7 +199,7 @@ export default function ContentPrimaryTech() {
               ]}
             />
 
-            <SkillFooterItem
+            <SkillLayoutFooterItem
               title="Tools and Languages"
               items={[
                 {
@@ -245,7 +245,7 @@ export default function ContentPrimaryTech() {
         iconSrc={ICON_CICD}
         footer={
           <>
-            <SkillFooterItem
+            <SkillLayoutFooterItem
               title="Technologies"
               items={[
                 {

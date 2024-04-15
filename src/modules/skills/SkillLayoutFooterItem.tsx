@@ -1,6 +1,6 @@
 import TechChip from '@/modules/portfolio/TechChip'
 
-export default function SkillFooterItem({
+export default function SkillLayoutFooterItem({
   title,
   items,
 }: {

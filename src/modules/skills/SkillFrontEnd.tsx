@@ -18,7 +18,7 @@ import {
   ICON_VUE_JS,
   ICON_WEBPACK,
 } from '@/modules/common/icons'
-import SkillFooterItem from '@/modules/skills/SkillFooterItem'
+import SkillLayoutFooterItem from '@/modules/skills/SkillLayoutFooterItem'
 import SkillLayout from '@/modules/skills/SkillLayout'
 
 export default function SkillFrontEnd({ className }: { className: string }) {
@@ -29,7 +29,7 @@ export default function SkillFrontEnd({ className }: { className: string }) {
       iconSrc={ICON_FRONTEND}
       footer={
         <>
-          <SkillFooterItem
+          <SkillLayoutFooterItem
             title="Frameworks"
             items={[
               {
@@ -55,7 +55,7 @@ export default function SkillFrontEnd({ className }: { className: string }) {
             ]}
           />
 
-          <SkillFooterItem
+          <SkillLayoutFooterItem
             title="UI Libraries"
             items={[
               {
@@ -81,7 +81,7 @@ export default function SkillFrontEnd({ className }: { className: string }) {
             ]}
           />
 
-          <SkillFooterItem
+          <SkillLayoutFooterItem
             title="Tools and Languages"
             items={[
               {
