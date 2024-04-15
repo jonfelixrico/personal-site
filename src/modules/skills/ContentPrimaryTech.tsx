@@ -36,30 +36,8 @@ import {
   ICON_VUE_JS,
   ICON_WEBPACK,
 } from '@/modules/common/icons'
-import TechChip from '@/modules/portfolio/TechChip'
+import SkillFooterItem from '@/modules/skills/SkillFooterItem'
 import SkillLayout from '@/modules/skills/SkillLayout'
-
-function TechContainer({
-  title,
-  items,
-}: {
-  title: string
-  items: {
-    label: string
-    src: string
-  }[]
-}) {
-  return (
-    <div className="rounded bg-app-3 gap-2 p-2 flex flex-col">
-      <div className="text-xs">{title}</div>
-      <div className="flex flex-row flex-wrap gap-2">
-        {items.map(({ label, src }, index) => (
-          <TechChip key={index} label={label} src={src} />
-        ))}
-      </div>
-    </div>
-  )
-}
 
 export default function ContentPrimaryTech() {
   return (
@@ -70,7 +48,7 @@ export default function ContentPrimaryTech() {
         iconSrc={ICON_FRONTEND}
         footer={
           <>
-            <TechContainer
+            <SkillFooterItem
               title="Frameworks"
               items={[
                 {
@@ -96,7 +74,7 @@ export default function ContentPrimaryTech() {
               ]}
             />
 
-            <TechContainer
+            <SkillFooterItem
               title="UI Libraries"
               items={[
                 {
@@ -122,7 +100,7 @@ export default function ContentPrimaryTech() {
               ]}
             />
 
-            <TechContainer
+            <SkillFooterItem
               title="Tools and Languages"
               items={[
                 {
@@ -177,7 +155,7 @@ export default function ContentPrimaryTech() {
         iconSrc={ICON_API}
         footer={
           <>
-            <TechContainer
+            <SkillFooterItem
               title="Server Technologies"
               items={[
                 {
@@ -199,7 +177,7 @@ export default function ContentPrimaryTech() {
               ]}
             />
 
-            <TechContainer
+            <SkillFooterItem
               title="Databases"
               items={[
                 {
@@ -221,7 +199,7 @@ export default function ContentPrimaryTech() {
               ]}
             />
 
-            <TechContainer
+            <SkillFooterItem
               title="Tools and Languages"
               items={[
                 {
@@ -267,7 +245,7 @@ export default function ContentPrimaryTech() {
         iconSrc={ICON_CICD}
         footer={
           <>
-            <TechContainer
+            <SkillFooterItem
               title="Technologies"
               items={[
                 {
