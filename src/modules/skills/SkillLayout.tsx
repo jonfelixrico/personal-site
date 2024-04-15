@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { ReactNode } from 'react'
 import { If, Then } from 'react-if'
 
-export default function ItemLayout(props: {
+export default function SkillLayout(props: {
   header: string
   side?: ReactNode
   className?: string

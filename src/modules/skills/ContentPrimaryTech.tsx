@@ -37,7 +37,7 @@ import {
   ICON_WEBPACK,
 } from '@/modules/common/icons'
 import TechChip from '@/modules/portfolio/TechChip'
-import ItemLayout from '@/modules/skills/ItemLayout'
+import SkillLayout from '@/modules/skills/SkillLayout'
 
 function TechContainer({
   title,
@@ -64,7 +64,7 @@ function TechContainer({
 export default function ContentPrimaryTech() {
   return (
     <div className="grid lg:grid-cols-8 w-full gap-4">
-      <ItemLayout
+      <SkillLayout
         className="lg:col-span-4"
         header="Front-end"
         iconSrc={ICON_FRONTEND}
@@ -169,9 +169,9 @@ export default function ContentPrimaryTech() {
           experience building web apps with Angular (with Angular Material) and
           React (with Next.js).
         </p>
-      </ItemLayout>
+      </SkillLayout>
 
-      <ItemLayout
+      <SkillLayout
         className="lg:col-span-4"
         header="Back-end"
         iconSrc={ICON_API}
@@ -259,9 +259,9 @@ export default function ContentPrimaryTech() {
           and MongoDB, respectively. I&apos;ve also been experimenting with the
           concept of EventSourcing (via EventSourceDB) in my personal projects.
         </p>
-      </ItemLayout>
+      </SkillLayout>
 
-      <ItemLayout
+      <SkillLayout
         className="lg:col-span-4 lg:col-start-3"
         header="DevOps"
         iconSrc={ICON_CICD}
@@ -310,7 +310,7 @@ export default function ContentPrimaryTech() {
           milestone would be figuring out how to make continuous deployment work
           with my home servers.
         </p>
-      </ItemLayout>
+      </SkillLayout>
     </div>
   )
 }
