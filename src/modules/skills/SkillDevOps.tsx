@@ -1,8 +1,9 @@
 import {
   ICON_CICD,
+  ICON_CLOUDFLARE,
+  ICON_DIGITAL_OCEAN,
   ICON_DOCKER,
   ICON_GITHUB_ACTIONS,
-  ICON_LINUX,
   ICON_NGINX,
   ICON_PROXMOX,
   ICON_UBUNTU,
@@ -38,12 +39,22 @@ export default function SkillDevOps({ className }: { className: string }) {
                 src: ICON_UBUNTU,
               },
               {
-                label: 'GNU/Linux',
-                src: ICON_LINUX,
-              },
-              {
                 label: 'NGINX',
                 src: ICON_NGINX,
+              },
+            ]}
+          />
+
+          <SkillLayoutFooterItem
+            title="Cloud Services"
+            items={[
+              {
+                label: 'DigitalOcean',
+                src: ICON_DIGITAL_OCEAN,
+              },
+              {
+                label: 'Cloudflare',
+                src: ICON_CLOUDFLARE,
               },
             ]}
           />
