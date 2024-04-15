@@ -1,6 +1,6 @@
 import ContentPrimaryTech from './ContentPrimaryTech'
 
-export default function HomeSectionSkills() {
+export default function SectionSkills() {
   return (
     <div className="pt-10 min-h-screen">
       <div className="py-10">

@@ -21,7 +21,7 @@ const ITEMS = [
   },
 ]
 
-export default function HomeSectionMain() {
+export default function SectionMain() {
   return (
     <div className="h-screen flex flex-col bg-app-2">
       <div className="flex-auto flex flex-col justify-center">

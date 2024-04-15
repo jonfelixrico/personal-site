@@ -2,10 +2,10 @@ import { Metadata } from 'next'
 import MainLayout from '@/modules/layout/MainLayout'
 import { SectionWrapper } from '@/modules/layout/SectionWrapper'
 import { Section } from '@/modules/layout/section.enum'
-import HomeSectionMain from '@/modules/about/HomeSectionMain'
+import SectionAbout from '@/modules/about/SectionAbout'
 import ContactsOverlay from '@/modules/contacts/ContactsOverlay'
-import HomeSectionSkills from '@/modules/skills/HomeSectionSkills'
-import HomeSectionPortfolio from '@/modules/portfolio/HomeSectionPortfolio'
+import SectionSkills from '@/modules/skills/SectionSkills'
+import SectionPortfolio from '@/modules/portfolio/SectionPortfolio'
 import { ActiveSectionProvider } from '@/modules/layout/ActiveSectionContext'
 
 export const metadata: Metadata = {
@@ -17,16 +17,16 @@ export default function Home() {
     <ActiveSectionProvider>
       <MainLayout>
         <SectionWrapper id={Section.HOME}>
-          <HomeSectionMain />
+          <SectionAbout />
         </SectionWrapper>
 
         <ContactsOverlay>
           <SectionWrapper id={Section.SKILLS}>
-            <HomeSectionSkills />
+            <SectionSkills />
           </SectionWrapper>
 
           <SectionWrapper id={Section.PORTFOLIO}>
-            <HomeSectionPortfolio />
+            <SectionPortfolio />
           </SectionWrapper>
         </ContactsOverlay>
       </MainLayout>
