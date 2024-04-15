@@ -39,15 +39,26 @@ export default function MainLayout({ children }: { children: ReactNode }) {
 
       <main>{children}</main>
 
-      <footer className="p-2 flex flex-col items-center text-sm">
-        <div>v{manifest.version}</div>
-        <a href="https://github.com/jonfelixrico/personal-site" target="_blank">
-          Built by <span className="font-semibold">Jon Felix Rico</span>
-        </a>
-        {/* For compliance with Icons8 */}
-        <a href="https://icons8.com" target="_blank">
-          Icons from <span className="font-semibold">Icons8</span>
-        </a>
+      <footer className="flex flex-row justify-center">
+        <div className="p-2 flex flex-col items-center text-sm lg:w-3/5">
+          <div>v{manifest.version}</div>
+          <a
+            href="https://github.com/jonfelixrico/personal-site"
+            target="_blank"
+          >
+            Built by <span className="font-semibold">Jon Felix Rico</span>
+          </a>
+          {/* For compliance with Icons8 */}
+          <a href="https://icons8.com" target="_blank">
+            Icons from <span className="font-semibold">Icons8</span>
+          </a>
+          <div className="text-center text-xs mt-2">
+            All trademarks, logos and brand names are the property of their
+            respective owners. All company, product and service names used in
+            this website are for identification purposes only. Use of these
+            names,trademarks and brands does not imply endorsement.
+          </div>
+        </div>
       </footer>
     </div>
   )
