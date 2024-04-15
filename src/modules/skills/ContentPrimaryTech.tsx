@@ -7,26 +7,32 @@ import {
   ICON_CHAKRA_UI,
   ICON_CICD,
   ICON_CYPRESS,
+  ICON_DOCKER,
   ICON_EVENTSTOREDB,
   ICON_EXPRESS_JS,
   ICON_FRONTEND,
+  ICON_GITHUB_ACTIONS,
   ICON_JAVA,
   ICON_JAVASCRIPT,
   ICON_JEST,
   ICON_JUNIT,
+  ICON_LINUX,
   ICON_MONGODB,
   ICON_MYSQL,
   ICON_NEST_JS,
   ICON_NEXT_JS,
+  ICON_NGINX,
   ICON_NODE_JS,
   ICON_POCKETBASE,
   ICON_POSTGRESQL,
+  ICON_PROXMOX,
   ICON_QUASAR_FRAMEWORK,
   ICON_REACT,
   ICON_REDUX,
   ICON_SPRING_BOOT,
   ICON_TAILWIND_CSS,
   ICON_TYPESCRIPT,
+  ICON_UBUNTU,
   ICON_VITE,
   ICON_VUE_JS,
   ICON_WEBPACK,
@@ -322,6 +328,39 @@ export default function ContentPrimaryTech() {
           </p>
         }
         iconSrc={ICON_CICD}
+        footer={
+          <>
+            <TechContainer
+              title="Technologies"
+              items={[
+                {
+                  label: 'Docker',
+                  src: ICON_DOCKER,
+                },
+                {
+                  label: 'GitHub Actions',
+                  src: ICON_GITHUB_ACTIONS,
+                },
+                {
+                  label: 'Proxmox',
+                  src: ICON_PROXMOX,
+                },
+                {
+                  label: 'Ubuntu Server',
+                  src: ICON_UBUNTU,
+                },
+                {
+                  label: 'GNU/Linux',
+                  src: ICON_LINUX,
+                },
+                {
+                  label: 'NGINX',
+                  src: ICON_NGINX,
+                },
+              ]}
+            />
+          </>
+        }
       />
     </div>
   )
