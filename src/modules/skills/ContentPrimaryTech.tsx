@@ -64,7 +64,7 @@ function ItemLayout(props: {
         <h4 className="text-4xl text-white">{props.header}</h4>
       </div>
 
-      <div className="flex-auto">{props.body ?? props.children}</div>
+      <div className="flex-auto">{props.children}</div>
 
       <If condition={!!props.footer}>
         <Then>
