@@ -131,10 +131,6 @@ export default function ContentPrimaryTech() {
                   label: 'Quasar',
                   src: ICON_QUASAR_FRAMEWORK,
                 },
-                {
-                  label: 'Redux',
-                  src: ICON_REDUX,
-                },
               ]}
             />
 
@@ -190,6 +186,10 @@ export default function ContentPrimaryTech() {
                 {
                   label: 'Cypress',
                   src: ICON_CYPRESS,
+                },
+                {
+                  label: 'Redux',
+                  src: ICON_REDUX,
                 },
               ]}
             />
