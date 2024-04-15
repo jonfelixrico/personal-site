@@ -1,18 +1,30 @@
 import {
   ICON_ANGULAR,
   ICON_ANGULAR_MATERIAL,
+  ICON_ANT_DESIGN,
   ICON_API,
   ICON_BOOTSTRAP,
   ICON_CHAKRA_UI,
   ICON_CICD,
   ICON_CYPRESS,
+  ICON_EVENTSTOREDB,
+  ICON_EXPRESS_JS,
   ICON_FRONTEND,
+  ICON_JAVA,
   ICON_JAVASCRIPT,
   ICON_JEST,
+  ICON_JUNIT,
+  ICON_MONGODB,
+  ICON_MYSQL,
+  ICON_NEST_JS,
   ICON_NEXT_JS,
+  ICON_NODE_JS,
+  ICON_POCKETBASE,
+  ICON_POSTGRESQL,
   ICON_QUASAR_FRAMEWORK,
   ICON_REACT,
   ICON_REDUX,
+  ICON_SPRING_BOOT,
   ICON_TAILWIND_CSS,
   ICON_TYPESCRIPT,
   ICON_VITE,
@@ -54,11 +66,11 @@ function ItemLayout(props: {
         <h4 className="text-4xl text-white">{props.header}</h4>
       </div>
 
-      <div className="col-auto">{props.body ?? props.children}</div>
+      <div className="flex-auto">{props.body ?? props.children}</div>
 
       <If condition={!!props.footer}>
         <Then>
-          <div className="flex flex-col gap-y-2">{props.footer}</div>
+          <div className="flex-none flex flex-col gap-y-2">{props.footer}</div>
         </Then>
       </If>
     </div>
@@ -145,6 +157,10 @@ export default function ContentPrimaryTech() {
                   label: 'Chakra UI',
                   src: ICON_CHAKRA_UI,
                 },
+                {
+                  label: 'Ant Design',
+                  src: ICON_ANT_DESIGN,
+                },
               ]}
             />
 
@@ -210,6 +226,83 @@ export default function ContentPrimaryTech() {
           </p>
         }
         iconSrc={ICON_API}
+        footer={
+          <>
+            <TechContainer
+              title="Frameworks and Technologies"
+              items={[
+                {
+                  label: 'Spring Boot',
+                  src: ICON_SPRING_BOOT,
+                },
+                {
+                  label: 'NestJS',
+                  src: ICON_NEST_JS,
+                },
+                {
+                  label: 'Node.js',
+                  src: ICON_NODE_JS,
+                },
+                {
+                  label: 'Express.js',
+                  src: ICON_EXPRESS_JS,
+                },
+                {
+                  label: 'Pocketbase',
+                  src: ICON_POCKETBASE,
+                },
+              ]}
+            />
+
+            <TechContainer
+              title="Databases"
+              items={[
+                {
+                  label: 'PostgreSQL',
+                  src: ICON_POSTGRESQL,
+                },
+                {
+                  label: 'MongoDB',
+                  src: ICON_MONGODB,
+                },
+                {
+                  label: 'MySQL',
+                  src: ICON_MYSQL,
+                },
+                {
+                  label: 'EventStoreDB',
+                  src: ICON_EVENTSTOREDB,
+                },
+              ]}
+            />
+
+            <TechContainer
+              title="Tools and Languages"
+              items={[
+                {
+                  label: 'Java',
+                  src: ICON_JAVA,
+                },
+                {
+                  label: 'TypeScript',
+                  src: ICON_TYPESCRIPT,
+                },
+                {
+                  label: 'JavaScript',
+                  src: ICON_JAVASCRIPT,
+                },
+                {
+                  label: 'JUnit',
+                  src: ICON_JUNIT,
+                },
+                {
+                  label: 'Jest',
+                  src: ICON_JEST,
+                },
+              ]}
+            />
+          </>
+        }
       />
 
       <ItemLayout
