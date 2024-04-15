@@ -1,6 +1,6 @@
-import PortfolioList from '@/modules/portfolio/PortfolioList'
+import PortfolioList from './PortfolioList'
 
-export default function HomeSectionPortfolio() {
+export default function SectionPortfolio() {
   return (
     <div className="bg-app-2 pt-10">
       <div className="section-width min-h-screen section-px py-10">
