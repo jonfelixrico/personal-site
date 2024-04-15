@@ -23,7 +23,6 @@ import {
   ICON_NEXT_JS,
   ICON_NGINX,
   ICON_NODE_JS,
-  ICON_POCKETBASE,
   ICON_POSTGRESQL,
   ICON_PROXMOX,
   ICON_QUASAR_FRAMEWORK,
@@ -252,10 +251,6 @@ export default function ContentPrimaryTech() {
                 {
                   label: 'Express.js',
                   src: ICON_EXPRESS_JS,
-                },
-                {
-                  label: 'Pocketbase',
-                  src: ICON_POCKETBASE,
                 },
               ]}
             />
