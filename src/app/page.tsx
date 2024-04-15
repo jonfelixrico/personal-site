@@ -5,7 +5,7 @@ import { Section } from '@/modules/layout/section.enum'
 import HomeSectionMain from '@/modules/section/HomeSectionMain'
 import ContactsOverlay from '@/modules/contacts/ContactsOverlay'
 import HomeSectionSkills from '@/modules/skills/HomeSectionSkills'
-import HomeSectionPortfolio from '@/modules/section/HomeSectionPortfolio'
+import HomeSectionPortfolio from '@/modules/portfolio/HomeSectionPortfolio'
 import { ActiveSectionProvider } from '@/modules/layout/ActiveSectionContext'
 
 export const metadata: Metadata = {

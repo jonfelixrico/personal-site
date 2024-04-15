@@ -1,4 +1,4 @@
-import PortfolioList from '@/modules/portfolio/PortfolioList'
+import PortfolioList from './PortfolioList'
 
 export default function HomeSectionPortfolio() {
   return (
