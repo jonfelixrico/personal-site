@@ -234,7 +234,7 @@ export default function ContentPrimaryTech() {
         footer={
           <>
             <TechContainer
-              title="Frameworks and Technologies"
+              title="Server Technologies"
               items={[
                 {
                   label: 'Spring Boot',
