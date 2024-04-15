@@ -3,8 +3,10 @@ import {
   ICON_CLOUDFLARE,
   ICON_DIGITAL_OCEAN,
   ICON_DOCKER,
+  ICON_DOCKER_COMPOSE,
   ICON_GITHUB_ACTIONS,
   ICON_NGINX,
+  ICON_PORTAINER,
   ICON_PROXMOX,
   ICON_UBUNTU,
 } from '@/modules/common/icons'
@@ -25,6 +27,14 @@ export default function SkillDevOps({ className }: { className: string }) {
               {
                 label: 'Docker',
                 src: ICON_DOCKER,
+              },
+              {
+                label: 'Docker Compose',
+                src: ICON_DOCKER_COMPOSE,
+              },
+              {
+                label: 'Portainer',
+                src: ICON_PORTAINER,
               },
               {
                 label: 'GitHub Actions',
