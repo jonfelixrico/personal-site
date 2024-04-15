@@ -1,16 +1,9 @@
 import {
-  ICON_ANGULAR,
-  ICON_ANGULAR_MATERIAL,
-  ICON_ANT_DESIGN,
   ICON_API,
-  ICON_BOOTSTRAP,
-  ICON_CHAKRA_UI,
   ICON_CICD,
-  ICON_CYPRESS,
   ICON_DOCKER,
   ICON_EVENTSTOREDB,
   ICON_EXPRESS_JS,
-  ICON_FRONTEND,
   ICON_GITHUB_ACTIONS,
   ICON_JAVA,
   ICON_JAVASCRIPT,
@@ -20,134 +13,22 @@ import {
   ICON_MONGODB,
   ICON_MYSQL,
   ICON_NEST_JS,
-  ICON_NEXT_JS,
   ICON_NGINX,
   ICON_NODE_JS,
   ICON_POSTGRESQL,
   ICON_PROXMOX,
-  ICON_QUASAR_FRAMEWORK,
-  ICON_REACT,
-  ICON_REDUX,
   ICON_SPRING_BOOT,
-  ICON_TAILWIND_CSS,
   ICON_TYPESCRIPT,
   ICON_UBUNTU,
-  ICON_VITE,
-  ICON_VUE_JS,
-  ICON_WEBPACK,
 } from '@/modules/common/icons'
 import SkillLayoutFooterItem from '@/modules/skills/SkillLayoutFooterItem'
 import SkillLayout from '@/modules/skills/SkillLayout'
+import SkillFrontEnd from '@/modules/skills/SkillFrontEnd'
 
 export default function ContentPrimaryTech() {
   return (
     <div className="grid lg:grid-cols-8 w-full gap-4">
-      <SkillLayout
-        className="lg:col-span-4"
-        header="Front-end"
-        iconSrc={ICON_FRONTEND}
-        footer={
-          <>
-            <SkillLayoutFooterItem
-              title="Frameworks"
-              items={[
-                {
-                  label: 'React',
-                  src: ICON_REACT,
-                },
-                {
-                  label: 'Vue.js',
-                  src: ICON_VUE_JS,
-                },
-                {
-                  label: 'Angular',
-                  src: ICON_ANGULAR,
-                },
-                {
-                  label: 'Next.js',
-                  src: ICON_NEXT_JS,
-                },
-                {
-                  label: 'Quasar',
-                  src: ICON_QUASAR_FRAMEWORK,
-                },
-              ]}
-            />
-
-            <SkillLayoutFooterItem
-              title="UI Libraries"
-              items={[
-                {
-                  label: 'TailwindCSS',
-                  src: ICON_TAILWIND_CSS,
-                },
-                {
-                  label: 'Angular Material',
-                  src: ICON_ANGULAR_MATERIAL,
-                },
-                {
-                  label: 'Bootstrap',
-                  src: ICON_BOOTSTRAP,
-                },
-                {
-                  label: 'Chakra UI',
-                  src: ICON_CHAKRA_UI,
-                },
-                {
-                  label: 'Ant Design',
-                  src: ICON_ANT_DESIGN,
-                },
-              ]}
-            />
-
-            <SkillLayoutFooterItem
-              title="Tools and Languages"
-              items={[
-                {
-                  label: 'Webpack',
-                  src: ICON_WEBPACK,
-                },
-                {
-                  label: 'Vite',
-                  src: ICON_VITE,
-                },
-                {
-                  label: 'TypeScript',
-                  src: ICON_TYPESCRIPT,
-                },
-                {
-                  label: 'JavaScript',
-                  src: ICON_JAVASCRIPT,
-                },
-                {
-                  label: 'Jest',
-                  src: ICON_JEST,
-                },
-                {
-                  label: 'Cypress',
-                  src: ICON_CYPRESS,
-                },
-                {
-                  label: 'Redux',
-                  src: ICON_REDUX,
-                },
-              ]}
-            />
-          </>
-        }
-      >
-        <p>
-          I have been working with Vue.js (under the Quasar Framework) for more
-          than three years. I have built complex and interactive user interfaces
-          with this front-end stack. It is my go-to whenever I want to work on a
-          personal project.
-          <br />
-          <br />
-          In addition to my &quot;bread and butter&quot; above, I also have
-          experience building web apps with Angular (with Angular Material) and
-          React (with Next.js).
-        </p>
-      </SkillLayout>
+      <SkillFrontEnd className="lg:col-span-4" />
 
       <SkillLayout
         className="lg:col-span-4"
