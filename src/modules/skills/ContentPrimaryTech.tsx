@@ -1,13 +1,21 @@
 import {
   ICON_ANGULAR,
+  ICON_ANGULAR_MATERIAL,
   ICON_API,
+  ICON_BOOTSTRAP,
+  ICON_CHAKRA_UI,
   ICON_CICD,
   ICON_FRONTEND,
   ICON_JAVASCRIPT,
   ICON_NEXT_JS,
+  ICON_QUASAR_FRAMEWORK,
   ICON_REACT,
+  ICON_REDUX,
+  ICON_TAILWIND_CSS,
   ICON_TYPESCRIPT,
+  ICON_VITE,
   ICON_VUE_JS,
+  ICON_WEBPACK,
 } from '@/modules/common/icons'
 import TechChip from '@/modules/portfolio/TechChip'
 import classnames from 'classnames'
@@ -85,35 +93,81 @@ export default function ContentPrimaryTech() {
         header="Front-end"
         iconSrc={ICON_FRONTEND}
         footer={
-          <TechContainer
-            title="Main Technologies"
-            items={[
-              {
-                label: 'TypeScript',
-                src: ICON_TYPESCRIPT,
-              },
-              {
-                label: 'JavaScript',
-                src: ICON_JAVASCRIPT,
-              },
-              {
-                label: 'React',
-                src: ICON_REACT,
-              },
-              {
-                label: 'Vue.js',
-                src: ICON_VUE_JS,
-              },
-              {
-                label: 'Angular',
-                src: ICON_ANGULAR,
-              },
-              {
-                label: 'Next.js',
-                src: ICON_NEXT_JS,
-              },
-            ]}
-          />
+          <>
+            <TechContainer
+              title="Main Technologies"
+              items={[
+                {
+                  label: 'TypeScript',
+                  src: ICON_TYPESCRIPT,
+                },
+                {
+                  label: 'JavaScript',
+                  src: ICON_JAVASCRIPT,
+                },
+                {
+                  label: 'React',
+                  src: ICON_REACT,
+                },
+                {
+                  label: 'Vue.js',
+                  src: ICON_VUE_JS,
+                },
+                {
+                  label: 'Angular',
+                  src: ICON_ANGULAR,
+                },
+                {
+                  label: 'Next.js',
+                  src: ICON_NEXT_JS,
+                },
+                {
+                  label: 'Quasar',
+                  src: ICON_QUASAR_FRAMEWORK,
+                },
+                {
+                  label: 'Redux',
+                  src: ICON_REDUX,
+                },
+              ]}
+            />
+
+            <TechContainer
+              title="UI Libraries"
+              items={[
+                {
+                  label: 'TailwindCSS',
+                  src: ICON_TAILWIND_CSS,
+                },
+                {
+                  label: 'Angular Material',
+                  src: ICON_ANGULAR_MATERIAL,
+                },
+                {
+                  label: 'Bootstrap',
+                  src: ICON_BOOTSTRAP,
+                },
+                {
+                  label: 'Chakra UI',
+                  src: ICON_CHAKRA_UI,
+                },
+              ]}
+            />
+
+            <TechContainer
+              title="Tools"
+              items={[
+                {
+                  label: 'Webpack',
+                  src: ICON_WEBPACK,
+                },
+                {
+                  label: 'Vite',
+                  src: ICON_VITE,
+                },
+              ]}
+            />
+          </>
         }
       >
         <p>
