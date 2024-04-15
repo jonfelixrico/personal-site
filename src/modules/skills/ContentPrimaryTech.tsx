@@ -43,19 +43,12 @@ import { ReactNode } from 'react'
 import { If, Then } from 'react-if'
 
 function ItemLayout(props: {
-  /**
-   * @deprecated
-   */
-  body?: ReactNode
   header: string
   side?: ReactNode
   className?: string
   iconSrc: string
   footer?: ReactNode
-  /**
-   * TODO make required
-   */
-  children?: ReactNode
+  children: ReactNode
 }) {
   return (
     <div
@@ -217,19 +210,6 @@ export default function ContentPrimaryTech() {
       <ItemLayout
         className="lg:col-span-4"
         header="Back-end"
-        body={
-          <p>
-            I have experience in back-end development, using either Java or
-            JavaScript (with Nest.js). Before, I used to work with Java
-            exclusively but now I&apos;m using JavaScript more.
-            <br />
-            <br />
-            I&apos;ve also worked with both SQL and NoSQL databases such as
-            MySQL and MongoDB, respectively. I&apos;ve also been experimenting
-            with the concept of EventSourcing (via EventSourceDB) in my personal
-            projects.
-          </p>
-        }
         iconSrc={ICON_API}
         footer={
           <>
@@ -304,24 +284,22 @@ export default function ContentPrimaryTech() {
             />
           </>
         }
-      />
+      >
+        <p>
+          I have experience in back-end development, using either Java or
+          JavaScript (with Nest.js). Before, I used to work with Java
+          exclusively but now I&apos;m using JavaScript more.
+          <br />
+          <br />
+          I&apos;ve also worked with both SQL and NoSQL databases such as MySQL
+          and MongoDB, respectively. I&apos;ve also been experimenting with the
+          concept of EventSourcing (via EventSourceDB) in my personal projects.
+        </p>
+      </ItemLayout>
 
       <ItemLayout
         className="lg:col-span-4 lg:col-start-3"
         header="DevOps"
-        body={
-          <p>
-            Just recently, I&apos;ve started to expore DevOps by incorporating
-            CI/CD into my personal projects via Docker and GitHub actions. I
-            have also taken steps to create my own deployment set-up where I
-            self-host my projects with my home servers.
-            <br />
-            <br />
-            I&apos;m very excited about furthering my DevOps journey. My next
-            milestone would be figuring out how to make continuous deployment
-            work with my home servers.
-          </p>
-        }
         iconSrc={ICON_CICD}
         footer={
           <>
@@ -356,7 +334,19 @@ export default function ContentPrimaryTech() {
             />
           </>
         }
-      />
+      >
+        <p>
+          Just recently, I&apos;ve started to expore DevOps by incorporating
+          CI/CD into my personal projects via Docker and GitHub actions. I have
+          also taken steps to create my own deployment set-up where I self-host
+          my projects with my home servers.
+          <br />
+          <br />
+          I&apos;m very excited about furthering my DevOps journey. My next
+          milestone would be figuring out how to make continuous deployment work
+          with my home servers.
+        </p>
+      </ItemLayout>
     </div>
   )
 }
