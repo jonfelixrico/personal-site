@@ -4,7 +4,7 @@ import { SectionWrapper } from '@/modules/layout/SectionWrapper'
 import { Section } from '@/modules/layout/section.enum'
 import HomeSectionMain from '@/modules/section/HomeSectionMain'
 import ContactsOverlay from '@/modules/contacts/ContactsOverlay'
-import HomeSectionSkills from '@/modules/section/HomeSectionSkills'
+import HomeSectionSkills from '@/modules/skills/HomeSectionSkills'
 import HomeSectionPortfolio from '@/modules/section/HomeSectionPortfolio'
 import { ActiveSectionProvider } from '@/modules/layout/ActiveSectionContext'
 
