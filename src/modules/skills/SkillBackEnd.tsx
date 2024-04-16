@@ -12,6 +12,8 @@ import {
   ICON_NODE_JS,
   ICON_POSTGRESQL,
   ICON_SPRING_BOOT,
+  ICON_SPRING_DATA_JPA,
+  ICON_TYPEORM,
   ICON_TYPESCRIPT,
 } from '@/modules/common/icons'
 import SkillLayout from '@/modules/skills/SkillLayout'
@@ -51,7 +53,7 @@ export default function SkillBackEnd({ className }: { className: string }) {
           />
 
           <SkillLayoutFooterItem
-            title="Databases"
+            title="Databases and ORMs"
             items={[
               {
                 label: 'PostgreSQL',
@@ -68,6 +70,14 @@ export default function SkillBackEnd({ className }: { className: string }) {
               {
                 label: 'EventStoreDB',
                 src: ICON_EVENTSTOREDB,
+              },
+              {
+                label: 'TypeORM',
+                src: ICON_TYPEORM,
+              },
+              {
+                label: 'Spring Data JPA',
+                src: ICON_SPRING_DATA_JPA,
               },
             ]}
           />
