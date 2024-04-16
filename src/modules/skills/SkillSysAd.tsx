@@ -9,6 +9,9 @@ import {
 } from '@/modules/common/icons'
 import SkillLayout from '@/modules/skills/SkillLayout'
 import SkillLayoutFooterItem from '@/modules/skills/SkillLayoutFooterItem'
+import content from './SkillSysAd.md'
+import Markdown from 'markdown-to-jsx'
+import { Fragment } from 'react'
 
 export default function SkillSysAd({ className }: { className: string }) {
   return (
@@ -55,7 +58,15 @@ export default function SkillSysAd({ className }: { className: string }) {
         </>
       }
     >
-      Test
+      <div className="markdown">
+        <Markdown
+          options={{
+            wrapper: Fragment,
+          }}
+        >
+          {content}
+        </Markdown>
+      </div>
     </SkillLayout>
   )
 }
