@@ -1,4 +1,3 @@
-Learning DevOps was one of the best learning decisions that I've made. It makes my one-man personal projects more convenient to work with
-since the grunt work of testing and building is no longer being done by me manually. I am looking forward to learn more things that can make
-my life as a dev easier.
-
+As someone on the path to becoming a DevOps engineer, embracing DevOps practices stands out as one of the most impactful decisions I've made in my development journey. It has streamlined my workflow, freeing up valuable time once spent on manual tasks like testing and building Docker images. Integrating automated testing into the pipeline has fortified my projects, reducing the likelihood of bugs.  
+<br>
+Looking ahead, I'm excited to dive deeper into DevOps practices, not only to enhance my own development experience but also to empower my collaborators on future projects. I want to challenge myself by mastering DevOps technologies such as Jenkins, and I aim to broaden my expertise by learning AWS. Being proficient in AWS will enable me to extend DevOps practices to the cloud, beyond just my home servers. After all, cloud technology is becoming increasingly vital in today's software landscape.
