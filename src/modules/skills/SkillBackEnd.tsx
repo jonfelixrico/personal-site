@@ -12,10 +12,15 @@ import {
   ICON_NODE_JS,
   ICON_POSTGRESQL,
   ICON_SPRING_BOOT,
+  ICON_SPRING_DATA_JPA,
+  ICON_TYPEORM,
   ICON_TYPESCRIPT,
 } from '@/modules/common/icons'
 import SkillLayout from '@/modules/skills/SkillLayout'
 import SkillLayoutFooterItem from '@/modules/skills/SkillLayoutFooterItem'
+import Markdown from 'markdown-to-jsx'
+import { Fragment } from 'react'
+import content from './SkillBackEnd.md'
 
 export default function SkillBackEnd({ className }: { className: string }) {
   return (
@@ -48,7 +53,7 @@ export default function SkillBackEnd({ className }: { className: string }) {
           />
 
           <SkillLayoutFooterItem
-            title="Databases"
+            title="Databases and ORMs"
             items={[
               {
                 label: 'PostgreSQL',
@@ -65,6 +70,14 @@ export default function SkillBackEnd({ className }: { className: string }) {
               {
                 label: 'EventStoreDB',
                 src: ICON_EVENTSTOREDB,
+              },
+              {
+                label: 'TypeORM',
+                src: ICON_TYPEORM,
+              },
+              {
+                label: 'Spring Data JPA',
+                src: ICON_SPRING_DATA_JPA,
               },
             ]}
           />
@@ -97,16 +110,15 @@ export default function SkillBackEnd({ className }: { className: string }) {
         </>
       }
     >
-      <p>
-        I have experience in back-end development, using either Java or
-        JavaScript (with Nest.js). Before, I used to work with Java exclusively
-        but now I&apos;m using JavaScript more.
-        <br />
-        <br />
-        I&apos;ve also worked with both SQL and NoSQL databases such as MySQL
-        and MongoDB, respectively. I&apos;ve also been experimenting with the
-        concept of EventSourcing (via EventSourceDB) in my personal projects.
-      </p>
+      <div className="markdown">
+        <Markdown
+          options={{
+            wrapper: Fragment,
+          }}
+        >
+          {content}
+        </Markdown>
+      </div>
     </SkillLayout>
   )
 }

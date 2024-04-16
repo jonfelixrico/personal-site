@@ -20,6 +20,9 @@ import {
 } from '@/modules/common/icons'
 import SkillLayoutFooterItem from '@/modules/skills/SkillLayoutFooterItem'
 import SkillLayout from '@/modules/skills/SkillLayout'
+import content from './SkillFrontEnd.md'
+import Markdown from 'markdown-to-jsx'
+import { Fragment } from 'react'
 
 export default function SkillFrontEnd({ className }: { className: string }) {
   return (
@@ -117,17 +120,15 @@ export default function SkillFrontEnd({ className }: { className: string }) {
         </>
       }
     >
-      <p>
-        I have been working with Vue.js (under the Quasar Framework) for more
-        than three years. I have built complex and interactive user interfaces
-        with this front-end stack. It is my go-to whenever I want to work on a
-        personal project.
-        <br />
-        <br />
-        In addition to my &quot;bread and butter&quot; above, I also have
-        experience building web apps with Angular (with Angular Material) and
-        React (with Next.js).
-      </p>
+      <div className="markdown">
+        <Markdown
+          options={{
+            wrapper: Fragment,
+          }}
+        >
+          {content}
+        </Markdown>
+      </div>
     </SkillLayout>
   )
 }
