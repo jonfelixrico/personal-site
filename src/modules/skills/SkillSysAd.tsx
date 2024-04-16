@@ -2,6 +2,7 @@ import {
   ICON_CLOUDFLARE,
   ICON_DIGITAL_OCEAN,
   ICON_NGINX,
+  ICON_OPNSENSE,
   ICON_PROXMOX,
   ICON_SYSAD,
   ICON_UBUNTU,
@@ -31,6 +32,10 @@ export default function SkillSysAd({ className }: { className: string }) {
               {
                 label: 'NGINX',
                 src: ICON_NGINX,
+              },
+              {
+                label: 'OPNsense',
+                src: ICON_OPNSENSE,
               },
             ]}
           />
