@@ -64,3 +64,14 @@
   -ms-overflow-style: none; // IE and Edge
   scrollbar-width: none; // Firefox
 }
+
+.markdown {
+  ul {
+    @apply list-disc list-outside ml-10;
+  }
+
+  a {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+}

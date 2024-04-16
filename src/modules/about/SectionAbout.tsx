@@ -21,12 +21,12 @@ const ITEMS = [
   },
 ]
 
-export default function HomeSectionMain() {
+export default function SectionMain() {
   return (
     <div className="h-screen flex flex-col bg-app-2">
       <div className="flex-auto flex flex-col justify-center">
         <div className="section-width section-px gap-10 flex flex-col">
-          <div className="font-semibold">
+          <h1 className="font-semibold">
             <div
               className="
             text-white
@@ -41,7 +41,7 @@ export default function HomeSectionMain() {
             >
               &lt;web-developer/&gt;
             </div>
-          </div>
+          </h1>
 
           <div className="lg:w-5/6 text-xl">
             I&apos;m a web developer specializing in front-end technologies
