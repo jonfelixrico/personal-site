@@ -7,6 +7,9 @@ import {
 } from '@/modules/common/icons'
 import SkillLayout from '@/modules/skills/SkillLayout'
 import SkillLayoutFooterItem from '@/modules/skills/SkillLayoutFooterItem'
+import content from './SkillDevOps.md'
+import Markdown from 'markdown-to-jsx'
+import { Fragment } from 'react'
 
 export default function SkillDevOps({ className }: { className: string }) {
   return (
@@ -40,17 +43,7 @@ export default function SkillDevOps({ className }: { className: string }) {
         </>
       }
     >
-      <p>
-        Just recently, I&apos;ve started to expore DevOps by incorporating CI/CD
-        into my personal projects via Docker and GitHub actions. I have also
-        taken steps to create my own deployment set-up where I self-host my
-        projects with my home servers.
-        <br />
-        <br />
-        I&apos;m very excited about furthering my DevOps journey. My next
-        milestone would be figuring out how to make continuous deployment work
-        with my home servers.
-      </p>
+      <Markdown>{content}</Markdown>
     </SkillLayout>
   )
 }
