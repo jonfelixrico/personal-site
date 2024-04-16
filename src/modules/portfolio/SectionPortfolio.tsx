@@ -8,7 +8,7 @@ export default function SectionPortfolio() {
       <div className="section-width min-h-screen section-px py-10">
         <div className="row-start-2 row-span-4">
           <div className="mb-5">
-            <h5 className="text-5xl font-semibold text-primary">
+            <h2 className="text-5xl font-semibold text-primary">
               <Link
                 href={{
                   hash: Section.PORTFOLIO,
@@ -16,7 +16,7 @@ export default function SectionPortfolio() {
               >
                 Portfolio
               </Link>
-            </h5>
+            </h2>
             <div className="text-secondary text-2xl">
               Things that I&apos;ve been up to recently
             </div>
