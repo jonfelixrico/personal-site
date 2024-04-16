@@ -2,6 +2,8 @@ import classNames from 'classnames'
 import Image from 'next/image'
 import { ReactNode } from 'react'
 import { If, Then } from 'react-if'
+import * as changeCase from 'change-case'
+import Link from 'next/link'
 
 export default function SkillLayout(props: {
   header: string
@@ -11,8 +13,11 @@ export default function SkillLayout(props: {
   footer?: ReactNode
   children: ReactNode
 }) {
+  const id = changeCase.kebabCase(`skill ${props.header}`)
+
   return (
     <div
+      id={id}
       className={classNames(
         'p-5 rounded-lg bg-app-2 flex flex-col gap-3',
         props.className,
@@ -22,7 +27,15 @@ export default function SkillLayout(props: {
         <div className="relative h-12 w-12">
           <Image alt={props.header} src={props.iconSrc} fill />
         </div>
-        <h4 className="text-4xl text-white">{props.header}</h4>
+        <h4 className="text-4xl text-white">
+          <Link
+            href={{
+              hash: id,
+            }}
+          >
+            {props.header}
+          </Link>
+        </h4>
       </div>
 
       <div className="flex-auto">{props.children}</div>

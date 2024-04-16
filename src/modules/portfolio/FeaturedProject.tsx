@@ -7,6 +7,7 @@ import { Project } from '@/modules/portfolio/data/project.interface'
 import { LinkButton } from '@/modules/common/LinkButton'
 import TechChip from '@/modules/common/TechChip'
 import FitWidthImage from '@/modules/portfolio/FitWidthImage'
+import Link from 'next/link'
 
 const classnames = bindableCf.bind(styles)
 
@@ -29,7 +30,13 @@ export function FeaturedProject({
         z-10"
       >
         <h5 className="text-4xl text-accent font-medium" id={id}>
-          {title}
+          <Link
+            href={{
+              hash: id,
+            }}
+          >
+            {title}
+          </Link>
         </h5>
         <div className="rounded-lg overflow-hidden bg-app-1 shadow-md p-3 relative">
           <Image

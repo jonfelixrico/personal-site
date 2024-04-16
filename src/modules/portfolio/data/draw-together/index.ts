@@ -13,7 +13,7 @@ import {
 } from '@/modules/common/icons'
 
 const project: Project = {
-  id: 'draw-together',
+  id: 'project-draw-together',
   description: markdown,
   image: '/portfolio/draw-together/preview.png',
   title: 'Draw Together',

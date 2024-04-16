@@ -2,6 +2,8 @@ import SkillFrontEnd from '@/modules/skills/SkillFrontEnd'
 import SkillBackEnd from '@/modules/skills/SkillBackEnd'
 import SkillDevOps from '@/modules/skills/SkillDevOps'
 import SkillSysAd from '@/modules/skills/SkillSysAd'
+import Link from 'next/link'
+import { Section } from '@/modules/layout/section.enum'
 
 export default function SectionSkills() {
   return (
@@ -9,7 +11,15 @@ export default function SectionSkills() {
       <div className="py-10">
         <div className="section-width section-px">
           <div className="mb-5">
-            <h2 className="text-5xl font-semibold text-primary">Skills</h2>
+            <h2 className="text-5xl font-semibold text-primary">
+              <Link
+                href={{
+                  hash: Section.SKILLS,
+                }}
+              >
+                Skills
+              </Link>
+            </h2>
             <div className="text-secondary text-2xl">
               What I&apos;ve cultivated so far
             </div>
