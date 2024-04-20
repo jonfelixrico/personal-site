@@ -16,7 +16,10 @@ export default function FitWidthImage(props: {
   const height = width ? width / (16 / 9) : undefined
 
   return (
-    <div className={classNames(props.className, 'relative')} ref={ref}>
+    <div
+      className={classNames(props.className, 'relative overflow-clip')}
+      ref={ref}
+    >
       <If condition={!!height}>
         <Then>
           <Image
@@ -26,7 +29,8 @@ export default function FitWidthImage(props: {
             alt={`Preview of ${props.alt}`}
             quality={100}
             priority
-            className="object-fill"
+            className="transition-all
+            scale-100 hover:scale-105"
           />
         </Then>
       </If>
