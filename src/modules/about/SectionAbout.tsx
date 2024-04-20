@@ -1,7 +1,6 @@
 import { ContactInfo } from '@/modules/contacts/contact-info'
 import { LinkButton } from '@/modules/common/LinkButton'
 import { ICON_EMAIL, ICON_GITHUB, ICON_LINKEDIN } from '@/modules/common/icons'
-import { TechIconCarousel } from '@/modules/about/TechIconCarousel'
 
 const ITEMS = [
   {
@@ -65,10 +64,6 @@ export default function SectionMain() {
             ))}
           </div>
         </div>
-      </div>
-
-      <div className="flex-none bg-app-3">
-        <TechIconCarousel />
       </div>
     </div>
   )
