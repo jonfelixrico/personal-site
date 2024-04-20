@@ -5,6 +5,10 @@ import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useInterval, useMeasure } from 'react-use'
 import range from 'lodash/range'
 import { useImmer } from 'use-immer'
+import style from './IconCarousel.module.scss'
+import cnBind from 'classnames/bind'
+
+const classNames = cnBind.bind(style)
 
 /**
  * Implements a perpetually-cycling carousel of icons.
@@ -51,8 +55,8 @@ export default function IconCarousel({
   }, [offset, moveFirstIconToLast, setOffset, iconSize, gap])
 
   return (
-    <div className="w-full select-none" ref={ref}>
-      <div className="overflow-hidden" style={{ width }}>
+    <div className="w-full select-none isolate" ref={ref}>
+      <div style={{ width }}>
         <div
           className="flex flex-row"
           style={{
@@ -67,7 +71,7 @@ export default function IconCarousel({
                 height: iconSize,
                 marginRight: index < iconCount - 1 ? gap : 0,
               }}
-              className="flex-none relative"
+              className={classNames('flex-none relative', style['tech-icon'])}
             >
               {/* We're not giving this a proper alt because this component is purely for presentaiton only */}
               <Image
