@@ -1,10 +1,12 @@
 .tech-icon {
   transition-duration: 0.25s;
-  transition-property: transform;
+  transition-property: transform filter;
 
-  transform: scale(1);
+  transform: scale(1) translateY(0);
+  @apply drop-shadow-none;
 
   &:hover {
-    transform: scale(1.5);
+    transform: scale(1.25) translateY(-10px);
+    @apply drop-shadow-xl z-10;
   }
 }

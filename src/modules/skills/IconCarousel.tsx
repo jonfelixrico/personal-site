@@ -55,7 +55,7 @@ export default function IconCarousel({
   }, [offset, moveFirstIconToLast, setOffset, iconSize, gap])
 
   return (
-    <div className="w-full select-none" ref={ref}>
+    <div className="w-full select-none isolate" ref={ref}>
       <div style={{ width }}>
         <div
           className="flex flex-row"
