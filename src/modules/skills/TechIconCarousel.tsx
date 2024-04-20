@@ -1,6 +1,6 @@
 'use client'
 
-import IconCarousel from '@/modules/about/IconCarousel'
+import IconCarousel from './IconCarousel'
 import * as TECH_ICONS from '@/modules/common/tech-icons'
 import { useScreen } from '@/modules/common/use-screen.hook'
 import { useMemo } from 'react'
