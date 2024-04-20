@@ -1,9 +1,6 @@
 .tech-icon {
-  transition-duration: 0.25s;
-  transition-property: transform filter;
-
   transform: scale(1) translateY(0);
-  @apply drop-shadow-none;
+  @apply drop-shadow-none duration-300 transition-all ease-out;
 
   &:hover {
     transform: scale(1.25) translateY(-10%);
