@@ -50,13 +50,13 @@ function ContactGroup() {
 export default function ContactsOverlay({ children }: { children: ReactNode }) {
   return (
     <div className="relative">
-      <div className="absolute h-full w-full pointer-events-none">
+      <div className="absolute h-full w-full pointer-events-none z-10">
         <div className="sticky w-full h-screen py-5 px-8 top-0 flex flex-col justify-end">
           <ContactGroup />
         </div>
       </div>
 
-      {children}
+      <div className="z-0">{children}</div>
     </div>
   )
 }
