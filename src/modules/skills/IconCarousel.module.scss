@@ -6,7 +6,7 @@
   @apply drop-shadow-none;
 
   &:hover {
-    transform: scale(1.25) translateY(-10px);
+    transform: scale(1.25) translateY(-10%);
     @apply drop-shadow-xl z-10;
   }
 }
