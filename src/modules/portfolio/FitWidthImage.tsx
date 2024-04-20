@@ -29,7 +29,7 @@ export default function FitWidthImage(props: {
             alt={`Preview of ${props.alt}`}
             quality={100}
             priority
-            className="transition-all
+            className="transition-all ease-in-out duration-700
             scale-100 hover:scale-105"
           />
         </Then>
