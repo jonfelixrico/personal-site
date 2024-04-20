@@ -1,0 +1,10 @@
+.tech-icon {
+  transition-duration: 0.25s;
+  transition-property: transform;
+
+  transform: scale(1);
+
+  &:hover {
+    transform: scale(1.5);
+  }
+}
