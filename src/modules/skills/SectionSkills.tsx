@@ -4,11 +4,12 @@ import SkillDevOps from '@/modules/skills/SkillDevOps'
 import SkillSysAd from '@/modules/skills/SkillSysAd'
 import Link from 'next/link'
 import { Section } from '@/modules/layout/section.enum'
+import { TechIconCarousel } from '@/modules/skills/TechIconCarousel'
 
 export default function SectionSkills() {
   return (
-    <div className="pt-10 min-h-screen">
-      <div className="py-10">
+    <div className="pt-10 min-h-screen flex flex-col">
+      <div className="py-10 flex-auto">
         <div className="section-width section-px">
           <div className="mb-5">
             <h2 className="text-5xl font-semibold text-primary">
@@ -35,6 +36,10 @@ export default function SectionSkills() {
             <SkillSysAd className="lg:col-span-4" />
           </div>
         </div>
+      </div>
+
+      <div className="flex-none bg-app-3">
+        <TechIconCarousel />
       </div>
     </div>
   )
