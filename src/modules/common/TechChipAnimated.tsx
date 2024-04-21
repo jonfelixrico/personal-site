@@ -4,6 +4,9 @@ import style from './TechChipAnimated.module.scss'
 
 const classnames = cnBind.bind(style)
 
+/**
+ * Adds a fade-in animation once the `isVisible` flag is present
+ */
 export default function TechChipAnimated({
   isVisible,
   delay = 0,
