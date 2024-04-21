@@ -25,6 +25,7 @@ export default function FadeInOnVisible({
   const intersectionRatio = useMemo(() => obs?.intersectionRatio ?? 0, [obs])
   useEffect(() => {
     if (intersectionRatio > 0) {
+      console.debug('Visible')
       setIsVisible(true)
     }
   }, [intersectionRatio, setIsVisible])
