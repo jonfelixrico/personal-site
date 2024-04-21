@@ -26,7 +26,7 @@ export default function SkillLayoutFooterItem({
             key={index}
             label={label}
             src={src}
-            delay={100 * index}
+            delay={50 * index}
             isVisible={visible}
           />
         ))}
