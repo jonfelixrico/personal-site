@@ -9,7 +9,13 @@ const classnames = cnBind.bind(style)
 import { ReactNode, useEffect, useMemo, useRef, useState } from 'react'
 import { useIntersection } from 'react-use'
 
-export default function FadeInOnVisible({ children }: { children: ReactNode }) {
+export default function FadeInOnVisible({
+  children,
+  className,
+}: {
+  children: ReactNode
+  className?: string
+}) {
   const [visible, setIsVisible] = useState(false)
 
   const ref = useRef<HTMLDivElement>(null)
@@ -26,9 +32,13 @@ export default function FadeInOnVisible({ children }: { children: ReactNode }) {
   return (
     <div
       ref={ref}
-      className={classnames(style['container'], {
-        [style['not-visible']]: !visible,
-      })}
+      className={classnames(
+        style['container'],
+        {
+          [style['not-visible']]: !visible,
+        },
+        className,
+      )}
     >
       {children}
     </div>
