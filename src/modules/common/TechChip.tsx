@@ -4,15 +4,13 @@ import style from './TechChip.module.scss'
 
 const classnames = cnBind.bind(style)
 
-export default function TechChip({
-  src,
-  label,
-  className,
-}: {
+export interface TechChipProps {
   src: string
   label: string
   className?: string
-}) {
+}
+
+export default function TechChip({ src, label, className }: TechChipProps) {
   return (
     <div
       className={classnames(
