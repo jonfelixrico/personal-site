@@ -1,6 +1,8 @@
 import Link from 'next/link'
-import PortfolioList from './PortfolioList'
 import { Section } from '@/modules/layout/section.enum'
+import { FeaturedProject } from '@/modules/portfolio/FeaturedProject'
+import projects from './data'
+import FadeInOnVisible from '@/modules/common/FadeInOnVisible'
 
 export default function SectionPortfolio() {
   return (
@@ -22,7 +24,13 @@ export default function SectionPortfolio() {
             </div>
           </div>
 
-          <PortfolioList />
+          <div className="flex flex-col gap-10">
+            {projects.map((props, key) => (
+              <FadeInOnVisible key={key}>
+                <FeaturedProject {...props} />
+              </FadeInOnVisible>
+            ))}
+          </div>
         </div>
       </div>
     </div>

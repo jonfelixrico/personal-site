@@ -11,7 +11,7 @@ import content from './SkillDevOps.md'
 import Markdown from 'markdown-to-jsx'
 import { Fragment } from 'react'
 
-export default function SkillDevOps({ className }: { className: string }) {
+export default function SkillDevOps({ className }: { className?: string }) {
   return (
     <SkillLayout
       className={className}

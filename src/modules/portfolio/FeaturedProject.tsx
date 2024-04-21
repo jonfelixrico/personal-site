@@ -1,15 +1,13 @@
 import Image from 'next/image'
 import { Fragment } from 'react'
 import styles from './FeaturedProject.module.scss'
-import bindableCf from 'classnames/bind'
+import classnames from 'classnames'
 import Markdown from 'markdown-to-jsx'
 import { Project } from '@/modules/portfolio/data/project.interface'
 import { LinkButton } from '@/modules/common/LinkButton'
-import TechChip from '@/modules/common/TechChip'
 import FitWidthImage from '@/modules/portfolio/FitWidthImage'
 import Link from 'next/link'
-
-const classnames = bindableCf.bind(styles)
+import FeaturedProjectTechList from '@/modules/portfolio/FeaturedProjectTechList'
 
 export function FeaturedProject({
   description,
@@ -64,14 +62,7 @@ export function FeaturedProject({
                 {description}
               </Markdown>
             </div>
-            <div>
-              <div className="text-xs mb-1">Relevant technologies:</div>
-              <div className="flex flex-row gap-2 flex-wrap">
-                {tech.map(({ icon, label }) => (
-                  <TechChip src={icon} label={label} key={label} />
-                ))}
-              </div>
-            </div>
+            <FeaturedProjectTechList tech={tech} />
           </div>
         </div>
         <div className="flex flex-row flex-wrap gap-3">

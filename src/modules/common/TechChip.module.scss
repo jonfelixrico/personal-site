@@ -1,0 +1,7 @@
+.chip {
+  @apply transition-all select-none translate-y-0;
+
+  &:hover {
+    transform: translateY(-10%);
+  }
+}

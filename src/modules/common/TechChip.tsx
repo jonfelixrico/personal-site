@@ -1,14 +1,20 @@
 import Image from 'next/image'
+import classnames from 'classnames'
+import style from './TechChip.module.scss'
 
-export default function TechChip({
-  src,
-  label,
-}: {
+export interface TechChipProps {
   src: string
   label: string
-}) {
+}
+
+export default function TechChip({ src, label }: TechChipProps) {
   return (
-    <div className="flex flex-row gap-x-1 items-center bg-app-2 px-2 py-1 rounded-lg text-sm font-semibold">
+    <div
+      className={classnames(
+        'flex flex-row gap-x-1 items-center bg-app-2 px-2 py-1 rounded-lg text-sm font-semibold',
+        style['chip'],
+      )}
+    >
       <div
         className="relative"
         style={{
