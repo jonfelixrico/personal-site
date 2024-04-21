@@ -38,7 +38,7 @@ export default function SectionSkills() {
         </div>
       </div>
 
-      <div className="flex-none bg-app-3">
+      <div className="flex-none bg-app-3 overflow-x-clip py-2">
         <TechIconCarousel />
       </div>
     </div>
