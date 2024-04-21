@@ -1,7 +1,5 @@
-'use client'
-
 import Image from 'next/image'
-import { Fragment, useRef } from 'react'
+import { Fragment } from 'react'
 import styles from './FeaturedProject.module.scss'
 import classnames from 'classnames'
 import Markdown from 'markdown-to-jsx'
@@ -9,8 +7,7 @@ import { Project } from '@/modules/portfolio/data/project.interface'
 import { LinkButton } from '@/modules/common/LinkButton'
 import FitWidthImage from '@/modules/portfolio/FitWidthImage'
 import Link from 'next/link'
-import useVisibleOnce from '@/modules/common/visible-once.hook'
-import TechChipAnimated from '@/modules/common/TechChipAnimated'
+import FeaturedProjectTechList from '@/modules/portfolio/FeaturedProjectTechList'
 
 export function FeaturedProject({
   description,
@@ -20,9 +17,6 @@ export function FeaturedProject({
   title,
   id,
 }: Project) {
-  const techListRef = useRef<HTMLDivElement>(null)
-  const isVisible = useVisibleOnce(techListRef)
-
   return (
     <div className="grid grid-cols-12 isolate">
       <div
@@ -68,20 +62,7 @@ export function FeaturedProject({
                 {description}
               </Markdown>
             </div>
-            <div>
-              <div className="text-xs mb-1">Relevant technologies:</div>
-              <div className="flex flex-row gap-2 flex-wrap" ref={techListRef}>
-                {tech.map(({ icon, label }, index) => (
-                  <TechChipAnimated
-                    isVisible={isVisible}
-                    delay={index * 100}
-                    src={icon}
-                    label={label}
-                    key={label}
-                  />
-                ))}
-              </div>
-            </div>
+            <FeaturedProjectTechList tech={tech} />
           </div>
         </div>
         <div className="flex flex-row flex-wrap gap-3">
