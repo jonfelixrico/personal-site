@@ -7,15 +7,18 @@ const classnames = cnBind.bind(style)
 export default function TechChip({
   src,
   label,
+  className,
 }: {
   src: string
   label: string
+  className?: string
 }) {
   return (
     <div
       className={classnames(
         'flex flex-row gap-x-1 items-center bg-app-2 px-2 py-1 rounded-lg text-sm font-semibold',
         style['chip'],
+        className,
       )}
     >
       <div
