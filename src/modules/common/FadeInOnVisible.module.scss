@@ -1,0 +1,7 @@
+.container {
+  @apply transition-all translate-y-0 opacity-100;
+
+  &.not-visible {
+    @apply opacity-100 translate-y-4;
+  }
+}
