@@ -1,6 +1,5 @@
 .chip {
-  @apply transition-all select-none;
-  transform: translateY(0);
+  @apply transition-all select-none translate-y-0;
 
   &:hover {
     transform: translateY(-10%);

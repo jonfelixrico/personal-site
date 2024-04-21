@@ -22,7 +22,7 @@ import Markdown from 'markdown-to-jsx'
 import { Fragment } from 'react'
 import content from './SkillBackEnd.md'
 
-export default function SkillBackEnd({ className }: { className: string }) {
+export default function SkillBackEnd({ className }: { className?: string }) {
   return (
     <SkillLayout
       className={className}

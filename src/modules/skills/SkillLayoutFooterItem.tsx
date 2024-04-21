@@ -1,4 +1,8 @@
-import TechChip from '@/modules/common/TechChip'
+'use client'
+
+import TechChipAnimated from '@/modules/common/TechChipAnimated'
+import useVisibleOnce from '@/modules/common/visible-once.hook'
+import { useRef } from 'react'
 
 export default function SkillLayoutFooterItem({
   title,
@@ -10,12 +14,21 @@ export default function SkillLayoutFooterItem({
     src: string
   }[]
 }) {
+  const ref = useRef<HTMLDivElement>(null)
+  const visible = useVisibleOnce(ref)
+
   return (
-    <div className="rounded bg-app-3 gap-2 p-2 flex flex-col">
+    <div ref={ref} className="rounded bg-app-3 gap-2 p-2 flex flex-col">
       <div className="text-xs">{title}</div>
       <div className="flex flex-row flex-wrap gap-2">
         {items.map(({ label, src }, index) => (
-          <TechChip key={index} label={label} src={src} />
+          <TechChipAnimated
+            key={index}
+            label={label}
+            src={src}
+            delay={50 * index}
+            isVisible={visible}
+          />
         ))}
       </div>
     </div>

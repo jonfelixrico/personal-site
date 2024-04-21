@@ -1,19 +1,16 @@
 import Image from 'next/image'
-import cnBind from 'classnames/bind'
+import classnames from 'classnames'
 import style from './TechChip.module.scss'
 
-const classNames = cnBind.bind(style)
-
-export default function TechChip({
-  src,
-  label,
-}: {
+export interface TechChipProps {
   src: string
   label: string
-}) {
+}
+
+export default function TechChip({ src, label }: TechChipProps) {
   return (
     <div
-      className={classNames(
+      className={classnames(
         'flex flex-row gap-x-1 items-center bg-app-2 px-2 py-1 rounded-lg text-sm font-semibold',
         style['chip'],
       )}
