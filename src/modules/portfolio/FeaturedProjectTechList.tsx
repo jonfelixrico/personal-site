@@ -7,16 +7,16 @@ import { useRef } from 'react'
 export default function FeaturedProjectTechList({
   tech,
 }: Pick<Project, 'tech'>) {
-  const techListRef = useRef<HTMLDivElement>(null)
-  const isVisible = useVisibleOnce(techListRef)
+  const ref = useRef<HTMLDivElement>(null)
+  const visible = useVisibleOnce(ref)
 
   return (
     <div>
       <div className="text-xs mb-1">Relevant technologies:</div>
-      <div className="flex flex-row gap-2 flex-wrap" ref={techListRef}>
+      <div className="flex flex-row gap-2 flex-wrap" ref={ref}>
         {tech.map(({ icon, label }, index) => (
           <TechChipAnimated
-            isVisible={isVisible}
+            isVisible={visible}
             delay={index * 50}
             src={icon}
             label={label}
