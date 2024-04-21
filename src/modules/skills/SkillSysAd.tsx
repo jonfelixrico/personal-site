@@ -13,7 +13,7 @@ import content from './SkillSysAd.md'
 import Markdown from 'markdown-to-jsx'
 import { Fragment } from 'react'
 
-export default function SkillSysAd({ className }: { className: string }) {
+export default function SkillSysAd({ className }: { className?: string }) {
   return (
     <SkillLayout
       className={className}
