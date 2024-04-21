@@ -4,7 +4,7 @@ import style from './TechChipAnimated.module.scss'
 
 const classnames = cnBind.bind(style)
 
-export default function AnimatedTechChip({
+export default function TechChipAnimated({
   isVisible,
   delay = 0,
   className,
