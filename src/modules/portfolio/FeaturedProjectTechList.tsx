@@ -17,7 +17,7 @@ export default function FeaturedProjectTechList({
         {tech.map(({ icon, label }, index) => (
           <TechChipAnimated
             isVisible={visible}
-            delay={index * 50}
+            delay={index * 100}
             src={icon}
             label={label}
             key={label}
