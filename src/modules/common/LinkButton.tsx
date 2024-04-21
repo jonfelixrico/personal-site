@@ -28,8 +28,8 @@ export function LinkButton({
     >
       <div
         style={{
-          width: '1em',
-          height: '1em',
+          width: '1.5em',
+          height: '1.5em',
         }}
         className="relative"
       >
